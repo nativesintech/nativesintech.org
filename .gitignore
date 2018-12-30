@@ -2,3 +2,4 @@ node_modules
 dist
 .merlin
 lib
+.bsb.lock
