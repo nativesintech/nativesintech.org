@@ -71,18 +71,7 @@ let make = () => {
   },
   render: _self =>
     <div>
-      <BsReactHelmet>
-        <title> "Natives in Tech"->text </title>
-        <meta
-          name="description"
-          content="Natives in Tech is a coalition of Native and non-Native developers who seek
-          to empower and support Native communties around the world through software application development."
-        />
-        <meta
-          name="keywords"
-          content="natives in tech, natives, indigenous, tech, software development, open source"
-        />
-      </BsReactHelmet>
+      <BsReactHelmet> <title> "Natives in Tech"->text </title> </BsReactHelmet>
       <div className=Styles.container>
         <div className=Styles.header>
           <div className=Styles.logo>
