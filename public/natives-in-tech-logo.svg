@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500">
+  <defs>
+    <text id="aR0ukMIiq" x="129.2" y="181.49" font-size="388" font-family="Source Sans Pro" font-weight="600" letter-spacing="0" alignment-baseline="before-edge" transform="translate(-6.583 -181.494)" style="line-height:100%" dominant-baseline="text-before-edge">
+      <tspan x="129.2" dy="0em" alignment-baseline="before-edge" dominant-baseline="text-before-edge">N</tspan>
+    </text>
+    <path d="M463.06 250c0 125.48-95.47 227.35-213.06 227.35S36.94 375.48 36.94 250c0-125.48 95.47-227.35 213.06-227.35S463.06 124.52 463.06 250z" id="aTqTd1ypF"/>
+  </defs>
+  <use xlink:href="#aR0ukMIiq" id="b3LiILRj9x"/>
+  <use xlink:href="#aTqTd1ypF" fill-opacity="0" stroke="#000" stroke-width="40"/>
+</svg>

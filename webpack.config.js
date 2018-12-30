@@ -37,7 +37,12 @@ module.exports = (/* config: PhenomicConfig */) => ({
       },
       {
         test: /\.css$/,
-        use: [{ loader: MiniCssExtractPlugin.loader }, "css-loader"]
+        use: [
+          process.env.NODE_ENV !== "production"
+            ? "style-loader"
+            : MiniCssExtractPlugin.loader,
+          "css-loader"
+        ]
       },
       {
         test: /\.svg$/,
