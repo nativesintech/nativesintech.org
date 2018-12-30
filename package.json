@@ -12,6 +12,7 @@
     "bs-css": "^8.0.0-beta.2",
     "bs-platform": "^4.0.0",
     "css-loader": "^2.1.0",
+    "dotenv-webpack": "^1.6.0",
     "emotion": "^9.2.12",
     "emotion-server": "^9.2.12",
     "file-loader": "^3.0.1",

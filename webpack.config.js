@@ -3,6 +3,7 @@ import path from "path";
 import webpack from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import TerserPlugin from "terser-webpack-plugin";
+import Dotenv from "dotenv-webpack";
 
 module.exports = (/* config: PhenomicConfig */) => ({
   entry: {
@@ -56,7 +57,8 @@ module.exports = (/* config: PhenomicConfig */) => ({
         filename: "styles.css"
       }),
     process.env.PHENOMIC_ENV !== "static" &&
-      new webpack.HotModuleReplacementPlugin()
+      new webpack.HotModuleReplacementPlugin(),
+    new Dotenv()
   ].filter(Boolean),
 
   optimization: {
