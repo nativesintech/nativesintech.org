@@ -41,6 +41,7 @@ export default ({ App, render }) => {
           content="Natives in Tech is a coalition of Native and non-Native developers who seek
           to empower and support Native communities around the world through software development."
         />
+        <link rel="stylesheet" href="/styles.css" />
         <style dangerouslySetInnerHTML={{ __html: css }} />
       </head>
       <body>
