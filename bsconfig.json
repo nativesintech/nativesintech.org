@@ -1,0 +1,25 @@
+{
+  "name": "@phenomic/example-reason-react-app",
+  "refmt": 3,
+  "reason": {
+    "react-jsx": 2
+  },
+  "suffix": ".bs.js",
+  "package-specs": {
+    "module": "es6"
+  },
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "bs-dependencies": [
+    "reason-react",
+    "@moox/bs-react-helmet",
+    "@phenomic/preset-react-app",
+    "@phenomic/plugin-renderer-react",
+    "@phenomic/api-client",
+    "bs-css"
+  ]
+}

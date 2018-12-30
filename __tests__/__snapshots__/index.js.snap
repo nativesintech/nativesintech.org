@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should build example correctly 1`] = `
+Array [
+  "404.html",
+  "after/c2Vjb25kLXBvc3Q=/index.html",
+  "after/dGhpcmQtcG9zdA==/index.html",
+  "after/Zm91cnRoLXBvc3Q=/index.html",
+  "after/ZmlmdGgtcG9zdA==/index.html",
+  "after/Zmlyc3QtcG9zdA==/index.html",
+  "blog/fifth-post/index.html",
+  "blog/first-post/index.html",
+  "blog/fourth-post/index.html",
+  "blog/second-post/index.html",
+  "blog/third-post/index.html",
+  "index.html",
+]
+`;
+
+exports[`should build example correctly 2`] = `
+Array [
+  "phenomic/content/posts/by-default/1/desc/date/limit-2.json",
+  "phenomic/content/posts/by-default/1/desc/date/limit-2/after-c2Vjb25kLXBvc3Q=.json",
+  "phenomic/content/posts/by-default/1/desc/date/limit-2/after-dGhpcmQtcG9zdA==.json",
+  "phenomic/content/posts/by-default/1/desc/date/limit-2/after-Zm91cnRoLXBvc3Q=.json",
+  "phenomic/content/posts/by-default/1/desc/date/limit-2/after-ZmlmdGgtcG9zdA==.json",
+  "phenomic/content/posts/by-default/1/desc/date/limit-2/after-Zmlyc3QtcG9zdA==.json",
+  "phenomic/content/posts/item/fifth-post.json",
+  "phenomic/content/posts/item/first-post.json",
+  "phenomic/content/posts/item/fourth-post.json",
+  "phenomic/content/posts/item/second-post.json",
+  "phenomic/content/posts/item/third-post.json",
+]
+`;
+
+exports[`should build example correctly 3`] = `Array []`;

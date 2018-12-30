@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "name": "@phenomic/example-reason-react-app",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "@moox/bs-react-helmet": "^1.0.0",
+    "@phenomic/cli": "^1.0.0-beta.7",
+    "@phenomic/core": "^1.0.0-beta.7",
+    "@phenomic/plugin-public-assets": "^1.0.0-beta.8",
+    "@phenomic/preset-react-app": "^1.0.0-beta.7",
+    "bs-css": "^8.0.0-beta.2",
+    "bs-platform": "^4.0.0",
+    "css-loader": "^2.1.0",
+    "emotion": "^9.2.12",
+    "emotion-server": "^9.2.12",
+    "file-loader": "^3.0.1",
+    "mini-css-extract-plugin": "^0.5.0",
+    "npm-run-all": "^4.0.2",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "react-helmet": "^5.2.0",
+    "react-hot-loader": "^4.6.3",
+    "react-router": "^3.2.0",
+    "reason-react": "^0.5.3",
+    "terser-webpack-plugin": "^1.2.1"
+  },
+  "scripts": {
+    "reason:cleanup": "bsb -clean-world",
+    "reason:compile": "bsb -make-world",
+    "prepare": "yarn reason:cleanup && yarn reason:compile",
+    "start": "yarn reason:cleanup && npm-run-all --parallel start:*",
+    "start:js": "phenomic start",
+    "start:reason": "yarn reason:compile -w",
+    "build": "yarn reason:compile && phenomic build"
+  },
+  "phenomic": {
+    "presets": [
+      "@phenomic/preset-react-app"
+    ]
+  },
+  "version": "1.0.0-beta.7",
+  "dependencies": {}
+}
