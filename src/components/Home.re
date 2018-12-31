@@ -1,13 +1,11 @@
 open Helpers;
 
 [@bs.module]
-external logo: string = "../../../../public/natives-in-tech-logo.svg";
+external logo: string = "../../../../public/images/natives-in-tech-logo.svg";
 
 module Styles = {
   open Css;
-  global("*", [fontFamily("Inter UI")]);
-  global("p", [lineHeight(`abs(1.75))]);
-  global("li", [lineHeight(`abs(1.75))]);
+
   let red = style([color(red)]);
   let container = style([margin2(~h=auto, ~v=px(0)), maxWidth(px(900))]);
   let header =

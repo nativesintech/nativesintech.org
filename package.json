@@ -12,6 +12,7 @@
     "bs-css": "^8.0.0-beta.2",
     "bs-platform": "^4.0.0",
     "css-loader": "^2.1.0",
+    "cssnano": "^4.1.8",
     "dotenv-webpack": "^1.6.0",
     "emotion": "^9.2.12",
     "emotion-server": "^9.2.12",
@@ -19,6 +20,9 @@
     "mini-css-extract-plugin": "^0.5.0",
     "normalize.css": "^8.0.1",
     "npm-run-all": "^4.0.2",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.5.0",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-helmet": "^5.2.0",
@@ -27,7 +31,8 @@
     "reason-react": "^0.5.3",
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.2.1",
-    "typed.js": "^2.0.9"
+    "typed.js": "^2.0.9",
+    "url-loader": "^1.1.2"
   },
   "scripts": {
     "reason:cleanup": "bsb -clean-world",
