@@ -42,12 +42,13 @@ module.exports = (/* config: PhenomicConfig */) => ({
           process.env.NODE_ENV !== "production"
             ? "style-loader"
             : MiniCssExtractPlugin.loader,
-          "css-loader"
+          "css-loader",
+          "postcss-loader"
         ]
       },
       {
         test: /\.svg$/,
-        use: "file-loader"
+        use: [{ loader: "url-loader", options: { limit: 8192 } }]
       }
     ]
   },
@@ -62,9 +63,7 @@ module.exports = (/* config: PhenomicConfig */) => ({
   ].filter(Boolean),
 
   optimization: {
-    minimizer: [
-      process.env.NODE_ENV === "production" && new TerserPlugin()
-    ].filter(Boolean)
+    minimizer: [new TerserPlugin()]
   },
 
   resolve: {
