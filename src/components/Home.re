@@ -1,7 +1,19 @@
 open Helpers;
 
 [@bs.module]
-external logo: string = "../../../../public/images/natives-in-tech-logo.svg";
+external logo: string = "../../../../public/images/natives-in-tech-logo.png";
+
+[@bs.module]
+external slack: string = "../../../../public/images/slack-logo.svg";
+
+[@bs.module]
+external github: string = "../../../../public/images/github-logo.svg";
+
+[@bs.module]
+external medium: string = "../../../../public/images/medium-logo.png";
+
+[@bs.module]
+external twitter: string = "../../../../public/images/twitter-logo.svg";
 
 module Styles = {
   open Css;
@@ -34,6 +46,15 @@ module Styles = {
     ]);
   let typingContainer = style([maxWidth(px(900))]);
   let typing = style([]);
+  let connect = style([textAlign(`center)]);
+  let heading = style([padding2(~v=px(30), ~h=px(0))]);
+  let icons =
+    style([
+      display(`flex),
+      justifyContent(`spaceAround),
+      alignItems(`center),
+    ]);
+  let icon = style([width(px(70)), height(px(70))]);
 };
 
 type state = {empty: string};
@@ -95,17 +116,17 @@ let make = () => {
           visibile software developers and applications that elevate and reinforce Native beliefs, knowledge, and identity."
           ->text
         </p>
+        <h2> "How to get involved..."->text </h2>
+        <p>
+          "Natives in Tech is seeking volunteers to help with developing applications,
+          hosting workshops, speaking at conferences, and generating content that promote Native communities.
+          If you would be interested in helping with these initiatives let us know by completing the form below!"
+          ->text
+        </p>
         <h2> "How we support..."->text </h2>
-        <p> "Natives in Tech supports software developers by:"->text </p>
+        <p> "Natives in Tech supports software developers by"->text </p>
         <ul>
-          <li>
-            <span>
-              "Engaging developers through online channels such as "->text
-            </span>
-            <a href="https://medium.com/natives-in-tech"> "Medium "->text </a>
-            <span> "and "->text </span>
-            <a href="https://nativesintech.herokuapp.com"> "Slack"->text </a>
-          </li>
+          <li> "Engaging developers through online channels"->text </li>
           <li>
             "Building connections with non-Native developers whose work promotes Native communities"
             ->text
@@ -115,13 +136,35 @@ let make = () => {
             ->text
           </li>
         </ul>
-        <h2> "How to get involved..."->text </h2>
-        <p>
-          "Natives in Tech is seeking volunteers to help with developing applications,
-          hosting workshops, speaking at conferences, and generating content that promote Native communities.
-          If you would be interested in helping with these initiatives let us know by completing the form below!"
-          ->text
-        </p>
+        <div className=Styles.connect>
+          <h2 className=Styles.heading> "Connect with Us"->text </h2>
+          <div className=Styles.icons>
+            <a
+              href="https://nativesintech.herokuapp.com/"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img src=slack className=Styles.icon />
+            </a>
+            <a
+              href="https://github.com/nativesintech"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img src=github className=Styles.icon />
+            </a>
+            <a
+              href="https://medium.com/natives-in-tech"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img src=medium className=Styles.icon />
+            </a>
+            <a
+              href="https://twitter.com/nativesintech"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img src=twitter className=Styles.icon />
+            </a>
+          </div>
+        </div>
       </div>
     </div>,
 };
