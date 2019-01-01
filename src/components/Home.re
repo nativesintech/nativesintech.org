@@ -123,6 +123,19 @@ let make = () => {
           If you would be interested in helping with these initiatives let us know by completing the form below!"
           ->text
         </p>
+        <h2> "How we support..."->text </h2>
+        <p> "Natives in Tech supports software developers by"->text </p>
+        <ul>
+          <li> "Engaging developers through online channels"->text </li>
+          <li>
+            "Building connections with non-Native developers whose work promotes Native communities"
+            ->text
+          </li>
+          <li>
+            "Making visible the work of these developers at the Natives in Tech Conference"
+            ->text
+          </li>
+        </ul>
         <div className=Styles.connect>
           <h2 className=Styles.heading> "Connect with Us"->text </h2>
           <div className=Styles.icons>
