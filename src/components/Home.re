@@ -46,15 +46,60 @@ module Styles = {
     ]);
   let typingContainer = style([maxWidth(px(900))]);
   let typing = style([]);
+  let content = style([fontSize(px(18))]);
   let connect = style([textAlign(`center)]);
-  let heading = style([padding2(~v=px(30), ~h=px(0))]);
+  let heading = style([padding2(~v=px(30), ~h=px(0)), textAlign(`left)]);
   let icons =
     style([
       display(`flex),
-      justifyContent(`spaceAround),
+      justifyContent(`spaceBetween),
       alignItems(`center),
     ]);
   let icon = style([width(px(70)), height(px(70))]);
+  let inputs =
+    style([
+      display(`flex),
+      selector("div:not(:last-child)", [marginRight(px(20))]),
+    ]);
+  let inputWrapper =
+    style([
+      display(`flex),
+      flexDirection(`column),
+      marginBottom(px(10)),
+      flex(1),
+    ]);
+  let label =
+    style([
+      textTransform(`uppercase),
+      fontSize(px(10)),
+      marginBottom(px(5)),
+    ]);
+  let input =
+    style([
+      borderRadius(px(2)),
+      border(px(1), `solid, hex("000")),
+      fontSize(px(18)),
+      padding(px(5)),
+    ]);
+
+  let textarea =
+    style([
+      borderRadius(px(2)),
+      border(px(1), `solid, hex("000")),
+      fontSize(px(18)),
+      padding(px(5)),
+    ]);
+  let footer =
+    style([
+      backgroundColor(black),
+      color(white),
+      textAlign(`center),
+      minHeight(px(60)),
+      display(`flex),
+      justifyContent(`center),
+      alignItems(`center),
+    ]);
+  let reach = style([padding2(~h=px(0), ~v=px(40))]);
 };
 
 type state = {empty: string};
@@ -110,34 +155,39 @@ let make = () => {
         </div>
       </div>
       <div className=Styles.container>
-        <h2> "Who we are..."->text </h2>
-        <p>
-          "Natives in Tech is a coalition of Native and non-Native software developers whose goal is to support and make
-          visibile software developers and applications that elevate and reinforce Native beliefs, knowledge, and identity."
+        <h2> {j|Hensci! 👋|j}->text </h2>
+        <p className=Styles.content>
+          "In recent years, open source development has exploded and a new generation of software applications
+         have captivated the minds of users from all walks of life. New software technologies and design patterns
+         have made it easier for developers to quickly protoype, build, and ship high quality software applications
+         for users all around the world. In turn, Native peoples have adopted these applications as the de facto
+         standard for engaging with other community members. "
+          ->text
+          <strong>
+            "What if instead of social media applications that are
+         geared towards everyone, there were applications geared towards Native communities and their
+         specific needs, interests, and identities? "
+            ->text
+          </strong>
+          "What if when you read someone's profile you also learned what
+         clan or band they are from? What if you could learn they spoke your tribal language? These are the kinds of questions
+         that the Natives in Tech community hopes to answer and we would like you to be a part of it!"
           ->text
         </p>
-        <h2> "How to get involved..."->text </h2>
-        <p>
-          "Natives in Tech is seeking volunteers to help with developing applications,
-          hosting workshops, speaking at conferences, and generating content that promote Native communities.
-          If you would be interested in helping with these initiatives let us know by completing the form below!"
+        <p className=Styles.content>
+          <strong>
+            "Natives in Tech is a coalition of Native and non-Native software developers whose goal is to support
+          software application development that reinforces Native beliefs, knowledge, and identity. "
+            ->text
+          </strong>
+          "This is
+          achieved through several initiatives: creating a strong social media presence on platforms familiar to software developers,
+           hosting a yearly Natives in Tech conference, and building open source software that Native peoples can use to cultivate
+           healthy online communities."
           ->text
         </p>
-        <h2> "How we support..."->text </h2>
-        <p> "Natives in Tech supports software developers by"->text </p>
-        <ul>
-          <li> "Engaging developers through online channels"->text </li>
-          <li>
-            "Building connections with non-Native developers whose work promotes Native communities"
-            ->text
-          </li>
-          <li>
-            "Making visible the work of these developers at the Natives in Tech Conference"
-            ->text
-          </li>
-        </ul>
         <div className=Styles.connect>
-          <h2 className=Styles.heading> "Connect with Us"->text </h2>
+          <h2 className=Styles.heading> {j|Connect with Us 💻|j}->text </h2>
           <div className=Styles.icons>
             <a
               href="https://nativesintech.herokuapp.com/"
@@ -165,7 +215,49 @@ let make = () => {
             </a>
           </div>
         </div>
+        <div className=Styles.reach>
+          <h2> {j|Reach Out 📧|j}->text </h2>
+          <form
+            action="https://formspree.io/nativesintech@gmail.com"
+            method="POST">
+            <div className=Styles.inputs>
+              <div className=Styles.inputWrapper>
+                <label className=Styles.label> "Name"->text </label>
+                <input
+                  required=true
+                  className=Styles.input
+                  type_="text"
+                  placeholder="Sonny Brown"
+                  name="name"
+                />
+              </div>
+              <div className=Styles.inputWrapper>
+                <label className=Styles.label> "Email"->text </label>
+                <input
+                  required=true
+                  className=Styles.input
+                  type_="email"
+                  placeholder="sonnybrown@aol.com"
+                  name="_replyto"
+                />
+              </div>
+            </div>
+            <div className=Styles.inputWrapper>
+              <label className=Styles.label> "Message"->text </label>
+              <textarea
+                required=true
+                className=Styles.textarea
+                placeholder={j|Tell me something. I am all 👂.|j}
+                name="message"
+              />
+            </div>
+            <button type_="submit" value="Send"> "Submit"->text </button>
+          </form>
+        </div>
       </div>
+      <footer className=Styles.footer>
+        {j|Made with ❤️ by Natives in Tech |j}->text
+      </footer>
     </div>,
 };
 
