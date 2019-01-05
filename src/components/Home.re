@@ -15,11 +15,19 @@ external medium: string = "../../../../public/images/medium-logo.png";
 [@bs.module]
 external twitter: string = "../../../../public/images/twitter-logo.svg";
 
+[@bs.module]
+external folk: string = "../../../../public/images/folk-pattern-black.png";
+
 module Styles = {
   open Css;
 
   let red = style([color(red)]);
-  let container = style([margin2(~h=auto, ~v=px(0)), maxWidth(px(900))]);
+  let container =
+    style([
+      margin2(~h=auto, ~v=px(0)),
+      maxWidth(px(900)),
+      position(`relative),
+    ]);
   let header =
     style([
       display(`flex),
@@ -43,6 +51,7 @@ module Styles = {
       justifyContent(`center),
       alignItems(`center),
       textAlign(`center),
+      backgroundImage(`url(folk)),
     ]);
   let typingContainer = style([maxWidth(px(900))]);
   let typing = style([]);
