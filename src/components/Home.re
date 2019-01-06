@@ -284,7 +284,6 @@ let make = () => {
             <button className=Styles.button type_="submit" value="Send">
               "Submit"->text
             </button>
-            <Recaptcha />
           </form>
         </div>
       </div>
