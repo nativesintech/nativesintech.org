@@ -32,6 +32,10 @@ export default ({ App, render }) => {
           content="Natives in Tech is a coalition of Native and non-Native developers who seek
           to empower and support Native communities around the world through software development."
         />
+        <meta
+          name="twitter:image"
+          content="https://avatars2.githubusercontent.com/u/35468375?v=4"
+        />
         {/* Open Graph Data */}
         <meta property="og:site_name" content="Natives in Tech" />
         <meta property="og:type" content="website" />
@@ -41,18 +45,23 @@ export default ({ App, render }) => {
           content="Natives in Tech is a coalition of Native and non-Native developers who seek
           to empower and support Native communities around the world through software development."
         />
+        <meta
+          property="og:image"
+          content="https://avatars2.githubusercontent.com/u/35468375?v=4"
+        />
         <link rel="stylesheet" href="/styles.css" />
         <style dangerouslySetInnerHTML={{ __html: css }} />
+        <script src="https://www.google.com/recaptcha/api.js" />
       </head>
       <body>
         <Main />
         <State />
+        <Script />
         <script
           dangerouslySetInnerHTML={{
             __html: `window._emotion = ${JSON.stringify(ids)}`
           }}
         />
-        <Script />
       </body>
     </html>
   );
