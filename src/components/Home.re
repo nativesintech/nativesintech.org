@@ -25,14 +25,24 @@ module Styles = {
   let container =
     style([
       margin2(~h=auto, ~v=px(0)),
-      maxWidth(px(900)),
+      maxWidth(em(40.0)),
       position(`relative),
+    ]);
+  let containerContent =
+    style([
+      margin2(~h=auto, ~v=px(0)),
+      maxWidth(em(40.0)),
+      position(`relative),
+      selector("> div", [paddingTop(px(40))]),
+      selector("> div:last-child", [paddingBottom(px(40))]),
     ]);
   let header =
     style([
       display(`flex),
       justifyContent(`spaceBetween),
       alignItems(`center),
+      maxWidth(px(900)),
+      margin2(~h=`auto, ~v=px(0)),
     ]);
   let logo = style([display(`flex), alignItems(`center)]);
   let svg = style([marginRight(px(10))]);
@@ -53,22 +63,43 @@ module Styles = {
       textAlign(`center),
       backgroundImage(`url(folk)),
     ]);
-  let typingContainer = style([maxWidth(px(900))]);
+  let typingContainer = style([maxWidth(em(10.0))]);
   let typing = style([]);
+  let intro = style([padding2(~h=px(0), ~v=px(40))]);
   let content = style([fontSize(px(18))]);
-  let connect = style([textAlign(`center)]);
+  let connect = style([padding2(~h=px(0), ~v=px(40))]);
   let heading = style([padding2(~v=px(30), ~h=px(0)), textAlign(`left)]);
   let icons =
     style([
       display(`flex),
       justifyContent(`spaceBetween),
       alignItems(`center),
+      flexWrap(`wrap),
     ]);
-  let icon = style([width(px(70)), height(px(70))]);
+  let changeOpacity =
+    keyframes([(0, [opacity(0.8)]), (100, [opacity(1.0)])]);
+  let icon =
+    style([
+      width(px(70)),
+      height(px(70)),
+      opacity(0.8),
+      transition(~duration=200, ~timingFunction=`easeInOut, "transform"),
+      selector(
+        "&:hover",
+        [
+          transform(scale(1.5, 1.5)),
+          transition(~duration=200, ~timingFunction=`easeInOut, "transform"),
+          animations([
+            animation(~duration=200, ~fillMode=`forwards, changeOpacity),
+          ]),
+        ],
+      ),
+    ]);
   let inputs =
     style([
       display(`flex),
       selector("div:not(:last-child)", [marginRight(px(20))]),
+      flexWrap(`wrap),
     ]);
   let inputWrapper =
     style([
@@ -86,7 +117,7 @@ module Styles = {
   let input =
     style([
       borderRadius(px(2)),
-      border(px(2), `solid, hex("000")),
+      border(px(2), `solid, hex("404040")),
       fontSize(px(18)),
       padding(px(5)),
     ]);
@@ -94,7 +125,7 @@ module Styles = {
   let textarea =
     style([
       borderRadius(px(2)),
-      border(px(2), `solid, hex("000")),
+      border(px(2), `solid, hex("404040")),
       fontSize(px(18)),
       padding(px(5)),
       selector("&:invalid", [boxShadow(`transparent)]),
@@ -119,6 +150,19 @@ module Styles = {
       backgroundColor(white),
       fontWeight(`bold),
       cursor(`pointer),
+      selector(
+        "&:hover",
+        [
+          backgroundColor(black),
+          color(white),
+          transition(~duration=200, ~timingFunction=`easeInOut, "color"),
+          transition(
+            ~duration=200,
+            ~timingFunction=`easeInOut,
+            "background-color",
+          ),
+        ],
+      ),
     ]);
   let hesci = style([textDecoration(`underline)]);
 };
@@ -147,7 +191,7 @@ let make = () => {
             {j|gOtcyathla nAnû, wAchêthlê tOtsûdachE k'asOsOha nôkû|j},
           |],
           ~typeSpeed=50,
-          ~backSpeed=50,
+          ~backSpeed=30,
           ~loop=true,
           ~backDelay=500,
         ),
@@ -156,6 +200,19 @@ let make = () => {
   },
   render: _self =>
     <div>
+      <a href="https://github.com/nativesintech/natives-in-tech">
+        <img
+          style={ReactDOMRe.Style.make(
+            ~position="absolute",
+            ~top="0",
+            ~right="0",
+            ~border="none",
+            (),
+          )}
+          src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
+          alt="Fork me on GitHub"
+        />
+      </a>
       <BsReactHelmet> <title> "Natives in Tech"->text </title> </BsReactHelmet>
       <div className=Styles.container>
         <div className=Styles.header>
@@ -175,49 +232,52 @@ let make = () => {
           <span id="typing" className=Styles.typing />
         </div>
       </div>
-      <div id="about" className=Styles.container>
-        <h2>
-          <a
-            className=Styles.hesci
-            href="http://www.muscogeenation-nsn.gov/_OLD/Pages/Language/audio/hesci2.mp3"
-            target="_blank"
-            rel="noopener noreferrer">
-            "Hesci"->text
-          </a>
-          {j|! 👋|j}->text
-        </h2>
-        <p className=Styles.content>
-          "In recent years, open source development has exploded and a new generation of software applications
-         have captivated the minds of users from all walks of life. New software technologies and design patterns
-         have made it easier for developers to quickly protoype, build, and ship high quality software applications
-         for users all around the world. In turn, Native peoples have adopted these applications as the de facto
-         standard for engaging with other community members. "
-          ->text
-          <strong>
-            "What if instead of social media applications that are
-         geared towards everyone, there were applications geared towards Native communities and their
-         specific needs, interests, and identities? "
+      <div id="about" className=Styles.containerContent>
+        <div>
+          <h2>
+            <a
+              className=Styles.hesci
+              href="http://www.muscogeenation-nsn.gov/_OLD/Pages/Language/audio/hesci2.mp3"
+              target="_blank"
+              rel="noopener noreferrer">
+              "Hesci"->text
+            </a>
+            {j|! 👋|j}->text
+          </h2>
+          <p className=Styles.content>
+            "New software technologies and design patterns have made it easier for developers to quickly protoype, build, and ship high quality software applications
+          for users all around the world. In turn, Native peoples have adopted these applications as the de facto
+          standard for engaging with other community members. "
             ->text
-          </strong>
-          "What if when you read someone's profile you also learned what
-         clan or band they are from? What if you could learn they spoke your tribal language? These are the kinds of questions
-         that the Natives in Tech community hopes to answer and we would like you to be a part of it!"
-          ->text
-        </p>
-        <p className=Styles.content>
-          <strong>
-            "Natives in Tech is a coalition of Native and non-Native software developers whose goal is to support
-          software application development that reinforces Native beliefs, knowledge, and identity. "
+            <strong>
+              "What if instead of social media applications that are
+          geared towards everyone, there were applications geared towards Native communities and their
+          specific needs, interests, and identities? "
+              ->text
+            </strong>
+            "What if when you read someone's profile you also learned what
+          clan or band they are from? What if you could learn they spoke your tribal language? These are the kinds of questions
+          that the Natives in Tech community hopes to answer and we would like you to be a part of it!"
             ->text
-          </strong>
-          "This is
-          achieved through several initiatives: creating a strong social media presence on platforms familiar to software developers,
-           hosting a yearly Natives in Tech conference, and building open source software that Native peoples can use to cultivate
-           healthy online communities."
-          ->text
-        </p>
-        <div id="connect" className=Styles.connect>
-          <h2 className=Styles.heading> {j|Connect with Us 💻|j}->text </h2>
+          </p>
+          <p className=Styles.content>
+            <strong>
+              "Natives in Tech is a coalition of Native and non-Native software developers whose goal is to support
+            software application development that reinforces Native beliefs, knowledge, and identity. "
+              ->text
+            </strong>
+            "This is
+            achieved through several initiatives: creating a strong social media presence on platforms familiar to software developers,
+            hosting a yearly Natives in Tech conference, and building open source software that Native peoples can use to cultivate
+            healthy online communities."
+            ->text
+          </p>
+        </div>
+        <div id="connect">
+          <h2> {j|Connect 💻|j}->text </h2>
+          <p>
+            "Connect with us on any of our social media platforms."->text
+          </p>
           <div className=Styles.icons>
             <a
               href="https://nativesintech.herokuapp.com/"
@@ -245,8 +305,9 @@ let make = () => {
             </a>
           </div>
         </div>
-        <div id="contact" className=Styles.reach>
-          <h2> {j|Reach Out 📧|j}->text </h2>
+        <div id="contact">
+          <h2> {j|Contact 📧|j}->text </h2>
+          <p> "Reach out and ask us a question."->text </p>
           <form
             action="https://formspree.io/nativesintech@gmail.com"
             method="POST">
@@ -277,7 +338,7 @@ let make = () => {
               <textarea
                 required=true
                 className=Styles.textarea
-                placeholder={j|Tell me something. I am all 👂.|j}
+                placeholder={j|Tell me something. I am all 👂👂.|j}
                 name="message"
               />
             </div>
