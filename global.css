@@ -3,6 +3,10 @@
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 h2 {
   font-size: 36px;
 }
@@ -13,4 +17,12 @@ p {
 
 li {
   line-height: 1.75;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
 }

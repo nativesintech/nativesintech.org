@@ -39,7 +39,7 @@ module Styles = {
   let links =
     style([
       display(`flex),
-      selector("> div:not(:last-child)", [marginRight(px(10))]),
+      selector("> a:not(:last-child)", [marginRight(px(10))]),
     ]);
   let billboard =
     style([
@@ -80,13 +80,13 @@ module Styles = {
   let label =
     style([
       textTransform(`uppercase),
-      fontSize(px(10)),
+      fontSize(px(12)),
       marginBottom(px(5)),
     ]);
   let input =
     style([
       borderRadius(px(2)),
-      border(px(1), `solid, hex("000")),
+      border(px(2), `solid, hex("000")),
       fontSize(px(18)),
       padding(px(5)),
     ]);
@@ -94,9 +94,10 @@ module Styles = {
   let textarea =
     style([
       borderRadius(px(2)),
-      border(px(1), `solid, hex("000")),
+      border(px(2), `solid, hex("000")),
       fontSize(px(18)),
       padding(px(5)),
+      selector("&:invalid", [boxShadow(`transparent)]),
     ]);
   let footer =
     style([
@@ -109,6 +110,17 @@ module Styles = {
       alignItems(`center),
     ]);
   let reach = style([padding2(~h=px(0), ~v=px(40))]);
+  let button =
+    style([
+      border(px(2), `solid, black),
+      textTransform(`uppercase),
+      padding2(~h=px(30), ~v=px(10)),
+      borderRadius(px(3)),
+      backgroundColor(white),
+      fontWeight(`bold),
+      cursor(`pointer),
+    ]);
+  let hesci = style([textDecoration(`underline)]);
 };
 
 type state = {empty: string};
@@ -152,9 +164,9 @@ let make = () => {
             <h1> "Natives in Tech"->text </h1>
           </div>
           <div className=Styles.links>
-            <div> "About"->text </div>
-            <div> "Conference"->text </div>
-            <div> "Contact"->text </div>
+            <a href="#about"> "About"->text </a>
+            <a href="#connect"> "Connect"->text </a>
+            <a href="#contact"> "Contact"->text </a>
           </div>
         </div>
       </div>
@@ -163,8 +175,17 @@ let make = () => {
           <span id="typing" className=Styles.typing />
         </div>
       </div>
-      <div className=Styles.container>
-        <h2> {j|Hensci! 👋|j}->text </h2>
+      <div id="about" className=Styles.container>
+        <h2>
+          <a
+            className=Styles.hesci
+            href="http://www.muscogeenation-nsn.gov/_OLD/Pages/Language/audio/hesci2.mp3"
+            target="_blank"
+            rel="noopener noreferrer">
+            "Hesci"->text
+          </a>
+          {j|! 👋|j}->text
+        </h2>
         <p className=Styles.content>
           "In recent years, open source development has exploded and a new generation of software applications
          have captivated the minds of users from all walks of life. New software technologies and design patterns
@@ -195,7 +216,7 @@ let make = () => {
            healthy online communities."
           ->text
         </p>
-        <div className=Styles.connect>
+        <div id="connect" className=Styles.connect>
           <h2 className=Styles.heading> {j|Connect with Us 💻|j}->text </h2>
           <div className=Styles.icons>
             <a
@@ -224,14 +245,14 @@ let make = () => {
             </a>
           </div>
         </div>
-        <div className=Styles.reach>
+        <div id="contact" className=Styles.reach>
           <h2> {j|Reach Out 📧|j}->text </h2>
           <form
             action="https://formspree.io/nativesintech@gmail.com"
             method="POST">
             <div className=Styles.inputs>
               <div className=Styles.inputWrapper>
-                <label className=Styles.label> "Name"->text </label>
+                <label className=Styles.label> "Name*"->text </label>
                 <input
                   required=true
                   className=Styles.input
@@ -241,7 +262,7 @@ let make = () => {
                 />
               </div>
               <div className=Styles.inputWrapper>
-                <label className=Styles.label> "Email"->text </label>
+                <label className=Styles.label> "Email*"->text </label>
                 <input
                   required=true
                   className=Styles.input
@@ -252,7 +273,7 @@ let make = () => {
               </div>
             </div>
             <div className=Styles.inputWrapper>
-              <label className=Styles.label> "Message"->text </label>
+              <label className=Styles.label> "Message*"->text </label>
               <textarea
                 required=true
                 className=Styles.textarea
@@ -260,7 +281,10 @@ let make = () => {
                 name="message"
               />
             </div>
-            <button type_="submit" value="Send"> "Submit"->text </button>
+            <button className=Styles.button type_="submit" value="Send">
+              "Submit"->text
+            </button>
+            <Recaptcha />
           </form>
         </div>
       </div>
