@@ -21,20 +21,19 @@ external folk: string = "../../../../public/images/folk-pattern-black.png";
 module Styles = {
   open Css;
 
-  let red = style([color(red)]);
   let container =
     style([
       margin2(~h=auto, ~v=px(0)),
-      maxWidth(em(40.0)),
+      maxWidth(em(45.0)),
       position(`relative),
     ]);
   let containerContent =
     style([
       margin2(~h=auto, ~v=px(0)),
-      maxWidth(em(40.0)),
+      maxWidth(em(45.0)),
       position(`relative),
-      selector("> div", [paddingTop(px(40))]),
-      selector("> div:last-child", [paddingBottom(px(40))]),
+      selector("> div", [paddingTop(px(100))]),
+      selector("> div:last-child", [paddingBottom(px(100))]),
     ]);
   let header =
     style([
@@ -54,19 +53,18 @@ module Styles = {
   let billboard =
     style([
       minHeight(px(400)),
-      backgroundColor(black),
       fontSize(px(52)),
-      color(white),
+      color(Colors.gray50),
       display(`flex),
       justifyContent(`center),
       alignItems(`center),
       textAlign(`center),
       backgroundImage(`url(folk)),
     ]);
-  let typingContainer = style([maxWidth(em(10.0))]);
+  let typingContainer = style([maxWidth(em(15.0))]);
   let typing = style([]);
   let intro = style([padding2(~h=px(0), ~v=px(40))]);
-  let content = style([fontSize(px(18))]);
+  let content = style([fontSize(px(24))]);
   let connect = style([padding2(~h=px(0), ~v=px(40))]);
   let heading = style([padding2(~v=px(30), ~h=px(0)), textAlign(`left)]);
   let icons =
@@ -111,29 +109,32 @@ module Styles = {
   let label =
     style([
       textTransform(`uppercase),
-      fontSize(px(12)),
+      fontSize(px(18)),
       marginBottom(px(5)),
+      color(Colors.gray700),
     ]);
   let input =
     style([
       borderRadius(px(2)),
-      border(px(2), `solid, hex("404040")),
-      fontSize(px(18)),
+      border(px(2), `solid, Colors.gray400),
+      fontSize(px(20)),
       padding(px(5)),
+      color(Colors.gray900),
     ]);
 
   let textarea =
     style([
       borderRadius(px(2)),
-      border(px(2), `solid, hex("404040")),
+      border(px(2), `solid, Colors.gray400),
       fontSize(px(18)),
       padding(px(5)),
+      minHeight(px(150)),
       selector("&:invalid", [boxShadow(`transparent)]),
     ]);
   let footer =
     style([
-      backgroundColor(black),
-      color(white),
+      backgroundColor(Colors.gray900),
+      color(Colors.gray50),
       textAlign(`center),
       minHeight(px(60)),
       display(`flex),
@@ -141,20 +142,23 @@ module Styles = {
       alignItems(`center),
     ]);
   let reach = style([padding2(~h=px(0), ~v=px(40))]);
+  let buttonColor = Colors.redA200;
   let button =
     style([
-      border(px(2), `solid, black),
+      fontSize(px(18)),
+      border(px(2), `solid, buttonColor),
       textTransform(`uppercase),
       padding2(~h=px(30), ~v=px(10)),
       borderRadius(px(3)),
-      backgroundColor(white),
+      backgroundColor(buttonColor),
       fontWeight(`bold),
       cursor(`pointer),
+      color(Colors.gray50),
       selector(
         "&:hover",
         [
-          backgroundColor(black),
-          color(white),
+          backgroundColor(Colors.gray50),
+          color(buttonColor),
           transition(~duration=200, ~timingFunction=`easeInOut, "color"),
           transition(
             ~duration=200,
@@ -200,19 +204,6 @@ let make = () => {
   },
   render: _self =>
     <div>
-      <a href="https://github.com/nativesintech/natives-in-tech">
-        <img
-          style={ReactDOMRe.Style.make(
-            ~position="absolute",
-            ~top="0",
-            ~right="0",
-            ~border="none",
-            (),
-          )}
-          src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"
-          alt="Fork me on GitHub"
-        />
-      </a>
       <BsReactHelmet> <title> "Natives in Tech"->text </title> </BsReactHelmet>
       <div className=Styles.container>
         <div className=Styles.header>
@@ -245,7 +236,7 @@ let make = () => {
             {j|! 👋|j}->text
           </h2>
           <p className=Styles.content>
-            "New software technologies and design patterns have made it easier for developers to quickly protoype, build, and ship high quality software applications
+            "New software technologies and design patterns make it easier for developers to quickly protoype, build, and ship high quality software applications
           for users all around the world. In turn, Native peoples have adopted these applications as the de facto
           standard for engaging with other community members. "
             ->text
@@ -307,7 +298,7 @@ let make = () => {
         </div>
         <div id="contact">
           <h2> {j|Contact 📧|j}->text </h2>
-          <p> "Reach out and ask us a question."->text </p>
+          <p> "Reach out and ask us a question or leave a comment."->text </p>
           <form
             action="https://formspree.io/nativesintech@gmail.com"
             method="POST">
@@ -338,7 +329,7 @@ let make = () => {
               <textarea
                 required=true
                 className=Styles.textarea
-                placeholder={j|Tell me something. I am all 👂👂.|j}
+                placeholder={j|I am all 👂👂.|j}
                 name="message"
               />
             </div>
