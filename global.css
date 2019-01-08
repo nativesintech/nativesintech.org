@@ -7,14 +7,19 @@ html {
   scroll-behavior: smooth;
 }
 
+h1 {
+  color: #212121;
+}
+
 h2 {
   font-size: 36px;
+  color: #212121;
 }
 
 p {
   line-height: 1.75;
-  color: #404040;
-  font-size: 18px;
+  color: #616161;
+  font-size: 24px;
 }
 
 li {
@@ -23,9 +28,17 @@ li {
 
 a {
   text-decoration: none;
-  color: black;
+  color: #212121;
 }
 
 a:visited {
-  color: black;
+  color: #212121;
+}
+
+a:hover {
+  color: #ff5252;
+}
+
+strong {
+  color: #424242;
 }
