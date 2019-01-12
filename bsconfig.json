@@ -20,6 +20,7 @@
     "@phenomic/preset-react-app",
     "@phenomic/plugin-renderer-react",
     "@phenomic/api-client",
-    "bs-css"
+    "bs-css",
+    "bs-typing"
   ]
 }

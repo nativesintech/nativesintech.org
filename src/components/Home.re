@@ -187,7 +187,7 @@ let make = () => {
   },
   didMount: _self => {
     let _ =
-      Typing.create(
+      Typing.make(
         "#typing",
         Typing.options(
           ~strings=[|
@@ -198,6 +198,7 @@ let make = () => {
           ~backSpeed=30,
           ~loop=true,
           ~backDelay=500,
+          ()
         ),
       );
     ();
