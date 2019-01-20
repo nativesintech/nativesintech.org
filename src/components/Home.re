@@ -39,9 +39,13 @@ module Styles = {
       justifyContent(`spaceBetween),
       alignItems(`center),
       padding2(~h=px(60), ~v=px(0)),
+      minHeight(px(60)),
+      media("(max-width: 600px)", [padding2(~h=px(20), ~v=px(0))]),
     ]);
 
   let logo = style([display(`flex), alignItems(`center)]);
+
+  let logoName = style([media("(max-width: 600px)", [display(`none)])]);
 
   let svg = style([marginRight(px(10))]);
 
@@ -283,7 +287,7 @@ let make = () => {
         <div className=Styles.header>
           <div className=Styles.logo>
             <img className=Styles.svg src=logo width="50px" height="50px" />
-            <h1> "Natives in Tech"->text </h1>
+            <h1 className=Styles.logoName> "Natives in Tech"->text </h1>
           </div>
           <div className=Styles.linksBox>
             <a href="#about"> "About"->text </a>
