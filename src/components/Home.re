@@ -174,7 +174,7 @@ module Styles = {
       selector("div:not(:last-child)", [marginRight(px(20))]),
       flexWrap(`wrap),
       media(
-        "(max-width: 611px)",
+        "(max-width: 633px)",
         [selector("div:not(:last-child)", [marginRight(px(0))])],
       ),
     ]);
