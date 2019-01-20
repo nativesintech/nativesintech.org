@@ -56,10 +56,26 @@ module Styles = {
       backgroundColor(Colors.gray900),
       selector("> div", [flex(1)]),
       padding2(~h=px(60), ~v=px(0)),
+      media("(max-width: 900px)", [flexDirection(`column)]),
     ]);
-  let billboardHeadline = style([padding2(~h=px(0), ~v=px(0))]);
+  let billboardHeadline =
+    style([
+      media(
+        "(max-width: 900px)",
+        [textAlign(`center), fontSize(px(42)), paddingTop(px(40))],
+      ),
+    ]);
   let frameBox =
-    style([display(`flex), justifyContent(`center), alignItems(`center)]);
+    style([
+      display(`flex),
+      justifyContent(`center),
+      alignItems(`center),
+      media(
+        "(max-width: 900px)",
+        [paddingTop(px(40)), paddingBottom(px(40))],
+      ),
+      media("(max-width: 410px)", [display(`none), padding(px(0))]),
+    ]);
   let frame = style([flex(1), maxWidth(px(400)), alignSelf(`flexEnd)]);
   let intro = style([padding2(~h=px(0), ~v=px(40))]);
   let content = style([fontSize(px(24))]);
@@ -94,6 +110,13 @@ module Styles = {
       alignItems(`center),
       flexWrap(`wrap),
       maxWidth(px(800)),
+      media(
+        "(max-width: 600px)",
+        [
+          flexDirection(`column),
+          selector("> a:not(:last-child)", [paddingBottom(px(40))]),
+        ],
+      ),
     ]);
 
   let icon =
@@ -114,6 +137,10 @@ module Styles = {
       display(`flex),
       selector("div:not(:last-child)", [marginRight(px(20))]),
       flexWrap(`wrap),
+      media(
+        "(max-width: 611px)",
+        [selector("div:not(:last-child)", [marginRight(px(0))])],
+      ),
     ]);
   let inputWrapper =
     style([
@@ -247,8 +274,7 @@ let make = () => {
       </div>
       <div className={j|$billboard |j}>
         <div className=Styles.billboardHeadline>
-          {j|Supporting software developers that serve Native communities|j}
-          ->text
+          {j|Supporting software developers serving Native communities|j}->text
         </div>
         <div className=Styles.frameBox>
           <div className=Styles.frame>
@@ -312,13 +338,13 @@ let make = () => {
         <p>
           "We would love to hear from you! Feel free to send a message to "
           ->text
-          <a href="mailto:nativesintech@gmail.com">
-            "nativesintech@gmail.com"->text
+          <a href="mailto:hello@nativesintech.app">
+            "hello@nativesintech.app"->text
           </a>
           {j| or drop us a line below 👇|j}->text
         </p>
         <form
-          action="https://formspree.io/nativesintech@gmail.com" method="POST">
+          action="https://formspree.io/hello@nativesintech.app" method="POST">
           <div className=Styles.inputs>
             <div className=Styles.inputWrapper>
               <input
