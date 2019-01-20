@@ -30,8 +30,8 @@ module Styles = {
     style([
       maxWidth(em(50.0)),
       position(`relative),
-      padding2(~h=px(60), ~v=px(0)),
-      media("(max-width: 600px)", [padding2(~h=px(20), ~v=px(0))]),
+      padding2(~h=Space.px64, ~v=px(0)),
+      media("(max-width: 600px)", [padding2(~h=Space.px24, ~v=px(0))]),
     ]);
 
   let header =
@@ -39,9 +39,9 @@ module Styles = {
       display(`flex),
       justifyContent(`spaceBetween),
       alignItems(`center),
-      padding2(~h=px(60), ~v=px(0)),
-      minHeight(px(80)),
-      media("(max-width: 600px)", [padding2(~h=px(20), ~v=px(0))]),
+      padding2(~h=Space.px64, ~v=px(0)),
+      minHeight(Space.px96),
+      media("(max-width: 600px)", [padding2(~h=Space.px24, ~v=px(0))]),
     ]);
 
   let logo = style([display(`flex), alignItems(`center)]);
@@ -58,24 +58,24 @@ module Styles = {
 
   let billboard =
     style([
-      minHeight(px(400)),
-      fontSize(px(52)),
+      minHeight(Space.px384),
+      Font.font60,
       color(Colors.gray50),
       display(`flex),
       justifyContent(`spaceAround),
       alignItems(`center),
       backgroundColor(Colors.gray900),
       selector("> div", [flex(1)]),
-      padding2(~h=px(60), ~v=px(0)),
+      padding2(~h=Space.px64, ~v=px(0)),
       media("(max-width: 900px)", [flexDirection(`column)]),
-      media("(max-width: 600px)", [padding2(~h=px(20), ~v=px(0))]),
+      media("(max-width: 600px)", [padding2(~h=Space.px24, ~v=px(0))]),
     ]);
 
   let billboardHeadline =
     style([
       media(
         "(max-width: 900px)",
-        [textAlign(`center), fontSize(px(42)), paddingTop(px(40))],
+        [textAlign(`center), Font.font48, paddingTop(Space.px48)],
       ),
       media(
         "(max-width: 600px)",
@@ -95,42 +95,45 @@ module Styles = {
       alignItems(`center),
       media(
         "(max-width: 900px)",
-        [paddingTop(px(40)), paddingBottom(px(40))],
+        [paddingTop(Space.px48), paddingBottom(Space.px48)],
       ),
       media("(max-width: 410px)", [display(`none), padding(px(0))]),
     ]);
 
   let frame = style([flex(1), maxWidth(px(400)), alignSelf(`flexEnd)]);
 
-  let content = style([fontSize(px(24))]);
+  let content = style([Font.font24]);
 
   let connect =
     style([
-      padding2(~v=px(120), ~h=px(60)),
+      padding2(~v=Space.px128, ~h=Space.px64),
       backgroundColor(hex("222")),
       color(hex("fff")),
       selector(
         "> h2",
-        [margin(px(0)), marginBottom(px(40)), fontSize(px(52))],
+        [margin(px(0)), marginBottom(Space.px48), Font.font48],
       ),
-      media("(max-width: 600px)", [padding2(~h=px(20), ~v=px(120))]),
+      media(
+        "(max-width: 600px)",
+        [padding2(~h=Space.px24, ~v=Space.px128)],
+      ),
     ]);
 
   let connectHeadline =
     style([
       color(hex("fff")),
       textAlign(`center),
-      paddingBottom(px(60)),
+      paddingBottom(Space.px64),
     ]);
 
   let about =
     style([
       position(`relative),
-      paddingTop(px(60)),
-      paddingBottom(px(100)),
+      paddingTop(Space.px64),
+      paddingBottom(Space.px128),
       media(
         "(max-width: 600px)",
-        [paddingTop(px(40)), paddingBottom(px(50))],
+        [paddingTop(Space.px48), paddingBottom(Space.px64)],
       ),
     ]);
 
@@ -146,7 +149,7 @@ module Styles = {
         "(max-width: 600px)",
         [
           flexDirection(`column),
-          selector("> a:not(:last-child)", [paddingBottom(px(40))]),
+          selector("> a:not(:last-child)", [paddingBottom(Space.px48)]),
         ],
       ),
     ]);
@@ -180,23 +183,15 @@ module Styles = {
     style([
       display(`flex),
       flexDirection(`column),
-      marginBottom(px(10)),
+      marginBottom(Space.px12),
       flex(1),
-    ]);
-
-  let label =
-    style([
-      textTransform(`uppercase),
-      fontSize(px(18)),
-      marginBottom(px(5)),
-      color(Colors.gray700),
     ]);
 
   let input =
     style([
       borderRadius(px(2)),
       border(px(0), `none, `transparent),
-      fontSize(px(20)),
+      Font.font18,
       padding(px(5)),
       color(Colors.gray900),
       boxShadow(
@@ -211,9 +206,9 @@ module Styles = {
   let textarea =
     style([
       borderRadius(px(2)),
-      fontSize(px(20)),
+      Font.font18,
       padding(px(5)),
-      minHeight(px(150)),
+      minHeight(Space.px128),
       selector("&:invalid", [boxShadow(`transparent)]),
     ]);
 
@@ -222,7 +217,7 @@ module Styles = {
       backgroundColor(Colors.gray900),
       color(Colors.gray50),
       textAlign(`center),
-      minHeight(px(60)),
+      minHeight(Space.px64),
       display(`flex),
       justifyContent(`center),
       alignItems(`center),
@@ -232,10 +227,10 @@ module Styles = {
 
   let button =
     style([
-      fontSize(px(18)),
+      Font.font18,
       border(px(2), `solid, buttonColor),
       textTransform(`uppercase),
-      padding2(~h=px(30), ~v=px(10)),
+      padding2(~h=Space.px32, ~v=Space.px12),
       borderRadius(px(3)),
       backgroundColor(buttonColor),
       fontWeight(`bold),
@@ -268,9 +263,9 @@ module Styles = {
 
   let contact =
     style([
-      padding2(~v=px(80), ~h=px(60)),
+      padding2(~v=Space.px96, ~h=Space.px64),
       maxWidth(em(50.0)),
-      media("(max-width: 600px)", [padding2(~h=px(20), ~v=px(30))]),
+      media("(max-width: 600px)", [padding2(~h=Space.px24, ~v=Space.px32)]),
     ]);
 };
 
