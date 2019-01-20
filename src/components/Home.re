@@ -25,12 +25,14 @@ module Styles = {
   open Css;
 
   let container = style([margin2(~h=auto, ~v=px(0)), position(`relative)]);
-  let containerContent =
+
+  let containerBox =
     style([
       maxWidth(em(50.0)),
       position(`relative),
       padding2(~h=px(60), ~v=px(0)),
     ]);
+
   let header =
     style([
       display(`flex),
@@ -38,13 +40,17 @@ module Styles = {
       alignItems(`center),
       padding2(~h=px(60), ~v=px(0)),
     ]);
+
   let logo = style([display(`flex), alignItems(`center)]);
+
   let svg = style([marginRight(px(10))]);
-  let links =
+
+  let linksBox =
     style([
       display(`flex),
       selector("> a:not(:last-child)", [marginRight(px(10))]),
     ]);
+
   let billboard =
     style([
       minHeight(px(400)),
@@ -58,6 +64,7 @@ module Styles = {
       padding2(~h=px(60), ~v=px(0)),
       media("(max-width: 900px)", [flexDirection(`column)]),
     ]);
+
   let billboardHeadline =
     style([
       media(
@@ -65,6 +72,7 @@ module Styles = {
         [textAlign(`center), fontSize(px(42)), paddingTop(px(40))],
       ),
     ]);
+
   let frameBox =
     style([
       display(`flex),
@@ -76,9 +84,11 @@ module Styles = {
       ),
       media("(max-width: 410px)", [display(`none), padding(px(0))]),
     ]);
+
   let frame = style([flex(1), maxWidth(px(400)), alignSelf(`flexEnd)]);
-  let intro = style([padding2(~h=px(0), ~v=px(40))]);
+
   let content = style([fontSize(px(24))]);
+
   let connect =
     style([
       padding2(~v=px(120), ~h=px(60)),
@@ -89,6 +99,7 @@ module Styles = {
         [margin(px(0)), marginBottom(px(40)), fontSize(px(52))],
       ),
     ]);
+
   let connectHeadline =
     style([
       color(hex("fff")),
@@ -102,7 +113,8 @@ module Styles = {
       paddingTop(px(60)),
       paddingBottom(px(100)),
     ]);
-  let icons =
+
+  let iconsBox =
     style([
       margin2(~v=px(0), ~h=`auto),
       display(`flex),
@@ -132,6 +144,7 @@ module Styles = {
         ],
       ),
     ]);
+
   let inputs =
     style([
       display(`flex),
@@ -142,13 +155,15 @@ module Styles = {
         [selector("div:not(:last-child)", [marginRight(px(0))])],
       ),
     ]);
-  let inputWrapper =
+
+  let inputBox =
     style([
       display(`flex),
       flexDirection(`column),
       marginBottom(px(10)),
       flex(1),
     ]);
+
   let label =
     style([
       textTransform(`uppercase),
@@ -156,6 +171,7 @@ module Styles = {
       marginBottom(px(5)),
       color(Colors.gray700),
     ]);
+
   let input =
     style([
       borderRadius(px(2)),
@@ -180,6 +196,7 @@ module Styles = {
       minHeight(px(150)),
       selector("&:invalid", [boxShadow(`transparent)]),
     ]);
+
   let footer =
     style([
       backgroundColor(Colors.gray900),
@@ -190,8 +207,9 @@ module Styles = {
       justifyContent(`center),
       alignItems(`center),
     ]);
-  let reach = style([padding2(~h=px(0), ~v=px(40))]);
+
   let buttonColor = Colors.redA200;
+
   let button =
     style([
       fontSize(px(18)),
@@ -217,6 +235,7 @@ module Styles = {
         ],
       ),
     ]);
+
   let topography =
     style([
       width(px(750)),
@@ -226,6 +245,7 @@ module Styles = {
       top(px(60)),
       zIndex(-1),
     ]);
+
   let contact =
     style([padding2(~v=px(80), ~h=px(60)), maxWidth(em(50.0))]);
 };
@@ -265,7 +285,7 @@ let make = () => {
             <img className=Styles.svg src=logo width="50px" height="50px" />
             <h1> "Natives in Tech"->text </h1>
           </div>
-          <div className=Styles.links>
+          <div className=Styles.linksBox>
             <a href="#about"> "About"->text </a>
             <a href="#connect"> "Connect"->text </a>
             <a href="#contact"> "Contact"->text </a>
@@ -284,7 +304,7 @@ let make = () => {
         </div>
       </div>
       <div id="about" className=Styles.about>
-        <div className=Styles.containerContent>
+        <div className=Styles.containerBox>
           <h2> <span id="typing" /> </h2>
           <p className=Styles.content>
             {j|Welcome 👋. |j}->text
@@ -306,7 +326,7 @@ let make = () => {
         <h2 className=Styles.connectHeadline>
           {j|Connect with us 🙌|j}->text
         </h2>
-        <div className=Styles.icons>
+        <div className=Styles.iconsBox>
           <a
             href="https://nativesintech.herokuapp.com/"
             target="_blank"
@@ -346,7 +366,7 @@ let make = () => {
         <form
           action="https://formspree.io/hello@nativesintech.app" method="POST">
           <div className=Styles.inputs>
-            <div className=Styles.inputWrapper>
+            <div className=Styles.inputBox>
               <input
                 required=true
                 className=Styles.input
@@ -355,7 +375,7 @@ let make = () => {
                 name="name"
               />
             </div>
-            <div className=Styles.inputWrapper>
+            <div className=Styles.inputBox>
               <input
                 required=true
                 className=Styles.input
@@ -365,7 +385,7 @@ let make = () => {
               />
             </div>
           </div>
-          <div className=Styles.inputWrapper>
+          <div className=Styles.inputBox>
             <textarea
               required=true
               className=Styles.textarea
