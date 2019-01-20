@@ -31,6 +31,7 @@ module Styles = {
       maxWidth(em(50.0)),
       position(`relative),
       padding2(~h=px(60), ~v=px(0)),
+      media("(max-width: 600px)", [padding2(~h=px(20), ~v=px(0))]),
     ]);
 
   let header =
@@ -39,7 +40,7 @@ module Styles = {
       justifyContent(`spaceBetween),
       alignItems(`center),
       padding2(~h=px(60), ~v=px(0)),
-      minHeight(px(60)),
+      minHeight(px(80)),
       media("(max-width: 600px)", [padding2(~h=px(20), ~v=px(0))]),
     ]);
 
@@ -67,6 +68,7 @@ module Styles = {
       selector("> div", [flex(1)]),
       padding2(~h=px(60), ~v=px(0)),
       media("(max-width: 900px)", [flexDirection(`column)]),
+      media("(max-width: 600px)", [padding2(~h=px(20), ~v=px(0))]),
     ]);
 
   let billboardHeadline =
@@ -74,6 +76,15 @@ module Styles = {
       media(
         "(max-width: 900px)",
         [textAlign(`center), fontSize(px(42)), paddingTop(px(40))],
+      ),
+      media(
+        "(max-width: 600px)",
+        [
+          display(`flex),
+          alignItems(`center),
+          justifyContent(`center),
+          paddingTop(px(0)),
+        ],
       ),
     ]);
 
@@ -102,6 +113,7 @@ module Styles = {
         "> h2",
         [margin(px(0)), marginBottom(px(40)), fontSize(px(52))],
       ),
+      media("(max-width: 600px)", [padding2(~h=px(20), ~v=px(120))]),
     ]);
 
   let connectHeadline =
@@ -116,6 +128,10 @@ module Styles = {
       position(`relative),
       paddingTop(px(60)),
       paddingBottom(px(100)),
+      media(
+        "(max-width: 600px)",
+        [paddingTop(px(40)), paddingBottom(px(50))],
+      ),
     ]);
 
   let iconsBox =
@@ -251,7 +267,11 @@ module Styles = {
     ]);
 
   let contact =
-    style([padding2(~v=px(80), ~h=px(60)), maxWidth(em(50.0))]);
+    style([
+      padding2(~v=px(80), ~h=px(60)),
+      maxWidth(em(50.0)),
+      media("(max-width: 600px)", [padding2(~h=px(20), ~v=px(30))]),
+    ]);
 };
 
 let component = ReasonReact.statelessComponent("Home");
