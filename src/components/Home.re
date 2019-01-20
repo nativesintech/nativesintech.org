@@ -192,7 +192,7 @@ module Styles = {
       borderRadius(px(2)),
       border(px(0), `none, `transparent),
       Font.font18,
-      padding(px(5)),
+      padding(Space.px8),
       color(Colors.gray900),
       boxShadow(
         ~x=px(0),
@@ -207,7 +207,7 @@ module Styles = {
     style([
       borderRadius(px(2)),
       Font.font18,
-      padding(px(5)),
+      padding(Space.px8),
       minHeight(Space.px128),
       selector("&:invalid", [boxShadow(`transparent)]),
     ]);
