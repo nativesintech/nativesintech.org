@@ -53,11 +53,11 @@ module Styles = {
       display(`flex),
       justifyContent(`spaceAround),
       alignItems(`center),
-      backgroundImage(`url(folk)),
+      backgroundColor(Colors.gray900),
       selector("> div", [flex(1)]),
       padding2(~h=px(60), ~v=px(0)),
     ]);
-  let headline = style([padding2(~h=px(0), ~v=px(0))]);
+  let billboardHeadline = style([padding2(~h=px(0), ~v=px(0))]);
   let frameBox =
     style([display(`flex), justifyContent(`center), alignItems(`center)]);
   let frame = style([flex(1), maxWidth(px(400)), alignSelf(`flexEnd)]);
@@ -245,8 +245,8 @@ let make = () => {
           </div>
         </div>
       </div>
-      <div className={j|$billboard cutout|j}>
-        <div className=Styles.headline>
+      <div className={j|$billboard |j}>
+        <div className=Styles.billboardHeadline>
           {j|Supporting software developers that serve Native communities|j}
           ->text
         </div>
