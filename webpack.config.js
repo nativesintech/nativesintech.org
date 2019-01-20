@@ -47,7 +47,7 @@ module.exports = (/* config: PhenomicConfig */) => ({
         ]
       },
       {
-        test: /\.(svg|png)$/,
+        test: /\.(svg|png|jpg|jpeg)$/,
         use: [{ loader: "url-loader", options: { limit: 8192 } }]
       }
     ]
