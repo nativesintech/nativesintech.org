@@ -19,7 +19,7 @@ external twitter: string = "../../../../public/images/twitter-logo.svg";
 external folk: string = "../../../../public/images/folk-pattern-black.png";
 
 [@bs.module]
-external frame: string = "../../../../public/images/native-land-image.png";
+external frame: string = "../../../../public/images/native-land-image.jpg";
 
 module Styles = {
   open Css;
