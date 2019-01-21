@@ -83,9 +83,10 @@ module Styles = {
           display(`flex),
           alignItems(`center),
           justifyContent(`center),
-          paddingTop(px(0)),
+          paddingTop(Space.px32),
         ],
       ),
+      media("(max-width: 410px)", [paddingBottom(Space.px32)]),
     ]);
 
   let frameBox =
@@ -109,10 +110,7 @@ module Styles = {
       padding2(~v=Space.px128, ~h=Space.px64),
       backgroundColor(hex("222")),
       color(hex("fff")),
-      selector(
-        "> h2",
-        [margin(px(0)), marginBottom(Space.px48), Font.font48],
-      ),
+      selector("> h2", [margin(px(0)), Font.font48]),
       media(
         "(max-width: 600px)",
         [padding2(~h=Space.px24, ~v=Space.px128)],
@@ -166,6 +164,7 @@ module Styles = {
           transition(~duration=200, ~timingFunction=`easeInOut, "transform"),
         ],
       ),
+      media("(max-width: 600px)", [width(px(75)), height(px(75))]),
     ]);
 
   let inputs =
@@ -373,14 +372,14 @@ let make = () => {
         </div>
       </div>
       <div id="contact" className=Styles.contact>
-        <h2> {j|Ask a question or leave a comment 🖖|j}->text </h2>
+        <h2> {j|Ask a question or leave a comment 💬|j}->text </h2>
         <p>
           "We would love to hear from you! Feel free to send a message to "
           ->text
           <a href="mailto:hello@nativesintech.app">
             "hello@nativesintech.app"->text
           </a>
-          {j| or drop us a line below 👇|j}->text
+          {j| or drop us a line below.|j}->text
         </p>
         <form
           action="https://formspree.io/hello@nativesintech.app" method="POST">
