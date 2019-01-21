@@ -34,7 +34,7 @@ export default ({ App, render }) => {
         />
         <meta
           name="twitter:image"
-          content="https://natives-in-tech.netlify.com/og-image.jpg"
+          content="https://natives-in-tech.netlify.com/images/og-image.jpg"
         />
         {/* Open Graph Data */}
         <meta property="og:site_name" content="Natives in Tech" />
