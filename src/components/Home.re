@@ -25,68 +25,117 @@ module Styles = {
   open Css;
 
   let container = style([margin2(~h=auto, ~v=px(0)), position(`relative)]);
-  let containerContent =
+
+  let containerBox =
     style([
       maxWidth(em(50.0)),
       position(`relative),
-      padding2(~h=px(60), ~v=px(0)),
+      padding2(~h=Space.px64, ~v=px(0)),
+      media("(max-width: 600px)", [padding2(~h=Space.px24, ~v=px(0))]),
     ]);
+
   let header =
     style([
       display(`flex),
       justifyContent(`spaceBetween),
       alignItems(`center),
-      padding2(~h=px(60), ~v=px(0)),
+      padding2(~h=Space.px64, ~v=px(0)),
+      minHeight(Space.px96),
+      media("(max-width: 600px)", [padding2(~h=Space.px24, ~v=px(0))]),
     ]);
+
   let logo = style([display(`flex), alignItems(`center)]);
+
+  let logoName = style([media("(max-width: 600px)", [display(`none)])]);
+
   let svg = style([marginRight(px(10))]);
-  let links =
+
+  let linksBox =
     style([
       display(`flex),
       selector("> a:not(:last-child)", [marginRight(px(10))]),
     ]);
+
   let billboard =
     style([
-      minHeight(px(400)),
-      fontSize(px(52)),
+      minHeight(Space.px384),
+      Font.font60,
       color(Colors.gray50),
       display(`flex),
       justifyContent(`spaceAround),
       alignItems(`center),
       backgroundColor(Colors.gray900),
       selector("> div", [flex(1)]),
-      padding2(~h=px(60), ~v=px(0)),
+      padding2(~h=Space.px64, ~v=px(0)),
+      media("(max-width: 900px)", [flexDirection(`column)]),
+      media("(max-width: 600px)", [padding2(~h=Space.px24, ~v=px(0))]),
     ]);
-  let billboardHeadline = style([padding2(~h=px(0), ~v=px(0))]);
+
+  let billboardHeadline =
+    style([
+      media(
+        "(max-width: 900px)",
+        [textAlign(`center), Font.font48, paddingTop(Space.px48)],
+      ),
+      media(
+        "(max-width: 600px)",
+        [
+          display(`flex),
+          alignItems(`center),
+          justifyContent(`center),
+          paddingTop(Space.px32),
+        ],
+      ),
+      media("(max-width: 410px)", [paddingBottom(Space.px32)]),
+    ]);
+
   let frameBox =
-    style([display(`flex), justifyContent(`center), alignItems(`center)]);
+    style([
+      display(`flex),
+      justifyContent(`center),
+      alignItems(`center),
+      media(
+        "(max-width: 900px)",
+        [paddingTop(Space.px48), paddingBottom(Space.px48)],
+      ),
+      media("(max-width: 410px)", [display(`none), padding(px(0))]),
+    ]);
+
   let frame = style([flex(1), maxWidth(px(400)), alignSelf(`flexEnd)]);
-  let intro = style([padding2(~h=px(0), ~v=px(40))]);
-  let content = style([fontSize(px(24))]);
+
+  let content = style([Font.font24]);
+
   let connect =
     style([
-      padding2(~v=px(120), ~h=px(60)),
+      padding2(~v=Space.px128, ~h=Space.px64),
       backgroundColor(hex("222")),
       color(hex("fff")),
-      selector(
-        "> h2",
-        [margin(px(0)), marginBottom(px(40)), fontSize(px(52))],
+      selector("> h2", [margin(px(0)), Font.font48]),
+      media(
+        "(max-width: 600px)",
+        [padding2(~h=Space.px24, ~v=Space.px128)],
       ),
     ]);
+
   let connectHeadline =
     style([
       color(hex("fff")),
       textAlign(`center),
-      paddingBottom(px(60)),
+      paddingBottom(Space.px64),
     ]);
 
   let about =
     style([
       position(`relative),
-      paddingTop(px(60)),
-      paddingBottom(px(100)),
+      paddingTop(Space.px64),
+      paddingBottom(Space.px128),
+      media(
+        "(max-width: 600px)",
+        [paddingTop(Space.px48), paddingBottom(Space.px64)],
+      ),
     ]);
-  let icons =
+
+  let iconsBox =
     style([
       margin2(~v=px(0), ~h=`auto),
       display(`flex),
@@ -94,6 +143,13 @@ module Styles = {
       alignItems(`center),
       flexWrap(`wrap),
       maxWidth(px(800)),
+      media(
+        "(max-width: 600px)",
+        [
+          flexDirection(`column),
+          selector("> a:not(:last-child)", [paddingBottom(Space.px48)]),
+        ],
+      ),
     ]);
 
   let icon =
@@ -108,33 +164,34 @@ module Styles = {
           transition(~duration=200, ~timingFunction=`easeInOut, "transform"),
         ],
       ),
+      media("(max-width: 600px)", [width(px(75)), height(px(75))]),
     ]);
+
   let inputs =
     style([
       display(`flex),
       selector("div:not(:last-child)", [marginRight(px(20))]),
       flexWrap(`wrap),
+      media(
+        "(max-width: 633px)",
+        [selector("div:not(:last-child)", [marginRight(px(0))])],
+      ),
     ]);
-  let inputWrapper =
+
+  let inputBox =
     style([
       display(`flex),
       flexDirection(`column),
-      marginBottom(px(10)),
+      marginBottom(Space.px12),
       flex(1),
     ]);
-  let label =
-    style([
-      textTransform(`uppercase),
-      fontSize(px(18)),
-      marginBottom(px(5)),
-      color(Colors.gray700),
-    ]);
+
   let input =
     style([
       borderRadius(px(2)),
       border(px(0), `none, `transparent),
-      fontSize(px(20)),
-      padding(px(5)),
+      Font.font18,
+      padding(Space.px8),
       color(Colors.gray900),
       boxShadow(
         ~x=px(0),
@@ -148,29 +205,31 @@ module Styles = {
   let textarea =
     style([
       borderRadius(px(2)),
-      fontSize(px(20)),
-      padding(px(5)),
-      minHeight(px(150)),
+      Font.font18,
+      padding(Space.px8),
+      minHeight(Space.px128),
       selector("&:invalid", [boxShadow(`transparent)]),
     ]);
+
   let footer =
     style([
       backgroundColor(Colors.gray900),
       color(Colors.gray50),
       textAlign(`center),
-      minHeight(px(60)),
+      minHeight(Space.px64),
       display(`flex),
       justifyContent(`center),
       alignItems(`center),
     ]);
-  let reach = style([padding2(~h=px(0), ~v=px(40))]);
+
   let buttonColor = Colors.redA200;
+
   let button =
     style([
-      fontSize(px(18)),
+      Font.font18,
       border(px(2), `solid, buttonColor),
       textTransform(`uppercase),
-      padding2(~h=px(30), ~v=px(10)),
+      padding2(~h=Space.px32, ~v=Space.px12),
       borderRadius(px(3)),
       backgroundColor(buttonColor),
       fontWeight(`bold),
@@ -190,6 +249,7 @@ module Styles = {
         ],
       ),
     ]);
+
   let topography =
     style([
       width(px(750)),
@@ -199,8 +259,13 @@ module Styles = {
       top(px(60)),
       zIndex(-1),
     ]);
+
   let contact =
-    style([padding2(~v=px(80), ~h=px(60)), maxWidth(em(50.0))]);
+    style([
+      padding2(~v=Space.px96, ~h=Space.px64),
+      maxWidth(em(50.0)),
+      media("(max-width: 600px)", [padding2(~h=Space.px24, ~v=Space.px32)]),
+    ]);
 };
 
 let component = ReasonReact.statelessComponent("Home");
@@ -236,9 +301,9 @@ let make = () => {
         <div className=Styles.header>
           <div className=Styles.logo>
             <img className=Styles.svg src=logo width="50px" height="50px" />
-            <h1> "Natives in Tech"->text </h1>
+            <h1 className=Styles.logoName> "Natives in Tech"->text </h1>
           </div>
-          <div className=Styles.links>
+          <div className=Styles.linksBox>
             <a href="#about"> "About"->text </a>
             <a href="#connect"> "Connect"->text </a>
             <a href="#contact"> "Contact"->text </a>
@@ -247,8 +312,7 @@ let make = () => {
       </div>
       <div className={j|$billboard |j}>
         <div className=Styles.billboardHeadline>
-          {j|Supporting software developers that serve Native communities|j}
-          ->text
+          {j|Supporting software developers serving Native communities|j}->text
         </div>
         <div className=Styles.frameBox>
           <div className=Styles.frame>
@@ -258,7 +322,7 @@ let make = () => {
         </div>
       </div>
       <div id="about" className=Styles.about>
-        <div className=Styles.containerContent>
+        <div className=Styles.containerBox>
           <h2> <span id="typing" /> </h2>
           <p className=Styles.content>
             {j|Welcome 👋. |j}->text
@@ -267,8 +331,8 @@ let make = () => {
             software application development that reinforces Native beliefs, knowledge, and identity. "
               ->text
             </strong>
-            "This is
-            achieved through several initiatives: creating a strong social media presence on platforms familiar to software developers,
+            "This is achieved through four initiatives: networking with aspiring and
+            experienced developers alike, creating a strong social media presence on platforms familiar to developers,
             hosting a yearly Natives in Tech conference, and building open source software that Native peoples can use to cultivate
             healthy online communities."
             ->text
@@ -280,7 +344,7 @@ let make = () => {
         <h2 className=Styles.connectHeadline>
           {j|Connect with us 🙌|j}->text
         </h2>
-        <div className=Styles.icons>
+        <div className=Styles.iconsBox>
           <a
             href="https://nativesintech.herokuapp.com/"
             target="_blank"
@@ -308,19 +372,19 @@ let make = () => {
         </div>
       </div>
       <div id="contact" className=Styles.contact>
-        <h2> {j|Ask a question or leave a comment 🖖|j}->text </h2>
+        <h2> {j|Ask a question or leave a comment 💬|j}->text </h2>
         <p>
           "We would love to hear from you! Feel free to send a message to "
           ->text
-          <a href="mailto:nativesintech@gmail.com">
-            "nativesintech@gmail.com"->text
+          <a href="mailto:hello@nativesintech.app">
+            "hello@nativesintech.app"->text
           </a>
-          {j| or drop us a line below 👇|j}->text
+          {j| or drop us a line below.|j}->text
         </p>
         <form
-          action="https://formspree.io/nativesintech@gmail.com" method="POST">
+          action="https://formspree.io/hello@nativesintech.app" method="POST">
           <div className=Styles.inputs>
-            <div className=Styles.inputWrapper>
+            <div className=Styles.inputBox>
               <input
                 required=true
                 className=Styles.input
@@ -329,7 +393,7 @@ let make = () => {
                 name="name"
               />
             </div>
-            <div className=Styles.inputWrapper>
+            <div className=Styles.inputBox>
               <input
                 required=true
                 className=Styles.input
@@ -339,7 +403,7 @@ let make = () => {
               />
             </div>
           </div>
-          <div className=Styles.inputWrapper>
+          <div className=Styles.inputBox>
             <textarea
               required=true
               className=Styles.textarea

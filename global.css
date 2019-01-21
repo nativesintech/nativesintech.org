@@ -9,11 +9,13 @@ html {
 
 h1 {
   color: #212121;
+  line-height: 1.75;
 }
 
 h2 {
   font-size: 36px;
   color: #212121;
+  line-height: 1.75;
 }
 
 p {
