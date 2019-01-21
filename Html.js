@@ -50,7 +50,7 @@ export default ({ App, render }) => {
         <meta property="og:url" content="http://natives-in-tech.netlify.com" />
         <meta
           property="og:image"
-          content="https://natives-in-tech.netlify.com/og-image.jpg"
+          content="https://natives-in-tech.netlify.com/images/og-image.jpg"
         />
 
         {/* Favicon */}
