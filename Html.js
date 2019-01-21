@@ -34,24 +34,50 @@ export default ({ App, render }) => {
         />
         <meta
           name="twitter:image"
-          content="https://avatars2.githubusercontent.com/u/35468375?v=4"
+          content="https://natives-in-tech.netlify.com/images/og-image.jpg"
         />
         {/* Open Graph Data */}
         <meta property="og:site_name" content="Natives in Tech" />
         <meta property="og:type" content="website" />
+        <meta property="og:image:height" content="319" />
+        <meta property="og:image:width" content="609" />
         <meta property="og:title" content="Natives in Tech" />
         <meta
           property="og:description"
           content="Natives in Tech is a coalition of Native and non-Native developers who seek
           to empower and support Native communities around the world through software development."
         />
+        <meta property="og:url" content="http://natives-in-tech.netlify.com" />
         <meta
           property="og:image"
-          content="https://avatars2.githubusercontent.com/u/35468375?v=4"
+          content="https://natives-in-tech.netlify.com/images/og-image.jpg"
         />
+
+        {/* Favicon */}
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#7b7b7b" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+        {/* Styles */}
         <link rel="stylesheet" href="/styles.css" />
         <style dangerouslySetInnerHTML={{ __html: css }} />
-        <script src="https://www.google.com/recaptcha/api.js" />
       </head>
       <body>
         <Main />
