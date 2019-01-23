@@ -43,13 +43,13 @@ Running the application locally requires a few steps.
 
 ## Road Map 🗺
 
-- [ ] - An Awesome Natives in Tech page per the info [here](https://github.com/nativesintech/awesome-natives-in-tech)
-- [ ] - A page dedicated to the Natives in Tech conference
-- [ ] - A page for users to nominate others for Awesome Natives in Tech
-- [ ] - A fancy error page for when pages don't exist (current error page looks 🤮)
-- [ ] - Move [blog](https://medium.com/natives-in-tech) from Medium to this site
-- [ ] - Build out a test suite to test the site
-- [ ] - Make this site awesome in anyway possible 😂
+- [ ] An Awesome Natives in Tech page per the info [here](https://github.com/nativesintech/awesome-natives-in-tech)
+- [ ] A page dedicated to the Natives in Tech conference
+- [ ] A page for users to nominate others for Awesome Natives in Tech
+- [ ] A fancy error page for when pages don't exist (current error page looks 🤮)
+- [ ] Move [blog](https://medium.com/natives-in-tech) from Medium to this site
+- [ ] Build out a test suite to test the site
+- [ ] Make this site awesome in anyway possible 😂
 
 ## Contributing 📝
 
