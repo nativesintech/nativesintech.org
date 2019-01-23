@@ -22,7 +22,7 @@ The [bs-css](https://babeljs.io/) library is the CSS-in-JS library used to style
 
 ### Netlify 🛫
 
-Deployment of the master branch and pull requests are built through the [Netlify](https://www.netlify.com/) service. This makes it easy for maintainer and contributors to check their work before merging into the master branch.
+Deployment of the master branch and pull requests are built through the [Netlify](https://www.netlify.com/) service. This makes it easy for maintainers and contributors to check their work before merging into the master branch.
 
 ### Webpack 🎒
 
