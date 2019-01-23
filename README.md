@@ -1,8 +1,8 @@
-![Natives in Tech](./public/images/og-image.jpg)
+![Natives in Tech](./public/images/natives-in-tech-logo-github.png)
 
-# Natives in Tech 💻
+# Natives in Tech
 
-Hello and welcome 👋. This is the repository for the Natives in Tech website. The website was created to give Natives in Tech a presence on the web and make it easier for this organization to be found by search engines. There are a lot of talented Native developers out there and we want to do our best to connect with them. This project is open source and we welcome contributions from the open source community! Please be advised we do have a [Code of Conduct](./CODE_OF_CONDUCT). Please give that a read if you would like to be a contributor. Thank you again for visiting the repo and we hope you can contribute your talent to this effort.
+Hello and welcome 👋. This is the repository for the Natives in Tech website. The website was created to give Natives in Tech a presence on the web and make it easier for this organization to be found by search engines. There are a lot of talented Native developers out there and we want to do our best to connect with them. This project is open source and we welcome contributions from the open source community! Please be advised we do have a [Code of Conduct](./CODE_OF_CONDUCT). Please give that a read if you would like to be a contributor. Thank you again for visiting this repo and we hope you can contribute your talent to this effort.
 
 ## Tech Stack 📚
 
