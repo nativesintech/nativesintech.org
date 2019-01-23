@@ -1,6 +1,6 @@
 {
-  "private": true,
-  "name": "@phenomic/example-reason-react-app",
+  "private": false,
+  "name": "natives-in-tech-website",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
