@@ -10,7 +10,7 @@ This project uses modern tooling to build the site. Below is a list of those too
 
 ### ReasonML and ReasonReact λ
 
-[ReasonML](https://reasonml.github.io/reason-react/) is a functional programming language that compiles down to JavaScript. It provides a lot of [ES2016+](https://babeljs.io/) features out of the box and has bindings to popular libraries like [React](https://reactjs.org/). This project uses [ReasonReact](https://reasonml.github.io/reason-react/) as its templating and style language. Specifically, we are using[Phenomic](https://phenomic.io/)'s ReasonReact configuration. For this reason, there are some residual files which are not being used currently but will likely be utilized in the future.
+[ReasonML](https://reasonml.github.io/reason-react/) is a functional programming language that compiles down to JavaScript. It provides a lot of [ES2016+](https://babeljs.io/) features out of the box and has bindings to popular libraries like [React](https://reactjs.org/). This project uses [ReasonReact](https://reasonml.github.io/reason-react/) as its templating and style language. Specifically, we are using [Phenomic](https://phenomic.io/)'s ReasonReact configuration. Because of this, there are some residual files which are not being used currently but will likely be utilized in the future.
 
 ### ES2016+ 🤓
 
