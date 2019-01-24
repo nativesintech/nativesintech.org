@@ -376,13 +376,13 @@ let make = () => {
         <p>
           "We would love to hear from you! Feel free to send a message to "
           ->text
-          <a href="mailto:hello@nativesintech.app">
-            "hello@nativesintech.app"->text
+          <a href="mailto:hello@nativesintech.org">
+            "hello@nativesintech.org"->text
           </a>
           {j| or drop us a line below.|j}->text
         </p>
         <form
-          action="https://formspree.io/hello@nativesintech.app" method="POST">
+          action="https://formspree.io/hello@nativesintech.org" method="POST">
           <div className=Styles.inputs>
             <div className=Styles.inputBox>
               <input

@@ -34,7 +34,7 @@ export default ({ App, render }) => {
         />
         <meta
           name="twitter:image"
-          content="https://nativesintech.app/images/og-image.jpg"
+          content="https://nativesintech.org/images/og-image.jpg"
         />
         {/* Open Graph Data */}
         <meta property="og:site_name" content="Natives in Tech" />
@@ -47,10 +47,10 @@ export default ({ App, render }) => {
           content="Natives in Tech is a coalition of Native and non-Native developers who seek
           to empower and support Native communities around the world through software development."
         />
-        <meta property="og:url" content="http://nativesintech.app" />
+        <meta property="og:url" content="http://nativesintech.org" />
         <meta
           property="og:image"
-          content="https://nativesintech.app/images/og-image.jpg"
+          content="https://nativesintech.org/images/og-image.jpg"
         />
 
         {/* Favicon */}
