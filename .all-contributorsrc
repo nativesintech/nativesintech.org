@@ -1,0 +1,25 @@
+{
+  "projectName": "natives-in-tech",
+  "projectOwner": "nativesintech",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "arecvlohe",
+      "name": "Adam Recvlohe",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/9747933?v=4",
+      "profile": "https://arecvlohe.github.io/simple-portfolio/",
+      "contributions": [
+        "design",
+        "code",
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
