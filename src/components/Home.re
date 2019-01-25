@@ -66,9 +66,9 @@ module Styles = {
       alignItems(`center),
       backgroundColor(Colors.gray900),
       selector("> div", [flex(1)]),
-      padding2(~h=Space.px64, ~v=px(0)),
+      padding2(~h=Space.px64, ~v=Space.px32),
       media("(max-width: 900px)", [flexDirection(`column)]),
-      media("(max-width: 600px)", [padding2(~h=Space.px24, ~v=px(0))]),
+      media("(max-width: 600px)", [padding2(~h=Space.px24, ~v=Space.px32)]),
     ]);
 
   let billboardHeadline =
@@ -107,10 +107,8 @@ module Styles = {
 
   let connect =
     style([
-      padding2(~v=Space.px128, ~h=Space.px64),
+      padding2(~v=Space.px192, ~h=Space.px64),
       backgroundColor(hex("222")),
-      color(hex("fff")),
-      selector("> h2", [margin(px(0)), Font.font48]),
       media(
         "(max-width: 600px)",
         [padding2(~h=Space.px24, ~v=Space.px128)],
@@ -119,6 +117,8 @@ module Styles = {
 
   let connectHeadline =
     style([
+      margin(px(0)),
+      Font.font48,
       color(hex("fff")),
       textAlign(`center),
       paddingBottom(Space.px64),
@@ -216,7 +216,7 @@ module Styles = {
       backgroundColor(Colors.gray900),
       color(Colors.gray50),
       textAlign(`center),
-      minHeight(Space.px64),
+      minHeight(Space.px96),
       display(`flex),
       justifyContent(`center),
       alignItems(`center),
