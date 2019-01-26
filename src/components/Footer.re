@@ -5,6 +5,9 @@ module Styles = {
 
   let footer =
     style([
+      position(`absolute),
+      bottom(px(0)),
+      width(`percent(100.0)),
       backgroundColor(Colors.gray900),
       color(Colors.gray50),
       textAlign(`center),
