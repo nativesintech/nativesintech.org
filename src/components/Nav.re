@@ -21,7 +21,8 @@ module Styles = {
 
   let logoImage = style([marginRight(px(10))]);
 
-  let orgName = style([media("(max-width: 600px)", [display(`none)])]);
+  let orgName =
+    style([Font.font24, media("(max-width: 600px)", [display(`none)])]);
 
   let linksBox =
     style([
@@ -44,12 +45,15 @@ let make = _children => {
             width="50px"
             height="50px"
           />
-          <h1 className=Styles.orgName> "Natives in Tech"->text </h1>
+          <h2 className=Styles.orgName> "Natives in Tech"->text </h2>
         </header>
       </PhenomicPresetReactApp.Link>
       <div className=Styles.linksBox>
         <PhenomicPresetReactApp.Link href="/about">
           "About"->text
+        </PhenomicPresetReactApp.Link>
+        <PhenomicPresetReactApp.Link href="/blog">
+          "Blog"->text
         </PhenomicPresetReactApp.Link>
       </div>
     </nav>,
