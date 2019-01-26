@@ -49,6 +49,9 @@ let make = _children => {
         </header>
       </PhenomicPresetReactApp.Link>
       <div className=Styles.linksBox>
+        <PhenomicPresetReactApp.Link href="/">
+          "Home"->text
+        </PhenomicPresetReactApp.Link>
         <PhenomicPresetReactApp.Link href="/about">
           "About"->text
         </PhenomicPresetReactApp.Link>
