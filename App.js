@@ -24,7 +24,7 @@ const routes = () => (
     />
     <Route
       path="/blog/after/:after"
-      component={withPhenomicApi(Posts.jsComponent)}
+      component={withPhenomicApi(Posts.jsComponent, Posts.queries)}
     />
     <Route
       path="blog/*"
