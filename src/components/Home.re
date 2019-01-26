@@ -189,17 +189,10 @@ module Styles = {
   let input =
     style([
       borderRadius(px(2)),
-      border(px(0), `none, `transparent),
+      border(px(1), `solid, Colors.gray300),
       Font.font18,
       padding(Space.px8),
       color(Colors.gray900),
-      boxShadow(
-        ~x=px(0),
-        ~y=px(0),
-        ~spread=px(1),
-        ~blur=px(1),
-        Colors.gray300,
-      ),
     ]);
 
   let textarea =
