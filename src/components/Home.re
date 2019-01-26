@@ -283,13 +283,13 @@ let make = () => {
               {j|Welcome 👋. |j}->text
               <strong>
                 "Natives in Tech is a coalition of Native and non-Native software developers whose goal is to support
-            software application development that reinforces Native beliefs, knowledge, and identity. "
+                software application development that reinforces Native beliefs, knowledge, and identity. "
                 ->text
               </strong>
               "This is achieved through four initiatives: networking with aspiring and
-            experienced developers alike, creating a strong social media presence on platforms familiar to developers,
-            hosting a yearly Natives in Tech conference, and building open source software that Native peoples can use to cultivate
-            healthy online communities."
+                experienced developers alike, creating a strong social media presence on platforms familiar to developers,
+                hosting a yearly Natives in Tech conference, and building open source software that Native peoples can use to cultivate
+                healthy online communities."
               ->text
             </p>
           </div>
