@@ -243,7 +243,14 @@ let make = () => {
         Typing.options(
           ~strings=
             Belt.Array.map(
-              [|"Hello", {j|s@^gaêl'A|j}, "Hesci", {j|Yá'át'ééh|j}|], x =>
+              [|
+                "Hello",
+                {j|s@^gaêl'A|j},
+                "Hesci",
+                {j|Yá'át'ééh|j},
+                "Halito",
+              |],
+              x =>
               x ++ "!"
             ),
           ~typeSpeed=70,
