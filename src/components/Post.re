@@ -60,9 +60,10 @@ let make = (~post) => {
          <div className=Styles.wrapper>
            <BsReactHelmet>
              <title>
-               "Natives in Tech Blog - "->text
+               "Natives in Tech - Blog - "->text
                {post##title->text}
              </title>
+             <meta name="keywords" content={post##tags} />
            </BsReactHelmet>
            <Frame>
              <article className=Styles.container>

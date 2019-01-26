@@ -6,6 +6,7 @@ type partialPost = {
   "tagline": string,
   "minRead": string,
   "author": string,
+  "tags": string,
 };
 
 type posts =
@@ -20,6 +21,7 @@ type post = {
   "date": string,
   "minRead": string,
   "author": string,
+  "tags": string,
   "body": PhenomicPresetReactApp.BodyRenderer.jsBody,
 };
 
