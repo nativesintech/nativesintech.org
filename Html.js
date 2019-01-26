@@ -11,7 +11,7 @@ export default ({ App, render }) => {
         <meta charSet="utf-8" />
         <meta
           name="google-site-verification"
-          content="xkTFh4EDEOcNJLVMxDzneV9gjBsaeqCx6YOBQ3cABFk"
+          content="SyuiaRpl6xD19jqWl4zCCc7bkeawvTUU43Nr2h7rXoY"
         />
         <meta
           name="viewport"
@@ -56,7 +56,6 @@ export default ({ App, render }) => {
           property="og:image"
           content="https://nativesintech.org/images/og-image.jpg"
         />
-
         {/* Favicon */}
         <link
           rel="apple-touch-icon"
