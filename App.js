@@ -7,6 +7,7 @@ import { withPhenomicApi } from "@phenomic/preset-react-app/lib/es6/src/phenomic
 
 import * as Home from "./lib/es6/src/components/Home.bs.js";
 import * as Post from "./lib/es6/src/components/Post.bs.js";
+import * as About from "./lib/es6/src/components/About.bs.js";
 import ErrorPage from "./lib/es6/src/components/ErrorPage.bs.js";
 
 import "normalize.css";
@@ -15,6 +16,7 @@ import "./global.css";
 const routes = () => (
   <Router history={browserHistory}>
     <Route path="/" component={withPhenomicApi(Home.jsComponent)} />
+    <Route path="/about" component={About.jsComponent} />
     <Route path="/after/:after" component={withPhenomicApi(Home.jsComponent)} />
     <Route
       path="blog/*"
