@@ -3,13 +3,23 @@ import { css } from "emotion";
 
 const wrapper = css`
   border: 1px solid #e0e0e0;
-  padding: 20px;
-  border-radius: 3px;
+  padding: 24px;
+  border-radius: 4px;
+`;
+
+const header = css`
+  @media screen and (max-width: 600px) {
+    font-size: 32px;
+  }
 `;
 
 const paragraph = css`
   margin: 8px 0;
   font-size: 18px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+  }
 `;
 
 const input = css`
@@ -18,6 +28,12 @@ const input = css`
   font-size: 18px;
   padding: 8px;
   color: #212121;
+  width: 400px;
+
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+    width: 100%;
+  }
 `;
 
 const hiddenInput = css`
@@ -39,6 +55,10 @@ const button = css`
     background-color: #fafafa;
     color: #ff5252;
   }
+
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+  }
 `;
 
 export default () => {
@@ -53,7 +73,7 @@ export default () => {
         target="_blank"
       >
         <div id="mc_embed_signup_scroll">
-          <h2>Join our mailing list</h2>
+          <h2 className={header}>Join our mailing list</h2>
           <p className={paragraph}>
             Get the latest news from Natives in Tech. No spam. Unsubscribe at
             any time.
