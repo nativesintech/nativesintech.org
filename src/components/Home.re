@@ -1,9 +1,6 @@
 open Helpers;
 
 [@bs.module]
-external logo: string = "../../../../public/images/natives-in-tech-logo.png";
-
-[@bs.module]
 external slack: string = "../../../../public/images/slack-logo.svg";
 
 [@bs.module]
@@ -16,31 +13,16 @@ external medium: string = "../../../../public/images/medium-logo.svg";
 external twitter: string = "../../../../public/images/twitter-logo.svg";
 
 [@bs.module]
-external folk: string = "../../../../public/images/folk-pattern-black.png";
-
-[@bs.module]
 external frame: string = "../../../../public/images/native-land-image.jpg";
 
 module Styles = {
   open Css;
-
-  let container = style([margin2(~h=auto, ~v=px(0)), position(`relative)]);
 
   let containerBox =
     style([
       maxWidth(em(50.0)),
       position(`relative),
       padding2(~h=Space.px64, ~v=px(0)),
-      media("(max-width: 600px)", [padding2(~h=Space.px24, ~v=px(0))]),
-    ]);
-
-  let header =
-    style([
-      display(`flex),
-      justifyContent(`spaceBetween),
-      alignItems(`center),
-      padding2(~h=Space.px64, ~v=px(0)),
-      minHeight(Space.px96),
       media("(max-width: 600px)", [padding2(~h=Space.px24, ~v=px(0))]),
     ]);
 
@@ -204,17 +186,6 @@ module Styles = {
       selector("&:invalid", [boxShadow(`transparent)]),
     ]);
 
-  let footer =
-    style([
-      backgroundColor(Colors.gray900),
-      color(Colors.gray50),
-      textAlign(`center),
-      minHeight(Space.px96),
-      display(`flex),
-      justifyContent(`center),
-      alignItems(`center),
-    ]);
-
   let buttonColor = Colors.redA200;
 
   let button =
@@ -289,129 +260,119 @@ let make = () => {
     let connect = Styles.connect;
     let billboard = Styles.billboard;
     <div>
-      <BsReactHelmet> <title> "Natives in Tech"->text </title> </BsReactHelmet>
-      <div className=Styles.container>
-        <div className=Styles.header>
-          <div className=Styles.logo>
-            <img className=Styles.svg src=logo width="50px" height="50px" />
-            <h1 className=Styles.logoName> "Natives in Tech"->text </h1>
+      <BsReactHelmet>
+        <title> "Natives in Tech - Home"->text </title>
+      </BsReactHelmet>
+      <Frame>
+        <div className={j|$billboard |j}>
+          <div className=Styles.billboardHeadline>
+            {j|Supporting software developers serving Native communities|j}
+            ->text
           </div>
-          <div className=Styles.linksBox>
-            <a href="#about"> "About"->text </a>
-            <a href="#connect"> "Connect"->text </a>
-            <a href="#contact"> "Contact"->text </a>
-          </div>
-        </div>
-      </div>
-      <div className={j|$billboard |j}>
-        <div className=Styles.billboardHeadline>
-          {j|Supporting software developers serving Native communities|j}->text
-        </div>
-        <div className=Styles.frameBox>
-          <div className=Styles.frame>
-            <div className="screenshot-safari" />
-            <img width="100%" height="auto" src=frame />
+          <div className=Styles.frameBox>
+            <div className=Styles.frame>
+              <div className="screenshot-safari" />
+              <img width="100%" height="auto" src=frame />
+            </div>
           </div>
         </div>
-      </div>
-      <div id="about" className=Styles.about>
-        <div className=Styles.containerBox>
-          <h2> <span id="typing" /> </h2>
-          <p className=Styles.content>
-            {j|Welcome 👋. |j}->text
-            <strong>
-              "Natives in Tech is a coalition of Native and non-Native software developers whose goal is to support
+        <div id="about" className=Styles.about>
+          <div className=Styles.containerBox>
+            <h2> <span id="typing" /> </h2>
+            <p className=Styles.content>
+              {j|Welcome 👋. |j}->text
+              <strong>
+                "Natives in Tech is a coalition of Native and non-Native software developers whose goal is to support
             software application development that reinforces Native beliefs, knowledge, and identity. "
-              ->text
-            </strong>
-            "This is achieved through four initiatives: networking with aspiring and
+                ->text
+              </strong>
+              "This is achieved through four initiatives: networking with aspiring and
             experienced developers alike, creating a strong social media presence on platforms familiar to developers,
             hosting a yearly Natives in Tech conference, and building open source software that Native peoples can use to cultivate
             healthy online communities."
+              ->text
+            </p>
+          </div>
+          <div className={j|topography $topography|j} />
+        </div>
+        <div id="connect" className={j|$connect circuit-board |j}>
+          <h2 className=Styles.connectHeadline>
+            {j|Connect with us 🙌|j}->text
+          </h2>
+          <div className=Styles.iconsBox>
+            <a
+              href="https://nativesintech.herokuapp.com/"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img src=slack className=Styles.icon />
+            </a>
+            <a
+              href="https://medium.com/natives-in-tech"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img src=medium className=Styles.icon />
+            </a>
+            <a
+              href="https://github.com/nativesintech"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img src=github className=Styles.icon />
+            </a>
+            <a
+              href="https://twitter.com/nativesintech"
+              target="_blank"
+              rel="noopener noreferrer">
+              <img src=twitter className=Styles.icon />
+            </a>
+          </div>
+        </div>
+        <div id="contact" className=Styles.contact>
+          <h2> {j|Ask a question or leave a comment 💬|j}->text </h2>
+          <p>
+            "We would love to hear from you! Feel free to send a message to "
             ->text
+            <a href="mailto:hello@nativesintech.org">
+              "hello@nativesintech.org"->text
+            </a>
+            {j| or drop us a line below.|j}->text
           </p>
-        </div>
-        <div className={j|topography $topography|j} />
-      </div>
-      <div id="connect" className={j|$connect circuit-board |j}>
-        <h2 className=Styles.connectHeadline>
-          {j|Connect with us 🙌|j}->text
-        </h2>
-        <div className=Styles.iconsBox>
-          <a
-            href="https://nativesintech.herokuapp.com/"
-            target="_blank"
-            rel="noopener noreferrer">
-            <img src=slack className=Styles.icon />
-          </a>
-          <a
-            href="https://medium.com/natives-in-tech"
-            target="_blank"
-            rel="noopener noreferrer">
-            <img src=medium className=Styles.icon />
-          </a>
-          <a
-            href="https://github.com/nativesintech"
-            target="_blank"
-            rel="noopener noreferrer">
-            <img src=github className=Styles.icon />
-          </a>
-          <a
-            href="https://twitter.com/nativesintech"
-            target="_blank"
-            rel="noopener noreferrer">
-            <img src=twitter className=Styles.icon />
-          </a>
-        </div>
-      </div>
-      <div id="contact" className=Styles.contact>
-        <h2> {j|Ask a question or leave a comment 💬|j}->text </h2>
-        <p>
-          "We would love to hear from you! Feel free to send a message to "
-          ->text
-          <a href="mailto:hello@nativesintech.org">
-            "hello@nativesintech.org"->text
-          </a>
-          {j| or drop us a line below.|j}->text
-        </p>
-        <form
-          action="https://formspree.io/hello@nativesintech.org" method="POST">
-          <div className=Styles.inputs>
-            <div className=Styles.inputBox>
-              <input
-                required=true
-                className=Styles.input
-                type_="text"
-                placeholder="Name"
-                name="name"
-              />
+          <form
+            action="https://formspree.io/hello@nativesintech.org"
+            method="POST">
+            <div className=Styles.inputs>
+              <div className=Styles.inputBox>
+                <input
+                  required=true
+                  className=Styles.input
+                  type_="text"
+                  placeholder="Name"
+                  name="name"
+                />
+              </div>
+              <div className=Styles.inputBox>
+                <input
+                  required=true
+                  className=Styles.input
+                  type_="email"
+                  placeholder="Email"
+                  name="_replyto"
+                />
+              </div>
             </div>
             <div className=Styles.inputBox>
-              <input
+              <textarea
                 required=true
-                className=Styles.input
-                type_="email"
-                placeholder="Email"
-                name="_replyto"
+                className=Styles.textarea
+                placeholder="Message"
+                name="message"
               />
             </div>
-          </div>
-          <div className=Styles.inputBox>
-            <textarea
-              required=true
-              className=Styles.textarea
-              placeholder="Message"
-              name="message"
-            />
-          </div>
-          <button className=Styles.button type_="submit" value="Send">
-            "Submit"->text
-          </button>
-        </form>
-      </div>
-      <footer className=Styles.footer>
-        {j|Made with ❤️ by Natives in Tech |j}->text
-      </footer>
+            <button className=Styles.button type_="submit" value="Send">
+              "Submit"->text
+            </button>
+          </form>
+        </div>
+      </Frame>
     </div>;
   },
 };
