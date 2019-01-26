@@ -82,6 +82,7 @@ let make = (~post) => {
                <section className=Styles.content>
                  <PhenomicPresetReactApp.BodyRenderer body=post##body />
                </section>
+               <section> <SubscribeForm /> </section>
              </article>
            </Frame>
          </div>
