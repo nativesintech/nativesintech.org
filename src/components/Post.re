@@ -66,7 +66,11 @@ let make = (~post) => {
              <meta name="keywords" content={post##tags} />
            </BsReactHelmet>
            <Frame>
+             <div />
              <article className=Styles.container>
+               <PhenomicPresetReactApp.Link href="/blog">
+                 {js| ← Back|js}->text
+               </PhenomicPresetReactApp.Link>
                <header>
                  <h1 className=Styles.title> {post##title->text} </h1>
                  <div className=Styles.metaBox>
