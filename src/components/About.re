@@ -53,9 +53,10 @@ let make = _children => {
           <p>
             "Natives in Tech is a coalition of Native and non-Native software developers whose goal is to support
               software application development that reinforces Native beliefs, knowledge, and identity.
-              This is achieved through four initiatives: creating a strong social media presence on platforms familiar to software developers,
+              This is achieved through four initiatives: networking with aspiring and
+              experienced developers alike, creating a strong social media presence on platforms familiar to developers,
               hosting a yearly Natives in Tech conference, and building open source software that Native peoples can use to cultivate
-              healthy online communities. "
+              healthy online communities."
             ->text
             <strong>
               "Through these initiatives we hope to build a strong community of developers that have the power to shape the online future of the communities they support."
