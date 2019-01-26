@@ -51,7 +51,6 @@ export default () => {
         name="mc-embedded-subscribe-form"
         className="validate"
         target="_blank"
-        formNoValidate
       >
         <div id="mc_embed_signup_scroll">
           <h2>Join our mailing list</h2>
