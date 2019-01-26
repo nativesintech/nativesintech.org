@@ -30,7 +30,7 @@ let make = _children => {
         <title> "Natives in Tech - About"->text </title>
       </BsReactHelmet>
       <Frame>
-        <div className=Styles.container>
+        <section className=Styles.container>
           <header> <h1 className=Styles.header> "About"->text </h1> </header>
           <p>
             "In recent years, open source development has exploded and a new generation of software applications
@@ -63,7 +63,7 @@ let make = _children => {
               ->text
             </strong>
           </p>
-        </div>
+        </section>
       </Frame>
     </div>,
 };

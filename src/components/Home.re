@@ -152,11 +152,11 @@ module Styles = {
   let inputs =
     style([
       display(`flex),
-      selector("div:not(:last-child)", [marginRight(px(20))]),
+      selector("span:not(:last-child)", [marginRight(px(20))]),
       flexWrap(`wrap),
       media(
         "(max-width: 633px)",
-        [selector("div:not(:last-child)", [marginRight(px(0))])],
+        [selector("span:not(:last-child)", [marginRight(px(0))])],
       ),
     ]);
 
@@ -271,7 +271,7 @@ let make = () => {
         <title> "Natives in Tech - Home"->text </title>
       </BsReactHelmet>
       <Frame>
-        <div className={j|$billboard |j}>
+        <section className={j|$billboard |j}>
           <div className=Styles.billboardHeadline>
             {j|Supporting software developers serving Native communities|j}
             ->text
@@ -282,8 +282,8 @@ let make = () => {
               <img width="100%" height="auto" src=frame />
             </div>
           </div>
-        </div>
-        <div id="about" className=Styles.about>
+        </section>
+        <section id="about" className=Styles.about>
           <div className=Styles.containerBox>
             <h2> <span id="typing" /> </h2>
             <p className=Styles.content>
@@ -301,8 +301,8 @@ let make = () => {
             </p>
           </div>
           <div className={j|topography $topography|j} />
-        </div>
-        <div id="connect" className={j|$connect circuit-board |j}>
+        </section>
+        <section id="connect" className={j|$connect circuit-board |j}>
           <h2 className=Styles.connectHeadline>
             {j|Connect with us 🙌|j}->text
           </h2>
@@ -332,8 +332,8 @@ let make = () => {
               <img src=twitter className=Styles.icon />
             </a>
           </div>
-        </div>
-        <div id="contact" className=Styles.contact>
+        </section>
+        <section id="contact" className=Styles.contact>
           <h2> {j|Ask a question or leave a comment 💬|j}->text </h2>
           <p>
             "We would love to hear from you! Feel free to send a message to "
@@ -347,7 +347,7 @@ let make = () => {
             action="https://formspree.io/hello@nativesintech.org"
             method="POST">
             <div className=Styles.inputs>
-              <div className=Styles.inputBox>
+              <span className=Styles.inputBox>
                 <input
                   required=true
                   className=Styles.input
@@ -355,8 +355,8 @@ let make = () => {
                   placeholder="Name"
                   name="name"
                 />
-              </div>
-              <div className=Styles.inputBox>
+              </span>
+              <span className=Styles.inputBox>
                 <input
                   required=true
                   className=Styles.input
@@ -364,21 +364,21 @@ let make = () => {
                   placeholder="Email"
                   name="_replyto"
                 />
-              </div>
+              </span>
             </div>
-            <div className=Styles.inputBox>
+            <span className=Styles.inputBox>
               <textarea
                 required=true
                 className=Styles.textarea
                 placeholder="Message"
                 name="message"
               />
-            </div>
+            </span>
             <button className=Styles.button type_="submit" value="Send">
               "Submit"->text
             </button>
           </form>
-        </div>
+        </section>
       </Frame>
     </div>;
   },
