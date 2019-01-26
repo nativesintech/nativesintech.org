@@ -56,7 +56,7 @@ let make = _children => {
               This is achieved through four initiatives: networking with aspiring and
               experienced developers alike, creating a strong social media presence on platforms familiar to developers,
               hosting a yearly Natives in Tech conference, and building open source software that Native peoples can use to cultivate
-              healthy online communities."
+              healthy online communities. "
             ->text
             <strong>
               "Through these initiatives we hope to build a strong community of developers that have the power to shape the online future of the communities they support."
