@@ -4,3 +4,4 @@ dist
 lib
 .bsb.lock
 .env
+yarn-error.log

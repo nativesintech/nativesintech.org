@@ -59,7 +59,7 @@ module.exports = (/* config: PhenomicConfig */) => ({
       }),
     process.env.PHENOMIC_ENV !== "static" &&
       new webpack.HotModuleReplacementPlugin(),
-    new Dotenv()
+    new Dotenv({ systemvars: true })
   ].filter(Boolean),
 
   optimization: {
