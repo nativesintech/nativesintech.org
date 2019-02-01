@@ -1,7 +1,6 @@
 type node = {
   avatarUrl: option(string),
   bio: option(string),
-  company: option(string),
   email: option(string),
   location: option(string),
   name: option(string),
@@ -23,7 +22,6 @@ module GitHubGraphQL = {
       avatarUrl: json |> field("avatarUrl", optional(string)),
       email: json |> field("email", optional(string)),
       bio: json |> field("bio", optional(string)),
-      company: json |> field("company", optional(string)),
       location: json |> field("location", optional(string)),
       websiteUrl: json |> field("websiteUrl", optional(string)),
       name: json |> field("name", optional(string)),
