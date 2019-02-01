@@ -2,6 +2,15 @@ open Helpers;
 
 [@bs.val] external token: string = "process.env.GITHUB_TOKEN";
 
+[@bs.module]
+external github: string = "../../../../public/images/github-black-logo.svg";
+
+[@bs.module] external link: string = "../../../../public/images/link.svg";
+
+[@bs.module] external mail: string = "../../../../public/images/mail.svg";
+
+[@bs.module] external branch: string = "../../../../public/images/branch.svg";
+
 module Styles = {
   open Css;
 
@@ -52,6 +61,22 @@ module Styles = {
       Font.font12,
       paddingTop(Space.px8),
       paddingBottom(Space.px4),
+    ]);
+
+  let name = style([Font.font30]);
+
+  let location = style([Font.font18, color(Colors.gray500)]);
+  let username = style([Font.font18, color(Colors.gray500)]);
+  let bio = style([marginTop(Space.px12)]);
+
+  let iconsBox = style([display(`flex), marginTop(Space.px16)]);
+
+  let icon =
+    style([
+      width(px(30)),
+      height(px(30)),
+      marginRight(Space.px24),
+      alignItems(`center),
     ]);
 };
 
@@ -139,54 +164,49 @@ let make = _children => {
           <div className=Styles.usersBox>
             {self.state.members
              |> List.map((m: Decoder.edge) => {
-                  let orShruggie =
-                    Belt.Option.(
-                      mapWithDefault(_, {j|¯\\_(ツ)_/¯|j}, v =>
-                        switch (v) {
-                        | "" => {j|¯\\_(ツ)_/¯|j}
-                        | _ => v
-                        }
-                      )
-                    );
-                  let (
-                    img,
-                    bio,
-                    company,
-                    email,
-                    location,
-                    login,
-                    name,
-                    websiteUrl,
-                  ) = (
-                    m.node.avatarUrl->orShruggie,
-                    m.node.bio->orShruggie,
-                    m.node.company->orShruggie,
-                    m.node.email->orShruggie,
-                    m.node.location->orShruggie,
-                    m.node.login->orShruggie,
-                    m.node.name->orShruggie,
-                    m.node.websiteUrl->orShruggie,
+                  let orStr = Belt.Option.(getWithDefault(_, ""));
+                  let (img, bio, email, location, login, name, websiteUrl) = (
+                    m.node.avatarUrl->orStr,
+                    m.node.bio->orStr,
+                    m.node.email->orStr,
+                    m.node.location->orStr,
+                    m.node.login->orStr,
+                    m.node.name->orStr,
+                    m.node.websiteUrl->orStr,
                   );
 
                   <div className=Styles.userBox>
                     <div className={Styles.image(img)} />
                     <div className=Styles.content>
-                      <div className=Styles.label> "Name"->text </div>
-                      <div> name->text </div>
-                      <div className=Styles.label>
-                        "GitHub Username"->text
+                      <div className=Styles.name> name->text </div>
+                      <div className=Styles.location> location->text </div>
+                      <div className=Styles.bio> bio->text </div>
+                      <div className=Styles.iconsBox>
+                        {email !== "" ?
+                           <a
+                             href={j|mailto:$email|j}
+                             target="_blank"
+                             rel="noopener noreferrer">
+                             <img src=mail className=Styles.icon />
+                           </a> :
+                           nothing}
+                        {websiteUrl !== "" ?
+                           <a
+                             href=websiteUrl
+                             target="_blank"
+                             rel="noopener noreferrer">
+                             <img src=link className=Styles.icon />
+                           </a> :
+                           nothing}
+                        {login !== "" ?
+                           <a
+                             href={j|https://github.com/$login|j}
+                             target="_blank"
+                             rel="noopener noreferrer">
+                             <img src=branch className=Styles.icon />
+                           </a> :
+                           nothing}
                       </div>
-                      <div> login->text </div>
-                      <div className=Styles.label> "Email"->text </div>
-                      <div> email->text </div>
-                      <div className=Styles.label> "Location"->text </div>
-                      <div> location->text </div>
-                      <div className=Styles.label> "Company"->text </div>
-                      <div> company->text </div>
-                      <div className=Styles.label> "Bio"->text </div>
-                      <div> bio->text </div>
-                      <div className=Styles.label> "Website"->text </div>
-                      <div> websiteUrl->text </div>
                     </div>
                   </div>;
                 })
