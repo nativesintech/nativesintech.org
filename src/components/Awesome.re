@@ -193,6 +193,43 @@ let make = _children => {
   },
   render: self => {
     <div>
+      <BsReactHelmet>
+        <title> "Natives in Tech - Awesome Natives in Tech"->text </title>
+        <meta
+          name="description"
+          content="A list of Native and non-Native developers working in the software development industry that represent or serve Native communities"
+        />
+        <meta
+          name="keywords"
+          content="natives in tech, natives, indigenous, tech, software development, open source, awesome natives in tech"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@nativesintech" />
+        <meta name="twitter:creator" content="@nativesintech" />
+        <meta name="twitter:title" content="Awesome Natives in Tech" />
+        <meta
+          name="twitter:description"
+          content="A list of Native and non-Native developers working in the software development industry that represent or serve Native communities"
+        />
+        <meta
+          name="twitter:image"
+          content="https://nativesintech.org/images/og-image.jpg"
+        />
+        <meta property="og:site_name" content="Natives in Tech" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image:height" content="319" />
+        <meta property="og:image:width" content="609" />
+        <meta property="og:title" content="Awesome Natives in Tech" />
+        <meta
+          property="og:description"
+          content="A list of Native and non-Native developers working in the software development industry that represent or serve Native communities"
+        />
+        <meta property="og:url" content="http://nativesintech.org/awesome" />
+        <meta
+          property="og:image"
+          content="https://nativesintech.org/images/og-image.jpg"
+        />
+      </BsReactHelmet>
       <Frame>
         <div className=Styles.billboard>
           <h1 className=Styles.header> "Awesome Natives in Tech"->text </h1>
