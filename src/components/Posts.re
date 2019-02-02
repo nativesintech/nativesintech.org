@@ -5,28 +5,34 @@ module Styles = {
 
   let container =
     style([
-      padding2(~h=Space.px64, ~v=Space.px48),
-      media("(max-width: 600px)", [padding2(~h=Space.px24, ~v=Space.px48)]),
+      padding2(~h=Shared.Spacer.px64, ~v=Shared.Spacer.px48),
+      media(
+        "(max-width: 600px)",
+        [padding2(~h=Shared.Spacer.px24, ~v=Shared.Spacer.px48)],
+      ),
     ]);
 
   let link = style([display(`inlineBlock)]);
 
   let title =
-    style([Font.font36, selector(":hover", [color(Colors.redA200)])]);
+    style([
+      Shared.FontSize.px36,
+      selector(":hover", [color(Shared.Colors.redA200)]),
+    ]);
 
   let metaBox =
     style([
       display(`flex),
       flexWrap(`wrap),
-      color(Colors.gray500),
+      color(Shared.Colors.gray500),
       selector("> small:not(:last-child)", [marginRight(px(5))]),
     ]);
 
   let tagline =
     style([
-      Font.font16,
+      Shared.FontSize.px16,
       width(`percent(100.0)),
-      margin2(~v=Space.px4, ~h=px(0)),
+      margin2(~v=Shared.Spacer.px4, ~h=px(0)),
     ]);
 };
 

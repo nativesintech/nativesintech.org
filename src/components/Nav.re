@@ -11,23 +11,26 @@ module Styles = {
       display(`flex),
       justifyContent(`spaceBetween),
       alignItems(`center),
-      padding2(~h=Space.px64, ~v=px(0)),
-      minHeight(Space.px96),
-      media("(max-width: 600px)", [padding2(~h=Space.px24, ~v=px(0))]),
-      borderBottom(px(1), `solid, Colors.gray300),
+      padding2(~h=Shared.Spacer.px64, ~v=px(0)),
+      minHeight(Shared.Spacer.px96),
+      borderBottom(px(1), `solid, Shared.Colors.gray300),
+      Shared.Styles.mobile([padding2(~h=Shared.Spacer.px24, ~v=px(0))]),
     ]);
 
   let logoBox = style([display(`flex), alignItems(`center)]);
 
-  let logoImage = style([marginRight(px(10))]);
+  let logoImage = style([marginRight(Shared.Spacer.px12)]);
 
   let orgName =
-    style([Font.font24, media("(max-width: 600px)", [display(`none)])]);
+    style([
+      Shared.FontSize.px24,
+      Shared.Styles.mobile([display(`none)]),
+    ]);
 
   let linksBox =
     style([
       display(`flex),
-      selector("> a:not(:last-child)", [marginRight(px(10))]),
+      selector("> a:not(:last-child)", [marginRight(Shared.Spacer.px12)]),
     ]);
 };
 

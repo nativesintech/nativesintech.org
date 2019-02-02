@@ -17,21 +17,21 @@ module Styles = {
   let billboard =
     style([
       textAlign(`center),
-      padding2(~v=Space.px192, ~h=Space.px64),
-      backgroundColor(Colors.gray900),
-      marginBottom(Space.px96),
+      padding2(~v=Shared.Spacer.px192, ~h=Shared.Spacer.px64),
+      backgroundColor(Shared.Colors.gray900),
+      marginBottom(Shared.Spacer.px96),
       Shared.Styles.mobile([
-        padding2(~v=Space.px128, ~h=Space.px24),
-        marginBottom(Space.px64),
+        padding2(~v=Shared.Spacer.px128, ~h=Shared.Spacer.px24),
+        marginBottom(Shared.Spacer.px64),
       ]),
     ]);
 
-  let header = style([Font.font60, color(hex("fff"))]);
+  let header = style([Shared.FontSize.px60, color(hex("fff"))]);
 
   let tagline =
     style([
-      color(Colors.gray500),
-      maxWidth(Space.px640),
+      color(Shared.Colors.gray500),
+      maxWidth(Shared.Spacer.px640),
       margin2(~v=px(0), ~h=`auto),
     ]);
 
@@ -49,9 +49,9 @@ module Styles = {
     style([
       display(`flex),
       flexDirection(`column),
-      maxWidth(Space.px384),
-      marginBottom(Space.px128),
-      borderRadius(Space.px4),
+      maxWidth(Shared.Spacer.px384),
+      marginBottom(Shared.Spacer.px128),
+      borderRadius(Shared.Spacer.px4),
       borderTopLeftRadius(px(0)),
       borderTopRightRadius(px(0)),
       boxShadow(
@@ -60,11 +60,11 @@ module Styles = {
         ~blur=px(2),
         ~spread=px(2),
         ~inset=false,
-        Colors.gray200,
+        Shared.Colors.gray200,
       ),
       Shared.Styles.mobile([
-        marginBottom(Space.px128),
-        maxWidth(Space.px256),
+        marginBottom(Shared.Spacer.px128),
+        maxWidth(Shared.Spacer.px256),
       ]),
     ]);
 
@@ -73,36 +73,43 @@ module Styles = {
       backgroundImage(`url(url)),
       backgroundRepeat(`noRepeat),
       backgroundSize(`cover),
-      width(Space.px384),
-      height(Space.px384),
-      borderBottom(px(1), `solid, Colors.gray200),
-      Shared.Styles.mobile([width(Space.px256), height(Space.px256)]),
+      width(Shared.Spacer.px384),
+      height(Shared.Spacer.px384),
+      borderBottom(px(1), `solid, Shared.Colors.gray200),
+      Shared.Styles.mobile([
+        width(Shared.Spacer.px256),
+        height(Shared.Spacer.px256),
+      ]),
     ]);
 
-  let content = style([padding(Space.px24)]);
+  let content = style([padding(Shared.Spacer.px24)]);
 
-  let name = style([Font.font30]);
+  let name = style([Shared.FontSize.px30]);
 
   let location =
-    style([Font.font18, color(Colors.gray500), marginTop(Space.px4)]);
+    style([
+      Shared.FontSize.px18,
+      color(Shared.Colors.gray500),
+      marginTop(Shared.Spacer.px4),
+    ]);
 
-  let username = style([Font.font18, color(Colors.gray500)]);
+  let username = style([Shared.FontSize.px18, color(Shared.Colors.gray500)]);
 
   let bio =
     style([
-      marginTop(Space.px12),
-      Font.font16,
-      color(Colors.gray800),
+      marginTop(Shared.Spacer.px12),
+      Shared.FontSize.px16,
+      color(Shared.Colors.gray800),
       lineHeight(`abs(1.5)),
     ]);
 
-  let iconsBox = style([display(`flex), marginTop(Space.px16)]);
+  let iconsBox = style([display(`flex), marginTop(Shared.Spacer.px16)]);
 
   let icon =
     style([
       width(px(28)),
       height(px(28)),
-      marginRight(Space.px16),
+      marginRight(Shared.Spacer.px16),
       alignItems(`center),
     ]);
 };
