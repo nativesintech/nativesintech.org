@@ -9,6 +9,7 @@ import * as Home from "./lib/es6/src/components/Home.bs.js";
 import * as Posts from "./lib/es6/src/components/Posts.bs.js";
 import * as Post from "./lib/es6/src/components/Post.bs.js";
 import * as About from "./lib/es6/src/components/About.bs.js";
+import * as Awesome from "./lib/es6/src/components/Awesome.bs.js";
 import ErrorPage from "./lib/es6/src/components/ErrorPage.bs.js";
 
 import "normalize.css";
@@ -18,6 +19,7 @@ const routes = () => (
   <Router history={browserHistory}>
     <Route path="/" component={Home.jsComponent} />
     <Route path="/about" component={About.jsComponent} />
+    <Route path="/awesome" component={Awesome.jsComponent} />
     <Route
       path="/blog"
       component={withPhenomicApi(Posts.jsComponent, Posts.queries)}

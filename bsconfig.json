@@ -1,5 +1,6 @@
 {
   "name": "natives-in-tech",
+  "bsc-flags": ["-bs-super-errors"],
   "refmt": 3,
   "reason": {
     "react-jsx": 2
@@ -21,6 +22,8 @@
     "@phenomic/plugin-renderer-react",
     "@phenomic/api-client",
     "bs-css",
-    "bs-typing"
+    "bs-typing",
+    "bs-fetch",
+    "@glennsl/bs-json"
   ]
 }

@@ -5,14 +5,14 @@ module Styles = {
 
   let container =
     style([
-      padding2(~h=Space.px64, ~v=Space.px48),
+      padding2(~h=Shared.Spacer.px64, ~v=Shared.Spacer.px48),
       maxWidth(em(50.0)),
       margin2(~v=px(0), ~h=`auto),
       media(
         "(max-width: 600px)",
         [
-          padding2(~h=Space.px24, ~v=Space.px48),
-          selector("p", [Font.font18]),
+          padding2(~h=Shared.Spacer.px24, ~v=Shared.Spacer.px48),
+          selector("p", [Shared.FontSize.px18]),
         ],
       ),
     ]);
@@ -28,6 +28,28 @@ let make = _children => {
     <div>
       <BsReactHelmet>
         <title> "Natives in Tech - About"->text </title>
+        <meta
+          name="description"
+          content="Natives in Tech is a coalition of Native and non-Native developers who seek
+          to empower and support Native communities around the world through software development."
+        />
+        <meta
+          name="keywords"
+          content="natives in tech, natives, indigenous, tech, software development, open source"
+        />
+        <meta name="twitter:title" content="About Natives in Tech" />
+        <meta
+          name="twitter:description"
+          content="Natives in Tech is a coalition of Native and non-Native developers who seek
+          to empower and support Native communities around the world through software development."
+        />
+        <meta property="og:title" content="About Natives in Tech" />
+        <meta
+          property="og:description"
+          content="Natives in Tech is a coalition of Native and non-Native developers who seek
+          to empower and support Native communities around the world through software development."
+        />
+        <meta property="og:url" content="http://nativesintech.org/about/" />
       </BsReactHelmet>
       <Frame>
         <section className=Styles.container>
@@ -59,7 +81,7 @@ let make = _children => {
               healthy online communities. "
             ->text
             <strong>
-              "Through these initiatives we hope to build a strong community of developers that have the power to shape the online future of the communities they support."
+              "Through these initiatives we hope to build a strong community of developers that have the power to shape the online future of the communities they serve."
               ->text
             </strong>
           </p>

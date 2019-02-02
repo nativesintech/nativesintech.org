@@ -22,8 +22,11 @@ module Styles = {
     style([
       maxWidth(em(50.0)),
       position(`relative),
-      padding2(~h=Space.px64, ~v=px(0)),
-      media("(max-width: 600px)", [padding2(~h=Space.px24, ~v=px(0))]),
+      padding2(~h=Shared.Spacer.px64, ~v=px(0)),
+      media(
+        "(max-width: 600px)",
+        [padding2(~h=Shared.Spacer.px24, ~v=px(0))],
+      ),
     ]);
 
   let logo = style([display(`flex), alignItems(`center)]);
@@ -40,24 +43,31 @@ module Styles = {
 
   let billboard =
     style([
-      minHeight(Space.px384),
-      Font.font60,
-      color(Colors.gray50),
+      minHeight(Shared.Spacer.px384),
+      Shared.FontSize.px60,
+      color(Shared.Colors.gray50),
       display(`flex),
       justifyContent(`spaceAround),
       alignItems(`center),
-      backgroundColor(Colors.gray900),
+      backgroundColor(Shared.Colors.gray900),
       selector("> div", [flex(1)]),
-      padding2(~h=Space.px64, ~v=Space.px32),
+      padding2(~h=Shared.Spacer.px64, ~v=Shared.Spacer.px64),
       media("(max-width: 900px)", [flexDirection(`column)]),
-      media("(max-width: 600px)", [padding2(~h=Space.px24, ~v=Space.px32)]),
+      media(
+        "(max-width: 600px)",
+        [padding2(~h=Shared.Spacer.px24, ~v=Shared.Spacer.px32)],
+      ),
     ]);
 
   let billboardHeadline =
     style([
       media(
         "(max-width: 900px)",
-        [textAlign(`center), Font.font48, paddingTop(Space.px48)],
+        [
+          textAlign(`center),
+          Shared.FontSize.px48,
+          paddingTop(Shared.Spacer.px48),
+        ],
       ),
       media(
         "(max-width: 600px)",
@@ -65,10 +75,10 @@ module Styles = {
           display(`flex),
           alignItems(`center),
           justifyContent(`center),
-          paddingTop(Space.px32),
+          paddingTop(Shared.Spacer.px32),
         ],
       ),
-      media("(max-width: 410px)", [paddingBottom(Space.px32)]),
+      media("(max-width: 410px)", [paddingBottom(Shared.Spacer.px32)]),
     ]);
 
   let frameBox =
@@ -78,43 +88,42 @@ module Styles = {
       alignItems(`center),
       media(
         "(max-width: 900px)",
-        [paddingTop(Space.px48), paddingBottom(Space.px48)],
+        [paddingTop(Shared.Spacer.px48), paddingBottom(Shared.Spacer.px48)],
       ),
       media("(max-width: 410px)", [display(`none), padding(px(0))]),
     ]);
 
   let frame = style([flex(1), maxWidth(px(400)), alignSelf(`flexEnd)]);
 
-  let content = style([Font.font24]);
+  let content = style([Shared.FontSize.px24]);
 
   let connect =
     style([
-      padding2(~v=Space.px192, ~h=Space.px64),
+      padding2(~v=Shared.Spacer.px192, ~h=Shared.Spacer.px64),
       backgroundColor(hex("222")),
-      media(
-        "(max-width: 600px)",
-        [padding2(~h=Space.px24, ~v=Space.px128)],
-      ),
+      Shared.Styles.mobile([
+        padding2(~h=Shared.Spacer.px24, ~v=Shared.Spacer.px128),
+      ]),
     ]);
 
   let connectHeadline =
     style([
       margin(px(0)),
-      Font.font48,
+      Shared.FontSize.px48,
       color(hex("fff")),
       textAlign(`center),
-      paddingBottom(Space.px64),
+      paddingBottom(Shared.Spacer.px64),
     ]);
 
   let about =
     style([
       position(`relative),
-      paddingTop(Space.px64),
-      paddingBottom(Space.px128),
-      media(
-        "(max-width: 600px)",
-        [paddingTop(Space.px48), paddingBottom(Space.px64)],
-      ),
+      paddingTop(Shared.Spacer.px64),
+      paddingBottom(Shared.Spacer.px128),
+      Shared.Styles.mobile([
+        paddingTop(Shared.Spacer.px48),
+        paddingBottom(Shared.Spacer.px64),
+      ]),
     ]);
 
   let iconsBox =
@@ -125,13 +134,13 @@ module Styles = {
       alignItems(`center),
       flexWrap(`wrap),
       maxWidth(px(800)),
-      media(
-        "(max-width: 600px)",
-        [
-          flexDirection(`column),
-          selector("> a:not(:last-child)", [paddingBottom(Space.px48)]),
-        ],
-      ),
+      Shared.Styles.mobile([
+        flexDirection(`column),
+        selector(
+          "> a:not(:last-child)",
+          [paddingBottom(Shared.Spacer.px48)],
+        ),
+      ]),
     ]);
 
   let icon =
@@ -164,45 +173,45 @@ module Styles = {
     style([
       display(`flex),
       flexDirection(`column),
-      marginBottom(Space.px12),
+      marginBottom(Shared.Spacer.px12),
       flex(1),
     ]);
 
   let input =
     style([
       borderRadius(px(2)),
-      border(px(1), `solid, Colors.gray300),
-      Font.font18,
-      padding(Space.px8),
-      color(Colors.gray900),
+      border(px(1), `solid, Shared.Colors.gray300),
+      Shared.FontSize.px18,
+      padding(Shared.Spacer.px8),
+      color(Shared.Colors.gray900),
     ]);
 
   let textarea =
     style([
       borderRadius(px(2)),
-      Font.font18,
-      padding(Space.px8),
-      minHeight(Space.px128),
+      Shared.FontSize.px18,
+      padding(Shared.Spacer.px8),
+      minHeight(Shared.Spacer.px128),
       selector("&:invalid", [boxShadow(`transparent)]),
     ]);
 
-  let buttonColor = Colors.redA200;
+  let buttonColor = Shared.Colors.redA200;
 
   let button =
     style([
-      Font.font18,
+      Shared.FontSize.px18,
       border(px(2), `solid, buttonColor),
       textTransform(`uppercase),
-      padding2(~h=Space.px32, ~v=Space.px12),
+      padding2(~h=Shared.Spacer.px32, ~v=Shared.Spacer.px12),
       borderRadius(px(3)),
       backgroundColor(buttonColor),
       fontWeight(`bold),
       cursor(`pointer),
-      color(Colors.gray50),
+      color(Shared.Colors.gray50),
       selector(
         "&:hover",
         [
-          backgroundColor(Colors.gray50),
+          backgroundColor(Shared.Colors.gray50),
           color(buttonColor),
           transition(~duration=200, ~timingFunction=`easeInOut, "color"),
           transition(
@@ -226,9 +235,12 @@ module Styles = {
 
   let contact =
     style([
-      padding2(~v=Space.px96, ~h=Space.px64),
+      padding2(~v=Shared.Spacer.px96, ~h=Shared.Spacer.px64),
       maxWidth(em(50.0)),
-      media("(max-width: 600px)", [padding2(~h=Space.px24, ~v=Space.px32)]),
+      media(
+        "(max-width: 600px)",
+        [padding2(~h=Shared.Spacer.px24, ~v=Shared.Spacer.px32)],
+      ),
     ]);
 };
 
@@ -269,6 +281,28 @@ let make = () => {
     <div>
       <BsReactHelmet>
         <title> "Natives in Tech - Home"->text </title>
+        <meta
+          name="description"
+          content="Natives in Tech is a coalition of Native and non-Native developers who seek
+          to empower and support Native communities around the world through software development."
+        />
+        <meta
+          name="keywords"
+          content="natives in tech, natives, indigenous, tech, software development, open source"
+        />
+        <meta name="twitter:title" content="Natives in Tech" />
+        <meta
+          name="twitter:description"
+          content="Natives in Tech is a coalition of Native and non-Native developers who seek
+          to empower and support Native communities around the world through software development."
+        />
+        <meta property="og:title" content="Natives in Tech" />
+        <meta
+          property="og:description"
+          content="Natives in Tech is a coalition of Native and non-Native developers who seek
+          to empower and support Native communities around the world through software development."
+        />
+        <meta property="og:url" content="http://nativesintech.org" />
       </BsReactHelmet>
       <Frame>
         <section className={j|$billboard |j}>

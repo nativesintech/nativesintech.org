@@ -13,34 +13,38 @@ module Styles = {
     ]);
 
   let title =
-    style([Font.font48, media("(max-width: 600px)", [Font.font36])]);
+    style([
+      Shared.FontSize.px48,
+      media("(max-width: 600px)", [Shared.FontSize.px36]),
+    ]);
 
   let tagline =
     style([
-      Font.font16,
+      Shared.FontSize.px16,
       width(`percent(100.0)),
-      margin2(~v=Space.px4, ~h=px(0)),
+      margin2(~v=Shared.Spacer.px4, ~h=px(0)),
     ]);
 
   let metaBox =
     style([
       display(`flex),
       flexWrap(`wrap),
-      color(Colors.gray500),
-      Font.font18,
+      color(Shared.Colors.gray500),
+      Shared.FontSize.px18,
       selector("> small:not(:last-child)", [marginRight(px(5))]),
-      media("(max-width: 600px)", [Font.font14]),
+      media("(max-width: 600px)", [Shared.FontSize.px14]),
     ]);
 
-  let author = style([width(`percent(100.0)), marginBottom(Space.px8)]);
+  let author =
+    style([width(`percent(100.0)), marginBottom(Shared.Spacer.px8)]);
 
   let content =
     style([
       media(
         "(max-width: 600px)",
         [
-          selector(" div > p", [Font.font18]),
-          selector(" div > h2", [Font.font24]),
+          selector(" div > p", [Shared.FontSize.px18]),
+          selector(" div > h2", [Shared.FontSize.px24]),
         ],
       ),
     ]);
@@ -63,7 +67,29 @@ let make = (~post) => {
                "Natives in Tech - Blog - "->text
                {post##title->text}
              </title>
+             <meta
+               name="description"
+               content={post##title ++ ": " ++ post##tagline}
+             />
              <meta name="keywords" content={post##tags} />
+             <meta name="twitter:title" content="Natives in Tech Blog" />
+             <meta
+               name="twitter:description"
+               content={post##title ++ ": " ++ post##tagline}
+             />
+             <meta property="og:title" content="Natives in Tech Blog" />
+             <meta
+               property="og:description"
+               content={post##title ++ ": " ++ post##tagline}
+             />
+             <meta
+               property="og:url"
+               content={
+                 "http://nativesintech.org/blog/"
+                 ++ Helpers.getPage(post##filename)
+                 ++ "/"
+               }
+             />
            </BsReactHelmet>
            <Frame>
              <div />
