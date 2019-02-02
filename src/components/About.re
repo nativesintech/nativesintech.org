@@ -59,7 +59,7 @@ let make = _children => {
               healthy online communities. "
             ->text
             <strong>
-              "Through these initiatives we hope to build a strong community of developers that have the power to shape the online future of the communities they support."
+              "Through these initiatives we hope to build a strong community of developers that have the power to shape the online future of the communities they serve."
               ->text
             </strong>
           </p>
