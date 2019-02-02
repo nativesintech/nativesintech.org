@@ -22,6 +22,7 @@ type post = {
   "minRead": string,
   "author": string,
   "tags": string,
+  "tagline": string,
   "body": PhenomicPresetReactApp.BodyRenderer.jsBody,
 };
 

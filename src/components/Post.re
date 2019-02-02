@@ -52,7 +52,7 @@ module Styles = {
 
 let component = ReasonReact.statelessComponent("Post");
 
-let make = (~post) => {
+let make = (~post, ~slug) => {
   ...component,
   render: _self =>
     <div>
@@ -67,7 +67,40 @@ let make = (~post) => {
                "Natives in Tech - Blog - "->text
                {post##title->text}
              </title>
+             <meta
+               name="description"
+               content={post##title ++ ": " ++ post##tagline}
+             />
              <meta name="keywords" content={post##tags} />
+             <meta name="twitter:card" content="summary_large_image" />
+             <meta name="twitter:site" content="@nativesintech" />
+             <meta name="twitter:creator" content="@nativesintech" />
+             <meta name="twitter:title" content="Natives in Tech Blog" />
+             <meta
+               name="twitter:description"
+               content={post##title ++ ": " ++ post##tagline}
+             />
+             <meta
+               name="twitter:image"
+               content="https://nativesintech.org/images/og-image.jpg"
+             />
+             <meta property="og:site_name" content="Natives in Tech" />
+             <meta property="og:type" content="website" />
+             <meta property="og:image:height" content="319" />
+             <meta property="og:image:width" content="609" />
+             <meta property="og:title" content="Natives in Tech Blog" />
+             <meta
+               property="og:description"
+               content={post##title ++ ": " ++ post##tagline}
+             />
+             <meta
+               property="og:url"
+               content={"http://nativesintech.org/" ++ slug}
+             />
+             <meta
+               property="og:image"
+               content="https://nativesintech.org/images/og-image.jpg"
+             />
            </BsReactHelmet>
            <Frame>
              <div />
@@ -100,7 +133,10 @@ let make = (~post) => {
 
 let jsComponent =
   ReasonReact.wrapReasonForJs(~component, jsProps =>
-    make(~post=PhenomicPresetReactApp.jsEdge(jsProps##post))
+    make(
+      ~post=PhenomicPresetReactApp.jsEdge(jsProps##post),
+      ~slug=jsProps##slug,
+    )
   );
 
 let queries = props => {
@@ -108,5 +144,5 @@ let queries = props => {
     PhenomicPresetReactApp.query(
       Item({path: "content/posts", id: props##params##splat}),
     );
-  {"post": post};
+  {"post": post, "slug": props##params##splat};
 };
