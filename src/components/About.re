@@ -49,7 +49,7 @@ let make = _children => {
           content="Natives in Tech is a coalition of Native and non-Native developers who seek
           to empower and support Native communities around the world through software development."
         />
-        <meta property="og:url" content="http://nativesintech.org/about" />
+        <meta property="og:url" content="http://nativesintech.org/about/" />
       </BsReactHelmet>
       <Frame>
         <section className=Styles.container>
