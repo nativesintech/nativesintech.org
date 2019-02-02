@@ -87,6 +87,7 @@ let make = (~post) => {
                content={
                  "http://nativesintech.org/"
                  ++ Helpers.getPage(post##filename)
+                 ++ "/"
                }
              />
            </BsReactHelmet>
