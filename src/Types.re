@@ -23,6 +23,7 @@ type post = {
   "author": string,
   "tags": string,
   "tagline": string,
+  "filename": string,
   "body": PhenomicPresetReactApp.BodyRenderer.jsBody,
 };
 

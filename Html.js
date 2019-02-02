@@ -20,6 +20,21 @@ export default ({ App, render }) => {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@nativesintech" />
+        <meta name="twitter:creator" content="@nativesintech" />
+        <meta
+          name="twitter:image"
+          content="https://nativesintech.org/images/og-image.jpg"
+        />
+        <meta property="og:site_name" content="Natives in Tech" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image:height" content="319" />
+        <meta property="og:image:width" content="609" />
+        <meta
+          property="og:image"
+          content="https://nativesintech.org/images/og-image.jpg"
+        />
 
         {helmet.meta.toComponent()}
         {helmet.title.toComponent()}

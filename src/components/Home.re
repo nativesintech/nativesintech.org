@@ -282,26 +282,20 @@ let make = () => {
       <BsReactHelmet>
         <title> "Natives in Tech - Home"->text </title>
         <meta
+          name="description"
+          content="Natives in Tech is a coalition of Native and non-Native developers who seek
+          to empower and support Native communities around the world through software development."
+        />
+        <meta
           name="keywords"
           content="natives in tech, natives, indigenous, tech, software development, open source"
         />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@nativesintech" />
-        <meta name="twitter:creator" content="@nativesintech" />
         <meta name="twitter:title" content="Natives in Tech" />
         <meta
           name="twitter:description"
           content="Natives in Tech is a coalition of Native and non-Native developers who seek
           to empower and support Native communities around the world through software development."
         />
-        <meta
-          name="twitter:image"
-          content="https://nativesintech.org/images/og-image.jpg"
-        />
-        <meta property="og:site_name" content="Natives in Tech" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image:height" content="319" />
-        <meta property="og:image:width" content="609" />
         <meta property="og:title" content="Natives in Tech" />
         <meta
           property="og:description"
@@ -309,10 +303,6 @@ let make = () => {
           to empower and support Native communities around the world through software development."
         />
         <meta property="og:url" content="http://nativesintech.org" />
-        <meta
-          property="og:image"
-          content="https://nativesintech.org/images/og-image.jpg"
-        />
       </BsReactHelmet>
       <Frame>
         <section className={j|$billboard |j}>

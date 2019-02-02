@@ -52,32 +52,17 @@ let make = (~posts) => {
           name="keywords"
           content="blog, natives in tech, natives, indigenous, tech, software development, open source"
         />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@nativesintech" />
-        <meta name="twitter:creator" content="@nativesintech" />
         <meta name="twitter:title" content="Natives in Tech Blog" />
         <meta
           name="twitter:description"
           content="Sharing news from the Natives in Tech community."
         />
-        <meta
-          name="twitter:image"
-          content="https://nativesintech.org/images/og-image.jpg"
-        />
-        <meta property="og:site_name" content="Natives in Tech" />
-        <meta property="og:type" content="website" />
-        <meta property="og:image:height" content="319" />
-        <meta property="og:image:width" content="609" />
         <meta property="og:title" content="Natives in Tech Blog" />
         <meta
           property="og:description"
           content="Sharing news from the Natives in Tech community."
         />
         <meta property="og:url" content="http://nativesintech.org/blog" />
-        <meta
-          property="og:image"
-          content="https://nativesintech.org/images/og-image.jpg"
-        />
       </BsReactHelmet>
       <Frame>
         <section className=Styles.container>
