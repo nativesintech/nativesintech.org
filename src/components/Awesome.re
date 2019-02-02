@@ -197,7 +197,7 @@ let make = _children => {
         <div className=Styles.billboard>
           <h1 className=Styles.header> "Awesome Natives in Tech"->text </h1>
           <p className=Styles.tagline>
-            "A collection of Native and non-Native developers working in the software development industry that represent or serve Native communities"
+            "A list of Native and non-Native developers working in the software development industry that represent or serve Native communities"
             ->text
           </p>
         </div>
