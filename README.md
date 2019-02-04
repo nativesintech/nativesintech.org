@@ -1,5 +1,7 @@
 ![Natives in Tech](./public/images/natives-in-tech-logo-github.png)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a2eead8b-3d03-4de5-b744-299149b6de59/deploy-status)](https://app.netlify.com/sites/natives-in-tech/deploys)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+
 
 # Natives in Tech
 
