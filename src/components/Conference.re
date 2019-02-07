@@ -85,7 +85,7 @@ let make = _children => {
             </p>
             <h2> "Would you like to attend?"->text </h2>
             <p>
-              "Stay up to date on all the latest details by joining our mailing list."
+              {j|Stay up to date on all the latest details by joining our mailing list 👇.|j}
               ->text
             </p>
             <SubscribeForm />

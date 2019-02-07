@@ -28,11 +28,10 @@ export const input = css`
   font-size: 18px;
   padding: 8px;
   color: #212121;
-  width: 400px;
+  width: 100%;
 
   @media screen and (max-width: 600px) {
     font-size: 16px;
-    width: 100%;
   }
 `;
 
