@@ -6,7 +6,7 @@ export default () => {
   return (
     <div className={Styles.wrapper}>
       <form
-        action="https://twitter.us7.list-manage.com/subscribe/post?u=6872107ebdd9e6f7b3cb9190f&amp;id=277436fefe"
+        action="https://nativesintech.us7.list-manage.com/subscribe/post?u=6872107ebdd9e6f7b3cb9190f&amp;id=277436fefe"
         method="post"
         id="mc-embedded-subscribe-form"
         name="mc-embedded-subscribe-form"
