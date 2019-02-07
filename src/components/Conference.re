@@ -88,6 +88,7 @@ let make = _children => {
               "Stay up to date on all the latest details by joining our mailing list."
               ->text
             </p>
+            <SubscribeForm />
           </div>
         </div>
       </Frame>
