@@ -1,71 +1,12 @@
 import React from "react";
-import { css } from "emotion";
 
-const wrapper = css`
-  border: 1px solid #e0e0e0;
-  padding: 24px;
-  border-radius: 4px;
-`;
-
-const header = css`
-  @media screen and (max-width: 600px) {
-    font-size: 32px;
-  }
-`;
-
-const paragraph = css`
-  margin: 8px 0;
-  font-size: 18px;
-
-  @media screen and (max-width: 600px) {
-    font-size: 16px;
-  }
-`;
-
-const input = css`
-  border-radius: 2px;
-  border: 1px solid #e0e0e0;
-  font-size: 18px;
-  padding: 8px;
-  color: #212121;
-  width: 400px;
-
-  @media screen and (max-width: 600px) {
-    font-size: 16px;
-    width: 100%;
-  }
-`;
-
-const hiddenInput = css`
-  visibility: hidden;
-`;
-
-const button = css`
-  font-size: 18px;
-  border: 2px solid #ff5252;
-  text-transform: uppercase;
-  padding: 12px 32px;
-  border-radius: 3px;
-  background-color: #ff5252;
-  font-weight: 700;
-  cursor: pointer;
-  color: #fafafa;
-
-  &:hover {
-    background-color: #fafafa;
-    color: #ff5252;
-  }
-
-  @media screen and (max-width: 600px) {
-    font-size: 16px;
-  }
-`;
+import * as Styles from "./FormStyles";
 
 export default () => {
   return (
-    <div className={wrapper}>
+    <div className={Styles.wrapper}>
       <form
-        action="https://twitter.us7.list-manage.com/subscribe/post?u=6872107ebdd9e6f7b3cb9190f&amp;id=277436fefe"
+        action="https://nativesintech.us7.list-manage.com/subscribe/post?u=6872107ebdd9e6f7b3cb9190f&amp;id=277436fefe"
         method="post"
         id="mc-embedded-subscribe-form"
         name="mc-embedded-subscribe-form"
@@ -73,8 +14,8 @@ export default () => {
         target="_blank"
       >
         <div id="mc_embed_signup_scroll">
-          <h2 className={header}>Join our mailing list</h2>
-          <p className={paragraph}>
+          <h2 className={Styles.header}>Join our mailing list</h2>
+          <p className={Styles.paragraph}>
             Get the latest news from Natives in Tech. No spam. Unsubscribe at
             any time.
           </p>
@@ -84,7 +25,7 @@ export default () => {
               type="email"
               placeholder="Email"
               name="EMAIL"
-              className={input}
+              className={Styles.input}
               id="mce-EMAIL"
             />
           </div>
@@ -97,8 +38,7 @@ export default () => {
               type="text"
               name="b_6872107ebdd9e6f7b3cb9190f_277436fefe"
               tabIndex="-1"
-              value=""
-              className={hiddenInput}
+              className={Styles.hiddenInput}
             />
           </div>
           <div className="clear">
@@ -107,7 +47,7 @@ export default () => {
               value="Subscribe"
               name="subscribe"
               id="mc-embedded-subscribe"
-              className={button}
+              className={Styles.button}
             />
           </div>
         </div>

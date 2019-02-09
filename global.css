@@ -8,6 +8,10 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  position: relative;
+}
+
 html,
 body,
 div#PhenomicRoot {
