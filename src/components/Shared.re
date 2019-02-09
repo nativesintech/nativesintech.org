@@ -1,5 +1,14 @@
 open Css;
 
+module Types = {
+  type font =
+    | Title1
+    | Title2
+    | Title3
+    | Text
+    | Small;
+};
+
 module Colors = {
   let gray50 = hex("FAFAFA");
   let gray100 = hex("F5F5F5");
@@ -70,4 +79,18 @@ module Styles = {
   let mobile = styles => media("(max-width: 600px)", styles);
 
   let content = [maxWidth(`em(50.0)), margin2(~v=px(0), ~h=`auto)];
+};
+
+module Font = {
+  open Types;
+
+  let size = (size: font) => {
+    switch (size) {
+    | Title1 => [FontSize.px72, Styles.mobile([FontSize.px48])]
+    | Title2 => [FontSize.px36, Styles.mobile([FontSize.px30])]
+    | Title3 => [FontSize.px30, Styles.mobile([FontSize.px24])]
+    | Text => [FontSize.px24, Styles.mobile([FontSize.px18])]
+    | Small => [FontSize.px18, Styles.mobile([FontSize.px16])]
+    };
+  };
 };
