@@ -78,6 +78,8 @@ module Styles = {
 
   let mobile = styles => media("(max-width: 600px)", styles);
 
+  let noMobile = styles => media("(min-width: 601px)", styles);
+
   let content = [maxWidth(`em(50.0)), margin2(~v=px(0), ~h=`auto)];
 };
 
