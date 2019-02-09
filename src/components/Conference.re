@@ -74,7 +74,7 @@ let make = _children => {
               {j|Indigenous Peoples in Digital Spaces|j}->text
             </h1>
             <h2 className=Styles.header2>
-              {j|November 9th , 2018 - Location TBD|j}->text
+              {j|November 9th , 2019 - Location TBD|j}->text
             </h2>
             <p className=Styles.text>
               "The Natives in Tech Conference brings together Native and non-Native developers to share projects that empower and support Native communties around the world."
