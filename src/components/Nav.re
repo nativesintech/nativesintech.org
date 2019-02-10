@@ -140,14 +140,14 @@ let make = _children => {
         <PhenomicPresetReactApp.Link href="/about">
           "About"->text
         </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link href="/blog">
-          "Blog"->text
-        </PhenomicPresetReactApp.Link>
         <PhenomicPresetReactApp.Link href="/awesome">
           "Awesome"->text
         </PhenomicPresetReactApp.Link>
         <PhenomicPresetReactApp.Link href="/conference">
           "Conference"->text
+        </PhenomicPresetReactApp.Link>
+        <PhenomicPresetReactApp.Link href="/blog">
+          "Blog"->text
         </PhenomicPresetReactApp.Link>
       </div>
       <span className=Styles.hamburger onClick={_e => self.send(OpenSidebar)}>
@@ -157,14 +157,14 @@ let make = _children => {
         <PhenomicPresetReactApp.Link className="sidelink" href="/about">
           "About"->text
         </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link className="sidelink" href="/blog">
-          "Blog"->text
-        </PhenomicPresetReactApp.Link>
         <PhenomicPresetReactApp.Link className="sidelink" href="/awesome">
           "Awesome"->text
         </PhenomicPresetReactApp.Link>
         <PhenomicPresetReactApp.Link className="sidelink" href="/conference">
           "Conference"->text
+        </PhenomicPresetReactApp.Link>
+        <PhenomicPresetReactApp.Link className="sidelink" href="/blog">
+          "Blog"->text
         </PhenomicPresetReactApp.Link>
       </div>
     </nav>;

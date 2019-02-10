@@ -17,7 +17,8 @@ module Styles = {
       ),
     ]);
 
-  let header = style([margin(px(0))]);
+  let header =
+    style([margin(px(0)), ...Shared.Font.size(Shared.Types.Title1)]);
 };
 
 let component = ReasonReact.statelessComponent(__MODULE__);
@@ -53,7 +54,7 @@ let make = _children => {
       </BsReactHelmet>
       <Frame>
         <section className=Styles.container>
-          <header> <h1 className=Styles.header> "About"->text </h1> </header>
+          <header> <h1 className=Styles.header> "Why?"->text </h1> </header>
           <p>
             "In recent years, open source development has exploded and a new generation of software applications
               have captivated the minds of users from all walks of life. New software technologies and design patterns

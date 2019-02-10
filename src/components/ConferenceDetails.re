@@ -3,7 +3,36 @@ open Helpers;
 module Styles = {
   open Css;
 
-  let billboard = style([]);
+  let billboard =
+    style([
+      display(`flex),
+      alignItems(`center),
+      justifyContent(`center),
+      flexDirection(`column),
+      backgroundColor(Shared.Colors.gray900),
+      padding2(~v=Shared.Spacer.px192, ~h=px(0)),
+    ]);
+
+  let container = style(Shared.Styles.container);
+
+  let headline =
+    style([
+      color(Shared.Colors.gray50),
+      textAlign(`center),
+      ...Shared.Font.size(Shared.Types.Title1),
+    ]);
+
+  let tagline =
+    style([
+      color(Shared.Colors.gray400),
+      textAlign(`center),
+      ...Shared.Font.size(Shared.Types.Title3),
+    ]);
+
+  let header = style(Shared.Font.size(Shared.Types.Title2));
+
+  let text =
+    style([maxWidth(`em(30.0)), ...Shared.Font.size(Shared.Types.Text)]);
 };
 
 [@bs.deriving jsConverter]
@@ -72,16 +101,26 @@ let make = (~params, _children) => {
   render: self => {
     <div>
       <Frame>
-        <div> <h1> "Indigenous Peoples in Digital Spaces"->text </h1> </div>
-        {switch (self.state.data) {
-         | None => "Something went terribly wrong..."->text
-         | Some(d) =>
-           d.data
-           |> List.map((speaker: Types.SessionizeAPI.speaker) =>
-                <div> speaker.fullName->text </div>
-              )
-           |> list
-         }}
+        <div className=Styles.billboard>
+          <div className=Styles.container>
+            <h1 className=Styles.headline>
+              "Indigenous Peoples in Digital Spaces"->text
+            </h1>
+          </div>
+          <div className=Styles.tagline> "2019 Conference Details"->text </div>
+        </div>
+        <div className=Styles.container>
+          <h2 className=Styles.header> "Meet the Speakers"->text </h2>
+          {switch (self.state.data) {
+           | None => "Something went terribly wrong..."->text
+           | Some(d) =>
+             d.data
+             |> List.map((speaker: Types.SessionizeAPI.speaker) =>
+                  <div> speaker.fullName->text </div>
+                )
+             |> list
+           }}
+        </div>
       </Frame>
     </div>;
   },

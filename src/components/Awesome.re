@@ -30,7 +30,11 @@ module Styles = {
       ]),
     ]);
 
-  let header = style([Shared.FontSize.px60, color(hex("fff"))]);
+  let header =
+    style([
+      color(Shared.Colors.gray50),
+      ...Shared.Font.size(Shared.Types.Title1),
+    ]);
 
   let tagline =
     style([
