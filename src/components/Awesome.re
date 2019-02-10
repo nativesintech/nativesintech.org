@@ -21,12 +21,12 @@ module Styles = {
   let billboard =
     style([
       textAlign(`center),
-      padding2(~v=Shared.Spacer.px192, ~h=Shared.Spacer.px64),
+      padding2(~v=Shared.Spacer.px192, ~h=Shared.Spacer.px064),
       backgroundColor(Shared.Colors.gray900),
-      marginBottom(Shared.Spacer.px96),
+      marginBottom(Shared.Spacer.px096),
       Shared.Styles.mobile([
-        padding2(~v=Shared.Spacer.px128, ~h=Shared.Spacer.px24),
-        marginBottom(Shared.Spacer.px64),
+        padding2(~v=Shared.Spacer.px128, ~h=Shared.Spacer.px024),
+        marginBottom(Shared.Spacer.px064),
       ]),
     ]);
 
@@ -55,7 +55,7 @@ module Styles = {
       flexDirection(`column),
       maxWidth(Shared.Spacer.px384),
       marginBottom(Shared.Spacer.px128),
-      borderRadius(Shared.Spacer.px4),
+      borderRadius(Shared.Spacer.px004),
       borderTopLeftRadius(px(0)),
       borderTopRightRadius(px(0)),
       boxShadow(
@@ -86,7 +86,7 @@ module Styles = {
       ]),
     ]);
 
-  let content = style([padding(Shared.Spacer.px24)]);
+  let content = style([padding(Shared.Spacer.px024)]);
 
   let name = style([Shared.FontSize.px30]);
 
@@ -94,26 +94,26 @@ module Styles = {
     style([
       Shared.FontSize.px18,
       color(Shared.Colors.gray500),
-      marginTop(Shared.Spacer.px4),
+      marginTop(Shared.Spacer.px004),
     ]);
 
   let username = style([Shared.FontSize.px18, color(Shared.Colors.gray500)]);
 
   let bio =
     style([
-      marginTop(Shared.Spacer.px12),
+      marginTop(Shared.Spacer.px012),
       Shared.FontSize.px16,
       color(Shared.Colors.gray800),
       lineHeight(`abs(1.5)),
     ]);
 
-  let iconsBox = style([display(`flex), marginTop(Shared.Spacer.px16)]);
+  let iconsBox = style([display(`flex), marginTop(Shared.Spacer.px016)]);
 
   let icon =
     style([
       width(px(28)),
       height(px(28)),
-      marginRight(Shared.Spacer.px16),
+      marginRight(Shared.Spacer.px016),
       alignItems(`center),
     ]);
 };

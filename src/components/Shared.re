@@ -52,15 +52,15 @@ module FontSize = {
 };
 
 module Spacer = {
-  let px4 = px(4);
-  let px8 = px(8);
-  let px12 = px(12);
-  let px16 = px(16);
-  let px24 = px(24);
-  let px32 = px(32);
-  let px48 = px(48);
-  let px64 = px(64);
-  let px96 = px(96);
+  let px004 = px(4);
+  let px008 = px(8);
+  let px012 = px(12);
+  let px016 = px(16);
+  let px024 = px(24);
+  let px032 = px(32);
+  let px048 = px(48);
+  let px064 = px(64);
+  let px096 = px(96);
   let px128 = px(128);
   let px192 = px(192);
   let px256 = px(256);
@@ -72,8 +72,8 @@ module Spacer = {
 
 module Styles = {
   let container = [
-    padding2(~h=Spacer.px64, ~v=Spacer.px48),
-    media("(max-width: 600px)", [padding2(~h=Spacer.px24, ~v=Spacer.px48)]),
+    padding2(~h=Spacer.px064, ~v=Spacer.px048),
+    media("(max-width: 600px)", [padding2(~h=Spacer.px024, ~v=Spacer.px048)]),
   ];
 
   let mobile = styles => media("(max-width: 600px)", styles);

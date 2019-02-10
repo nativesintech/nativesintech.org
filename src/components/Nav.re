@@ -16,16 +16,16 @@ module Styles = {
       display(`flex),
       justifyContent(`spaceBetween),
       alignItems(`center),
-      padding2(~h=Shared.Spacer.px64, ~v=px(0)),
-      minHeight(Shared.Spacer.px96),
+      padding2(~h=Shared.Spacer.px064, ~v=px(0)),
+      minHeight(Shared.Spacer.px096),
       borderBottom(px(1), `solid, Shared.Colors.gray300),
       overflow(`hidden),
-      Shared.Styles.mobile([padding2(~h=Shared.Spacer.px24, ~v=px(0))]),
+      Shared.Styles.mobile([padding2(~h=Shared.Spacer.px024, ~v=px(0))]),
     ]);
 
   let logoBox = style([display(`flex), alignItems(`center)]);
 
-  let logoImage = style([marginRight(Shared.Spacer.px12)]);
+  let logoImage = style([marginRight(Shared.Spacer.px012)]);
 
   let orgName =
     style([Shared.FontSize.px24, Shared.Styles.mobile([display(`none)])]);
@@ -33,7 +33,7 @@ module Styles = {
   let linksBox =
     style([
       display(`flex),
-      selector("> a:not(:last-child)", [marginRight(Shared.Spacer.px12)]),
+      selector("> a:not(:last-child)", [marginRight(Shared.Spacer.px012)]),
       Shared.Styles.mobile([display(`none)]),
     ]);
 

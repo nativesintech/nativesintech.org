@@ -21,7 +21,7 @@ module Styles = {
     style([
       display(`flex),
       alignItems(`center),
-      marginLeft(Shared.Spacer.px32),
+      marginLeft(Shared.Spacer.px032),
       lineHeight(`abs(1.25)),
       ...Shared.Font.size(Text),
     ]);
@@ -30,7 +30,7 @@ module Styles = {
     style([
       width(px(30)),
       height(px(30)),
-      marginRight(Shared.Spacer.px12),
+      marginRight(Shared.Spacer.px012),
       Shared.Styles.mobile([width(px(20)), height(px(20))]),
     ]);
 };

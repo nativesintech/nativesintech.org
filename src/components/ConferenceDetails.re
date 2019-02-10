@@ -1,5 +1,11 @@
 open Helpers;
 
+module Styles = {
+  open Css;
+
+  let billboard = style([]);
+};
+
 [@bs.deriving jsConverter]
 type params = {year: string};
 
@@ -66,6 +72,7 @@ let make = (~params, _children) => {
   render: self => {
     <div>
       <Frame>
+        <div> <h1> "Indigenous Peoples in Digital Spaces"->text </h1> </div>
         {switch (self.state.data) {
          | None => "Something went terribly wrong..."->text
          | Some(d) =>
