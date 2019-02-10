@@ -11,6 +11,8 @@ import * as Post from "./lib/es6/src/components/Post.bs.js";
 import * as About from "./lib/es6/src/components/About.bs.js";
 import * as Awesome from "./lib/es6/src/components/Awesome.bs.js";
 import * as Conference from "./lib/es6/src/components/Conference.bs.js";
+import * as ConferenceDetails from "./lib/es6/src/components/ConferenceDetails.bs.js";
+
 import ErrorPage from "./lib/es6/src/components/ErrorPage.bs.js";
 
 import "normalize.css";
@@ -22,6 +24,7 @@ const routes = () => (
     <Route path="/about" component={About.jsComponent} />
     <Route path="/awesome" component={Awesome.jsComponent} />
     <Route path="/conference" component={Conference.jsComponent} />
+    <Route path="/conference/:year" component={ConferenceDetails.jsComponent} />
     <Route
       path="/blog"
       component={withPhenomicApi(Posts.jsComponent, Posts.queries)}

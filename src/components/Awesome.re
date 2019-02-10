@@ -11,6 +11,10 @@ external github: string = "../../../../public/images/github-black-logo.svg";
 
 [@bs.module] external branch: string = "../../../../public/images/branch.svg";
 
+let dict = Js.Dict.empty();
+Js.Dict.set(dict, "name", Js.Json.string("John Doe"));
+Js.Dict.set(dict, "age", Js.Json.number(30.0));
+
 module Styles = {
   open Css;
 
@@ -114,10 +118,10 @@ module Styles = {
     ]);
 };
 
-type state = {members: list(Decoder.edge)};
+type state = {members: list(Types.GitHubGraphQLAPI.edge)};
 
 type action =
-  | LoadMembers(list(Decoder.edge));
+  | LoadMembers(list(Types.GitHubGraphQLAPI.edge));
 
 let component = ReasonReact.reducerComponent(__MODULE__);
 
@@ -179,14 +183,11 @@ let make = _children => {
            let xs =
              Js.Json.stringify(data)
              |> Json.parseOrRaise
-             |> Decoder.GitHubGraphQL.response;
+             |> Decoders.GitHubGraphQLAPI.decodeResponse;
            self.send(LoadMembers(xs));
            Js.Promise.resolve();
          })
-      |> catch(e => {
-           Js.log(e);
-           Js.Exn.raiseError("There were an error in the promise");
-         })
+      |> catch(_e => Js.Exn.raiseError("There were an error in the promise"))
     )
     |> ignore;
     ();
@@ -226,7 +227,7 @@ let make = _children => {
         <div className=Styles.container>
           <div className=Styles.usersBox>
             {self.state.members
-             |> List.map((m: Decoder.edge) => {
+             |> List.map((m: Types.GitHubGraphQLAPI.edge) => {
                   let orStr = Belt.Option.(getWithDefault(_, ""));
                   let (img, bio, email, location, login, name, websiteUrl) = (
                     m.node.avatarUrl->orStr,
