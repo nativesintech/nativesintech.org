@@ -15,13 +15,13 @@ let getIdFromYear = year => {
   };
 };
 
-module Storage = {
-  let now = () => [%raw {|Date.now()|}];
+let now = () => [%raw {|Date.now()|}];
 
-  let dayInMilliseconds = 86400000.0;
+let dayInMilliseconds = 86400000.0;
 
-  let getNextDay = () => now() +. dayInMilliseconds;
+let getNextDay = () => now() +. dayInMilliseconds;
 
+module LocalStorage = {
   let hasCachedConferenceDetails = year => {
     Belt.Option.(
       Dom.Storage.(localStorage |> getItem({j|$year|j}))

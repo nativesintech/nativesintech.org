@@ -17,9 +17,8 @@ let make = (~params, _children) => {
     let {year} = params;
     let id = getIdFromYear(year);
 
-    if (Utils.Storage.hasCachedConferenceDetails(year)) {
-      Js.log("getting data from local storage");
-      let details = Utils.Storage.getConferenceDetails(year);
+    if (LocalStorage.hasCachedConferenceDetails(year)) {
+      let details = LocalStorage.getConferenceDetails(year);
       self.send(UpdateDetails(details));
     } else {
       Js.Promise.(
@@ -36,16 +35,16 @@ let make = (~params, _children) => {
 
              let result =
                Js.Dict.fromList([
-                 ("timestamp", Js.Json.number(Utils.Storage.getNextDay())),
+                 ("timestamp", Js.Json.number(getNextDay())),
                  ("data", encodedConferenceData),
                ]);
 
-             Utils.Storage.setConferenceDetails(
+             LocalStorage.setConferenceDetails(
                year,
                Js.Json.object_(result),
              );
 
-             let details = Utils.Storage.getConferenceDetails(year);
+             let details = LocalStorage.getConferenceDetails(year);
 
              self.send(UpdateDetails(details));
 
