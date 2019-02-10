@@ -70,9 +70,7 @@ let make = _children => {
       <Frame>
         <div className=Styles.container>
           <div className=Styles.content>
-            <h1 className=Styles.header1>
-              {j|Indigenous Peoples in Digital Spaces|j}->text
-            </h1>
+            <h1 className=Styles.header1> {j|Natives in Tech Conf|j}->text </h1>
             <h2 className=Styles.header2>
               {j|November 9th , 2019 - Location TBD|j}->text
             </h2>
