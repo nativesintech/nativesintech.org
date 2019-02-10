@@ -70,7 +70,9 @@ let make = _children => {
       <Frame>
         <div className=Styles.container>
           <div className=Styles.content>
-            <h1 className=Styles.header1> {j|Natives in Tech Conf|j}->text </h1>
+            <h1 className=Styles.header1>
+              {j|Natives in Tech Conf|j}->text
+            </h1>
             <h2 className=Styles.header2>
               {j|November 9th , 2019 - Location TBD|j}->text
             </h2>
@@ -79,11 +81,8 @@ let make = _children => {
               ->text
             </p>
             <p className=Styles.text>
-              {(
-                 "Historically, Native communities were subject to programs which forced them to accept non-Native teachings. "
-                 ++ "Natives in Tech seeks to encourage Native communties to use software development as a means to empower themselves while encoding a traditional worldview. "
-               )
-               ->text}
+              "Natives in Tech seeks to encourage Native communties to use software development as a means to empower themselves while encoding a traditional worldview. "
+              ->text
             </p>
             <h2 className=Styles.header2>
               "Who is this conference for?"->text
@@ -123,6 +122,17 @@ let make = _children => {
               ->text
             </p>
             <SubscribeForm />
+            <h2
+              style={ReactDOMRe.Style.make(~margin="24px 0 24px 0", ())}
+              className=Styles.header2>
+              "Conference by Year"->text
+            </h2>
+            <div style={ReactDOMRe.Style.make(~marginBottom="48px", ())}>
+              <PhenomicPresetReactApp.Link
+                href="/conference/2019" className=Styles.text>
+                "2019"->text
+              </PhenomicPresetReactApp.Link>
+            </div>
           </div>
         </div>
       </Frame>
