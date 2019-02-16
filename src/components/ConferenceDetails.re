@@ -87,6 +87,8 @@ let make = (~conference, ~params) => {
     let {splat: year} = params;
     let id = getIdFromYear(year);
 
+    let _ = conference;
+
     if (LocalStorage.hasCachedConferenceDetails(year)) {
       let details = LocalStorage.getConferenceDetails(year);
       self.send(UpdateDetails(details));
