@@ -61,6 +61,7 @@ module Styles = {
       zIndex(10),
       right(px(0)),
       display(`flex),
+      overflowX(`hidden),
       flexDirection(`column),
     ];
 
