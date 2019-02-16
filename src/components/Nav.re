@@ -77,7 +77,6 @@ module Styles = {
             color(Shared.Colors.gray50),
             padding2(~v=px(10), ~h=px(20)),
             cursor(`pointer),
-            opacity(0.0),
             Shared.FontSize.px20,
             opacity(1.0),
           ],
@@ -93,7 +92,6 @@ module Styles = {
           "> .sidelink",
           [
             color(Shared.Colors.gray50),
-            padding2(~v=px(10), ~h=px(20)),
             cursor(`pointer),
             opacity(0.0),
             Shared.FontSize.px20,
