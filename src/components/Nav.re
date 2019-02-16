@@ -19,6 +19,7 @@ module Styles = {
       padding2(~h=Shared.Spacer.px64, ~v=px(0)),
       minHeight(Shared.Spacer.px96),
       borderBottom(px(1), `solid, Shared.Colors.gray300),
+      overflow(`hidden),
       Shared.Styles.mobile([padding2(~h=Shared.Spacer.px24, ~v=px(0))]),
     ]);
 
@@ -55,29 +56,51 @@ module Styles = {
       paddingTop(px(20)),
       position(`absolute),
       backgroundColor(Shared.Colors.gray900),
-      width(px(200)),
       top(px(0)),
       bottom(px(0)),
       zIndex(10),
+      right(px(0)),
       display(`flex),
+      overflowX(`hidden),
       flexDirection(`column),
-      selector(
-        "> .sidelink",
-        [
-          color(Shared.Colors.gray50),
-          padding2(~v=px(10), ~h=px(20)),
-          Shared.FontSize.px20,
-          cursor(`pointer),
-        ],
-      ),
     ];
 
-    let animation =
-      transition(~duration=300, ~timingFunction=`easeOut, "right");
+    let animationWidth =
+      transition(~duration=300, ~timingFunction=`easeOut, "width");
 
-    let isOpenStyles = style([right(px(0)), animation, ...baseStyles]);
+    let isOpenStyles =
+      style([
+        width(px(200)),
+        animationWidth,
+        selector(
+          "> .sidelink",
+          [
+            color(Shared.Colors.gray50),
+            padding2(~v=px(10), ~h=px(20)),
+            cursor(`pointer),
+            Shared.FontSize.px20,
+            opacity(1.0),
+          ],
+        ),
+        ...baseStyles,
+      ]);
 
-    let isClosedStyles = style([right(px(-200)), animation, ...baseStyles]);
+    let isClosedStyles =
+      style([
+        width(px(0)),
+        animationWidth,
+        selector(
+          "> .sidelink",
+          [
+            color(Shared.Colors.gray50),
+            cursor(`pointer),
+            opacity(0.0),
+            Shared.FontSize.px20,
+            opacity(0.0),
+          ],
+        ),
+        ...baseStyles,
+      ]);
 
     isSidebarOpen ? isOpenStyles : isClosedStyles;
   };
