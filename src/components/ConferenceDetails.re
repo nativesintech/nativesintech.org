@@ -160,7 +160,7 @@ let make = (~params, _children) => {
         />
         <meta
           property="og:url"
-          content={j|http://nativesintech.org/conference/$year/|j}
+          content={j|https://nativesintech.org/conference/$year/|j}
         />
       </BsReactHelmet>
       <Frame>

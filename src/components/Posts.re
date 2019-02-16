@@ -62,7 +62,7 @@ let make = (~posts) => {
           property="og:description"
           content="Sharing news from the Natives in Tech community."
         />
-        <meta property="og:url" content="http://nativesintech.org/blog/" />
+        <meta property="og:url" content="https://nativesintech.org/blog/" />
       </BsReactHelmet>
       <Frame>
         <section className=Styles.container>

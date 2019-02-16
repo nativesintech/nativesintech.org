@@ -213,7 +213,7 @@ let make = _children => {
           property="og:description"
           content="A list of Native and non-Native developers working in the software development industry that represent or serve Native communities"
         />
-        <meta property="og:url" content="http://nativesintech.org/awesome/" />
+        <meta property="og:url" content="https://nativesintech.org/awesome/" />
       </BsReactHelmet>
       <Frame>
         <div className=Styles.billboard>
