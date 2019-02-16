@@ -19,6 +19,7 @@ module Styles = {
       padding2(~h=Shared.Spacer.px64, ~v=px(0)),
       minHeight(Shared.Spacer.px96),
       borderBottom(px(1), `solid, Shared.Colors.gray300),
+      overflow(`hidden),
       Shared.Styles.mobile([padding2(~h=Shared.Spacer.px24, ~v=px(0))]),
     ]);
 
