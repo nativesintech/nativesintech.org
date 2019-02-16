@@ -1,4 +1,5 @@
 open Helpers;
+open Types;
 
 module Styles = {
   open Css;
@@ -72,9 +73,6 @@ module Styles = {
   let bio = style([Shared.FontSize.px20]);
 };
 
-[@bs.deriving jsConverter]
-type params = {year: string};
-
 type state = {data: option(Types.ConferenceDetails.details)};
 
 type action =
@@ -82,11 +80,11 @@ type action =
 
 let component = ReasonReact.reducerComponent(__MODULE__);
 
-let make = (~params, _children) => {
+let make = (~params) => {
   ...component,
   initialState: () => {data: None},
   didMount: self => {
-    let {year} = params;
+    let {splat: year} = params;
     let id = getIdFromYear(year);
 
     if (LocalStorage.hasCachedConferenceDetails(year)) {
@@ -136,7 +134,7 @@ let make = (~params, _children) => {
     };
   },
   render: self => {
-    let {year} = params;
+    let {splat: year} = params;
     <div>
       <BsReactHelmet>
         <title> {j|Natives in Tech Conf $year|j}->text </title>
@@ -203,9 +201,7 @@ let make = (~params, _children) => {
   },
 };
 
-type jsProps = {params};
-
 let jsComponent =
   ReasonReact.wrapReasonForJs(~component, jsProps =>
-    make(~params=paramsFromJs(jsProps##params), [||])
+    make(~params=paramsFromJs(jsProps##params))
   );
