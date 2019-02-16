@@ -132,7 +132,7 @@ let make = _children => {
             </p>
             <div style={ReactDOMRe.Style.make(~marginBottom="48px", ())}>
               <PhenomicPresetReactApp.Link
-                href="/conference/2019/" className=Styles.text>
+                href="/conference/2019" className=Styles.text>
                 "2019"->text
               </PhenomicPresetReactApp.Link>
             </div>
