@@ -23,7 +23,7 @@ module Styles = {
 
 let component = ReasonReact.statelessComponent(__MODULE__);
 
-let make = _children => {
+let make = () => {
   ...component,
   render: _self =>
     <div>

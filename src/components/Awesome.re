@@ -124,7 +124,7 @@ type action =
 
 let component = ReasonReact.reducerComponent(__MODULE__);
 
-let make = _children => {
+let make = () => {
   ...component,
   initialState: () => {members: []},
   reducer: (action, _state) => {

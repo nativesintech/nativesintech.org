@@ -83,3 +83,6 @@ module ConferenceDetails = {
     data: SessionizeAPI.response,
   };
 };
+
+[@bs.deriving jsConverter]
+type params = {splat: string};

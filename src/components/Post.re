@@ -1,4 +1,5 @@
 open Helpers;
+open Types;
 
 module Styles = {
   open Css;
@@ -52,7 +53,7 @@ module Styles = {
 
 let component = ReasonReact.statelessComponent("Post");
 
-let make = (~post) => {
+let make = (~post, ~params) => {
   ...component,
   render: _self =>
     <div>
@@ -61,6 +62,7 @@ let make = (~post) => {
        | Loading => "Loading ..." |> text
        | Errored => <ErrorPage />
        | Idle(post) =>
+         let {splat: article} = params;
          <div className=Styles.wrapper>
            <BsReactHelmet>
              <title>
@@ -84,11 +86,7 @@ let make = (~post) => {
              />
              <meta
                property="og:url"
-               content={
-                 "https://nativesintech.org/blog/"
-                 ++ Helpers.getPage(post##filename)
-                 ++ "/"
-               }
+               content={j|https://nativesintech.org/blog/$article/|j}
              />
            </BsReactHelmet>
            <Frame>
@@ -115,14 +113,17 @@ let make = (~post) => {
                <section> <SubscribeForm /> </section>
              </article>
            </Frame>
-         </div>
+         </div>;
        }}
     </div>,
 };
 
 let jsComponent =
   ReasonReact.wrapReasonForJs(~component, jsProps =>
-    make(~post=PhenomicPresetReactApp.jsEdge(jsProps##post))
+    make(
+      ~post=PhenomicPresetReactApp.jsEdge(jsProps##post),
+      ~params=paramsFromJs(jsProps##params),
+    )
   );
 
 let queries = props => {
