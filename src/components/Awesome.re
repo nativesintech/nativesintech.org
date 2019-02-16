@@ -56,8 +56,7 @@ module Styles = {
       maxWidth(Shared.Spacer.px384),
       marginBottom(Shared.Spacer.px128),
       borderRadius(Shared.Spacer.px004),
-      borderTopLeftRadius(px(0)),
-      borderTopRightRadius(px(0)),
+      overflow(`hidden),
       boxShadow(
         ~x=px(0),
         ~y=px(0),
