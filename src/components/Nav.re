@@ -55,13 +55,11 @@ module Styles = {
       paddingTop(px(20)),
       position(`absolute),
       backgroundColor(Shared.Colors.gray900),
-      width(px(200)),
       top(px(0)),
       bottom(px(0)),
       zIndex(10),
       display(`flex),
       flexDirection(`column),
-      overflowX(`hidden),
       selector(
         "> .sidelink",
         [
@@ -76,9 +74,9 @@ module Styles = {
     let animation =
       transition(~duration=300, ~timingFunction=`easeOut, "right");
 
-    let isOpenStyles = style([right(px(0)), animation, ...baseStyles]);
+    let isOpenStyles = style([width(px(200)), animation, ...baseStyles]);
 
-    let isClosedStyles = style([right(px(-200)), animation, ...baseStyles]);
+    let isClosedStyles = style([width(px(0)), animation, ...baseStyles]);
 
     isSidebarOpen ? isOpenStyles : isClosedStyles;
   };
