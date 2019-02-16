@@ -61,6 +61,7 @@ module Styles = {
       zIndex(10),
       display(`flex),
       flexDirection(`column),
+      overflowX(`hidden),
       selector(
         "> .sidelink",
         [
