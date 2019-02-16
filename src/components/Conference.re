@@ -21,7 +21,7 @@ module Styles = {
     style([
       display(`flex),
       alignItems(`center),
-      marginLeft(Shared.Spacer.px32),
+      marginLeft(Shared.Spacer.px016),
       lineHeight(`abs(1.25)),
       ...Shared.Font.size(Text),
     ]);
@@ -30,7 +30,7 @@ module Styles = {
     style([
       width(px(30)),
       height(px(30)),
-      marginRight(Shared.Spacer.px12),
+      marginRight(Shared.Spacer.px012),
       Shared.Styles.mobile([width(px(20)), height(px(20))]),
     ]);
 };
@@ -43,10 +43,10 @@ let make = _children => {
   render: _self =>
     <div>
       <BsReactHelmet>
-        <title> "Natives in Tech - Conference"->text </title>
+        <title> "Natives in Tech Conf"->text </title>
         <meta
           name="description"
-          content="Information about the Natives in Tech Conference"
+          content="Information about Natives in Tech Conf"
         />
         <meta
           name="keywords"
@@ -55,12 +55,12 @@ let make = _children => {
         <meta name="twitter:title" content="Natives in Tech Conference" />
         <meta
           name="twitter:description"
-          content="Information about the Natives in Tech Conference"
+          content="Information about Natives in Tech Conf"
         />
         <meta property="og:title" content="Natives in Tech Conference" />
         <meta
           property="og:description"
-          content="Information about the Natives in Tech Conference"
+          content="Information about Natives in Tech Conf"
         />
         <meta
           property="og:url"
@@ -71,7 +71,7 @@ let make = _children => {
         <div className=Styles.container>
           <div className=Styles.content>
             <h1 className=Styles.header1>
-              {j|Indigenous Peoples in Digital Spaces|j}->text
+              {j|Natives in Tech Conf|j}->text
             </h1>
             <h2 className=Styles.header2>
               {j|November 9th , 2019 - Location TBD|j}->text
@@ -81,11 +81,8 @@ let make = _children => {
               ->text
             </p>
             <p className=Styles.text>
-              {(
-                 "Historically, Native communities were subject to programs which forced them to accept non-Native teachings. "
-                 ++ "Natives in Tech seeks to encourage Native communties to use software development as a means to empower themselves while encoding a traditional worldview. "
-               )
-               ->text}
+              "Natives in Tech seeks to encourage Native communties to use software development as a means to empower themselves while encoding a traditional worldview. "
+              ->text
             </p>
             <h2 className=Styles.header2>
               "Who is this conference for?"->text
@@ -125,6 +122,20 @@ let make = _children => {
               ->text
             </p>
             <SubscribeForm />
+            <h2
+              style={ReactDOMRe.Style.make(~margin="24px 0 24px 0", ())}
+              className=Styles.header2>
+              "Conference by Year"->text
+            </h2>
+            <p className=Styles.text>
+              "A list of conferences by year"->text
+            </p>
+            <div style={ReactDOMRe.Style.make(~marginBottom="48px", ())}>
+              <PhenomicPresetReactApp.Link
+                href="/conference/2019" className=Styles.text>
+                "2019"->text
+              </PhenomicPresetReactApp.Link>
+            </div>
           </div>
         </div>
       </Frame>

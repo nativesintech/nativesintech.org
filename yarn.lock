@@ -1750,6 +1750,11 @@ bs-typing@^1.0.0:
   dependencies:
     typed.js "^2.0.9"
 
+bs-webapi@^0.13.2:
+  version "0.13.2"
+  resolved "https://registry.yarnpkg.com/bs-webapi/-/bs-webapi-0.13.2.tgz#7e96127f633cff16491d1b9b2158e7fa33a76412"
+  integrity sha512-eWWOT8ntAy7t2FzT+sJMmI47Fi+cpTmDSFC0R9F2OEJ/eZ8yp1wsheFAZsSDyOZIzIZP4mlJbiyVu01FB0r2DQ==
+
 bser@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/bser/-/bser-2.0.0.tgz#9ac78d3ed5d915804fd87acb158bc797147a1719"

@@ -5,10 +5,10 @@ module Styles = {
 
   let container =
     style([
-      padding2(~h=Shared.Spacer.px64, ~v=Shared.Spacer.px48),
+      padding2(~h=Shared.Spacer.px064, ~v=Shared.Spacer.px048),
       media(
         "(max-width: 600px)",
-        [padding2(~h=Shared.Spacer.px24, ~v=Shared.Spacer.px48)],
+        [padding2(~h=Shared.Spacer.px024, ~v=Shared.Spacer.px048)],
       ),
     ]);
 
@@ -32,7 +32,7 @@ module Styles = {
     style([
       Shared.FontSize.px16,
       width(`percent(100.0)),
-      margin2(~v=Shared.Spacer.px4, ~h=px(0)),
+      margin2(~v=Shared.Spacer.px004, ~h=px(0)),
     ]);
 };
 

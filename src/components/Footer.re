@@ -11,7 +11,7 @@ module Styles = {
       backgroundColor(Shared.Colors.gray900),
       color(Shared.Colors.gray50),
       textAlign(`center),
-      minHeight(Shared.Spacer.px96),
+      minHeight(Shared.Spacer.px096),
       display(`flex),
       justifyContent(`center),
       alignItems(`center),

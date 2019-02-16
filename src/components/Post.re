@@ -22,7 +22,7 @@ module Styles = {
     style([
       Shared.FontSize.px16,
       width(`percent(100.0)),
-      margin2(~v=Shared.Spacer.px4, ~h=px(0)),
+      margin2(~v=Shared.Spacer.px004, ~h=px(0)),
     ]);
 
   let metaBox =
@@ -36,7 +36,7 @@ module Styles = {
     ]);
 
   let author =
-    style([width(`percent(100.0)), marginBottom(Shared.Spacer.px8)]);
+    style([width(`percent(100.0)), marginBottom(Shared.Spacer.px008)]);
 
   let content =
     style([

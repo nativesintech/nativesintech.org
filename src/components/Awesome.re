@@ -17,16 +17,20 @@ module Styles = {
   let billboard =
     style([
       textAlign(`center),
-      padding2(~v=Shared.Spacer.px192, ~h=Shared.Spacer.px64),
+      padding2(~v=Shared.Spacer.px192, ~h=Shared.Spacer.px064),
       backgroundColor(Shared.Colors.gray900),
-      marginBottom(Shared.Spacer.px96),
+      marginBottom(Shared.Spacer.px096),
       Shared.Styles.mobile([
-        padding2(~v=Shared.Spacer.px128, ~h=Shared.Spacer.px24),
-        marginBottom(Shared.Spacer.px64),
+        padding2(~v=Shared.Spacer.px128, ~h=Shared.Spacer.px024),
+        marginBottom(Shared.Spacer.px064),
       ]),
     ]);
 
-  let header = style([Shared.FontSize.px60, color(hex("fff"))]);
+  let header =
+    style([
+      color(Shared.Colors.gray50),
+      ...Shared.Font.size(Shared.Types.Title1),
+    ]);
 
   let tagline =
     style([
@@ -51,9 +55,8 @@ module Styles = {
       flexDirection(`column),
       maxWidth(Shared.Spacer.px384),
       marginBottom(Shared.Spacer.px128),
-      borderRadius(Shared.Spacer.px4),
-      borderTopLeftRadius(px(0)),
-      borderTopRightRadius(px(0)),
+      borderRadius(Shared.Spacer.px004),
+      overflow(`hidden),
       boxShadow(
         ~x=px(0),
         ~y=px(0),
@@ -82,7 +85,7 @@ module Styles = {
       ]),
     ]);
 
-  let content = style([padding(Shared.Spacer.px24)]);
+  let content = style([padding(Shared.Spacer.px024)]);
 
   let name = style([Shared.FontSize.px30]);
 
@@ -90,34 +93,34 @@ module Styles = {
     style([
       Shared.FontSize.px18,
       color(Shared.Colors.gray500),
-      marginTop(Shared.Spacer.px4),
+      marginTop(Shared.Spacer.px004),
     ]);
 
   let username = style([Shared.FontSize.px18, color(Shared.Colors.gray500)]);
 
   let bio =
     style([
-      marginTop(Shared.Spacer.px12),
+      marginTop(Shared.Spacer.px012),
       Shared.FontSize.px16,
       color(Shared.Colors.gray800),
       lineHeight(`abs(1.5)),
     ]);
 
-  let iconsBox = style([display(`flex), marginTop(Shared.Spacer.px16)]);
+  let iconsBox = style([display(`flex), marginTop(Shared.Spacer.px016)]);
 
   let icon =
     style([
       width(px(28)),
       height(px(28)),
-      marginRight(Shared.Spacer.px16),
+      marginRight(Shared.Spacer.px016),
       alignItems(`center),
     ]);
 };
 
-type state = {members: list(Decoder.edge)};
+type state = {members: list(Types.GitHubGraphQLAPI.edge)};
 
 type action =
-  | LoadMembers(list(Decoder.edge));
+  | LoadMembers(list(Types.GitHubGraphQLAPI.edge));
 
 let component = ReasonReact.reducerComponent(__MODULE__);
 
@@ -179,14 +182,11 @@ let make = _children => {
            let xs =
              Js.Json.stringify(data)
              |> Json.parseOrRaise
-             |> Decoder.GitHubGraphQL.response;
+             |> Decoders.GitHubGraphQLAPI.decodeResponse;
            self.send(LoadMembers(xs));
            Js.Promise.resolve();
          })
-      |> catch(e => {
-           Js.log(e);
-           Js.Exn.raiseError("There were an error in the promise");
-         })
+      |> catch(_e => Js.Exn.raiseError("There were an error in the promise"))
     )
     |> ignore;
     ();
@@ -226,7 +226,7 @@ let make = _children => {
         <div className=Styles.container>
           <div className=Styles.usersBox>
             {self.state.members
-             |> List.map((m: Decoder.edge) => {
+             |> List.map((m: Types.GitHubGraphQLAPI.edge) => {
                   let orStr = Belt.Option.(getWithDefault(_, ""));
                   let (img, bio, email, location, login, name, websiteUrl) = (
                     m.node.avatarUrl->orStr,

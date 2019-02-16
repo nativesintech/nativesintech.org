@@ -16,16 +16,16 @@ module Styles = {
       display(`flex),
       justifyContent(`spaceBetween),
       alignItems(`center),
-      padding2(~h=Shared.Spacer.px64, ~v=px(0)),
-      minHeight(Shared.Spacer.px96),
+      padding2(~h=Shared.Spacer.px064, ~v=px(0)),
+      minHeight(Shared.Spacer.px096),
       borderBottom(px(1), `solid, Shared.Colors.gray300),
       overflow(`hidden),
-      Shared.Styles.mobile([padding2(~h=Shared.Spacer.px24, ~v=px(0))]),
+      Shared.Styles.mobile([padding2(~h=Shared.Spacer.px024, ~v=px(0))]),
     ]);
 
   let logoBox = style([display(`flex), alignItems(`center)]);
 
-  let logoImage = style([marginRight(Shared.Spacer.px12)]);
+  let logoImage = style([marginRight(Shared.Spacer.px012)]);
 
   let orgName =
     style([Shared.FontSize.px24, Shared.Styles.mobile([display(`none)])]);
@@ -33,7 +33,7 @@ module Styles = {
   let linksBox =
     style([
       display(`flex),
-      selector("> a:not(:last-child)", [marginRight(Shared.Spacer.px12)]),
+      selector("> a:not(:last-child)", [marginRight(Shared.Spacer.px012)]),
       Shared.Styles.mobile([display(`none)]),
     ]);
 
@@ -124,6 +124,7 @@ let make = _children => {
     };
   },
   render: self => {
+    let activeStyle = ReactDOMRe.Style.make(~color="#ff5252", ());
     <nav className=Styles.navBox>
       <PhenomicPresetReactApp.Link href="/">
         <header className=Styles.logoBox>
@@ -137,34 +138,38 @@ let make = _children => {
         </header>
       </PhenomicPresetReactApp.Link>
       <div className=Styles.linksBox>
-        <PhenomicPresetReactApp.Link href="/about">
+        <PhenomicPresetReactApp.Link activeStyle href="/about">
           "About"->text
         </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link href="/blog">
-          "Blog"->text
-        </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link href="/awesome">
+        <PhenomicPresetReactApp.Link activeStyle href="/awesome">
           "Awesome"->text
         </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link href="/conference">
+        <PhenomicPresetReactApp.Link activeStyle href="/conference">
           "Conference"->text
+        </PhenomicPresetReactApp.Link>
+        <PhenomicPresetReactApp.Link activeStyle href="/blog">
+          "Blog"->text
         </PhenomicPresetReactApp.Link>
       </div>
       <span className=Styles.hamburger onClick={_e => self.send(OpenSidebar)}>
         <img src=menu />
       </span>
       <div className={Styles.foldOut(self.state.sidebar)}>
-        <PhenomicPresetReactApp.Link className="sidelink" href="/about">
+        <PhenomicPresetReactApp.Link
+          className="sidelink" activeStyle href="/about">
           "About"->text
         </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link className="sidelink" href="/blog">
-          "Blog"->text
-        </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link className="sidelink" href="/awesome">
+        <PhenomicPresetReactApp.Link
+          className="sidelink" activeStyle href="/awesome">
           "Awesome"->text
         </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link className="sidelink" href="/conference">
+        <PhenomicPresetReactApp.Link
+          className="sidelink" activeStyle href="/conference">
           "Conference"->text
+        </PhenomicPresetReactApp.Link>
+        <PhenomicPresetReactApp.Link
+          className="sidelink" activeStyle href="/blog">
+          "Blog"->text
         </PhenomicPresetReactApp.Link>
       </div>
     </nav>;
