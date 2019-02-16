@@ -21,7 +21,7 @@ module Styles = {
     style([
       display(`flex),
       alignItems(`center),
-      marginLeft(Shared.Spacer.px032),
+      marginLeft(Shared.Spacer.px016),
       lineHeight(`abs(1.25)),
       ...Shared.Font.size(Text),
     ]);
@@ -127,7 +127,9 @@ let make = _children => {
               className=Styles.header2>
               "Conference by Year"->text
             </h2>
-            <p className=Styles.text>"A list of conferences by year"->text</p>
+            <p className=Styles.text>
+              "A list of conferences by year"->text
+            </p>
             <div style={ReactDOMRe.Style.make(~marginBottom="48px", ())}>
               <PhenomicPresetReactApp.Link
                 href="/conference/2019" className=Styles.text>
