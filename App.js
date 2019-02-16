@@ -24,7 +24,13 @@ const routes = () => (
     <Route path="/about" component={About.jsComponent} />
     <Route path="/awesome" component={Awesome.jsComponent} />
     <Route path="/conference" component={Conference.jsComponent} />
-    <Route path="conference/*" component={ConferenceDetails.jsComponent} />
+    <Route
+      path="conference/*"
+      component={withPhenomicApi(
+        ConferenceDetails.jsComponent,
+        ConferenceDetails.queries
+      )}
+    />
     <Route
       path="/blog"
       component={withPhenomicApi(Posts.jsComponent, Posts.queries)}

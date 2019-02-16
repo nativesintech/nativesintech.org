@@ -80,7 +80,7 @@ type action =
 
 let component = ReasonReact.reducerComponent(__MODULE__);
 
-let make = (~params) => {
+let make = (~conference, ~params) => {
   ...component,
   initialState: () => {data: None},
   didMount: self => {
@@ -203,5 +203,16 @@ let make = (~params) => {
 
 let jsComponent =
   ReasonReact.wrapReasonForJs(~component, jsProps =>
-    make(~params=paramsFromJs(jsProps##params))
+    make(
+      ~conference=PhenomicPresetReactApp.jsEdge(jsProps##conference),
+      ~params=paramsFromJs(jsProps##params),
+    )
   );
+
+let queries = props => {
+  let conference =
+    PhenomicPresetReactApp.query(
+      Item({path: "content/conferences", id: props##params##splat}),
+    );
+  {"conference": conference};
+};
