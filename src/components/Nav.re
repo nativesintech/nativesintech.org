@@ -62,15 +62,6 @@ module Styles = {
       right(px(0)),
       display(`flex),
       flexDirection(`column),
-      selector(
-        "> .sidelink",
-        [
-          color(Shared.Colors.gray50),
-          padding2(~v=px(10), ~h=px(20)),
-          cursor(`pointer),
-          Shared.FontSize.px20,
-        ],
-      ),
     ];
 
     let animationWidth =
@@ -80,7 +71,17 @@ module Styles = {
       style([
         width(px(200)),
         animationWidth,
-        selector("> .sidelink", [opacity(1.0)]),
+        selector(
+          "> .sidelink",
+          [
+            color(Shared.Colors.gray50),
+            padding2(~v=px(10), ~h=px(20)),
+            cursor(`pointer),
+            opacity(0.0),
+            Shared.FontSize.px20,
+            opacity(1.0),
+          ],
+        ),
         ...baseStyles,
       ]);
 
@@ -88,7 +89,17 @@ module Styles = {
       style([
         width(px(0)),
         animationWidth,
-        selector("> .sidelink", [opacity(0.0)]),
+        selector(
+          "> .sidelink",
+          [
+            color(Shared.Colors.gray50),
+            padding2(~v=px(10), ~h=px(20)),
+            cursor(`pointer),
+            opacity(0.0),
+            Shared.FontSize.px20,
+            opacity(0.0),
+          ],
+        ),
         ...baseStyles,
       ]);
 
