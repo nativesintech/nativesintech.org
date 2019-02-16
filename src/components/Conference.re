@@ -64,7 +64,7 @@ let make = _children => {
         />
         <meta
           property="og:url"
-          content="http://nativesintech.org/conference/"
+          content="https://nativesintech.org/conference/"
         />
       </BsReactHelmet>
       <Frame>

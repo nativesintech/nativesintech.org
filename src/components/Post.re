@@ -85,7 +85,7 @@ let make = (~post) => {
              <meta
                property="og:url"
                content={
-                 "http://nativesintech.org/blog/"
+                 "https://nativesintech.org/blog/"
                  ++ Helpers.getPage(post##filename)
                  ++ "/"
                }
