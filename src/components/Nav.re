@@ -67,18 +67,30 @@ module Styles = {
         [
           color(Shared.Colors.gray50),
           padding2(~v=px(10), ~h=px(20)),
-          Shared.FontSize.px20,
           cursor(`pointer),
+          Shared.FontSize.px20,
         ],
       ),
     ];
 
-    let animation =
+    let animationWidth =
       transition(~duration=300, ~timingFunction=`easeOut, "width");
 
-    let isOpenStyles = style([width(px(200)), animation, ...baseStyles]);
+    let isOpenStyles =
+      style([
+        width(px(200)),
+        animationWidth,
+        selector("> .sidelink", [opacity(1.0)]),
+        ...baseStyles,
+      ]);
 
-    let isClosedStyles = style([width(px(0)), animation, ...baseStyles]);
+    let isClosedStyles =
+      style([
+        width(px(0)),
+        animationWidth,
+        selector("> .sidelink", [opacity(0.0)]),
+        ...baseStyles,
+      ]);
 
     isSidebarOpen ? isOpenStyles : isClosedStyles;
   };
