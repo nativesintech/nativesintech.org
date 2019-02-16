@@ -29,10 +29,45 @@ module Styles = {
       ...Shared.Font.size(Shared.Types.Title3),
     ]);
 
-  let header = style(Shared.Font.size(Shared.Types.Title2));
+  let header =
+    style([
+      marginBottom(Shared.Spacer.px024),
+      ...Shared.Font.size(Shared.Types.Title2),
+    ]);
 
   let text =
     style([maxWidth(`em(30.0)), ...Shared.Font.size(Shared.Types.Text)]);
+
+  let speaker = style([display(`flex), marginBottom(px(100))]);
+
+  let image =
+    style([
+      borderRadius(px(2)),
+      overflow(`hidden),
+      minWidth(px(200)),
+      maxHeight(px(200)),
+      maxWidth(px(200)),
+      maxHeight(px(200)),
+    ]);
+
+  let details =
+    style([
+      display(`flex),
+      flexDirection(`column),
+      paddingLeft(Shared.Spacer.px024),
+    ]);
+
+  let name =
+    style([marginBottom(Shared.Spacer.px016), ...Shared.Font.size(Title3)]);
+
+  let session =
+    style([
+      marginBottom(Shared.Spacer.px016),
+      fontWeight(`bold),
+      Shared.FontSize.px18,
+    ]);
+
+  let bio = style([Shared.FontSize.px16]);
 };
 
 [@bs.deriving jsConverter]
@@ -112,12 +147,28 @@ let make = (~params, _children) => {
         <div className=Styles.container>
           <h2 className=Styles.header> "Meet the Speakers"->text </h2>
           {switch (self.state.data) {
-           | None => "Loading"->text
+           | None => "Loading..."->text
            | Some(d) =>
              d.data
-             |> List.map((speaker: Types.SessionizeAPI.speaker) =>
-                  <div> speaker.fullName->text </div>
-                )
+             |> List.map((speaker: Types.SessionizeAPI.speaker) => {
+                  let firstSessionName =
+                    Belt.Option.(
+                      Belt.List.head(speaker.sessions)
+                      ->map(s => s.name)
+                      ->getWithDefault("")
+                    );
+
+                  <div className=Styles.speaker>
+                    <img className=Styles.image src={speaker.profilePicture} />
+                    <div className=Styles.details>
+                      <div className=Styles.name> speaker.fullName->text </div>
+                      <div className=Styles.session>
+                        firstSessionName->text
+                      </div>
+                      <p className=Styles.bio> speaker.bio->text </p>
+                    </div>
+                  </div>;
+                })
              |> list
            }}
         </div>
