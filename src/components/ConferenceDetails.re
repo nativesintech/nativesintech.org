@@ -136,7 +136,33 @@ let make = (~params, _children) => {
     };
   },
   render: self => {
+    let {year} = params;
     <div>
+      <BsReactHelmet>
+        <title> {j|Natives in Tech Conf $year|j}->text </title>
+        <meta
+          name="description"
+          content={j|Details about the Natives in Tech Conference|j}
+        />
+        <meta
+          name="keywords"
+          content="natives in tech, natives, indigenous, tech, software development, open source, conference"
+        />
+        <meta name="twitter:title" content={j|Natives in Tech Conf $year|j} />
+        <meta
+          name="twitter:description"
+          content={j|Details about the Natives in Tech Conference of $year|j}
+        />
+        <meta property="og:title" content={j|Natives in Tech Conf $year|j} />
+        <meta
+          property="og:description"
+          content={j|Details about the Natives in Tech Conference|j}
+        />
+        <meta
+          property="og:url"
+          content={j|http://nativesintech.org/conference/$year/|j}
+        />
+      </BsReactHelmet>
       <Frame>
         <div className=Styles.billboard>
           <h1 className=Styles.headline>

@@ -43,10 +43,10 @@ let make = _children => {
   render: _self =>
     <div>
       <BsReactHelmet>
-        <title> "Natives in Tech - Conference"->text </title>
+        <title> "Natives in Tech Conf"->text </title>
         <meta
           name="description"
-          content="Information about the Natives in Tech Conference"
+          content="Information about Natives in Tech Conf"
         />
         <meta
           name="keywords"
@@ -55,12 +55,12 @@ let make = _children => {
         <meta name="twitter:title" content="Natives in Tech Conference" />
         <meta
           name="twitter:description"
-          content="Information about the Natives in Tech Conference"
+          content="Information about Natives in Tech Conf"
         />
         <meta property="og:title" content="Natives in Tech Conference" />
         <meta
           property="og:description"
-          content="Information about the Natives in Tech Conference"
+          content="Information about Natives in Tech Conf"
         />
         <meta
           property="og:url"
