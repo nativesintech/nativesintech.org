@@ -31,14 +31,19 @@ module Styles = {
 
   let header =
     style([
-      marginBottom(Shared.Spacer.px024),
-      ...Shared.Font.size(Shared.Types.Title2),
+      marginBottom(Shared.Spacer.px064),
+      ...Shared.Font.size(Shared.Types.Title1),
     ]);
 
   let text =
     style([maxWidth(`em(30.0)), ...Shared.Font.size(Shared.Types.Text)]);
 
-  let speaker = style([display(`flex), marginBottom(px(100))]);
+  let speaker =
+    style([
+      display(`flex),
+      marginBottom(px(100)),
+      Shared.Styles.mobile([flexDirection(`column)]),
+    ]);
 
   let image =
     style([
@@ -55,6 +60,7 @@ module Styles = {
       display(`flex),
       flexDirection(`column),
       paddingLeft(Shared.Spacer.px024),
+      Shared.Styles.mobile([padding2(~v=Shared.Spacer.px024, ~h=px(0))]),
     ]);
 
   let name =
