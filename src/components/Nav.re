@@ -124,6 +124,7 @@ let make = _children => {
     };
   },
   render: self => {
+    let activeStyle = ReactDOMRe.Style.make(~color="#ff5252", ());
     <nav className=Styles.navBox>
       <PhenomicPresetReactApp.Link href="/">
         <header className=Styles.logoBox>
@@ -137,16 +138,16 @@ let make = _children => {
         </header>
       </PhenomicPresetReactApp.Link>
       <div className=Styles.linksBox>
-        <PhenomicPresetReactApp.Link href="/about">
+        <PhenomicPresetReactApp.Link activeStyle href="/about">
           "About"->text
         </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link href="/awesome">
+        <PhenomicPresetReactApp.Link activeStyle href="/awesome">
           "Awesome"->text
         </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link href="/conference">
+        <PhenomicPresetReactApp.Link activeStyle href="/conference">
           "Conference"->text
         </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link href="/blog">
+        <PhenomicPresetReactApp.Link activeStyle href="/blog">
           "Blog"->text
         </PhenomicPresetReactApp.Link>
       </div>
@@ -154,16 +155,20 @@ let make = _children => {
         <img src=menu />
       </span>
       <div className={Styles.foldOut(self.state.sidebar)}>
-        <PhenomicPresetReactApp.Link className="sidelink" href="/about">
+        <PhenomicPresetReactApp.Link
+          className="sidelink" activeStyle href="/about">
           "About"->text
         </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link className="sidelink" href="/awesome">
+        <PhenomicPresetReactApp.Link
+          className="sidelink" activeStyle href="/awesome">
           "Awesome"->text
         </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link className="sidelink" href="/conference">
+        <PhenomicPresetReactApp.Link
+          className="sidelink" activeStyle href="/conference">
           "Conference"->text
         </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link className="sidelink" href="/blog">
+        <PhenomicPresetReactApp.Link
+          className="sidelink" activeStyle href="/blog">
           "Blog"->text
         </PhenomicPresetReactApp.Link>
       </div>
