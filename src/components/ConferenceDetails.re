@@ -5,12 +5,14 @@ module Styles = {
 
   let billboard =
     style([
-      display(`flex),
-      alignItems(`center),
-      justifyContent(`center),
-      flexDirection(`column),
+      textAlign(`center),
       backgroundColor(Shared.Colors.gray900),
-      padding2(~v=Shared.Spacer.px192, ~h=px(0)),
+      padding2(~v=Shared.Spacer.px192, ~h=Shared.Spacer.px064),
+      marginBottom(Shared.Spacer.px096),
+      Shared.Styles.mobile([
+        padding2(~v=Shared.Spacer.px128, ~h=Shared.Spacer.px024),
+        marginBottom(Shared.Spacer.px064),
+      ]),
     ]);
 
   let container = style(Shared.Styles.container);
@@ -18,21 +20,20 @@ module Styles = {
   let headline =
     style([
       color(Shared.Colors.gray50),
-      textAlign(`center),
       ...Shared.Font.size(Shared.Types.Title1),
     ]);
 
   let tagline =
     style([
       color(Shared.Colors.gray400),
-      textAlign(`center),
+      marginTop(Shared.Spacer.px024),
       ...Shared.Font.size(Shared.Types.Title3),
     ]);
 
   let header =
     style([
       marginBottom(Shared.Spacer.px064),
-      ...Shared.Font.size(Shared.Types.Title1),
+      ...Shared.Font.size(Shared.Types.Title2),
     ]);
 
   let text =
@@ -66,14 +67,9 @@ module Styles = {
   let name =
     style([marginBottom(Shared.Spacer.px016), ...Shared.Font.size(Title3)]);
 
-  let session =
-    style([
-      marginBottom(Shared.Spacer.px016),
-      fontWeight(`bold),
-      Shared.FontSize.px18,
-    ]);
+  let session = style([fontWeight(`bold), Shared.FontSize.px18]);
 
-  let bio = style([Shared.FontSize.px16]);
+  let bio = style([Shared.FontSize.px20]);
 };
 
 [@bs.deriving jsConverter]
@@ -143,11 +139,9 @@ let make = (~params, _children) => {
     <div>
       <Frame>
         <div className=Styles.billboard>
-          <div className=Styles.container>
-            <h1 className=Styles.headline>
-              "Indigenous Peoples in Digital Spaces"->text
-            </h1>
-          </div>
+          <h1 className=Styles.headline>
+            "Indigenous Peoples in Digital Spaces"->text
+          </h1>
           <div className=Styles.tagline> "2019 Conference Details"->text </div>
         </div>
         <div className=Styles.container>
