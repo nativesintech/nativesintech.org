@@ -92,17 +92,9 @@ module Font = {
   let size = (size: font) => {
     switch (size) {
     | Title1 => [FontSize.px72, Styles.mobile([FontSize.px48])]
-    | Title2 => [
-        FontSize.px36,
-        color(Colors.gray800),
-        Styles.mobile([FontSize.px30]),
-      ]
+    | Title2 => [FontSize.px36, Styles.mobile([FontSize.px30])]
     | Title3 => [FontSize.px30, Styles.mobile([FontSize.px24])]
-    | Text => [
-        FontSize.px24,
-        color(Colors.gray900),
-        Styles.mobile([FontSize.px18]),
-      ]
+    | Text => [FontSize.px24, Styles.mobile([FontSize.px18])]
     | Small => [FontSize.px18, Styles.mobile([FontSize.px16])]
     };
   };

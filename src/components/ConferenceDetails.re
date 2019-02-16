@@ -112,7 +112,7 @@ let make = (~params, _children) => {
         <div className=Styles.container>
           <h2 className=Styles.header> "Meet the Speakers"->text </h2>
           {switch (self.state.data) {
-           | None => "Something went terribly wrong..."->text
+           | None => "Loading"->text
            | Some(d) =>
              d.data
              |> List.map((speaker: Types.SessionizeAPI.speaker) =>

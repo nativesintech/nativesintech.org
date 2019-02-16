@@ -11,10 +11,6 @@ external github: string = "../../../../public/images/github-black-logo.svg";
 
 [@bs.module] external branch: string = "../../../../public/images/branch.svg";
 
-let dict = Js.Dict.empty();
-Js.Dict.set(dict, "name", Js.Json.string("John Doe"));
-Js.Dict.set(dict, "age", Js.Json.number(30.0));
-
 module Styles = {
   open Css;
 
