@@ -58,6 +58,7 @@ module Styles = {
       top(px(0)),
       bottom(px(0)),
       zIndex(10),
+      right(px(0)),
       display(`flex),
       flexDirection(`column),
       selector(
@@ -72,7 +73,7 @@ module Styles = {
     ];
 
     let animation =
-      transition(~duration=300, ~timingFunction=`easeOut, "right");
+      transition(~duration=300, ~timingFunction=`easeOut, "width");
 
     let isOpenStyles = style([width(px(200)), animation, ...baseStyles]);
 
