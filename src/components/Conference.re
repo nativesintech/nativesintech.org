@@ -33,6 +33,8 @@ module Styles = {
       marginRight(Shared.Spacer.px012),
       Shared.Styles.mobile([width(px(20)), height(px(20))]),
     ]);
+
+  let link = style([color(hex("#40dddb")), textDecoration(`underline)]);
 };
 
 let component = ReasonReact.statelessComponent(__MODULE__);
@@ -105,27 +107,29 @@ let make = () => {
               "Would you like to present?"->text
             </h2>
             <p className=Styles.text>
-              "If you would like to present at this conference, create a session using the "
+              "If you would like to present at this conference, create a session using "
               ->text
               <a
+                className=Styles.link
                 href="https://sessionize.com/natives-in-tech/"
                 target="_blank"
                 rel="noopener noreferrer">
-                "sessionize platform."->text
+                "sessionize"->text
               </a>
+              "."->text
             </p>
             <h2 className=Styles.header2>
               "Would you like to attend?"->text
             </h2>
             <p className=Styles.text>
-              {j|Stay up to date on all the latest details by joining our mailing list 👇.|j}
+              {j|Stay up to date on all the latest details by joining our mailing list.|j}
               ->text
             </p>
             <SubscribeForm />
             <h2
               style={ReactDOMRe.Style.make(~margin="24px 0 24px 0", ())}
               className=Styles.header2>
-              "Conference by Year"->text
+              "Conferences"->text
             </h2>
             <p className=Styles.text>
               "A list of conferences by year"->text

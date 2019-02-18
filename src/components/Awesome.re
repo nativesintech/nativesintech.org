@@ -18,7 +18,9 @@ module Styles = {
     style([
       textAlign(`center),
       padding2(~v=Shared.Spacer.px192, ~h=Shared.Spacer.px064),
-      backgroundColor(Shared.Colors.gray900),
+      color(hex("0a1214")),
+      backgroundColor(hex("fbfcfe")),
+      borderBottom(px(1), `solid, hex("ebf0fa")),
       marginBottom(Shared.Spacer.px096),
       Shared.Styles.mobile([
         padding2(~v=Shared.Spacer.px128, ~h=Shared.Spacer.px024),
@@ -26,15 +28,11 @@ module Styles = {
       ]),
     ]);
 
-  let header =
-    style([
-      color(Shared.Colors.gray50),
-      ...Shared.Font.size(Shared.Types.Title1),
-    ]);
+  let header = style(Shared.Font.size(Shared.Types.Title1));
 
   let tagline =
     style([
-      color(Shared.Colors.gray500),
+      color(hex("94a2bc")),
       maxWidth(Shared.Spacer.px640),
       margin2(~v=px(0), ~h=`auto),
     ]);
@@ -63,7 +61,7 @@ module Styles = {
         ~blur=px(2),
         ~spread=px(2),
         ~inset=false,
-        Shared.Colors.gray200,
+        hex("ddd"),
       ),
       Shared.Styles.mobile([
         marginBottom(Shared.Spacer.px128),
@@ -78,7 +76,7 @@ module Styles = {
       backgroundSize(`cover),
       width(Shared.Spacer.px384),
       height(Shared.Spacer.px384),
-      borderBottom(px(1), `solid, Shared.Colors.gray200),
+      borderBottom(px(1), `solid, hex("ddd")),
       Shared.Styles.mobile([
         width(Shared.Spacer.px256),
         height(Shared.Spacer.px256),
@@ -92,17 +90,17 @@ module Styles = {
   let location =
     style([
       Shared.FontSize.px18,
-      color(Shared.Colors.gray500),
+      color(hex("ccc")),
       marginTop(Shared.Spacer.px004),
     ]);
 
-  let username = style([Shared.FontSize.px18, color(Shared.Colors.gray500)]);
+  let username = style([Shared.FontSize.px18, color(hex("#0a1214"))]);
 
   let bio =
     style([
       marginTop(Shared.Spacer.px012),
       Shared.FontSize.px16,
-      color(Shared.Colors.gray800),
+      color(hex("0a1214")),
       lineHeight(`abs(1.5)),
     ]);
 

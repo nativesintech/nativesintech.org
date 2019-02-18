@@ -39,20 +39,23 @@ export const hiddenInput = css`
   visibility: hidden;
 `;
 
+const color = "#23c7c5";
+
 export const button = css`
   font-size: 18px;
-  border: 2px solid #ff5252;
+  border: 2px solid ${color};
   text-transform: uppercase;
   padding: 12px 32px;
   border-radius: 3px;
-  background-color: #ff5252;
+  background-color: ${color};
   font-weight: 700;
   cursor: pointer;
-  color: #fafafa;
+  color: #fff !important;
+  box-shadow: none;
 
   &:hover {
-    background-color: #fafafa;
-    color: #ff5252;
+    background-color: #fff;
+    color: ${color} !important;
   }
 
   @media screen and (max-width: 600px) {

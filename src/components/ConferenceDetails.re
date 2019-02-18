@@ -7,7 +7,9 @@ module Styles = {
   let billboard =
     style([
       textAlign(`center),
-      backgroundColor(Shared.Colors.gray900),
+      backgroundColor(hex("fbfcfe")),
+      borderBottom(px(1), `solid, hex("ebf0fa")),
+      color(hex("0a1214")),
       padding2(~v=Shared.Spacer.px192, ~h=Shared.Spacer.px064),
       marginBottom(Shared.Spacer.px096),
       Shared.Styles.mobile([
@@ -18,15 +20,11 @@ module Styles = {
 
   let container = style(Shared.Styles.container);
 
-  let headline =
-    style([
-      color(Shared.Colors.gray50),
-      ...Shared.Font.size(Shared.Types.Title1),
-    ]);
+  let headline = style(Shared.Font.size(Shared.Types.Title1));
 
   let tagline =
     style([
-      color(Shared.Colors.gray400),
+      color(hex("94a2bc")),
       marginTop(Shared.Spacer.px024),
       ...Shared.Font.size(Shared.Types.Title3),
     ]);
@@ -66,9 +64,19 @@ module Styles = {
     ]);
 
   let name =
-    style([marginBottom(Shared.Spacer.px016), ...Shared.Font.size(Title3)]);
+    style([
+      color(hex("0a1214")),
+      marginBottom(Shared.Spacer.px016),
+      ...Shared.Font.size(Title3),
+    ]);
 
-  let session = style([fontWeight(`bold), Shared.FontSize.px18]);
+  let session =
+    style([
+      fontWeight(`bold),
+      Shared.FontSize.px18,
+      color(hex("94a2bc")),
+      lineHeight(`abs(1.75)),
+    ]);
 
   let bio = style([Shared.FontSize.px20]);
 };

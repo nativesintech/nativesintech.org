@@ -66,22 +66,39 @@ a:visited {
 }
 
 a:hover {
-  color: #ff5252;
+  color: #23c7c5;
 }
 
 strong {
-  color: #212121;
+  color: #0a1214;
 }
 
 input {
   outline: none;
+  border: none;
+  box-shadow: 0 0 1px 1px #ddd;
+  color: #94a2bc !important;
 }
 
 textarea {
-  border: 1px solid #e0e0e0;
+  appearance: none;
   outline: none;
+  border: none;
+  box-shadow: 0 0 1px 1px #ddd;
   resize: none;
   overflow: auto;
+  color: #94a2bc !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #0a1214;
+}
+
+input,
+textarea {
+  color: #0a1214;
+  caret-color: #94a2bc;
 }
 
 .icon.icon-link:before {

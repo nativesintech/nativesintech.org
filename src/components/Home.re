@@ -54,7 +54,6 @@ module Styles = {
       alignItems(`center),
       backgroundColor(hex("fbfcfe")),
       borderBottom(px(1), `solid, hex("ebf0fa")),
-      marginTop(px(3)),
       padding2(~v=Shared.Spacer.px096, ~h=Shared.Spacer.px064),
       media("(max-width: 900px)", [flexDirection(`column)]),
       media(
@@ -189,25 +188,16 @@ module Styles = {
       flex(1),
     ]);
 
-  let input =
-    style([
-      borderRadius(px(2)),
-      border(px(1), `solid, Shared.Colors.gray300),
-      Shared.FontSize.px18,
-      padding(Shared.Spacer.px008),
-      color(Shared.Colors.gray900),
-    ]);
+  let input = style([Shared.FontSize.px18, padding(Shared.Spacer.px008)]);
 
   let textarea =
     style([
-      borderRadius(px(2)),
       Shared.FontSize.px18,
       padding(Shared.Spacer.px008),
       minHeight(Shared.Spacer.px128),
-      selector("&:invalid", [boxShadow(`transparent)]),
     ]);
 
-  let buttonColor = Shared.Colors.redA200;
+  let buttonColor = hex("23c7c5");
 
   let button =
     style([
