@@ -160,6 +160,9 @@ let make = () => {
         }",
       ),
     );
+
+    self.send(LoadMembers(RemoteData.Loading));
+
     Js.Promise.(
       Fetch.fetchWithInit(
         "https://api.github.com/graphql",

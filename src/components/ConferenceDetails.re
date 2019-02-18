@@ -89,6 +89,8 @@ let make = (~conference, ~params) => {
 
     let _ = conference;
 
+    self.send(UpdateDetails(RemoteData.Loading));
+
     if (LocalStorage.hasCachedConferenceDetails(year)) {
       let details =
         LocalStorage.getConferenceDetails(year) |> RemoteData.fromResult;
@@ -109,16 +111,15 @@ let make = (~conference, ~params) => {
                Belt.Option.(
                  text
                  ->Json.parse
-                 ->map(Decoders.SessionizeAPI.decodeResponse)
                  ->map(v =>
-                     Belt.Result.map(
-                       v,
-                       Encoders.LocalStorage.encodeConferenceData,
-                     )
+                     v
+                     ->Decoders.SessionizeAPI.decodeResponse
+                     ->Belt.Result.map(
+                         Encoders.LocalStorage.encodeConferenceData,
+                       )
+                     ->Belt.Result.getWithDefault(Js.Json.string(""))
                    )
-                 ->mapWithDefault(Js.Json.string(""), v =>
-                     Belt.Result.getWithDefault(v, Js.Json.string(""))
-                   )
+                 ->getWithDefault(Js.Json.string(""))
                );
 
              let result =
