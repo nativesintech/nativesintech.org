@@ -5,6 +5,7 @@ export const wrapper = css`
   border: 1px solid #e0e0e0;
   padding: 24px;
   border-radius: 4px;
+  box-shadow: 0 0 1px 1px #eee;
 `;
 
 export const header = css`
@@ -29,6 +30,7 @@ export const input = css`
   padding: 8px;
   color: #212121;
   width: 100%;
+  box-shadow: none;
 
   @media screen and (max-width: 600px) {
     font-size: 16px;
