@@ -18,7 +18,14 @@ module Styles = {
       alignItems(`center),
       padding2(~h=Shared.Spacer.px064, ~v=px(0)),
       minHeight(Shared.Spacer.px096),
-      borderBottom(px(1), `solid, Shared.Colors.gray300),
+      // borderBottom(px(1), `solid, Shared.Colors.gray300),
+      boxShadow(
+        ~x=px(1),
+        ~y=px(0),
+        ~blur=px(2),
+        ~spread=px(2),
+        hex("eee"),
+      ),
       overflow(`hidden),
       Shared.Styles.mobile([padding2(~h=Shared.Spacer.px024, ~v=px(0))]),
     ]);
