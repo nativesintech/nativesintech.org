@@ -2,6 +2,8 @@ let nothing = ReasonReact.null;
 
 let text = ReasonReact.string;
 
+let couldNotParseErr = "Could not parse";
+
 let list = list => list |> Array.of_list |> ReasonReact.array;
 
 let nodeList = node => node##list |> Array.to_list;
@@ -15,43 +17,33 @@ let getIdFromYear = year => {
   };
 };
 
-let now = () => [%raw {|Date.now()|}];
+let now = () => Js.Date.now();
 
 let dayInMilliseconds = 86400000.0;
 
-let getNextDay = () => now() +. dayInMilliseconds;
+let getNextDay = () => Js.Date.now() +. dayInMilliseconds;
 
 module LocalStorage = {
   let hasCachedConferenceDetails = year => {
     Belt.Option.(
       Dom.Storage.(localStorage |> getItem({j|$year|j}))
-      ->map(d => {
-          let time =
-            (
-              d
-              |> Json.parseOrRaise
-              |> Decoders.ConferenceDetails.decodeConferenceDetailsFromStorage
-            ).
-              timestamp;
-
-          if (time > now()) {
-            true;
-          } else {
-            false;
-          };
+      ->flatMap(Json.parse)
+      ->map(Decoders.ConferenceDetails.decodeConferenceDetailsFromStorage)
+      ->getWithDefault(Belt.Result.Error(couldNotParseErr))
+      ->Belt.Result.map(d => {
+          let time = d.timestamp;
+          time > now();
         })
-      ->getWithDefault(false)
+      ->Belt.Result.getWithDefault(false)
     );
   };
 
   let getConferenceDetails = id => {
     Belt.Option.(
       Dom.Storage.(localStorage |> getItem({j|$id|j}))
-      ->map(v =>
-          v
-          |> Json.parseOrRaise
-          |> Decoders.ConferenceDetails.decodeConferenceDetailsFromStorage
-        )
+      ->flatMap(Json.parse)
+      ->map(Decoders.ConferenceDetails.decodeConferenceDetailsFromStorage)
+      ->getWithDefault(Belt.Result.Error(couldNotParseErr))
     );
   };
 

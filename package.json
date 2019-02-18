@@ -13,6 +13,7 @@
     "bs-css": "^8.0.0-beta.2",
     "bs-fetch": "^0.3.1",
     "bs-platform": "^4.0.0",
+    "bs-remotedata": "^2.0.1",
     "bs-webapi": "^0.13.2",
     "css-loader": "^2.1.0",
     "cssnano": "^4.1.8",

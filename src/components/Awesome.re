@@ -117,19 +117,19 @@ module Styles = {
     ]);
 };
 
-type state = {members: list(Types.GitHubGraphQLAPI.edge)};
+type state = {data: WebData.t(list(Types.GitHubGraphQLAPI.edge))};
 
 type action =
-  | LoadMembers(list(Types.GitHubGraphQLAPI.edge));
+  | LoadMembers(WebData.t(list(Types.GitHubGraphQLAPI.edge)));
 
 let component = ReasonReact.reducerComponent(__MODULE__);
 
 let make = () => {
   ...component,
-  initialState: () => {members: []},
+  initialState: () => {data: RemoteData.NotAsked},
   reducer: (action, _state) => {
     switch (action) {
-    | LoadMembers(xs) => ReasonReact.Update({members: xs})
+    | LoadMembers(d) => ReasonReact.Update({data: d})
     };
   },
   didMount: self => {
@@ -177,18 +177,14 @@ let make = () => {
           (),
         ),
       )
-      |> then_(Fetch.Response.json)
-      |> then_(data => {
-           let xs =
-             Js.Json.stringify(data)
-             |> Json.parseOrRaise
-             |> Decoders.GitHubGraphQLAPI.decodeResponse;
-           self.send(LoadMembers(xs));
-           Js.Promise.resolve();
+      |> WebData.fromResponse(Decoders.GitHubGraphQLAPI.decodeResponse)
+      |> then_(result => {
+           self.send(LoadMembers(result));
+           resolve();
          })
-      |> catch(_e => Js.Exn.raiseError("There were an error in the promise"))
     )
     |> ignore;
+
     ();
   },
   render: self => {
@@ -225,54 +221,60 @@ let make = () => {
         </div>
         <div className=Styles.container>
           <div className=Styles.usersBox>
-            {self.state.members
-             |> List.map((m: Types.GitHubGraphQLAPI.edge) => {
-                  let orStr = Belt.Option.(getWithDefault(_, ""));
-                  let (img, bio, email, location, login, name, websiteUrl) = (
-                    m.node.avatarUrl->orStr,
-                    m.node.bio->orStr,
-                    m.node.email->orStr,
-                    m.node.location->orStr,
-                    m.node.login->orStr,
-                    m.node.name->orStr,
-                    m.node.websiteUrl->orStr,
-                  );
-                  <div className=Styles.userBox>
-                    <div className={Styles.image(img)} />
-                    <div className=Styles.content>
-                      <div className=Styles.name> name->text </div>
-                      <div className=Styles.location> location->text </div>
-                      <p className=Styles.bio> bio->text </p>
-                      <div className=Styles.iconsBox>
-                        {email !== "" ?
-                           <a
-                             href={j|mailto:$email|j}
-                             target="_blank"
-                             rel="noopener noreferrer">
-                             <img src=mail className=Styles.icon />
-                           </a> :
-                           nothing}
-                        {websiteUrl !== "" ?
-                           <a
-                             href=websiteUrl
-                             target="_blank"
-                             rel="noopener noreferrer">
-                             <img src=link className=Styles.icon />
-                           </a> :
-                           nothing}
-                        {login !== "" ?
-                           <a
-                             href={j|https://github.com/$login|j}
-                             target="_blank"
-                             rel="noopener noreferrer">
-                             <img src=branch className=Styles.icon />
-                           </a> :
-                           nothing}
+            {switch (self.state.data) {
+             | NotAsked => nothing
+             | Loading => "Loading..."->text
+             | Failure(e) => {j|Sorry, there was an error: $e|j}->text
+             | Success(d) =>
+               d
+               |> List.map((m: Types.GitHubGraphQLAPI.edge) => {
+                    let orStr = Belt.Option.(getWithDefault(_, ""));
+                    let (img, bio, email, location, login, name, websiteUrl) = (
+                      m.node.avatarUrl->orStr,
+                      m.node.bio->orStr,
+                      m.node.email->orStr,
+                      m.node.location->orStr,
+                      m.node.login->orStr,
+                      m.node.name->orStr,
+                      m.node.websiteUrl->orStr,
+                    );
+                    <div className=Styles.userBox>
+                      <div className={Styles.image(img)} />
+                      <div className=Styles.content>
+                        <div className=Styles.name> name->text </div>
+                        <div className=Styles.location> location->text </div>
+                        <p className=Styles.bio> bio->text </p>
+                        <div className=Styles.iconsBox>
+                          {email !== "" ?
+                             <a
+                               href={j|mailto:$email|j}
+                               target="_blank"
+                               rel="noopener noreferrer">
+                               <img src=mail className=Styles.icon />
+                             </a> :
+                             nothing}
+                          {websiteUrl !== "" ?
+                             <a
+                               href=websiteUrl
+                               target="_blank"
+                               rel="noopener noreferrer">
+                               <img src=link className=Styles.icon />
+                             </a> :
+                             nothing}
+                          {login !== "" ?
+                             <a
+                               href={j|https://github.com/$login|j}
+                               target="_blank"
+                               rel="noopener noreferrer">
+                               <img src=branch className=Styles.icon />
+                             </a> :
+                             nothing}
+                        </div>
                       </div>
-                    </div>
-                  </div>;
-                })
-             |> list}
+                    </div>;
+                  })
+               |> list
+             }}
           </div>
         </div>
       </Frame>

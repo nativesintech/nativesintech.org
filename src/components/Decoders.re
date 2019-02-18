@@ -15,12 +15,17 @@ module GitHubGraphQLAPI = {
 
   let edge = json => {node: json |> field("node", node)};
 
-  let decodeResponse = json =>
+  let decodeResponseExn = json =>
     at(
       ["data", "organization", "members"],
       field("edges", list(edge)),
       json,
     );
+
+  let decodeResponse = json =>
+    try (Belt.Result.Ok(decodeResponseExn(json))) {
+    | Json.Decode.DecodeError(err) => Belt.Result.Error(err)
+    };
 };
 
 module SessionizeAPI = {
@@ -50,14 +55,24 @@ module SessionizeAPI = {
     links: json |> field("links", list(link)),
   };
 
-  let decodeResponse = json => Json.Decode.list(speaker, json);
+  let decodeResponseExn = json => Json.Decode.list(speaker, json);
+
+  let decodeResponse = json =>
+    try (Belt.Result.Ok(decodeResponseExn(json))) {
+    | Json.Decode.DecodeError(err) => Belt.Result.Error(err)
+    };
 };
 
 module ConferenceDetails = {
   open Types.ConferenceDetails;
 
-  let decodeConferenceDetailsFromStorage = json => {
-    timestamp: json |> field("timestamp", int),
-    data: json |> field("data", SessionizeAPI.decodeResponse),
+  let decodeConferenceDetailsFromStorageExn = json => {
+    timestamp: json |> field("timestamp", Json.Decode.float),
+    data: json |> field("data", SessionizeAPI.decodeResponseExn),
   };
+
+  let decodeConferenceDetailsFromStorage = json =>
+    try (Belt.Result.Ok(decodeConferenceDetailsFromStorageExn(json))) {
+    | Json.Decode.DecodeError(err) => Belt.Result.Error(err)
+    };
 };

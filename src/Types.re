@@ -79,7 +79,7 @@ module SessionizeAPI = {
 
 module ConferenceDetails = {
   type details = {
-    timestamp: int,
+    timestamp: float,
     data: SessionizeAPI.response,
   };
 };

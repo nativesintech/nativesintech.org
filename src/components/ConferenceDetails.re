@@ -73,16 +73,16 @@ module Styles = {
   let bio = style([Shared.FontSize.px20]);
 };
 
-type state = {data: option(Types.ConferenceDetails.details)};
+type state = {data: RemoteData.t(string, Types.ConferenceDetails.details)};
 
 type action =
-  | UpdateDetails(option(Types.ConferenceDetails.details));
+  | UpdateDetails(RemoteData.t(string, Types.ConferenceDetails.details));
 
 let component = ReasonReact.reducerComponent(__MODULE__);
 
 let make = (~conference, ~params) => {
   ...component,
-  initialState: () => {data: None},
+  initialState: () => {data: RemoteData.NotAsked},
   didMount: self => {
     let {splat: year} = params;
     let id = getIdFromYear(year);
@@ -90,20 +90,36 @@ let make = (~conference, ~params) => {
     let _ = conference;
 
     if (LocalStorage.hasCachedConferenceDetails(year)) {
-      let details = LocalStorage.getConferenceDetails(year);
+      let details =
+        LocalStorage.getConferenceDetails(year) |> RemoteData.fromResult;
       self.send(UpdateDetails(details));
     } else {
       Js.Promise.(
         Fetch.fetch({j|https://sessionize.com/api/v2/$id/view/speakers|j})
-        |> then_(Fetch.Response.text)
+        |> then_(res =>
+             if (Fetch.Response.ok(res)) {
+               Fetch.Response.text(res);
+             } else {
+               self.send(UpdateDetails(RemoteData.Failure("Bad status")));
+               reject(Js.Exn.raiseError("Bad status"));
+             }
+           )
         |> then_(text => {
-             let result =
-               text
-               |> Json.parseOrRaise
-               |> Decoders.SessionizeAPI.decodeResponse;
-
              let encodedConferenceData =
-               Encoders.LocalStorage.encodeConferenceData(result);
+               Belt.Option.(
+                 text
+                 ->Json.parse
+                 ->map(Decoders.SessionizeAPI.decodeResponse)
+                 ->map(v =>
+                     Belt.Result.map(
+                       v,
+                       Encoders.LocalStorage.encodeConferenceData,
+                     )
+                   )
+                 ->mapWithDefault(Js.Json.string(""), v =>
+                     Belt.Result.getWithDefault(v, Js.Json.string(""))
+                   )
+               );
 
              let result =
                Js.Dict.fromList([
@@ -116,15 +132,17 @@ let make = (~conference, ~params) => {
                Js.Json.object_(result),
              );
 
-             let details = LocalStorage.getConferenceDetails(year);
+             let details =
+               LocalStorage.getConferenceDetails(year)
+               |> RemoteData.fromResult;
 
              self.send(UpdateDetails(details));
-
-             Js.Promise.resolve();
+             resolve();
            })
-        |> catch(_e =>
-             Js.Exn.raiseError("There were an error in the promise")
-           )
+        |> catch(_ => {
+             self.send(UpdateDetails(RemoteData.Failure("Network error")));
+             resolve();
+           })
       )
       |> ignore;
     };
@@ -173,8 +191,10 @@ let make = (~conference, ~params) => {
         <div className=Styles.container>
           <h2 className=Styles.header> "Meet the Speakers"->text </h2>
           {switch (self.state.data) {
-           | None => "Loading..."->text
-           | Some(d) =>
+           | NotAsked => nothing
+           | Loading => "Loading..."->text
+           | Failure(e) => {j|Sorry, there was an error: $e|j}->text
+           | Success(d) =>
              d.data
              |> List.map((speaker: Types.SessionizeAPI.speaker) => {
                   let firstSessionName =
