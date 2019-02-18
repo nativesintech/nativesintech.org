@@ -4,7 +4,7 @@ open Helpers;
 external slack: string = "../../../../public/images/slack-logo.svg";
 
 [@bs.module]
-external github: string = "../../../../public/images/github-logo.svg";
+external github: string = "../../../../public/images/github-black-logo.svg";
 
 [@bs.module]
 external medium: string = "../../../../public/images/medium-logo.svg";
@@ -14,6 +14,10 @@ external twitter: string = "../../../../public/images/twitter-logo.svg";
 
 [@bs.module]
 external frame: string = "../../../../public/images/native-land-image.jpg";
+
+[@bs.module]
+external computer: string =
+  "../../../../public/images/computer-with-feather.svg";
 
 module Styles = {
   open Css;
@@ -43,15 +47,14 @@ module Styles = {
 
   let billboard =
     style([
-      minHeight(Shared.Spacer.px384),
       Shared.FontSize.px60,
-      color(Shared.Colors.gray50),
+      color(hex("0a1214")),
       display(`flex),
       justifyContent(`spaceAround),
       alignItems(`center),
-      backgroundColor(Shared.Colors.gray900),
-      selector("> div", [flex(1)]),
-      padding2(~h=Shared.Spacer.px064, ~v=Shared.Spacer.px064),
+      backgroundColor(hex("fbfcfe")),
+      borderBottom(px(1), `solid, hex("ebf0fa")),
+      padding2(~v=Shared.Spacer.px096, ~h=Shared.Spacer.px064),
       media("(max-width: 900px)", [flexDirection(`column)]),
       media(
         "(max-width: 600px)",
@@ -61,6 +64,7 @@ module Styles = {
 
   let billboardHeadline =
     style([
+      flex(2),
       media(
         "(max-width: 900px)",
         [
@@ -78,12 +82,12 @@ module Styles = {
           paddingTop(Shared.Spacer.px032),
         ],
       ),
-      media("(max-width: 410px)", [paddingBottom(Shared.Spacer.px032)]),
     ]);
 
   let frameBox =
     style([
       display(`flex),
+      padding2(~v=px(0), ~h=Shared.Spacer.px032),
       justifyContent(`center),
       alignItems(`center),
       media(
@@ -93,17 +97,22 @@ module Styles = {
           paddingBottom(Shared.Spacer.px048),
         ],
       ),
-      media("(max-width: 410px)", [display(`none), padding(px(0))]),
     ]);
 
-  let frame = style([flex(1), maxWidth(px(400)), alignSelf(`flexEnd)]);
+  let comp =
+    style([
+      width(px(350)),
+      height(px(350)),
+      Shared.Styles.mobile([width(px(250)), height(px(250))]),
+    ]);
 
   let content = style([Shared.FontSize.px24]);
 
   let connect =
     style([
       padding2(~v=Shared.Spacer.px192, ~h=Shared.Spacer.px064),
-      backgroundColor(hex("222")),
+      backgroundColor(hex("fbfcfe")),
+      border(px(1), `solid, hex("ebf0fa")),
       Shared.Styles.mobile([
         padding2(~h=Shared.Spacer.px024, ~v=Shared.Spacer.px128),
       ]),
@@ -113,7 +122,6 @@ module Styles = {
     style([
       margin(px(0)),
       Shared.FontSize.px48,
-      color(hex("fff")),
       textAlign(`center),
       paddingBottom(Shared.Spacer.px064),
     ]);
@@ -180,25 +188,16 @@ module Styles = {
       flex(1),
     ]);
 
-  let input =
-    style([
-      borderRadius(px(2)),
-      border(px(1), `solid, Shared.Colors.gray300),
-      Shared.FontSize.px18,
-      padding(Shared.Spacer.px008),
-      color(Shared.Colors.gray900),
-    ]);
+  let input = style([Shared.FontSize.px18, padding(Shared.Spacer.px008)]);
 
   let textarea =
     style([
-      borderRadius(px(2)),
       Shared.FontSize.px18,
       padding(Shared.Spacer.px008),
       minHeight(Shared.Spacer.px128),
-      selector("&:invalid", [boxShadow(`transparent)]),
     ]);
 
-  let buttonColor = Shared.Colors.redA200;
+  let buttonColor = hex("23c7c5");
 
   let button =
     style([
@@ -314,10 +313,7 @@ let make = () => {
             ->text
           </div>
           <div className=Styles.frameBox>
-            <div className=Styles.frame>
-              <div className="screenshot-safari" />
-              <img width="100%" height="auto" src=frame />
-            </div>
+            <img className=Styles.comp src=computer />
           </div>
         </section>
         <section id="about" className=Styles.about>
@@ -339,9 +335,9 @@ let make = () => {
           </div>
           <div className={j|topography $topography|j} />
         </section>
-        <section id="connect" className={j|$connect circuit-board |j}>
+        <section id="connect" className={j|$connect |j}>
           <h2 className=Styles.connectHeadline>
-            {j|Connect with us 🙌|j}->text
+            {j|Connect with us!|j}->text
           </h2>
           <div className=Styles.iconsBox>
             <a

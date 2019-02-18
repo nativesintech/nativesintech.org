@@ -29,26 +29,26 @@ div#PhenomicRoot {
 
 h1 {
   margin: 0;
-  color: #212121;
+  color: #0a1214;
   line-height: 1.75;
 }
 
 h2 {
   margin: 0;
   font-size: 36px;
-  color: #212121;
+  color: #0a1214;
   line-height: 1.75;
 }
 
 h3 {
   margin: 0;
-  color: #212121;
+  color: #0a1214;
   line-height: 1.75;
 }
 
 p {
   line-height: 1.75;
-  color: #212121;
+  color: #0a1214;
   font-size: 24px;
 }
 
@@ -58,30 +58,47 @@ li {
 
 a {
   text-decoration: none;
-  color: #212121;
+  color: #0a1214;
 }
 
 a:visited {
-  color: #212121;
+  color: #0a1214;
 }
 
 a:hover {
-  color: #ff5252;
+  color: #23c7c5;
 }
 
 strong {
-  color: #212121;
+  color: #0a1214;
 }
 
 input {
   outline: none;
+  border: none;
+  box-shadow: 0 0 1px 1px #ddd;
+  color: #94a2bc !important;
 }
 
 textarea {
-  border: 1px solid #e0e0e0;
+  appearance: none;
   outline: none;
+  border: none;
+  box-shadow: 0 0 1px 1px #ddd;
   resize: none;
   overflow: auto;
+  color: #94a2bc !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #0a1214;
+}
+
+input,
+textarea {
+  color: #0a1214;
+  caret-color: #94a2bc;
 }
 
 .icon.icon-link:before {
@@ -95,180 +112,6 @@ code {
   padding: 2px;
   border-radius: 3px;
   color: #424242;
-}
-
-/*! ScreenshotFrames
-
-    v1.5.4 - 2016-09-12
-
-    https://github.com/olets/ScreenshotFrames
-    Copyright (c) 2016 Henry Bley-Vroman (@olets)
-    MIT License
-
- */
-.screenshot-ipad,
-.screenshot-iphone,
-.screenshot-safari {
-  position: relative;
-  padding: 0;
-  margin-top: 0;
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.screenshot-ipad img,
-.screenshot-iphone img,
-.screenshot-safari img {
-  width: 100%;
-  display: block;
-}
-
-.screenshot-ipad:after,
-.screenshot-iphone:after,
-.screenshot-safari:after {
-  background-repeat: no-repeat;
-}
-
-.screenshot-ipad,
-.screenshot-iphone {
-  height: 0;
-}
-
-.screenshot-ipad img,
-.screenshot-iphone img {
-  position: absolute;
-  outline: #000 solid 2px;
-}
-
-.screenshot-ipad:after,
-.screenshot-iphone:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  -webkit-background-size: cover;
-  background-size: cover;
-}
-
-.screenshot-safari {
-  border-radius: 3px 3px 0 0;
-  -moz-border-radius: 3px 3px 0 0;
-  -webkit-border-radius: 3px 3px 0 0;
-  padding-top: 40px;
-  background: #e5e5e5;
-  background: -moz-linear-gradient(
-    top,
-    #e5e5e5 0,
-    #e5e5e5 39px,
-    #979797 39px,
-    #979797 40px,
-    transparent 40px,
-    transparent 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    left bottom,
-    color-stop(#e5e5e5 0),
-    color-stop(#e5e5e5 39px),
-    color-stop(#979797 39px),
-    color-stop(#979797 40px),
-    color-stop(transparent 40px),
-    color-stop(transparent 100%)
-  );
-  background: -webkit-linear-gradient(
-    top,
-    #e5e5e5 0,
-    #e5e5e5 39px,
-    #979797 39px,
-    #979797 40px,
-    transparent 40px,
-    transparent 100%
-  );
-  background: -o-linear-gradient(
-    top,
-    #e5e5e5 0,
-    #e5e5e5 39px,
-    #979797 39px,
-    #979797 40px,
-    transparent 40px,
-    transparent 100%
-  );
-  background: -ms-linear-gradient(
-    top,
-    #e5e5e5 0,
-    #e5e5e5 39px,
-    #979797 39px,
-    #979797 40px,
-    transparent 40px,
-    transparent 100%
-  );
-  background: linear-gradient(
-    to bottom,
-    #e5e5e5 0,
-    #e5e5e5 39px,
-    #979797 39px,
-    #979797 40px,
-    transparent 40px,
-    transparent 100%
-  );
-}
-
-.screenshot-safari:after,
-.screenshot-safari:before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  background: no-repeat;
-  -webkit-background-size: contain;
-  background-size: contain;
-}
-
-.screenshot-safari:before {
-  height: 26px;
-  width: 167px;
-  left: 14px;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAU4AAAA0CAMAAADSQyFIAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAABgUExURUxpcf+RRf9hWSjPQfv7+8KwYuXl5fLy8v///8DAwP///7m5uf+9Lv+9LijOQSjPQbm5uf+9LirRQf9iWf9hWv///87Ozv////+9LijOQf9hWZeXl7i4uOjo6MjIyPPz8ztzuU8AAAAXdFJOUwBg6n/+Glz2xDqQzcjz88iUm062m7Xh3pmNQgAAAydJREFUeNrtnGeT4yAMhl3AvaWXxeH//8v1ZeeyuVgIRHBCbng/ZTKiPUiAATuKfFFW7QoD7aqMW6XSFF9WBTtYixVVGXmksiDUvbrBzM1T5SjQ6vC0Kn9oZjTP2FkxQNpbHByo8MY3mY0nZNT2Zgv6pk/+SXeOiQwnj3WMK3rz4Eh+jJ8ZveI7K5eqFnVOX9zTojnMarxTjG65K5z5h8b6n7hiVp0AibnCybzAmVvhtGkvXP7BmT4WZxZwWuKU0hQnaBlw/stoHE1xjqP0AyePN8mkTcz1redx07Rt0xjZpn3fdX2fclucE01mipPpeFJwjl+IRix/vj3ftNVA4qvjTSudbXq6CQGa02kqxk4dTwrOL1RI/nFyvlMSY4Ti9ninFrVdd6c7dWsLnCqaqqlIw5OGc/5L/c9v/vH5QQij+PggxDY9PSgl41TSVM7sOM8X4JzRRHjOaCI816eZ1kScaprqhRLKk4rzJ6wpOHkyx5koxjneznG2KttujrPjJJwITWTdifFcHuf2DGgLl7s6AloZhro63HM6TWwZj/BcPNj5GRToRvwICrY9geLmOFGa6FORmufiOGMYZ2w4cipHzxTGmRrjxGniD5lKnosH+wbGuYGKbWCcDWTbwzh7U5wamppndhXPxXEmMM7kzTh1NHVbIAqeiwc7BWcL42wh2w7G2ZnhzHU0tTtKE8884PQMZwh2p8EepiKnU1FYKDldKIVl/HuX8eEh0y3OsAUSNuhetUEXto/fvX0cDjcc4wxHb06P3sLBsNuD4XBtIVyqCZdqwpWvgDPgJDb3P7suO1rUvIwkPZGEy5eucEovcO4tKl7adMLorjsp+b9YNT3aRm7TCXtn3QnH+t4LnBnZPVgdRQM51TjA5Q+O3FOV/4vFBXUyukwVLwXRqZlQvEZVitwFzVx48prrIEj+wS71dYwQpDlEitpR+QrfFH4455XMxbhBchQ/bsCnVMZA5UXUHC1fPvMCthwv6t56h38KcTHSZPg3qCaehFQ115T/pIbII5W1abXr4ZdLZp5K832AcqifYVkPXn0e4NoiIz34GLdKFfQR+gY6zpZX94PvsAAAAABJRU5ErkJggg==);
-}
-
-.screenshot-safari:after {
-  height: 32px;
-  width: 119px;
-  right: 0;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAO4AAABABAMAAADv1laPAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAYUExURUxpcejo6NnZ2dra2v///8LCwpeXl7m5uZCWBLcAAAAEdFJOUwD2miy7rGeLAAABeklEQVRYw+3Yu07DMBQGYCuPgExYQSCxV0jMBgdmJJrdEj3MBUReH4tL40tOfWyTuAifoVl+/V9teUjMGFtxuW/EObMmMo5OI0NzmhHH5yJYJDLiGcu1VhAZx+eKUHSbHM/ZZilvkuP4cEKRSI7jIymTHI9xhzJuB49F3B42JdwOwF/wAm6voN0s73bAQXgLnt/tlQTpLRh3W/galefq5WrXWzDuws/kuXf6f+uK9onsOk/XBWScIsE/KwRf2PUqqOcKddfTcxiuPp3PuuLdOZ+YaxzmPBd2LlBc4zBnuvZP0B2f1a1uda2ioZArE1yguDCDq8q46HtOdf+yO/VSt4A7+RKb5ML0EtLf22luu2PVou7vf3d/W8ZGFnZnvt9A9/mNUHQ/9kTGcfeMUHQ09kTGcfc6vHPideyJjONusw0WnZj3hHFx3GWXD4Ge4xfzuzUyjrvNEBr7HjgujrtsFehx772j4nvcWec/u+vqVre61T1kF7sXLeR+AI2lhXaas5XzAAAAAElFTkSuQmCC);
-}
-
-.screenshot-ipad {
-  padding-top: 141.73493976%;
-}
-
-.screenshot-ipad img {
-  left: 6.5060241%;
-  width: 86.98795181%;
-  top: 9.11254675%;
-  height: 81.84291057%;
-  outline-color: #1d1d1d;
-}
-
-.screenshot-ipad:after {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2075 2941"> <defs> <linearGradient id="a" x1="0%" y1="50%" y2="50%"> <stop stop-color="#929497" offset="0%" /> <stop stop-color="#F1F1F2" offset="49.4%" /> <stop stop-color="#929497" offset="100%" /> </linearGradient> <linearGradient id="b" x1="0%" y1="49.9%" y2="49.9%"> <stop stop-color="#FFF" stop-opacity="0" offset="0%" /> <stop stop-color="#FFF" offset="100%" /> </linearGradient> <linearGradient id="c" x1="50%" x2="50%" y1="100.1%" y2="0%"> <stop stop-color="#FFF" offset="0%" /> <stop stop-color="#FFF" stop-opacity="0" offset="100%" /> </linearGradient> <linearGradient id="d" x1="50%" x2="50%" y1="100%" y2="0%"> <stop stop-color="#FFF" stop-opacity="0" offset="0%" /> <stop stop-color="#FFF" offset="100%" /> </linearGradient> <linearGradient id="e" x1=".1%" y1="50%" y2="50%"> <stop stop-color="#FFF" stop-opacity="0" offset="0%" /> <stop stop-color="#FFF" offset="100%" /> </linearGradient> <linearGradient id="f" x1="50%" x2="50%" y1="2.2%" y2="100.6%"> <stop stop-color="#D1D2D3" offset="0%" /> <stop stop-color="#F1F1F2" offset="100%" /> </linearGradient> <linearGradient id="g" x1="50%" x2="50%" y1="116.1%" y2="36.5%"> <stop stop-color="#FFF" stop-opacity="0" offset="0%" /> <stop stop-color="#FFF" offset="100%" /> </linearGradient> <linearGradient id="h" x1="50.1%" x2="50.1%" y1="6.1%" y2="100.3%"> <stop stop-color="#010101" offset="0%" /> <stop stop-color="#424143" offset="100%" /> </linearGradient> </defs> <g fill="none" fill-rule="evenodd"> <path fill="url(#a)" d="M1958.5 0H112C51 0 0 51 0 114v2712.6c0 63 55.5 114 123.7 114h1827.5c67 0 123.6-49 123.6-119.6V114c0-63-51-114-116.3-114zm-18.8 267.3v2406.2H135V267.3h1804.7z" /> <path fill="url(#b)" d="M2030 2899c-20.6 19.5-48.5 30-78.6 30h-9.6v11.8h9.6c37.8 0 72.2-15.6 95-41.8l-9-7.5c-2.3 2.6-4.7 5-7.3 7.6z" /> <path fill="url(#c)" d="M11.8 2826.4v-17.8H0v17.8c0 28.2 11 54 29.3 73.8l8.3-8.4c-16-17.6-25.8-40.5-25.8-65.4z" /> <path fill="url(#d)" d="M12 114c0-27.3 10.6-53 30-72.6 1.3-1.3 2.5-2.5 4-3.7l-8.5-8.4C14.5 50.3 0 80.5 0 114v23.4h12V114z" /> <path fill="url(#e)" d="M2033 41.7c9 9 16.4 19.6 21.5 31l8.8-8.7c-17.8-36-54-61.3-97.6-64v11.8c25.6 1.8 49.2 12.2 67.2 30z" /> <path fill="#F5F6F8" d="M1958.5 14H112c-26 0-50.3 10.6-69 29.4-18.8 19-29 44.2-29 70.8v2712.6c0 55.2 49 100 109.5 100H1951c29.5 0 57-10.5 77.3-29.6 20.7-19.5 32.2-46.5 32.2-76V114c0-26.7-10.5-51.8-29.5-70.6-19.2-19-45-29.3-72.7-29.3zm-18.8 253.3v2406.2H135V267.3h1804.7z" /> <path fill="url(#f)" d="M142 71c0 39-31.7 70.5-70.6 70.5C32.4 141.5 1 110 1 71S32.4.5 71.3.5C110.3.5 142 32 142 71z" transform="translate(966 2725)" /> <path fill="url(#g)" d="M142 71c0 39-31.7 70.5-70.6 70.5C32.4 141.5 1 110 1 71c47.8 24.4 98.7 18 141 0z" opacity=".5" transform="translate(966 2725)" /> <path fill="#FFF" d="M1037.4 2727.8c39 0 70.5 29.2 70.5 68.2 0-39-32-70.5-71-70.5s-71 31.5-71 70.5c0-39 31-68.2 70-68.2z" opacity=".1" /> <path fill="#010101" d="M1051.3 2826h-27.8c-7 0-12.5-5.6-12.5-12.5v-27.8c0-7 5.6-12.5 12.5-12.5h27.8c7 0 12.5 5.6 12.5 12.5v27.8c0 6.8-5.6 12.5-12.5 12.5zm-27.8-51.7c-6.3 0-11.3 5-11.3 11.3v27.8c0 6.3 5 11.3 11.3 11.3h27.8c6.3 0 11.3-5 11.3-11.3v-27.8c0-6.3-5-11.3-11.3-11.3h-27.8zm27.8 47h-27.8c-4.3 0-7.8-3.5-7.8-7.8v-27.8c0-4.3 3.5-7.8 7.8-7.8h27.8c4.3 0 7.8 3 7.8 7v28c1 4-3 8-7 8zm-27.8-42.3c-3.7 0-6.6 3-6.6 6.6v27.8c0 3.7 3 6.6 6 6.6h28c3 0 6-3 6-6.6v-27.8c0-3.7-3-6.6-7-6.6h-27z" opacity=".1" /> <path fill="#FFF" d="M1051.3 2778.4c4 0 7.2 3.2 7.2 7.2v27.8c0 4-3.2 7.2-7.2 7.2h-27.8c-4 0-7.2-3.2-7.2-7.2v-27.8c0-4 3.2-7.2 7.2-7.2h27.8zm0-4.7h-27.8c-6.6 0-12 5.3-12 12v27.7c0 6.6 5.4 12 12 12h27.8c6.6 0 12-5.4 12-12v-27.8c0-6.6-5.4-12-12-12z" /> <path fill="url(#h)" d="M16.4.6C25.4.6 32.8 8 32.8 17c0 9-7.4 16.4-16.4 16.4C7.4 33.4 0 26 0 17 0 8 7.3.6 16.4.6z" transform="translate(1021 120)" /> <path fill="#1D1D1D" d="M1939.7 267.3v2406.2H135V267.3h1804.7zm0-10.6H135c-5.7 0-10.5 4.7-10.5 10.6v2406.2c0 5.8 4.7 10.6 10.6 10.6h1805c6 0 11-4 11-10V268c0-5.8-4-10.6-10-10.6z" /> </g></svg>');
-}
-
-.screenshot-iphone {
-  padding-top: 194.14316703%;
-}
-
-.screenshot-iphone img {
-  left: 9.32754881%;
-  width: 81.34490239%;
-  top: 12.17877095%;
-  height: 74.52513966%;
-  outline-color: #979797;
-}
-
-.screenshot-iphone:after {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 461 895" xmlns:xlink="http://www.w3.org/1999/xlink"> <defs> <linearGradient id="b" x1="50%" x2="50%" y1="0%" y2="100%"> <stop stop-color="#EEE" offset="0%" /> <stop stop-color="#DDD" offset="100%" /> </linearGradient> <rect id="c" width="9" height="37" x="6" y="111" rx="3" /> <filter id="d" width="200%" height="200%" x="-50%" y="-50%" filterUnits="objectBoundingBox"> <feGaussianBlur stdDeviation=".5" in="SourceAlpha" result="shadowBlurInner1" /> <feOffset in="shadowBlurInner1" result="shadowOffsetInner1" /> <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1" /> <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" in="shadowInnerInner1" /> </filter> <rect id="e" width="9" height="64" x="7" y="268" rx="3" /> <filter id="f" width="200%" height="200%" x="-50%" y="-50%" filterUnits="objectBoundingBox"> <feGaussianBlur stdDeviation=".5" in="SourceAlpha" result="shadowBlurInner1" /> <feOffset in="shadowBlurInner1" result="shadowOffsetInner1" /> <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1" /> <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" in="shadowInnerInner1" /> </filter> <rect id="g" width="9" height="64" x="7" y="189" rx="3" /> <filter id="h" width="200%" height="200%" x="-50%" y="-50%" filterUnits="objectBoundingBox"> <feGaussianBlur stdDeviation=".5" in="SourceAlpha" result="shadowBlurInner1" /> <feOffset in="shadowBlurInner1" result="shadowOffsetInner1" /> <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1" /> <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" in="shadowInnerInner1" /> </filter> <rect id="i" width="9" height="64" x="431" y="188" rx="3" /> <filter id="j" width="200%" height="200%" x="-50%" y="-50%" filterUnits="objectBoundingBox"> <feGaussianBlur stdDeviation=".5" in="SourceAlpha" result="shadowBlurInner1" /> <feOffset in="shadowBlurInner1" result="shadowOffsetInner1" /> <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1" /> <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0" in="shadowInnerInner1" /> </filter> <linearGradient id="k" x1="50%" x2="50%" y1="0%" y2="100%"> <stop stop-color="#E7E7E7" offset="0%" /> <stop stop-color="#EEE" offset="66%" /> <stop stop-color="#DDD" offset="100%" /> </linearGradient> <linearGradient id="l" x1="50%" x2="50%" y1="0%" y2="100%"> <stop stop-color="#E2E2E2" offset="0%" /> <stop stop-color="#F3F3F3" offset="49.8%" /> <stop stop-color="#F9F9F9" offset="100%" /> </linearGradient> <linearGradient id="m" x1="50%" x2="50%" y1="0%" y2="100%"> <stop stop-color="#DCDCDC" offset="0%" /> <stop stop-color="#FFF" offset="100%" /> </linearGradient> <ellipse id="a" cx="225" cy="826" rx="34" ry="34" /> <mask id="n" width="68" height="68" x="0" y="0" fill="#fff"> <use xlink:href="#a" /> </mask> </defs> <g fill="none" fill-rule="evenodd" transform="translate(7)"> <use fill="url(#b)" xlink:href="#c" /> <use fill="#000" filter="url(#d)" xlink:href="#c" /> <use fill="url(#b)" xlink:href="#e" /> <use fill="#000" filter="url(#f)" xlink:href="#e" /> <use fill="url(#b)" xlink:href="#g" /> <use fill="#000" filter="url(#h)" xlink:href="#g" /> <use fill="url(#b)" xlink:href="#i" /> <use fill="#000" filter="url(#j)" xlink:href="#i" /> <path fill="url(#k)" d="M10 334c0-1.3 2-2.6 2-4V191c0-1.4-2-2.8-2-4.2V64C10 28.7 38.7 0 74 0h299c35.3 0 64 28.7 64 64v123.2c0 1.3-2 2.6-2 3.8v58c0 1.4 2 2.7 2 4v566c0 35.3-28.7 64-64 64H74c-35.3 0-64-28.6-64-64V334zm26-225v667h375V109H36z" /> <path fill="#959697" d="M10 69h23v16H10zm404 0h23v16h-23zM10 796h23v16H10zm404 0h23v16h-23z" /> <path fill="#F6F8FA" d="M16 66C16 33 43 6 76 6h295c33 0 60 27 60 60v751c0 33-27 60-60 60H76c-33 0-60-27-60-60V66zm20 43v667h375V109H36z" /> <path fill="#979797" d="M36 105c-2.2 0-4 1.8-4 4v667c0 2.2 1.8 4 4 4h375c2.2 0 4-1.8 4-4V109c0-2.2-1.8-4-4-4H36zm0 4v667h375V109H36z" /> <ellipse cx="157" cy="55" fill="#222" rx="5" ry="5" /> <rect width="68" height="6" x="190" y="52" fill="#222" rx="3" /> <ellipse cx="224" cy="26" fill="#222" rx="4" ry="4" /> <use fill="url(#l)" stroke="url(#m)" stroke-width="4" mask="url(#n)" xlink:href="#a" /> </g></svg>');
 }
 
 .topography {

@@ -17,7 +17,7 @@ module Styles = {
   let title =
     style([
       Shared.FontSize.px36,
-      selector(":hover", [color(Shared.Colors.redA200)]),
+      selector(":hover", [color(hex("23c7c5"))]),
     ]);
 
   let metaBox =

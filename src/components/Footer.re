@@ -8,8 +8,9 @@ module Styles = {
       position(`absolute),
       bottom(px(0)),
       width(`percent(100.0)),
-      backgroundColor(Shared.Colors.gray900),
-      color(Shared.Colors.gray50),
+      backgroundColor(hex("fbfcfe")),
+      borderTop(px(1), `solid, hex("ebf0fa")),
+      color(hex("94a2bc")),
       textAlign(`center),
       minHeight(Shared.Spacer.px096),
       display(`flex),
@@ -24,6 +25,6 @@ let make = _children => {
   ...component,
   render: _self =>
     <footer className=Styles.footer>
-      {j|Made with ❤️ by Natives in Tech |j}->text
+      {j|Made with ❤️by Natives in Tech |j}->text
     </footer>,
 };

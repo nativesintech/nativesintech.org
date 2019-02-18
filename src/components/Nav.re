@@ -18,7 +18,14 @@ module Styles = {
       alignItems(`center),
       padding2(~h=Shared.Spacer.px064, ~v=px(0)),
       minHeight(Shared.Spacer.px096),
-      borderBottom(px(1), `solid, Shared.Colors.gray300),
+      marginBottom(px(3)),
+      boxShadow(
+        ~x=px(1),
+        ~y=px(0),
+        ~blur=px(2),
+        ~spread=px(2),
+        hex("eee"),
+      ),
       overflow(`hidden),
       Shared.Styles.mobile([padding2(~h=Shared.Spacer.px024, ~v=px(0))]),
     ]);
@@ -124,7 +131,7 @@ let make = _children => {
     };
   },
   render: self => {
-    let activeStyle = ReactDOMRe.Style.make(~color="#ff5252", ());
+    let activeStyle = ReactDOMRe.Style.make(~color="#23c7c5", ());
     <nav className=Styles.navBox>
       <PhenomicPresetReactApp.Link href="/">
         <header className=Styles.logoBox>

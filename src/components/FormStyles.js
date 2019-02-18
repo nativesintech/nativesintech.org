@@ -5,6 +5,7 @@ export const wrapper = css`
   border: 1px solid #e0e0e0;
   padding: 24px;
   border-radius: 4px;
+  box-shadow: 0 0 1px 1px #eee;
 `;
 
 export const header = css`
@@ -29,6 +30,7 @@ export const input = css`
   padding: 8px;
   color: #212121;
   width: 100%;
+  box-shadow: none;
 
   @media screen and (max-width: 600px) {
     font-size: 16px;
@@ -39,20 +41,23 @@ export const hiddenInput = css`
   visibility: hidden;
 `;
 
+const color = "#23c7c5";
+
 export const button = css`
   font-size: 18px;
-  border: 2px solid #ff5252;
+  border: 2px solid ${color};
   text-transform: uppercase;
   padding: 12px 32px;
   border-radius: 3px;
-  background-color: #ff5252;
+  background-color: ${color};
   font-weight: 700;
   cursor: pointer;
-  color: #fafafa;
+  color: #fff !important;
+  box-shadow: none;
 
   &:hover {
-    background-color: #fafafa;
-    color: #ff5252;
+    background-color: #fff;
+    color: ${color} !important;
   }
 
   @media screen and (max-width: 600px) {
