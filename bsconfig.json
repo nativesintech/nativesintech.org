@@ -25,6 +25,7 @@
     "bs-typing",
     "bs-fetch",
     "@glennsl/bs-json",
-    "bs-webapi"
+    "bs-webapi",
+    "bs-remotedata"
   ]
 }
