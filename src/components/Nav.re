@@ -35,7 +35,7 @@ module Styles = {
 
   let orgName =
     style([
-      color(Shared.Colors.cyan300),
+      color(Shared.Colors.cyan400),
       Shared.FontSize.px24,
       Shared.Styles.mobile([display(`none)]),
     ]);
