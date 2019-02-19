@@ -216,11 +216,11 @@ module Styles = {
       backgroundColor(buttonColor),
       fontWeight(`bold),
       cursor(`pointer),
-      color(Shared.Colors.gray050),
+      color(hex("fff")),
       selector(
         "&:hover",
         [
-          backgroundColor(Shared.Colors.gray050),
+          backgroundColor(hex("fff")),
           color(buttonColor),
           transition(~duration=200, ~timingFunction=`easeInOut, "color"),
           transition(
