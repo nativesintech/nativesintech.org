@@ -18,10 +18,16 @@ module Styles = {
     style([
       textAlign(`center),
       padding2(~v=Shared.Spacer.px192, ~h=Shared.Spacer.px064),
-      color(hex("0a1214")),
-      backgroundColor(hex("fbfcfe")),
-      borderBottom(px(1), `solid, hex("ebf0fa")),
+      backgroundColor(Shared.Colors.gray050),
+      borderBottom(px(1), `solid, Shared.Colors.gray100),
       marginBottom(Shared.Spacer.px096),
+       boxShadow(
+        ~y=px(1),
+        ~blur=px(1),
+        ~spread=px(1),
+        ~inset=true,
+        Shared.Colors.gray100,
+      ),
       Shared.Styles.mobile([
         padding2(~v=Shared.Spacer.px128, ~h=Shared.Spacer.px024),
         marginBottom(Shared.Spacer.px064),
@@ -32,9 +38,10 @@ module Styles = {
 
   let tagline =
     style([
-      color(hex("94a2bc")),
+      color(Shared.Colors.gray500),
       maxWidth(Shared.Spacer.px640),
       margin2(~v=px(0), ~h=`auto),
+      Shared.Styles.mobile([Shared.FontSize.px20]),
     ]);
 
   let container = style(Shared.Styles.container);
@@ -61,7 +68,7 @@ module Styles = {
         ~blur=px(2),
         ~spread=px(2),
         ~inset=false,
-        hex("ddd"),
+        Shared.Colors.gray050,
       ),
       Shared.Styles.mobile([
         marginBottom(Shared.Spacer.px128),
@@ -76,7 +83,7 @@ module Styles = {
       backgroundSize(`cover),
       width(Shared.Spacer.px384),
       height(Shared.Spacer.px384),
-      borderBottom(px(1), `solid, hex("ddd")),
+      borderBottom(px(1), `solid, Shared.Colors.gray050),
       Shared.Styles.mobile([
         width(Shared.Spacer.px256),
         height(Shared.Spacer.px256),
@@ -85,22 +92,20 @@ module Styles = {
 
   let content = style([padding(Shared.Spacer.px024)]);
 
-  let name = style([Shared.FontSize.px30]);
+  let name = style([color(Shared.Colors.gray900), Shared.FontSize.px30]);
 
   let location =
     style([
       Shared.FontSize.px18,
-      color(hex("ccc")),
+      color(Shared.Colors.gray500),
       marginTop(Shared.Spacer.px004),
     ]);
-
-  let username = style([Shared.FontSize.px18, color(hex("#0a1214"))]);
 
   let bio =
     style([
       marginTop(Shared.Spacer.px012),
       Shared.FontSize.px16,
-      color(hex("0a1214")),
+      color(Shared.Colors.gray800),
       lineHeight(`abs(1.5)),
     ]);
 

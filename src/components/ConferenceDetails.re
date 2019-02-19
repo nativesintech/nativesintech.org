@@ -7,14 +7,13 @@ module Styles = {
   let billboard =
     style([
       textAlign(`center),
-      backgroundColor(hex("fbfcfe")),
-      borderBottom(px(1), `solid, hex("ebf0fa")),
-      color(hex("0a1214")),
+      backgroundColor(Shared.Colors.gray050),
+      borderBottom(px(1), `solid, Shared.Colors.gray100),
       padding2(~v=Shared.Spacer.px192, ~h=Shared.Spacer.px064),
-      marginBottom(Shared.Spacer.px096),
+      marginBottom(Shared.Spacer.px064),
       Shared.Styles.mobile([
         padding2(~v=Shared.Spacer.px128, ~h=Shared.Spacer.px024),
-        marginBottom(Shared.Spacer.px064),
+        marginBottom(Shared.Spacer.px048),
       ]),
     ]);
 
@@ -24,9 +23,10 @@ module Styles = {
 
   let tagline =
     style([
-      color(hex("94a2bc")),
+      color(Shared.Colors.gray500),
       marginTop(Shared.Spacer.px024),
-      ...Shared.Font.size(Shared.Types.Title3),
+      Shared.FontSize.px24,
+      Shared.Styles.mobile([Shared.FontSize.px20]),
     ]);
 
   let header =
@@ -65,20 +65,25 @@ module Styles = {
 
   let name =
     style([
-      color(hex("0a1214")),
-      marginBottom(Shared.Spacer.px016),
+      color(Shared.Colors.gray800),
+      marginBottom(Shared.Spacer.px008),
       ...Shared.Font.size(Title3),
     ]);
 
   let session =
     style([
-      fontWeight(`bold),
+      fontWeight(`medium),
       Shared.FontSize.px18,
-      color(hex("94a2bc")),
+      color(Shared.Colors.gray500),
       lineHeight(`abs(1.75)),
     ]);
 
-  let bio = style([Shared.FontSize.px20]);
+  let bio =
+    style([
+      fontWeight(`light),
+      Shared.FontSize.px20,
+      margin2(~v=Shared.Spacer.px008, ~h=px(0)),
+    ]);
 };
 
 type state = {data: RemoteData.t(string, Types.ConferenceDetails.details)};

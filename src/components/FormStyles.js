@@ -41,7 +41,7 @@ export const hiddenInput = css`
   visibility: hidden;
 `;
 
-const color = "#23c7c5";
+const color = "#38BEC9";
 
 export const button = css`
   font-size: 18px;

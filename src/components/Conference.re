@@ -34,7 +34,7 @@ module Styles = {
       Shared.Styles.mobile([width(px(20)), height(px(20))]),
     ]);
 
-  let link = style([color(hex("#40dddb")), textDecoration(`underline)]);
+  let link = style([textDecoration(`underline)]);
 };
 
 let component = ReasonReact.statelessComponent(__MODULE__);
