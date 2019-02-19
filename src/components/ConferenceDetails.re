@@ -25,7 +25,8 @@ module Styles = {
     style([
       color(Shared.Colors.gray500),
       marginTop(Shared.Spacer.px024),
-      ...Shared.Font.size(Shared.Types.Title3),
+      Shared.FontSize.px24,
+      Shared.Styles.mobile([Shared.FontSize.px20]),
     ]);
 
   let header =

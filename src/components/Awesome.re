@@ -34,6 +34,7 @@ module Styles = {
       color(Shared.Colors.gray500),
       maxWidth(Shared.Spacer.px640),
       margin2(~v=px(0), ~h=`auto),
+      Shared.Styles.mobile([Shared.FontSize.px20]),
     ]);
 
   let container = style(Shared.Styles.container);
