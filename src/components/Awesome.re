@@ -21,6 +21,13 @@ module Styles = {
       backgroundColor(Shared.Colors.gray050),
       borderBottom(px(1), `solid, Shared.Colors.gray100),
       marginBottom(Shared.Spacer.px096),
+       boxShadow(
+        ~y=px(1),
+        ~blur=px(1),
+        ~spread=px(1),
+        ~inset=true,
+        Shared.Colors.gray100,
+      ),
       Shared.Styles.mobile([
         padding2(~v=Shared.Spacer.px128, ~h=Shared.Spacer.px024),
         marginBottom(Shared.Spacer.px064),

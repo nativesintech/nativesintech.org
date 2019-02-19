@@ -52,6 +52,13 @@ module Styles = {
       justifyContent(`spaceAround),
       alignItems(`center),
       backgroundColor(Shared.Colors.gray050),
+      boxShadow(
+        ~y=px(1),
+        ~blur=px(1),
+        ~spread=px(1),
+        ~inset=true,
+        Shared.Colors.gray100,
+      ),
       borderBottom(px(1), `solid, Shared.Colors.gray100),
       padding2(~v=Shared.Spacer.px096, ~h=Shared.Spacer.px064),
       media("(max-width: 900px)", [flexDirection(`column)]),
