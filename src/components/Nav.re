@@ -18,13 +18,12 @@ module Styles = {
       alignItems(`center),
       padding2(~h=Shared.Spacer.px064, ~v=px(0)),
       minHeight(Shared.Spacer.px096),
-      marginBottom(px(3)),
       boxShadow(
         ~x=px(1),
         ~y=px(0),
         ~blur=px(2),
         ~spread=px(2),
-        hex("eee"),
+        Shared.Colors.gray050,
       ),
       overflow(`hidden),
       Shared.Styles.mobile([padding2(~h=Shared.Spacer.px024, ~v=px(0))]),
@@ -35,7 +34,11 @@ module Styles = {
   let logoImage = style([marginRight(Shared.Spacer.px012)]);
 
   let orgName =
-    style([Shared.FontSize.px24, Shared.Styles.mobile([display(`none)])]);
+    style([
+      color(Shared.Colors.cyan300),
+      Shared.FontSize.px24,
+      Shared.Styles.mobile([display(`none)]),
+    ]);
 
   let linksBox =
     style([
@@ -82,7 +85,7 @@ module Styles = {
         selector(
           "> .sidelink",
           [
-            color(Shared.Colors.gray50),
+            color(Shared.Colors.gray050),
             padding2(~v=px(10), ~h=px(20)),
             cursor(`pointer),
             Shared.FontSize.px20,
@@ -99,7 +102,7 @@ module Styles = {
         selector(
           "> .sidelink",
           [
-            color(Shared.Colors.gray50),
+            color(Shared.Colors.gray050),
             cursor(`pointer),
             opacity(0.0),
             Shared.FontSize.px20,

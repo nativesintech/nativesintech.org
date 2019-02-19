@@ -29,26 +29,26 @@ div#PhenomicRoot {
 
 h1 {
   margin: 0;
-  color: #0a1214;
+  color: #102a43;
   line-height: 1.75;
 }
 
 h2 {
   margin: 0;
   font-size: 36px;
-  color: #0a1214;
+  color: #102a43;
   line-height: 1.75;
 }
 
 h3 {
   margin: 0;
-  color: #0a1214;
+  color: #102a43;
   line-height: 1.75;
 }
 
 p {
   line-height: 1.75;
-  color: #0a1214;
+  color: #102a43;
   font-size: 24px;
 }
 
@@ -58,41 +58,41 @@ li {
 
 a {
   text-decoration: none;
-  color: #0a1214;
+  color: #102a43;
 }
 
 a:visited {
-  color: #0a1214;
+  color: #102a43;
 }
 
 a:hover {
-  color: #23c7c5;
+  color: #38bec9;
 }
 
 strong {
-  color: #0a1214;
+  color: #14919b;
 }
 
 input {
   outline: none;
   border: none;
-  box-shadow: 0 0 1px 1px #ddd;
-  color: #94a2bc !important;
+  box-shadow: 0 0 1px 1px #d9e2ec;
+  color: #102a43 !important;
 }
 
 textarea {
   appearance: none;
   outline: none;
   border: none;
-  box-shadow: 0 0 1px 1px #ddd;
+  box-shadow: 0 0 1px 1px #d9e2ec;
   resize: none;
   overflow: auto;
-  color: #94a2bc !important;
+  color: #102a43 !important;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: #0a1214;
+  color: #627d98;
 }
 
 input,
@@ -108,10 +108,10 @@ textarea {
 }
 
 code {
-  background-color: #ffcdd2;
+  background-color: #fcefc7;
   padding: 2px;
   border-radius: 3px;
-  color: #424242;
+  color: #e668a7;
 }
 
 .topography {

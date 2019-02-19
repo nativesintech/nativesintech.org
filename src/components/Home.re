@@ -48,12 +48,11 @@ module Styles = {
   let billboard =
     style([
       Shared.FontSize.px60,
-      color(hex("0a1214")),
       display(`flex),
       justifyContent(`spaceAround),
       alignItems(`center),
-      backgroundColor(hex("fbfcfe")),
-      borderBottom(px(1), `solid, hex("ebf0fa")),
+      backgroundColor(Shared.Colors.gray050),
+      borderBottom(px(1), `solid, Shared.Colors.gray100),
       padding2(~v=Shared.Spacer.px096, ~h=Shared.Spacer.px064),
       media("(max-width: 900px)", [flexDirection(`column)]),
       media(
@@ -65,6 +64,7 @@ module Styles = {
   let billboardHeadline =
     style([
       flex(2),
+      color(Shared.Colors.gray900),
       media(
         "(max-width: 900px)",
         [
@@ -111,8 +111,8 @@ module Styles = {
   let connect =
     style([
       padding2(~v=Shared.Spacer.px192, ~h=Shared.Spacer.px064),
-      backgroundColor(hex("fbfcfe")),
-      border(px(1), `solid, hex("ebf0fa")),
+      backgroundColor(Shared.Colors.gray050),
+      border(px(1), `solid, Shared.Colors.gray100),
       Shared.Styles.mobile([
         padding2(~h=Shared.Spacer.px024, ~v=Shared.Spacer.px128),
       ]),
@@ -197,7 +197,7 @@ module Styles = {
       minHeight(Shared.Spacer.px128),
     ]);
 
-  let buttonColor = hex("23c7c5");
+  let buttonColor = Shared.Colors.cyan400;
 
   let button =
     style([
@@ -209,11 +209,11 @@ module Styles = {
       backgroundColor(buttonColor),
       fontWeight(`bold),
       cursor(`pointer),
-      color(Shared.Colors.gray50),
+      color(Shared.Colors.gray050),
       selector(
         "&:hover",
         [
-          backgroundColor(Shared.Colors.gray50),
+          backgroundColor(Shared.Colors.gray050),
           color(buttonColor),
           transition(~duration=200, ~timingFunction=`easeInOut, "color"),
           transition(
