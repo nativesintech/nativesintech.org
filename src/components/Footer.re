@@ -26,6 +26,6 @@ let make = _children => {
   ...component,
   render: _self =>
     <footer className=Styles.footer>
-      {j|Made with ❤️by Natives in Tech |j}->text
+      {j|Made with ❤️ by Natives in Tech |j}->text
     </footer>,
 };
