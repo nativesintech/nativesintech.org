@@ -1,10 +1,12 @@
+open Shared;
+
 let component = ReasonReact.statelessComponent(__MODULE__);
 
 module Styles = {
   open Css;
 
   let container = style([minHeight(`percent(100.0)), position(`relative)]);
-  let main = style([paddingBottom(Shared.Spacer.px096)]);
+  let main = style([paddingBottom(Spacer.px096)]);
 };
 
 let make = children => {

@@ -1,24 +1,24 @@
 open Helpers;
+open Shared;
 
 module Styles = {
   open Css;
 
   let container =
     style([
-      padding2(~h=Shared.Spacer.px064, ~v=Shared.Spacer.px048),
+      padding2(~h=Spacer.px064, ~v=Spacer.px048),
       maxWidth(em(50.0)),
       margin2(~v=px(0), ~h=`auto),
       media(
         "(max-width: 600px)",
         [
-          padding2(~h=Shared.Spacer.px024, ~v=Shared.Spacer.px048),
-          selector("p", [Shared.FontSize.px18]),
+          padding2(~h=Spacer.px024, ~v=Spacer.px048),
+          selector("p", [FontSize.px18]),
         ],
       ),
     ]);
 
-  let header =
-    style([margin(px(0)), ...Shared.Font.size(Shared.Types.Title1)]);
+  let header = style([margin(px(0)), ...Font.size(FontTypes.Title1)]);
 };
 
 let component = ReasonReact.statelessComponent(__MODULE__);

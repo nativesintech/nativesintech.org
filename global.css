@@ -76,6 +76,7 @@ strong {
 input {
   outline: none;
   border: none;
+  appearance: none;
   box-shadow: 0 0 1px 1px #d9e2ec;
   color: #102a43 !important;
 }

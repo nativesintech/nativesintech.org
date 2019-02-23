@@ -1,4 +1,5 @@
 open Helpers;
+open Shared;
 
 [@bs.val] external token: string = "process.env.GITHUB_TOKEN";
 
@@ -17,34 +18,34 @@ module Styles = {
   let billboard =
     style([
       textAlign(`center),
-      padding2(~v=Shared.Spacer.px192, ~h=Shared.Spacer.px064),
-      backgroundColor(Shared.Colors.gray050),
-      borderBottom(px(1), `solid, Shared.Colors.gray100),
-      marginBottom(Shared.Spacer.px096),
-       boxShadow(
+      padding2(~v=Spacer.px192, ~h=Spacer.px064),
+      backgroundColor(Colors.gray050),
+      borderBottom(px(1), `solid, Colors.gray100),
+      marginBottom(Spacer.px096),
+      boxShadow(
         ~y=px(1),
         ~blur=px(1),
         ~spread=px(1),
         ~inset=true,
-        Shared.Colors.gray100,
+        Colors.gray100,
       ),
-      Shared.Styles.mobile([
-        padding2(~v=Shared.Spacer.px128, ~h=Shared.Spacer.px024),
-        marginBottom(Shared.Spacer.px064),
+      Styles.mobile([
+        padding2(~v=Spacer.px128, ~h=Spacer.px024),
+        marginBottom(Spacer.px064),
       ]),
     ]);
 
-  let header = style(Shared.Font.size(Shared.Types.Title1));
+  let header = style(Font.size(FontTypes.Title1));
 
   let tagline =
     style([
-      color(Shared.Colors.gray500),
-      maxWidth(Shared.Spacer.px640),
+      color(Colors.gray500),
+      maxWidth(Spacer.px640),
       margin2(~v=px(0), ~h=`auto),
-      Shared.Styles.mobile([Shared.FontSize.px20]),
+      Styles.mobile([FontSize.px20]),
     ]);
 
-  let container = style(Shared.Styles.container);
+  let container = style(Styles.container);
 
   let usersBox =
     style([
@@ -58,9 +59,9 @@ module Styles = {
     style([
       display(`flex),
       flexDirection(`column),
-      maxWidth(Shared.Spacer.px384),
-      marginBottom(Shared.Spacer.px128),
-      borderRadius(Shared.Spacer.px004),
+      maxWidth(Spacer.px384),
+      marginBottom(Spacer.px128),
+      borderRadius(Spacer.px004),
       overflow(`hidden),
       boxShadow(
         ~x=px(0),
@@ -68,12 +69,9 @@ module Styles = {
         ~blur=px(2),
         ~spread=px(2),
         ~inset=false,
-        Shared.Colors.gray050,
+        Colors.gray050,
       ),
-      Shared.Styles.mobile([
-        marginBottom(Shared.Spacer.px128),
-        maxWidth(Shared.Spacer.px256),
-      ]),
+      Styles.mobile([marginBottom(Spacer.px128), maxWidth(Spacer.px256)]),
     ]);
 
   let image = url =>
@@ -81,41 +79,34 @@ module Styles = {
       backgroundImage(`url(url)),
       backgroundRepeat(`noRepeat),
       backgroundSize(`cover),
-      width(Shared.Spacer.px384),
-      height(Shared.Spacer.px384),
-      borderBottom(px(1), `solid, Shared.Colors.gray050),
-      Shared.Styles.mobile([
-        width(Shared.Spacer.px256),
-        height(Shared.Spacer.px256),
-      ]),
+      width(Spacer.px384),
+      height(Spacer.px384),
+      borderBottom(px(1), `solid, Colors.gray050),
+      Styles.mobile([width(Spacer.px256), height(Spacer.px256)]),
     ]);
 
-  let content = style([padding(Shared.Spacer.px024)]);
+  let content = style([padding(Spacer.px024)]);
 
-  let name = style([color(Shared.Colors.gray900), Shared.FontSize.px30]);
+  let name = style([color(Colors.gray900), FontSize.px30]);
 
   let location =
-    style([
-      Shared.FontSize.px18,
-      color(Shared.Colors.gray500),
-      marginTop(Shared.Spacer.px004),
-    ]);
+    style([FontSize.px18, color(Colors.gray500), marginTop(Spacer.px004)]);
 
   let bio =
     style([
-      marginTop(Shared.Spacer.px012),
-      Shared.FontSize.px16,
-      color(Shared.Colors.gray800),
+      marginTop(Spacer.px012),
+      FontSize.px16,
+      color(Colors.gray800),
       lineHeight(`abs(1.5)),
     ]);
 
-  let iconsBox = style([display(`flex), marginTop(Shared.Spacer.px016)]);
+  let iconsBox = style([display(`flex), marginTop(Spacer.px016)]);
 
   let icon =
     style([
       width(px(28)),
       height(px(28)),
-      marginRight(Shared.Spacer.px016),
+      marginRight(Spacer.px016),
       alignItems(`center),
     ]);
 };

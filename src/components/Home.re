@@ -1,4 +1,5 @@
 open Helpers;
+open Shared;
 
 [@bs.module]
 external slack: string = "../../../../public/images/slack-logo.svg";
@@ -26,11 +27,8 @@ module Styles = {
     style([
       maxWidth(em(50.0)),
       position(`relative),
-      padding2(~h=Shared.Spacer.px064, ~v=px(0)),
-      media(
-        "(max-width: 600px)",
-        [padding2(~h=Shared.Spacer.px024, ~v=px(0))],
-      ),
+      padding2(~h=Spacer.px064, ~v=px(0)),
+      media("(max-width: 600px)", [padding2(~h=Spacer.px024, ~v=px(0))]),
     ]);
 
   let logo = style([display(`flex), alignItems(`center)]);
@@ -47,38 +45,34 @@ module Styles = {
 
   let billboard =
     style([
-      Shared.FontSize.px60,
+      FontSize.px60,
       display(`flex),
       justifyContent(`spaceAround),
       alignItems(`center),
-      backgroundColor(Shared.Colors.gray050),
+      backgroundColor(Colors.gray050),
       boxShadow(
         ~y=px(1),
         ~blur=px(1),
         ~spread=px(1),
         ~inset=true,
-        Shared.Colors.gray100,
+        Colors.gray100,
       ),
-      borderBottom(px(1), `solid, Shared.Colors.gray100),
-      padding2(~v=Shared.Spacer.px096, ~h=Shared.Spacer.px064),
+      borderBottom(px(1), `solid, Colors.gray100),
+      padding2(~v=Spacer.px096, ~h=Spacer.px064),
       media("(max-width: 900px)", [flexDirection(`column)]),
       media(
         "(max-width: 600px)",
-        [padding2(~h=Shared.Spacer.px024, ~v=Shared.Spacer.px032)],
+        [padding2(~h=Spacer.px024, ~v=Spacer.px032)],
       ),
     ]);
 
   let billboardHeadline =
     style([
       flex(2),
-      color(Shared.Colors.gray900),
+      color(Colors.gray900),
       media(
         "(max-width: 900px)",
-        [
-          textAlign(`center),
-          Shared.FontSize.px48,
-          paddingTop(Shared.Spacer.px048),
-        ],
+        [textAlign(`center), FontSize.px48, paddingTop(Spacer.px048)],
       ),
       media(
         "(max-width: 600px)",
@@ -86,7 +80,7 @@ module Styles = {
           display(`flex),
           alignItems(`center),
           justifyContent(`center),
-          paddingTop(Shared.Spacer.px032),
+          paddingTop(Spacer.px032),
         ],
       ),
     ]);
@@ -94,15 +88,12 @@ module Styles = {
   let frameBox =
     style([
       display(`flex),
-      padding2(~v=px(0), ~h=Shared.Spacer.px032),
+      padding2(~v=px(0), ~h=Spacer.px032),
       justifyContent(`center),
       alignItems(`center),
       media(
         "(max-width: 900px)",
-        [
-          paddingTop(Shared.Spacer.px048),
-          paddingBottom(Shared.Spacer.px048),
-        ],
+        [paddingTop(Spacer.px048), paddingBottom(Spacer.px048)],
       ),
     ]);
 
@@ -110,37 +101,35 @@ module Styles = {
     style([
       width(px(350)),
       height(px(350)),
-      Shared.Styles.mobile([width(px(250)), height(px(250))]),
+      Styles.mobile([width(px(250)), height(px(250))]),
     ]);
 
-  let content = style([Shared.FontSize.px24]);
+  let content = style([FontSize.px24]);
 
   let connect =
     style([
-      padding2(~v=Shared.Spacer.px192, ~h=Shared.Spacer.px064),
-      backgroundColor(Shared.Colors.gray050),
-      border(px(1), `solid, Shared.Colors.gray100),
-      Shared.Styles.mobile([
-        padding2(~h=Shared.Spacer.px024, ~v=Shared.Spacer.px128),
-      ]),
+      padding2(~v=Spacer.px192, ~h=Spacer.px064),
+      backgroundColor(Colors.gray050),
+      border(px(1), `solid, Colors.gray100),
+      Styles.mobile([padding2(~h=Spacer.px024, ~v=Spacer.px128)]),
     ]);
 
   let connectHeadline =
     style([
       margin(px(0)),
-      Shared.FontSize.px48,
+      FontSize.px48,
       textAlign(`center),
-      paddingBottom(Shared.Spacer.px064),
+      paddingBottom(Spacer.px064),
     ]);
 
   let about =
     style([
       position(`relative),
-      paddingTop(Shared.Spacer.px064),
-      paddingBottom(Shared.Spacer.px128),
-      Shared.Styles.mobile([
-        paddingTop(Shared.Spacer.px048),
-        paddingBottom(Shared.Spacer.px064),
+      paddingTop(Spacer.px064),
+      paddingBottom(Spacer.px128),
+      Styles.mobile([
+        paddingTop(Spacer.px048),
+        paddingBottom(Spacer.px064),
       ]),
     ]);
 
@@ -152,12 +141,9 @@ module Styles = {
       alignItems(`center),
       flexWrap(`wrap),
       maxWidth(px(800)),
-      Shared.Styles.mobile([
+      Styles.mobile([
         flexDirection(`column),
-        selector(
-          "> a:not(:last-child)",
-          [paddingBottom(Shared.Spacer.px048)],
-        ),
+        selector("> a:not(:last-child)", [paddingBottom(Spacer.px048)]),
       ]),
     ]);
 
@@ -191,27 +177,23 @@ module Styles = {
     style([
       display(`flex),
       flexDirection(`column),
-      marginBottom(Shared.Spacer.px012),
+      marginBottom(Spacer.px012),
       flex(1),
     ]);
 
-  let input = style([Shared.FontSize.px18, padding(Shared.Spacer.px008)]);
+  let input = style([FontSize.px18, padding(Spacer.px008)]);
 
   let textarea =
-    style([
-      Shared.FontSize.px18,
-      padding(Shared.Spacer.px008),
-      minHeight(Shared.Spacer.px128),
-    ]);
+    style([FontSize.px18, padding(Spacer.px008), minHeight(Spacer.px128)]);
 
-  let buttonColor = Shared.Colors.cyan400;
+  let buttonColor = Colors.cyan400;
 
   let button =
     style([
-      Shared.FontSize.px18,
+      FontSize.px18,
       border(px(2), `solid, buttonColor),
       textTransform(`uppercase),
-      padding2(~h=Shared.Spacer.px032, ~v=Shared.Spacer.px012),
+      padding2(~h=Spacer.px032, ~v=Spacer.px012),
       borderRadius(px(3)),
       backgroundColor(buttonColor),
       fontWeight(`bold),
@@ -244,11 +226,11 @@ module Styles = {
 
   let contact =
     style([
-      padding2(~v=Shared.Spacer.px096, ~h=Shared.Spacer.px064),
+      padding2(~v=Spacer.px096, ~h=Spacer.px064),
       maxWidth(em(50.0)),
       media(
         "(max-width: 600px)",
-        [padding2(~h=Shared.Spacer.px024, ~v=Shared.Spacer.px032)],
+        [padding2(~h=Spacer.px024, ~v=Spacer.px032)],
       ),
     ]);
 };
