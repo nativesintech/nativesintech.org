@@ -54,6 +54,7 @@ export const button = css`
   cursor: pointer;
   color: #fff !important;
   box-shadow: none;
+  transition: all 200ms ease-in-out;
 
   &:hover {
     background-color: #fff;
