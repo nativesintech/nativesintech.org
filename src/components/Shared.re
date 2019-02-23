@@ -1,6 +1,6 @@
 open Css;
 
-module Types = {
+module FontTypes = {
   type font =
     | Title1
     | Title2
@@ -127,7 +127,7 @@ module Styles = {
 };
 
 module Font = {
-  open Types;
+  open FontTypes;
 
   let size = (size: font) => {
     switch (size) {

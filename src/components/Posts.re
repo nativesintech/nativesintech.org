@@ -1,38 +1,36 @@
 open Helpers;
+open Shared;
 
 module Styles = {
   open Css;
 
   let container =
     style([
-      padding2(~h=Shared.Spacer.px064, ~v=Shared.Spacer.px048),
+      padding2(~h=Spacer.px064, ~v=Spacer.px048),
       media(
         "(max-width: 600px)",
-        [padding2(~h=Shared.Spacer.px024, ~v=Shared.Spacer.px048)],
+        [padding2(~h=Spacer.px024, ~v=Spacer.px048)],
       ),
     ]);
 
   let link = style([display(`inlineBlock)]);
 
   let title =
-    style([
-      Shared.FontSize.px36,
-      selector(":hover", [color(Shared.Colors.cyan400)]),
-    ]);
+    style([FontSize.px36, selector(":hover", [color(Colors.cyan400)])]);
 
   let metaBox =
     style([
       display(`flex),
       flexWrap(`wrap),
-      color(Shared.Colors.gray500),
+      color(Colors.gray500),
       selector("> small:not(:last-child)", [marginRight(px(5))]),
     ]);
 
   let tagline =
     style([
-      Shared.FontSize.px16,
+      FontSize.px16,
       width(`percent(100.0)),
-      margin2(~v=Shared.Spacer.px004, ~h=px(0)),
+      margin2(~v=Spacer.px004, ~h=px(0)),
     ]);
 };
 

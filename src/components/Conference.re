@@ -1,5 +1,5 @@
 open Helpers;
-open Shared.Types;
+open Shared;
 
 [@bs.module]
 external checkmark: string = "../../../../public/images/checkmark.svg";
@@ -7,31 +7,31 @@ external checkmark: string = "../../../../public/images/checkmark.svg";
 module Styles = {
   open Css;
 
-  let container = style(Shared.Styles.container);
+  let container = style(Styles.container);
 
-  let content = style(Shared.Styles.content);
+  let content = style(Styles.content);
 
-  let header1 = style(Shared.Font.size(Title1));
+  let header1 = style(Font.size(Title1));
 
-  let header2 = style(Shared.Font.size(Title2));
+  let header2 = style(Font.size(Title2));
 
-  let text = style(Shared.Font.size(Text));
+  let text = style(Font.size(Text));
 
   let points =
     style([
       display(`flex),
       alignItems(`center),
-      marginLeft(Shared.Spacer.px016),
+      marginLeft(Spacer.px016),
       lineHeight(`abs(1.25)),
-      ...Shared.Font.size(Text),
+      ...Font.size(Text),
     ]);
 
   let icon =
     style([
       width(px(30)),
       height(px(30)),
-      marginRight(Shared.Spacer.px012),
-      Shared.Styles.mobile([width(px(20)), height(px(20))]),
+      marginRight(Spacer.px012),
+      Styles.mobile([width(px(20)), height(px(20))]),
     ]);
 
   let link = style([textDecoration(`underline)]);

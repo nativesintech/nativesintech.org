@@ -1,4 +1,5 @@
 open Helpers;
+open Shared;
 open Types;
 
 module Styles = {
@@ -7,42 +8,38 @@ module Styles = {
   let billboard =
     style([
       textAlign(`center),
-      backgroundColor(Shared.Colors.gray050),
-      borderBottom(px(1), `solid, Shared.Colors.gray100),
-      padding2(~v=Shared.Spacer.px192, ~h=Shared.Spacer.px064),
-      marginBottom(Shared.Spacer.px064),
-      Shared.Styles.mobile([
-        padding2(~v=Shared.Spacer.px128, ~h=Shared.Spacer.px024),
-        marginBottom(Shared.Spacer.px048),
+      backgroundColor(Colors.gray050),
+      borderBottom(px(1), `solid, Colors.gray100),
+      padding2(~v=Spacer.px192, ~h=Spacer.px064),
+      marginBottom(Spacer.px064),
+      Styles.mobile([
+        padding2(~v=Spacer.px128, ~h=Spacer.px024),
+        marginBottom(Spacer.px048),
       ]),
     ]);
 
-  let container = style(Shared.Styles.container);
+  let container = style(Styles.container);
 
-  let headline = style(Shared.Font.size(Shared.Types.Title1));
+  let headline = style(Font.size(FontTypes.Title1));
 
   let tagline =
     style([
-      color(Shared.Colors.gray500),
-      marginTop(Shared.Spacer.px024),
-      Shared.FontSize.px24,
-      Shared.Styles.mobile([Shared.FontSize.px20]),
+      color(Colors.gray500),
+      marginTop(Spacer.px024),
+      FontSize.px24,
+      Styles.mobile([FontSize.px20]),
     ]);
 
   let header =
-    style([
-      marginBottom(Shared.Spacer.px064),
-      ...Shared.Font.size(Shared.Types.Title2),
-    ]);
+    style([marginBottom(Spacer.px064), ...Font.size(FontTypes.Title2)]);
 
-  let text =
-    style([maxWidth(`em(30.0)), ...Shared.Font.size(Shared.Types.Text)]);
+  let text = style([maxWidth(`em(30.0)), ...Font.size(FontTypes.Text)]);
 
   let speaker =
     style([
       display(`flex),
       marginBottom(px(100)),
-      Shared.Styles.mobile([flexDirection(`column)]),
+      Styles.mobile([flexDirection(`column)]),
     ]);
 
   let image =
@@ -59,30 +56,30 @@ module Styles = {
     style([
       display(`flex),
       flexDirection(`column),
-      paddingLeft(Shared.Spacer.px024),
-      Shared.Styles.mobile([padding2(~v=Shared.Spacer.px024, ~h=px(0))]),
+      paddingLeft(Spacer.px024),
+      Styles.mobile([padding2(~v=Spacer.px024, ~h=px(0))]),
     ]);
 
   let name =
     style([
-      color(Shared.Colors.gray800),
-      marginBottom(Shared.Spacer.px008),
-      ...Shared.Font.size(Title3),
+      color(Colors.gray800),
+      marginBottom(Spacer.px008),
+      ...Font.size(Title3),
     ]);
 
   let session =
     style([
       fontWeight(`medium),
-      Shared.FontSize.px18,
-      color(Shared.Colors.gray500),
+      FontSize.px18,
+      color(Colors.gray500),
       lineHeight(`abs(1.75)),
     ]);
 
   let bio =
     style([
       fontWeight(`light),
-      Shared.FontSize.px20,
-      margin2(~v=Shared.Spacer.px008, ~h=px(0)),
+      FontSize.px20,
+      margin2(~v=Spacer.px008, ~h=px(0)),
     ]);
 };
 

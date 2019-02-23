@@ -1,4 +1,5 @@
 open Helpers;
+open Shared;
 open Types;
 
 module Styles = {
@@ -10,42 +11,38 @@ module Styles = {
     style([
       maxWidth(em(50.0)),
       margin2(~v=px(0), ~h=`auto),
-      ...Shared.Styles.container,
+      ...Styles.container,
     ]);
 
   let title =
-    style([
-      Shared.FontSize.px48,
-      media("(max-width: 600px)", [Shared.FontSize.px36]),
-    ]);
+    style([FontSize.px48, media("(max-width: 600px)", [FontSize.px36])]);
 
   let tagline =
     style([
-      Shared.FontSize.px16,
+      FontSize.px16,
       width(`percent(100.0)),
-      margin2(~v=Shared.Spacer.px004, ~h=px(0)),
+      margin2(~v=Spacer.px004, ~h=px(0)),
     ]);
 
   let metaBox =
     style([
       display(`flex),
       flexWrap(`wrap),
-      color(Shared.Colors.gray500),
-      Shared.FontSize.px18,
+      color(Colors.gray500),
+      FontSize.px18,
       selector("> small:not(:last-child)", [marginRight(px(5))]),
-      media("(max-width: 600px)", [Shared.FontSize.px14]),
+      media("(max-width: 600px)", [FontSize.px14]),
     ]);
 
-  let author =
-    style([width(`percent(100.0)), marginBottom(Shared.Spacer.px008)]);
+  let author = style([width(`percent(100.0)), marginBottom(Spacer.px008)]);
 
   let content =
     style([
       media(
         "(max-width: 600px)",
         [
-          selector(" div > p", [Shared.FontSize.px18]),
-          selector(" div > h2", [Shared.FontSize.px24]),
+          selector(" div > p", [FontSize.px18]),
+          selector(" div > h2", [FontSize.px24]),
         ],
       ),
     ]);

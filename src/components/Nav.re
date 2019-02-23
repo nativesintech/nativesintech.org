@@ -1,4 +1,5 @@
 open Helpers;
+open Shared;
 
 [@bs.module] external menu: string = "../../../../public/images/hamburger.svg";
 
@@ -16,35 +17,35 @@ module Styles = {
       display(`flex),
       justifyContent(`spaceBetween),
       alignItems(`center),
-      padding2(~h=Shared.Spacer.px064, ~v=px(0)),
-      minHeight(Shared.Spacer.px096),
+      padding2(~h=Spacer.px064, ~v=px(0)),
+      minHeight(Spacer.px096),
       boxShadow(
         ~x=px(1),
         ~y=px(0),
         ~blur=px(2),
         ~spread=px(2),
-        Shared.Colors.gray050,
+        Colors.gray050,
       ),
       overflow(`hidden),
-      Shared.Styles.mobile([padding2(~h=Shared.Spacer.px024, ~v=px(0))]),
+      Styles.mobile([padding2(~h=Spacer.px024, ~v=px(0))]),
     ]);
 
   let logoBox = style([display(`flex), alignItems(`center)]);
 
-  let logoImage = style([marginRight(Shared.Spacer.px012)]);
+  let logoImage = style([marginRight(Spacer.px012)]);
 
   let orgName =
     style([
-      color(Shared.Colors.cyan400),
-      Shared.FontSize.px24,
-      Shared.Styles.mobile([display(`none)]),
+      color(Colors.cyan400),
+      FontSize.px24,
+      Styles.mobile([display(`none)]),
     ]);
 
   let linksBox =
     style([
       display(`flex),
-      selector("> a:not(:last-child)", [marginRight(Shared.Spacer.px012)]),
-      Shared.Styles.mobile([display(`none)]),
+      selector("> a:not(:last-child)", [marginRight(Spacer.px012)]),
+      Styles.mobile([display(`none)]),
     ]);
 
   let hamburger =
@@ -52,7 +53,7 @@ module Styles = {
       width(px(50)),
       height(px(50)),
       cursor(`pointer),
-      Shared.Styles.noMobile([display(`none)]),
+      Styles.noMobile([display(`none)]),
     ]);
 
   let foldOut = (sidebar: sidebarState) => {
@@ -65,7 +66,7 @@ module Styles = {
     let baseStyles = [
       paddingTop(px(20)),
       position(`absolute),
-      backgroundColor(Shared.Colors.gray900),
+      backgroundColor(Colors.gray900),
       top(px(0)),
       bottom(px(0)),
       zIndex(10),
@@ -85,10 +86,10 @@ module Styles = {
         selector(
           "> .sidelink",
           [
-            color(Shared.Colors.gray050),
+            color(Colors.gray050),
             padding2(~v=px(10), ~h=px(20)),
             cursor(`pointer),
-            Shared.FontSize.px20,
+            FontSize.px20,
             opacity(1.0),
           ],
         ),
@@ -102,10 +103,10 @@ module Styles = {
         selector(
           "> .sidelink",
           [
-            color(Shared.Colors.gray050),
+            color(Colors.gray050),
             cursor(`pointer),
             opacity(0.0),
-            Shared.FontSize.px20,
+            FontSize.px20,
             opacity(0.0),
           ],
         ),

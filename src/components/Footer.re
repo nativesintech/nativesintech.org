@@ -1,4 +1,5 @@
 open Helpers;
+open Shared;
 
 module Styles = {
   open Css;
@@ -8,11 +9,11 @@ module Styles = {
       position(`absolute),
       bottom(px(0)),
       width(`percent(100.0)),
-      backgroundColor(Shared.Colors.gray050),
-      borderTop(px(1), `solid, Shared.Colors.gray100),
-      color(Shared.Colors.gray900),
+      backgroundColor(Colors.gray050),
+      borderTop(px(1), `solid, Colors.gray100),
+      color(Colors.gray900),
       textAlign(`center),
-      minHeight(Shared.Spacer.px096),
+      minHeight(Spacer.px096),
       display(`flex),
       justifyContent(`center),
       alignItems(`center),
