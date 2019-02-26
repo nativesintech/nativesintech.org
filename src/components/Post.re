@@ -56,7 +56,10 @@ let make = (~post, ~params) => {
     <div>
       {switch ((post: Types.postNode)) {
        | Inactive
-       | Loading => "Loading ..." |> text
+       | Loading =>
+         <Frame>
+           <div className=Styles.container> "Loading ..."->text </div>
+         </Frame>
        | Errored => <ErrorPage />
        | Idle(post) =>
          let {splat: article} = params;
