@@ -73,7 +73,17 @@ let make = (~posts) => {
              <div>
                <div>
                  {postsList
-                  |> List.map(item =>
+                  |> List.map(item => {
+                       let date =
+                         Intl.mkDateTimeFormat(
+                           "en-US",
+                           Intl.options(
+                             ~year="numeric",
+                             ~month="long",
+                             ~day="numeric",
+                           ),
+                         )
+                         |> Intl.format(Js.Date.fromString(item##date));
                        <article key=item##id>
                          <span className=Styles.link>
                            <PhenomicPresetReactApp.Link
@@ -84,15 +94,15 @@ let make = (~posts) => {
                            </PhenomicPresetReactApp.Link>
                          </span>
                          <div className=Styles.metaBox>
-                           <small> {item##date |> text} </small>
+                           <small> {date |> text} </small>
                            <small> {j|—|j}->text </small>
                            <small> {item##minRead->text} " read"->text </small>
                            <p className=Styles.tagline>
                              {item##tagline->text}
                            </p>
                          </div>
-                       </article>
-                     )
+                       </article>;
+                     })
                   |> list}
                </div>
                <div>

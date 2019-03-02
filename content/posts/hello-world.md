@@ -1,6 +1,6 @@
 ---
 title: "Hello, world! 🌎"
-date: "January 26, 2019"
+date: "2019-01-26"
 tagline: "Why I chose ReasonML to build this site"
 layout: "normal"
 minRead: "6 minute"

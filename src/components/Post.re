@@ -63,6 +63,12 @@ let make = (~post, ~params) => {
        | Errored => <ErrorPage />
        | Idle(post) =>
          let {splat: article} = params;
+         let date =
+           Intl.mkDateTimeFormat(
+             "en-US",
+             Intl.options(~year="numeric", ~month="long", ~day="numeric"),
+           )
+           |> Intl.format(Js.Date.fromString(post##date));
          <div className=Styles.wrapper>
            <BsReactHelmet>
              <title>
@@ -102,7 +108,7 @@ let make = (~post, ~params) => {
                      "By "->text
                      {post##author->text}
                    </small>
-                   <small> {post##date->text} </small>
+                   <small> date->text </small>
                    <small> {j|—|j}->text </small>
                    <small> {post##minRead->text} " read"->text </small>
                  </div>
