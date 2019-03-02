@@ -66,8 +66,7 @@ module.exports = (/* config: PhenomicConfig */) => ({
         algorithm: "gzip",
         test: /\.js(\?.*)?$/i,
         threshold: 8192,
-        minRatio: 0.8,
-        deleteOriginalAssets: true
+        minRatio: 0.8
       })
   ].filter(Boolean),
 
