@@ -1,9 +1,9 @@
 import path from "path";
-
 import webpack from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import TerserPlugin from "terser-webpack-plugin";
 import Dotenv from "dotenv-webpack";
+import CompressionPlugin from "compression-webpack-plugin";
 
 module.exports = (/* config: PhenomicConfig */) => ({
   entry: {
@@ -59,7 +59,15 @@ module.exports = (/* config: PhenomicConfig */) => ({
       }),
     process.env.PHENOMIC_ENV !== "static" &&
       new webpack.HotModuleReplacementPlugin(),
-    new Dotenv({ systemvars: true })
+    new Dotenv({ systemvars: true }),
+    process.env.PHENOMIC_ENV === "static" &&
+      new CompressionPlugin({
+        filename: "[path].gz[query]",
+        algorithm: "gzip",
+        test: /\.js(\?.*)?$/i,
+        threshold: 8192,
+        minRatio: 0.8
+      })
   ].filter(Boolean),
 
   optimization: {
