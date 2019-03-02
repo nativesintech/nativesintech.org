@@ -11,43 +11,49 @@
 
   <url>
        <loc>https://nativesintech.org/</loc>
-       <lastmod>2019-02-16T23:21:02+00:00</lastmod>
+       <lastmod>2019-03-02T21:02:22+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>1.0000</priority>
   </url>
   <url>
        <loc>https://nativesintech.org/about/</loc>
-       <lastmod>2019-02-16T23:21:02+00:00</lastmod>
+       <lastmod>2019-03-02T21:02:22+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://nativesintech.org/awesome/</loc>
-       <lastmod>2019-02-16T23:21:02+00:00</lastmod>
+       <lastmod>2019-03-02T21:02:22+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://nativesintech.org/conference/</loc>
-       <lastmod>2019-02-16T23:21:02+00:00</lastmod>
+       <lastmod>2019-03-02T21:02:22+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://nativesintech.org/blog/</loc>
-       <lastmod>2019-02-16T23:21:02+00:00</lastmod>
+       <lastmod>2019-03-02T21:02:22+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.6400</priority>
   </url>
   <url>
        <loc>https://nativesintech.org/conference/2019/</loc>
-       <lastmod>2019-02-16T23:21:02+00:00</lastmod>
+       <lastmod>2019-03-02T21:02:22+00:00</lastmod>
+       <changefreq>daily</changefreq>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://nativesintech.org/blog/appeal-to-speakers/</loc>
+       <lastmod>2019-03-02T21:02:22+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.9500</priority>
   </url>
   <url>
        <loc>https://nativesintech.org/blog/hello-world/</loc>
-       <lastmod>2019-02-16T23:21:02+00:00</lastmod>
+       <lastmod>2019-03-02T21:02:22+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.5120</priority>
   </url>
