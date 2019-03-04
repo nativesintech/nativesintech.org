@@ -44,6 +44,10 @@ Running the application locally requires a few steps.
 - From the terminal, run the app in development mode: `$ yarn start`
 - You now have the app running and can browse to `localhost:3333` to see it live!
 
+## Repo Metrics 📈
+
+[![Throughput Graph](http://graphs.waffle.io/nativesintech/natives-in-tech/throughput.svg)](https://waffle.io/nativesintech/natives-in-tech/metrics)
+
 ## Road Map 🗺
 
 - [ ] An Awesome Natives in Tech page per the info [here](https://github.com/nativesintech/awesome-natives-in-tech)
@@ -69,7 +73,3 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/all-contri
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
-## Metrics/Activity 📈
-
-[![Throughput Graph](http://graphs.waffle.io/nativesintech/natives-in-tech/throughput.svg)](https://waffle.io/nativesintech/natives-in-tech/metrics)
