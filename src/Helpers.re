@@ -4,9 +4,9 @@ let text = ReasonReact.string;
 
 let couldNotParseErr = "Could not parse";
 
-let list = list => list |> Array.of_list |> ReasonReact.array;
+let list = list => list->Belt.List.toArray->ReasonReact.array;
 
-let nodeList = node => node##list |> Array.to_list;
+let nodeList = node => node##list->Belt.List.fromArray;
 
 let getPage = Js.String.slice(~from=0, ~to_=-3);
 
