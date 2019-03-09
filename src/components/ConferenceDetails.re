@@ -207,25 +207,25 @@ let make = (~conference, ~params) => {
            | Failure(e) => {j|Sorry, there was an error: $e|j}->text
            | Success(d) =>
              d.data
-             |> List.map((speaker: Types.SessionizeAPI.speaker) => {
-                  let firstSessionName =
-                    Belt.Option.(
-                      Belt.List.head(speaker.sessions)
-                      ->map(s => s.name)
-                      ->getWithDefault("")
-                    );
+             ->Belt.List.map((speaker: Types.SessionizeAPI.speaker) => {
+                 let firstSessionName =
+                   Belt.Option.(
+                     Belt.List.head(speaker.sessions)
+                     ->map(s => s.name)
+                     ->getWithDefault("")
+                   );
 
-                  <div className=Styles.speaker>
-                    <img className=Styles.image src={speaker.profilePicture} />
-                    <div className=Styles.details>
-                      <div className=Styles.name> speaker.fullName->text </div>
-                      <div className=Styles.session>
-                        firstSessionName->text
-                      </div>
-                      <p className=Styles.bio> speaker.bio->text </p>
-                    </div>
-                  </div>;
-                })
+                 <div className=Styles.speaker>
+                   <img className=Styles.image src={speaker.profilePicture} />
+                   <div className=Styles.details>
+                     <div className=Styles.name> speaker.fullName->text </div>
+                     <div className=Styles.session>
+                       firstSessionName->text
+                     </div>
+                     <p className=Styles.bio> speaker.bio->text </p>
+                   </div>
+                 </div>;
+               })
              |> list
            }}
         </div>
