@@ -5,6 +5,9 @@ open Shared;
 
 [@bs.module]
 external logo: string = "../../../../public/images/natives-in-tech-logo.png";
+
+[@bs.module] external close: string = "../../../../public/images/close.svg";
+
 type sidebarState =
   | Open
   | Closed;
@@ -56,11 +59,11 @@ module Styles = {
       Styles.noMobile([display(`none)]),
     ]);
 
-  let foldOut = (sidebar: sidebarState) => {
+  let foldOut = sidebar => {
     let isSidebarOpen =
       switch (sidebar) {
       | Open => true
-      | Closed => false
+      | _ => false
       };
 
     let baseStyles = [
@@ -84,7 +87,7 @@ module Styles = {
         width(px(200)),
         animationWidth,
         selector(
-          "> .sidelink",
+          "> div .sidelink",
           [
             color(Colors.gray050),
             padding2(~v=px(10), ~h=px(20)),
@@ -101,7 +104,7 @@ module Styles = {
         width(px(0)),
         animationWidth,
         selector(
-          "> .sidelink",
+          "> div .sidelink",
           [
             color(Colors.gray050),
             cursor(`pointer),
@@ -114,6 +117,31 @@ module Styles = {
       ]);
 
     isSidebarOpen ? isOpenStyles : isClosedStyles;
+  };
+
+  let links =
+    style([display(`flex), flexDirection(`column), position(`relative)]);
+
+  let close = sidebar => {
+    let isSidebarOpen =
+      switch (sidebar) {
+      | Open => true
+      | _ => false
+      };
+
+    let baseStyles = [
+      width(px(25)),
+      position(`absolute),
+      right(Spacer.px012),
+      top(px(-8)),
+      cursor(`pointer),
+    ];
+
+    let openStyles = style([display(`inlineBlock), ...baseStyles]);
+
+    let closedStyles = style([display(`none), ...baseStyles]);
+
+    isSidebarOpen ? openStyles : closedStyles;
   };
 };
 
@@ -166,22 +194,29 @@ let make = _children => {
         <img src=menu />
       </span>
       <div className={Styles.foldOut(self.state.sidebar)}>
-        <PhenomicPresetReactApp.Link
-          className="sidelink" activeStyle href="/about">
-          "About"->text
-        </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link
-          className="sidelink" activeStyle href="/awesome">
-          "Awesome"->text
-        </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link
-          className="sidelink" activeStyle href="/conference">
-          "Conference"->text
-        </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link
-          className="sidelink" activeStyle href="/blog">
-          "Blog"->text
-        </PhenomicPresetReactApp.Link>
+        <div className=Styles.links>
+          <span
+            className={Styles.close(self.state.sidebar)}
+            onClick={_e => self.send(CloseSidebar)}>
+            <img src=close />
+          </span>
+          <PhenomicPresetReactApp.Link
+            className="sidelink" activeStyle href="/about">
+            "About"->text
+          </PhenomicPresetReactApp.Link>
+          <PhenomicPresetReactApp.Link
+            className="sidelink" activeStyle href="/awesome">
+            "Awesome"->text
+          </PhenomicPresetReactApp.Link>
+          <PhenomicPresetReactApp.Link
+            className="sidelink" activeStyle href="/conference">
+            "Conference"->text
+          </PhenomicPresetReactApp.Link>
+          <PhenomicPresetReactApp.Link
+            className="sidelink" activeStyle href="/blog">
+            "Blog"->text
+          </PhenomicPresetReactApp.Link>
+        </div>
       </div>
     </nav>;
   },
