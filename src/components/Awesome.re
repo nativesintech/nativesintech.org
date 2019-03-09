@@ -223,53 +223,52 @@ let make = () => {
              | Loading => "Loading..."->text
              | Failure(e) => {j|Sorry, there was an error: $e|j}->text
              | Success(d) =>
-               d
-               |> List.map((m: Types.GitHubGraphQLAPI.edge) => {
-                    let orStr = Belt.Option.(getWithDefault(_, ""));
-                    let (img, bio, email, location, login, name, websiteUrl) = (
-                      m.node.avatarUrl->orStr,
-                      m.node.bio->orStr,
-                      m.node.email->orStr,
-                      m.node.location->orStr,
-                      m.node.login->orStr,
-                      m.node.name->orStr,
-                      m.node.websiteUrl->orStr,
-                    );
-                    <div className=Styles.userBox>
-                      <div className={Styles.image(img)} />
-                      <div className=Styles.content>
-                        <div className=Styles.name> name->text </div>
-                        <div className=Styles.location> location->text </div>
-                        <p className=Styles.bio> bio->text </p>
-                        <div className=Styles.iconsBox>
-                          {email !== "" ?
-                             <a
-                               href={j|mailto:$email|j}
-                               target="_blank"
-                               rel="noopener noreferrer">
-                               <img src=mail className=Styles.icon />
-                             </a> :
-                             nothing}
-                          {websiteUrl !== "" ?
-                             <a
-                               href=websiteUrl
-                               target="_blank"
-                               rel="noopener noreferrer">
-                               <img src=link className=Styles.icon />
-                             </a> :
-                             nothing}
-                          {login !== "" ?
-                             <a
-                               href={j|https://github.com/$login|j}
-                               target="_blank"
-                               rel="noopener noreferrer">
-                               <img src=branch className=Styles.icon />
-                             </a> :
-                             nothing}
-                        </div>
-                      </div>
-                    </div>;
-                  })
+               d->Belt.List.map((m: Types.GitHubGraphQLAPI.edge) => {
+                 let orStr = Belt.Option.(getWithDefault(_, ""));
+                 let (img, bio, email, location, login, name, websiteUrl) = (
+                   m.node.avatarUrl->orStr,
+                   m.node.bio->orStr,
+                   m.node.email->orStr,
+                   m.node.location->orStr,
+                   m.node.login->orStr,
+                   m.node.name->orStr,
+                   m.node.websiteUrl->orStr,
+                 );
+                 <div className=Styles.userBox>
+                   <div className={Styles.image(img)} />
+                   <div className=Styles.content>
+                     <div className=Styles.name> name->text </div>
+                     <div className=Styles.location> location->text </div>
+                     <p className=Styles.bio> bio->text </p>
+                     <div className=Styles.iconsBox>
+                       {email !== "" ?
+                          <a
+                            href={j|mailto:$email|j}
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <img src=mail className=Styles.icon />
+                          </a> :
+                          nothing}
+                       {websiteUrl !== "" ?
+                          <a
+                            href=websiteUrl
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <img src=link className=Styles.icon />
+                          </a> :
+                          nothing}
+                       {login !== "" ?
+                          <a
+                            href={j|https://github.com/$login|j}
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <img src=branch className=Styles.icon />
+                          </a> :
+                          nothing}
+                     </div>
+                   </div>
+                 </div>;
+               })
                |> list
              }}
           </div>

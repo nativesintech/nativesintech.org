@@ -72,37 +72,32 @@ let make = (~posts) => {
              let postsList = posts##list |> Array.to_list;
              <div>
                <div>
-                 {postsList
-                  |> List.map(item => {
-                       let date =
-                         Intl.mkDateTimeFormat(
-                           "en-US",
-                           Intl.options(
-                             ~year="numeric",
-                             ~month="long",
-                             ~day="numeric",
-                           ),
-                         )
-                         |> Intl.format(Js.Date.fromString(item##date));
-                       <article key=item##id>
-                         <span className=Styles.link>
-                           <PhenomicPresetReactApp.Link
-                             href={"/blog/" ++ item##id ++ "/"}>
-                             <h3 className=Styles.title>
-                               {item##title->text}
-                             </h3>
-                           </PhenomicPresetReactApp.Link>
-                         </span>
-                         <div className=Styles.metaBox>
-                           <small> {date |> text} </small>
-                           <small> {j|—|j}->text </small>
-                           <small> {item##minRead->text} " read"->text </small>
-                           <p className=Styles.tagline>
-                             {item##tagline->text}
-                           </p>
-                         </div>
-                       </article>;
-                     })
+                 {postsList->Belt.List.map(item => {
+                    let date =
+                      Intl.mkDateTimeFormat(
+                        "en-US",
+                        Intl.options(
+                          ~year="numeric",
+                          ~month="long",
+                          ~day="numeric",
+                        ),
+                      )
+                      |> Intl.format(Js.Date.fromString(item##date));
+                    <article key=item##id>
+                      <span className=Styles.link>
+                        <PhenomicPresetReactApp.Link
+                          href={"/blog/" ++ item##id ++ "/"}>
+                          <h3 className=Styles.title> {item##title->text} </h3>
+                        </PhenomicPresetReactApp.Link>
+                      </span>
+                      <div className=Styles.metaBox>
+                        <small> {date |> text} </small>
+                        <small> {j|—|j}->text </small>
+                        <small> {item##minRead->text} " read"->text </small>
+                        <p className=Styles.tagline> {item##tagline->text} </p>
+                      </div>
+                    </article>;
+                  })
                   |> list}
                </div>
                <div>
