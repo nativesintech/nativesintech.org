@@ -46,7 +46,7 @@
     "start": "yarn reason:cleanup && npm-run-all --parallel start:*",
     "start:js": "phenomic start",
     "start:reason": "yarn reason:compile -w",
-    "build": "yarn reason:compile && phenomic build && rm ./dist/phenomic.main.js"
+    "build": "yarn reason:compile && phenomic build"
   },
   "phenomic": {
     "presets": [
