@@ -1,7 +1,7 @@
 ![Natives in Tech](./public/images/natives-in-tech-logo-github.png)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a2eead8b-3d03-4de5-b744-299149b6de59/deploy-status)](https://app.netlify.com/sites/natives-in-tech/deploys)
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
-
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/nativesintech/natives-in-tech.svg?columns=all)](https://waffle.io/nativesintech/natives-in-tech) 
 
 # Natives in Tech
 
@@ -43,6 +43,10 @@ Running the application locally requires a few steps.
 - From the terminal, install dependencies: `$ yarn install`
 - From the terminal, run the app in development mode: `$ yarn start`
 - You now have the app running and can browse to `localhost:3333` to see it live!
+
+## Repo Metrics 📈
+
+[![Throughput Graph](http://graphs.waffle.io/nativesintech/natives-in-tech/throughput.svg)](https://waffle.io/nativesintech/natives-in-tech/metrics)
 
 ## Road Map 🗺
 
