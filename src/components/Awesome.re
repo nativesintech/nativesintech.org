@@ -223,7 +223,7 @@ let make = () => {
              | Loading => "Loading..."->text
              | Failure(e) => {j|Sorry, there was an error: $e|j}->text
              | Success(d) =>
-               d->Belt.List.map((m: Types.GitHubGraphQLAPI.edge) => {
+               d->Belt.List.map(m => {
                  let orStr = Belt.Option.(getWithDefault(_, ""));
                  let (img, bio, email, location, login, name, websiteUrl) = (
                    m.node.avatarUrl->orStr,
