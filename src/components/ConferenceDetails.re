@@ -207,7 +207,7 @@ let make = (~conference, ~params) => {
            | Failure(e) => {j|Sorry, there was an error: $e|j}->text
            | Success(d) =>
              d.data
-             ->Belt.List.map((speaker: Types.SessionizeAPI.speaker) => {
+             ->Belt.List.map(speaker => {
                  let firstSessionName =
                    Belt.Option.(
                      Belt.List.head(speaker.sessions)

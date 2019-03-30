@@ -28,8 +28,10 @@ module LocalStorage = {
     Belt.Option.(
       Dom.Storage.(localStorage |> getItem({j|$year|j}))
       ->flatMap(Json.parse)
-      ->map(Decoders.ConferenceDetails.decodeConferenceDetailsFromStorage)
-      ->getWithDefault(Belt.Result.Error(couldNotParseErr))
+      ->mapWithDefault(
+          Belt.Result.Error(couldNotParseErr),
+          Decoders.ConferenceDetails.decodeConferenceDetailsFromStorage,
+        )
       ->Belt.Result.map(d => {
           let time = d.timestamp;
           time > now();
@@ -42,8 +44,10 @@ module LocalStorage = {
     Belt.Option.(
       Dom.Storage.(localStorage |> getItem({j|$id|j}))
       ->flatMap(Json.parse)
-      ->map(Decoders.ConferenceDetails.decodeConferenceDetailsFromStorage)
-      ->getWithDefault(Belt.Result.Error(couldNotParseErr))
+      ->mapWithDefault(
+          Belt.Result.Error(couldNotParseErr),
+          Decoders.ConferenceDetails.decodeConferenceDetailsFromStorage,
+        )
     );
   };
 
