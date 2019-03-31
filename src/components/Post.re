@@ -109,6 +109,17 @@ let make = (~post, ~params) => {
                    <small> {post##minRead->text} " read"->text </small>
                  </div>
                </header>
+               {Belt.Option.(
+                  map(post##image, image =>
+                    <img
+                      style={ReactDOMRe.Style.make(~marginTop="20px", ())}
+                      src={j|/images/$image|j}
+                      width="100%"
+                      height="auto"
+                    />
+                  )
+                  ->getWithDefault(nothing)
+                )}
                <section className=Styles.content>
                  <PhenomicPresetReactApp.BodyRenderer body=post##body />
                </section>
