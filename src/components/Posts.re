@@ -73,16 +73,7 @@ let make = (~posts) => {
              <div>
                <div>
                  {postsList->Belt.List.map(item => {
-                    let date =
-                      Intl.mkDateTimeFormat(
-                        "en-US",
-                        Intl.options(
-                          ~year="numeric",
-                          ~month="long",
-                          ~day="numeric",
-                        ),
-                      )
-                      |> Intl.format(Js.Date.fromString(item##date));
+                    let date = Intl.formatUSDate(item##date);
                     <article key=item##id>
                       <span className=Styles.link>
                         <PhenomicPresetReactApp.Link

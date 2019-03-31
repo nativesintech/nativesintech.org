@@ -63,12 +63,8 @@ let make = (~post, ~params) => {
        | Errored => <ErrorPage />
        | Idle(post) =>
          let {splat: article} = params;
-         let date =
-           Intl.mkDateTimeFormat(
-             "en-US",
-             Intl.options(~year="numeric", ~month="long", ~day="numeric"),
-           )
-           |> Intl.format(Js.Date.fromString(post##date));
+         let date = Intl.formatUSDate(post##date);
+         Js.log(post##image);
          <div className=Styles.wrapper>
            <BsReactHelmet>
              <title>
