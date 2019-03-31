@@ -64,7 +64,6 @@ let make = (~post, ~params) => {
        | Idle(post) =>
          let {splat: article} = params;
          let date = Intl.formatUSDate(post##date);
-         Js.log(post##image);
          <div className=Styles.wrapper>
            <BsReactHelmet>
              <title>
