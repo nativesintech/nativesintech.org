@@ -63,12 +63,7 @@ let make = (~post, ~params) => {
        | Errored => <ErrorPage />
        | Idle(post) =>
          let {splat: article} = params;
-         let date =
-           Intl.mkDateTimeFormat(
-             "en-US",
-             Intl.options(~year="numeric", ~month="long", ~day="numeric"),
-           )
-           |> Intl.format(Js.Date.fromString(post##date));
+         let date = Intl.formatUSDate(post##date);
          <div className=Styles.wrapper>
            <BsReactHelmet>
              <title>
@@ -113,6 +108,17 @@ let make = (~post, ~params) => {
                    <small> {post##minRead->text} " read"->text </small>
                  </div>
                </header>
+               {Belt.Option.(
+                  map(post##image, image =>
+                    <img
+                      style={ReactDOMRe.Style.make(~marginTop="20px", ())}
+                      src={j|/images/$image|j}
+                      width="100%"
+                      height="auto"
+                    />
+                  )
+                  ->getWithDefault(nothing)
+                )}
                <section className=Styles.content>
                  <PhenomicPresetReactApp.BodyRenderer body=post##body />
                </section>
