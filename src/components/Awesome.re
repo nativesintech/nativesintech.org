@@ -134,7 +134,7 @@ let make = () => {
       Js.Json.string(
         "{
           organization(login:\"nativesintech\"){
-            members(first: 100) {
+            membersWithRole(first: 100) {
               edges {
                 node {
                   ...on User {

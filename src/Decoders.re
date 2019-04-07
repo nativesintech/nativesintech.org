@@ -17,7 +17,7 @@ module GitHubGraphQLAPI = {
 
   let decodeResponseExn = json =>
     at(
-      ["data", "organization", "members"],
+      ["data", "organization", "membersWithRole"],
       field("edges", list(edge)),
       json,
     );
