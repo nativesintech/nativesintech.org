@@ -1,9 +1,2 @@
-[@bs.module "../../../../src/components/SubscribeForm.js"]
-external subscribeForm: ReasonReact.reactClass = "default";
-
-let make = _children =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass=subscribeForm,
-    ~props=Js.Obj.empty(),
-    [||],
-  );
+[@bs.module "../../../../src/components/SubscribeForm.js"] [@react.component]
+external make: unit => React.element = "default";

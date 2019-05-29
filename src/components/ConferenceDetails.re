@@ -88,23 +88,29 @@ type state = {data: RemoteData.t(string, Types.ConferenceDetails.details)};
 type action =
   | UpdateDetails(RemoteData.t(string, Types.ConferenceDetails.details));
 
-let component = ReasonReact.reducerComponent(__MODULE__);
+[@react.component]
+let make = (~params) => {
+  let {splat: year} = params;
 
-let make = (~conference, ~params) => {
-  ...component,
-  initialState: () => {data: RemoteData.NotAsked},
-  didMount: self => {
+  let (state, dispatch) =
+    React.useReducer(
+      (_state, action) =>
+        switch (action) {
+        | UpdateDetails(result) => {data: result}
+        },
+      {data: RemoteData.NotAsked},
+    );
+
+  React.useEffect(() => {
     let {splat: year} = params;
     let id = getIdFromYear(year);
 
-    let _ = conference;
-
-    self.send(UpdateDetails(RemoteData.Loading));
+    dispatch(UpdateDetails(RemoteData.Loading));
 
     if (LocalStorage.hasCachedConferenceDetails(year)) {
       let details =
         LocalStorage.getConferenceDetails(year) |> RemoteData.fromResult;
-      self.send(UpdateDetails(details));
+      dispatch(UpdateDetails(details));
     } else {
       Js.Promise.(
         Fetch.fetch({j|https://sessionize.com/api/v2/$id/view/speakers|j})
@@ -112,7 +118,7 @@ let make = (~conference, ~params) => {
              if (Fetch.Response.ok(res)) {
                Fetch.Response.text(res);
              } else {
-               self.send(UpdateDetails(RemoteData.Failure("Bad status")));
+               dispatch(UpdateDetails(RemoteData.Failure("Bad status")));
                reject(Js.Exn.raiseError("Bad status"));
              }
            )
@@ -147,100 +153,83 @@ let make = (~conference, ~params) => {
                LocalStorage.getConferenceDetails(year)
                |> RemoteData.fromResult;
 
-             self.send(UpdateDetails(details));
+             dispatch(UpdateDetails(details));
              resolve();
            })
         |> catch(_ => {
-             self.send(UpdateDetails(RemoteData.Failure("Network error")));
+             dispatch(UpdateDetails(RemoteData.Failure("Network error")));
              resolve();
            })
       )
       |> ignore;
     };
-    ();
-  },
-  reducer: (action, _state) => {
-    switch (action) {
-    | UpdateDetails(result) => ReasonReact.Update({data: result})
-    };
-  },
-  render: self => {
-    let {splat: year} = params;
-    <div>
-      <BsReactHelmet>
-        <title> {j|Natives in Tech Conf $year|j}->text </title>
-        <meta
-          name="description"
-          content={j|Details about the Natives in Tech Conference|j}
-        />
-        <meta
-          name="keywords"
-          content="natives in tech, natives, indigenous, tech, software development, open source, conference"
-        />
-        <meta name="twitter:title" content={j|Natives in Tech Conf $year|j} />
-        <meta
-          name="twitter:description"
-          content={j|Details about the Natives in Tech Conference of $year|j}
-        />
-        <meta property="og:title" content={j|Natives in Tech Conf $year|j} />
-        <meta
-          property="og:description"
-          content={j|Details about the Natives in Tech Conference|j}
-        />
-        <meta
-          property="og:url"
-          content={j|https://nativesintech.org/conference/$year/|j}
-        />
-      </BsReactHelmet>
-      <Frame>
-        <div className=Styles.billboard>
-          <h1 className=Styles.headline>
-            "Indigenous Peoples in Digital Spaces"->text
-          </h1>
-          <div className=Styles.tagline> "2019 Conference Details"->text </div>
-        </div>
-        <div className=Styles.container>
-          <h2 className=Styles.header> "Meet the Speakers"->text </h2>
-          {switch (self.state.data) {
-           | NotAsked => nothing
-           | Loading => "Loading..."->text
-           | Failure(e) => {j|Sorry, there was an error: $e|j}->text
-           | Success(d) =>
-             d.data
-             ->Belt.List.map(speaker => {
-                 let firstSessionName =
-                   Belt.Option.(
-                     Belt.List.head(speaker.sessions)
-                     ->map(s => s.name)
-                     ->getWithDefault("")
-                   );
+    None;
+  });
 
-                 <div className=Styles.speaker>
-                   <img className=Styles.image src={speaker.profilePicture} />
-                   <div className=Styles.details>
-                     <div className=Styles.name> speaker.fullName->text </div>
-                     <div className=Styles.session>
-                       firstSessionName->text
-                     </div>
-                     <p className=Styles.bio> speaker.bio->text </p>
-                   </div>
-                 </div>;
-               })
-             |> list
-           }}
-        </div>
-      </Frame>
-    </div>;
-  },
+  <div>
+    <BsReactHelmet>
+      <title> {j|Natives in Tech Conf $year|j}->text </title>
+      <meta
+        name="description"
+        content={j|Details about the Natives in Tech Conference|j}
+      />
+      <meta
+        name="keywords"
+        content="natives in tech, natives, indigenous, tech, software development, open source, conference"
+      />
+      <meta name="twitter:title" content={j|Natives in Tech Conf $year|j} />
+      <meta
+        name="twitter:description"
+        content={j|Details about the Natives in Tech Conference of $year|j}
+      />
+      <meta property="og:title" content={j|Natives in Tech Conf $year|j} />
+      <meta
+        property="og:description"
+        content={j|Details about the Natives in Tech Conference|j}
+      />
+      <meta
+        property="og:url"
+        content={j|https://nativesintech.org/conference/$year/|j}
+      />
+    </BsReactHelmet>
+    <Frame>
+      <div className=Styles.billboard>
+        <h1 className=Styles.headline>
+          "Indigenous Peoples in Digital Spaces"->text
+        </h1>
+        <div className=Styles.tagline> "2019 Conference Details"->text </div>
+      </div>
+      <div className=Styles.container>
+        <h2 className=Styles.header> "Meet the Speakers"->text </h2>
+        {switch (state.data) {
+         | NotAsked => nothing
+         | Loading => "Loading..."->text
+         | Failure(e) => {j|Sorry, there was an error: $e|j}->text
+         | Success(d) =>
+           d.data
+           ->Belt.List.map(speaker => {
+               let firstSessionName =
+                 Belt.Option.(
+                   Belt.List.head(speaker.sessions)
+                   ->map(s => s.name)
+                   ->getWithDefault("")
+                 );
+
+               <div className=Styles.speaker>
+                 <img className=Styles.image src={speaker.profilePicture} />
+                 <div className=Styles.details>
+                   <div className=Styles.name> speaker.fullName->text </div>
+                   <div className=Styles.session> firstSessionName->text </div>
+                   <p className=Styles.bio> speaker.bio->text </p>
+                 </div>
+               </div>;
+             })
+           |> list
+         }}
+      </div>
+    </Frame>
+  </div>;
 };
-
-let jsComponent =
-  ReasonReact.wrapReasonForJs(~component, jsProps =>
-    make(
-      ~conference=PhenomicPresetReactApp.jsEdge(jsProps##conference),
-      ~params=paramsFromJs(jsProps##params),
-    )
-  );
 
 let queries = props => {
   let conference =

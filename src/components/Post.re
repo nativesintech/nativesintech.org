@@ -48,95 +48,85 @@ module Styles = {
     ]);
 };
 
-let component = ReasonReact.statelessComponent("Post");
-
+[@react.component]
 let make = (~post, ~params) => {
-  ...component,
-  render: _self =>
-    <div>
-      {switch ((post: Types.postNode)) {
-       | Inactive
-       | Loading =>
+  let post' = PhenomicPresetReactApp.jsEdge(post);
+  <div>
+    {switch ((post': Types.postNode)) {
+     | Inactive
+     | Loading =>
+       <Frame>
+         <div className=Styles.container> "Loading ..."->text </div>
+       </Frame>
+     | Errored => <ErrorPage />
+     | Idle(post) =>
+       let {splat: article} = params;
+       let date = Intl.formatUSDate(post##date);
+       <div className=Styles.wrapper>
+         <BsReactHelmet>
+           <title>
+             "Natives in Tech - Blog - "->text
+             {post##title->text}
+           </title>
+           <meta
+             name="description"
+             content={post##title ++ ": " ++ post##tagline}
+           />
+           <meta name="keywords" content={post##tags} />
+           <meta name="twitter:title" content="Natives in Tech Blog" />
+           <meta
+             name="twitter:description"
+             content={post##title ++ ": " ++ post##tagline}
+           />
+           <meta property="og:title" content="Natives in Tech Blog" />
+           <meta
+             property="og:description"
+             content={post##title ++ ": " ++ post##tagline}
+           />
+           <meta
+             property="og:url"
+             content={j|https://nativesintech.org/blog/$article/|j}
+           />
+         </BsReactHelmet>
          <Frame>
-           <div className=Styles.container> "Loading ..."->text </div>
+           <div />
+           <article className=Styles.container>
+             <PhenomicPresetReactApp.Link href="/blog">
+               {js| ← Back|js}->text
+             </PhenomicPresetReactApp.Link>
+             <header>
+               <h1 className=Styles.title> {post##title->text} </h1>
+               <div className=Styles.metaBox>
+                 <small className=Styles.author>
+                   "By "->text
+                   {post##author->text}
+                 </small>
+                 <small> date->text </small>
+                 <small> {j|—|j}->text </small>
+                 <small> {post##minRead->text} " read"->text </small>
+               </div>
+             </header>
+             Belt.Option.(
+               map(post##image, image =>
+                 <img
+                   style={ReactDOMRe.Style.make(~marginTop="20px", ())}
+                   src={j|/images/$image|j}
+                   width="100%"
+                   height="auto"
+                 />
+               )
+               ->getWithDefault(nothing)
+             )
+             <section className=Styles.content>
+               <PhenomicPresetReactApp.BodyRenderer body=post##body />
+             </section>
+             <section> <SubscribeForm /> </section>
+           </article>
          </Frame>
-       | Errored => <ErrorPage />
-       | Idle(post) =>
-         let {splat: article} = params;
-         let date = Intl.formatUSDate(post##date);
-         <div className=Styles.wrapper>
-           <BsReactHelmet>
-             <title>
-               "Natives in Tech - Blog - "->text
-               {post##title->text}
-             </title>
-             <meta
-               name="description"
-               content={post##title ++ ": " ++ post##tagline}
-             />
-             <meta name="keywords" content={post##tags} />
-             <meta name="twitter:title" content="Natives in Tech Blog" />
-             <meta
-               name="twitter:description"
-               content={post##title ++ ": " ++ post##tagline}
-             />
-             <meta property="og:title" content="Natives in Tech Blog" />
-             <meta
-               property="og:description"
-               content={post##title ++ ": " ++ post##tagline}
-             />
-             <meta
-               property="og:url"
-               content={j|https://nativesintech.org/blog/$article/|j}
-             />
-           </BsReactHelmet>
-           <Frame>
-             <div />
-             <article className=Styles.container>
-               <PhenomicPresetReactApp.Link href="/blog">
-                 {js| ← Back|js}->text
-               </PhenomicPresetReactApp.Link>
-               <header>
-                 <h1 className=Styles.title> {post##title->text} </h1>
-                 <div className=Styles.metaBox>
-                   <small className=Styles.author>
-                     "By "->text
-                     {post##author->text}
-                   </small>
-                   <small> date->text </small>
-                   <small> {j|—|j}->text </small>
-                   <small> {post##minRead->text} " read"->text </small>
-                 </div>
-               </header>
-               {Belt.Option.(
-                  map(post##image, image =>
-                    <img
-                      style={ReactDOMRe.Style.make(~marginTop="20px", ())}
-                      src={j|/images/$image|j}
-                      width="100%"
-                      height="auto"
-                    />
-                  )
-                  ->getWithDefault(nothing)
-                )}
-               <section className=Styles.content>
-                 <PhenomicPresetReactApp.BodyRenderer body=post##body />
-               </section>
-               <section> <SubscribeForm /> </section>
-             </article>
-           </Frame>
-         </div>;
-       }}
-    </div>,
+       </div>;
+     }}
+  </div>;
 };
-
-let jsComponent =
-  ReasonReact.wrapReasonForJs(~component, jsProps =>
-    make(
-      ~post=PhenomicPresetReactApp.jsEdge(jsProps##post),
-      ~params=paramsFromJs(jsProps##params),
-    )
-  );
 
 let queries = props => {
   let post =

@@ -67,7 +67,8 @@ module.exports = (/* config: PhenomicConfig */) => ({
         test: /\.js(\?.*)?$/i,
         threshold: 8192,
         minRatio: 0.8
-      })
+      }),
+    process.env.NODE_ENV === "development" && new DashboardPlugin()
   ].filter(Boolean),
 
   optimization: {

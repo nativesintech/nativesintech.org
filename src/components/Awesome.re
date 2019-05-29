@@ -116,17 +116,17 @@ type state = {data: WebData.t(list(Types.GitHubGraphQLAPI.edge))};
 type action =
   | LoadMembers(WebData.t(list(Types.GitHubGraphQLAPI.edge)));
 
-let component = ReasonReact.reducerComponent(__MODULE__);
-
+[@react.component]
 let make = () => {
-  ...component,
-  initialState: () => {data: RemoteData.NotAsked},
-  reducer: (action, _state) => {
-    switch (action) {
-    | LoadMembers(d) => ReasonReact.Update({data: d})
-    };
-  },
-  didMount: self => {
+  let (state, dispatch) =
+    React.useReducer(
+      (_state, action) =>
+        switch (action) {
+        | LoadMembers(d) => {data: d}
+        },
+      {data: RemoteData.NotAsked},
+    );
+  React.useEffect(() => {
     let payload = Js.Dict.empty();
     Js.Dict.set(
       payload,
@@ -155,7 +155,7 @@ let make = () => {
       ),
     );
 
-    self.send(LoadMembers(RemoteData.Loading));
+    dispatch(LoadMembers(RemoteData.Loading));
 
     Js.Promise.(
       Fetch.fetchWithInit(
@@ -176,106 +176,102 @@ let make = () => {
       )
       |> WebData.fromResponse(Decoders.GitHubGraphQLAPI.decodeResponse)
       |> then_(result => {
-           self.send(LoadMembers(result));
+           dispatch(LoadMembers(result));
            resolve();
          })
     )
     |> ignore;
 
-    ();
-  },
-  render: self => {
-    <div>
-      <BsReactHelmet>
-        <title> "Natives in Tech - Awesome Natives in Tech"->text </title>
-        <meta
-          name="description"
-          content="A list of Native and non-Native developers working in the software development industry that represent or serve Native communities"
-        />
-        <meta
-          name="keywords"
-          content="natives in tech, natives, indigenous, tech, software development, open source, awesome natives in tech"
-        />
-        <meta name="twitter:title" content="Awesome Natives in Tech" />
-        <meta
-          name="twitter:description"
-          content="A list of Native and non-Native developers working in the software development industry that represent or serve Native communities"
-        />
-        <meta property="og:title" content="Awesome Natives in Tech" />
-        <meta
-          property="og:description"
-          content="A list of Native and non-Native developers working in the software development industry that represent or serve Native communities"
-        />
-        <meta property="og:url" content="https://nativesintech.org/awesome/" />
-      </BsReactHelmet>
-      <Frame>
-        <div className=Styles.billboard>
-          <h1 className=Styles.header> "Awesome Natives in Tech"->text </h1>
-          <p className=Styles.tagline>
-            "A list of Native and non-Native developers working in the software development industry that represent or serve Native communities"
-            ->text
-          </p>
-        </div>
-        <div className=Styles.container>
-          <div className=Styles.usersBox>
-            {switch (self.state.data) {
-             | NotAsked => nothing
-             | Loading => "Loading..."->text
-             | Failure(e) => {j|Sorry, there was an error: $e|j}->text
-             | Success(d) =>
-               d->Belt.List.map(m => {
-                 let orStr = Belt.Option.(getWithDefault(_, ""));
-                 let (img, bio, email, location, login, name, websiteUrl) = (
-                   m.node.avatarUrl->orStr,
-                   m.node.bio->orStr,
-                   m.node.email->orStr,
-                   m.node.location->orStr,
-                   m.node.login->orStr,
-                   m.node.name->orStr,
-                   m.node.websiteUrl->orStr,
-                 );
-                 <div className=Styles.userBox>
-                   <div className={Styles.image(img)} />
-                   <div className=Styles.content>
-                     <div className=Styles.name> name->text </div>
-                     <div className=Styles.location> location->text </div>
-                     <p className=Styles.bio> bio->text </p>
-                     <div className=Styles.iconsBox>
-                       {email !== "" ?
-                          <a
+    None;
+  });
+  <div>
+    <BsReactHelmet>
+      <title> "Natives in Tech - Awesome Natives in Tech"->text </title>
+      <meta
+        name="description"
+        content="A list of Native and non-Native developers working in the software development industry that represent or serve Native communities"
+      />
+      <meta
+        name="keywords"
+        content="natives in tech, natives, indigenous, tech, software development, open source, awesome natives in tech"
+      />
+      <meta name="twitter:title" content="Awesome Natives in Tech" />
+      <meta
+        name="twitter:description"
+        content="A list of Native and non-Native developers working in the software development industry that represent or serve Native communities"
+      />
+      <meta property="og:title" content="Awesome Natives in Tech" />
+      <meta
+        property="og:description"
+        content="A list of Native and non-Native developers working in the software development industry that represent or serve Native communities"
+      />
+      <meta property="og:url" content="https://nativesintech.org/awesome/" />
+    </BsReactHelmet>
+    <Frame>
+      <div className=Styles.billboard>
+        <h1 className=Styles.header> "Awesome Natives in Tech"->text </h1>
+        <p className=Styles.tagline>
+          "A list of Native and non-Native developers working in the software development industry that represent or serve Native communities"
+          ->text
+        </p>
+      </div>
+      <div className=Styles.container>
+        <div className=Styles.usersBox>
+          {switch (state.data) {
+           | NotAsked => nothing
+           | Loading => "Loading..."->text
+           | Failure(e) => {j|Sorry, there was an error: $e|j}->text
+           | Success(d) =>
+             d->Belt.List.map(m => {
+               let orStr = Belt.Option.(getWithDefault(_, ""));
+               let (img, bio, email, location, login, name, websiteUrl) = (
+                 m.node.avatarUrl->orStr,
+                 m.node.bio->orStr,
+                 m.node.email->orStr,
+                 m.node.location->orStr,
+                 m.node.login->orStr,
+                 m.node.name->orStr,
+                 m.node.websiteUrl->orStr,
+               );
+               <div className=Styles.userBox>
+                 <div className={Styles.image(img)} />
+                 <div className=Styles.content>
+                   <div className=Styles.name> name->text </div>
+                   <div className=Styles.location> location->text </div>
+                   <p className=Styles.bio> bio->text </p>
+                   <div className=Styles.iconsBox>
+                     {email !== ""
+                        ? <a
                             href={j|mailto:$email|j}
                             target="_blank"
                             rel="noopener noreferrer">
                             <img src=mail className=Styles.icon />
-                          </a> :
-                          nothing}
-                       {websiteUrl !== "" ?
-                          <a
+                          </a>
+                        : nothing}
+                     {websiteUrl !== ""
+                        ? <a
                             href=websiteUrl
                             target="_blank"
                             rel="noopener noreferrer">
                             <img src=link className=Styles.icon />
-                          </a> :
-                          nothing}
-                       {login !== "" ?
-                          <a
+                          </a>
+                        : nothing}
+                     {login !== ""
+                        ? <a
                             href={j|https://github.com/$login|j}
                             target="_blank"
                             rel="noopener noreferrer">
                             <img src=branch className=Styles.icon />
-                          </a> :
-                          nothing}
-                     </div>
+                          </a>
+                        : nothing}
                    </div>
-                 </div>;
-               })
-               |> list
-             }}
-          </div>
+                 </div>
+               </div>;
+             })
+             |> list
+           }}
         </div>
-      </Frame>
-    </div>;
-  },
+      </div>
+    </Frame>
+  </div>;
 };
-
-let jsComponent = ReasonReact.wrapReasonForJs(~component, _jsProps => make());
