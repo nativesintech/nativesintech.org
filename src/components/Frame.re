@@ -1,7 +1,5 @@
 open Shared;
 
-let component = ReasonReact.statelessComponent(__MODULE__);
-
 module Styles = {
   open Css;
 
@@ -9,12 +7,11 @@ module Styles = {
   let main = style([paddingBottom(Spacer.px096)]);
 };
 
-let make = children => {
-  ...component,
-  render: _self =>
-    <div className=Styles.container>
-      <Nav />
-      <main className=Styles.main> ...children </main>
-      <Footer />
-    </div>,
+[@react.component]
+let make = (~children) => {
+  <div className=Styles.container>
+    <Nav />
+    <main className=Styles.main> children </main>
+    <Footer />
+  </div>;
 };

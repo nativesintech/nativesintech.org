@@ -151,73 +151,66 @@ type action =
   | OpenSidebar
   | CloseSidebar;
 
-let component = ReasonReact.reducerComponent(__MODULE__);
-
-let make = _children => {
-  ...component,
-  initialState: () => {sidebar: Closed},
-  reducer: (action, _state) => {
-    switch (action) {
-    | OpenSidebar => ReasonReact.Update({sidebar: Open})
-    | CloseSidebar => ReasonReact.Update({sidebar: Closed})
-    };
-  },
-  render: self => {
-    let activeStyle = ReactDOMRe.Style.make(~color="#23c7c5", ());
-    <nav className=Styles.navBox>
-      <PhenomicPresetReactApp.Link href="/">
-        <header className=Styles.logoBox>
-          <img
-            className=Styles.logoImage
-            src=logo
-            width="50px"
-            height="50px"
-          />
-          <h2 className=Styles.orgName> "Natives in Tech"->text </h2>
-        </header>
+[@react.component]
+let make = () => {
+  let (state, dispatch) =
+    React.useReducer(
+      (_state, action) =>
+        switch (action) {
+        | OpenSidebar => {sidebar: Open}
+        | CloseSidebar => {sidebar: Closed}
+        },
+      {sidebar: Closed},
+    );
+  let activeStyle = ReactDOMRe.Style.make(~color="#23c7c5", ());
+  <nav className=Styles.navBox>
+    <PhenomicPresetReactApp.Link href="/">
+      <header className=Styles.logoBox>
+        <img className=Styles.logoImage src=logo width="50px" height="50px" />
+        <h2 className=Styles.orgName> "Natives in Tech"->text </h2>
+      </header>
+    </PhenomicPresetReactApp.Link>
+    <div className=Styles.linksBox>
+      <PhenomicPresetReactApp.Link activeStyle href="/about">
+        "About"->text
       </PhenomicPresetReactApp.Link>
-      <div className=Styles.linksBox>
-        <PhenomicPresetReactApp.Link activeStyle href="/about">
+      <PhenomicPresetReactApp.Link activeStyle href="/awesome">
+        "Awesome"->text
+      </PhenomicPresetReactApp.Link>
+      <PhenomicPresetReactApp.Link activeStyle href="/conference">
+        "Conference"->text
+      </PhenomicPresetReactApp.Link>
+      <PhenomicPresetReactApp.Link activeStyle href="/blog">
+        "Blog"->text
+      </PhenomicPresetReactApp.Link>
+    </div>
+    <span className=Styles.hamburger onClick={_e => dispatch(OpenSidebar)}>
+      <img src=menu />
+    </span>
+    <div className={Styles.foldOut(state.sidebar)}>
+      <div className=Styles.links>
+        <span
+          className={Styles.close(state.sidebar)}
+          onClick={_e => dispatch(CloseSidebar)}>
+          <img src=close />
+        </span>
+        <PhenomicPresetReactApp.Link
+          className="sidelink" activeStyle href="/about">
           "About"->text
         </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link activeStyle href="/awesome">
+        <PhenomicPresetReactApp.Link
+          className="sidelink" activeStyle href="/awesome">
           "Awesome"->text
         </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link activeStyle href="/conference">
+        <PhenomicPresetReactApp.Link
+          className="sidelink" activeStyle href="/conference">
           "Conference"->text
         </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link activeStyle href="/blog">
+        <PhenomicPresetReactApp.Link
+          className="sidelink" activeStyle href="/blog">
           "Blog"->text
         </PhenomicPresetReactApp.Link>
       </div>
-      <span className=Styles.hamburger onClick={_e => self.send(OpenSidebar)}>
-        <img src=menu />
-      </span>
-      <div className={Styles.foldOut(self.state.sidebar)}>
-        <div className=Styles.links>
-          <span
-            className={Styles.close(self.state.sidebar)}
-            onClick={_e => self.send(CloseSidebar)}>
-            <img src=close />
-          </span>
-          <PhenomicPresetReactApp.Link
-            className="sidelink" activeStyle href="/about">
-            "About"->text
-          </PhenomicPresetReactApp.Link>
-          <PhenomicPresetReactApp.Link
-            className="sidelink" activeStyle href="/awesome">
-            "Awesome"->text
-          </PhenomicPresetReactApp.Link>
-          <PhenomicPresetReactApp.Link
-            className="sidelink" activeStyle href="/conference">
-            "Conference"->text
-          </PhenomicPresetReactApp.Link>
-          <PhenomicPresetReactApp.Link
-            className="sidelink" activeStyle href="/blog">
-            "Blog"->text
-          </PhenomicPresetReactApp.Link>
-        </div>
-      </div>
-    </nav>;
-  },
+    </div>
+  </nav>;
 };

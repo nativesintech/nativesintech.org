@@ -13,38 +13,35 @@ import * as Awesome from "./lib/es6/src/components/Awesome.bs.js";
 import * as Conference from "./lib/es6/src/components/Conference.bs.js";
 import * as ConferenceDetails from "./lib/es6/src/components/ConferenceDetails.bs.js";
 
-import ErrorPage from "./lib/es6/src/components/ErrorPage.bs.js";
+import * as ErrorPage from "./lib/es6/src/components/ErrorPage.bs.js";
 
 import "normalize.css";
 import "./global.css";
 
 const routes = () => (
   <Router history={browserHistory}>
-    <Route path="/" component={Home.jsComponent} />
-    <Route path="/about" component={About.jsComponent} />
-    <Route path="/awesome" component={Awesome.jsComponent} />
-    <Route path="/conference" component={Conference.jsComponent} />
+    <Route path="/" component={Home.make} />
+    <Route path="/about" component={About.make} />
+    <Route path="/awesome" component={Awesome.make} />
+    <Route path="/conference" component={Conference.make} />
     <Route
       path="conference/*"
       component={withPhenomicApi(
-        ConferenceDetails.jsComponent,
+        ConferenceDetails.make,
         ConferenceDetails.queries
       )}
     />
     <Route
       path="/blog"
-      component={withPhenomicApi(Posts.jsComponent, Posts.queries)}
+      component={withPhenomicApi(Posts.make, Posts.queries)}
     />
     <Route
       path="/blog/after/:after"
-      component={withPhenomicApi(Posts.jsComponent, Posts.queries)}
+      component={withPhenomicApi(Posts.make, Posts.queries)}
     />
-    <Route
-      path="blog/*"
-      component={withPhenomicApi(Post.jsComponent, Post.queries)}
-    />
-    <Route path="*" component={ErrorPage} />
-    <Route path="404.html" component={ErrorPage} />
+    <Route path="blog/*" component={withPhenomicApi(Post.make, Post.queries)} />
+    <Route path="*" component={ErrorPage.make} />
+    <Route path="404.html" component={ErrorPage.make} />
   </Router>
 );
 

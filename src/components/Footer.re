@@ -20,12 +20,9 @@ module Styles = {
     ]);
 };
 
-let component = ReasonReact.statelessComponent(__MODULE__);
-
-let make = _children => {
-  ...component,
-  render: _self =>
-    <footer className=Styles.footer>
-      {j|Made with ❤️ by Natives in Tech |j}->text
-    </footer>,
+[@react.component]
+let make = () => {
+  <footer className=Styles.footer>
+    {j|Made with ❤️ by Natives in Tech |j}->text
+  </footer>;
 };

@@ -1,10 +1,10 @@
-let nothing = ReasonReact.null;
+let nothing = React.null;
 
-let text = ReasonReact.string;
+let text = React.string;
 
 let couldNotParseErr = "Could not parse";
 
-let list = list => list->Belt.List.toArray->ReasonReact.array;
+let list = list => list->Belt.List.toArray->React.array;
 
 let nodeList = node => node##list->Belt.List.fromArray;
 

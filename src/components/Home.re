@@ -14,9 +14,6 @@ external medium: string = "../../../../public/images/medium-logo.svg";
 external twitter: string = "../../../../public/images/twitter-logo.svg";
 
 [@bs.module]
-external frame: string = "../../../../public/images/native-land-image.jpg";
-
-[@bs.module]
 external computer: string =
   "../../../../public/images/computer-with-feather.svg";
 
@@ -235,11 +232,9 @@ module Styles = {
     ]);
 };
 
-let component = ReasonReact.statelessComponent("Home");
-
+[@react.component]
 let make = () => {
-  ...component,
-  didMount: _self => {
+  React.useEffect0(() => {
     let _ =
       Typing.make(
         "#typing",
@@ -263,147 +258,141 @@ let make = () => {
           (),
         ),
       );
-    ();
-  },
-  render: _self => {
-    let topography = Styles.topography;
-    let connect = Styles.connect;
-    let billboard = Styles.billboard;
-    <div>
-      <BsReactHelmet>
-        <title> "Natives in Tech - Home"->text </title>
-        <meta
-          name="description"
-          content="Natives in Tech is a coalition of Native and non-Native developers who seek
-          to empower and support Native communities around the world through software development."
-        />
-        <meta
-          name="keywords"
-          content="natives in tech, natives, indigenous, tech, software development, open source"
-        />
-        <meta name="twitter:title" content="Natives in Tech" />
-        <meta
-          name="twitter:description"
-          content="Natives in Tech is a coalition of Native and non-Native developers who seek
-          to empower and support Native communities around the world through software development."
-        />
-        <meta property="og:title" content="Natives in Tech" />
-        <meta
-          property="og:description"
-          content="Natives in Tech is a coalition of Native and non-Native developers who seek
-          to empower and support Native communities around the world through software development."
-        />
-        <meta property="og:url" content="https://nativesintech.org" />
-      </BsReactHelmet>
-      <Frame>
-        <section className={j|$billboard |j}>
-          <div className=Styles.billboardHeadline>
-            {j|Supporting software developers serving Native communities|j}
-            ->text
-          </div>
-          <div className=Styles.frameBox>
-            <img className=Styles.comp src=computer />
-          </div>
-        </section>
-        <section id="about" className=Styles.about>
-          <div className=Styles.containerBox>
-            <h2> <span id="typing" /> </h2>
-            <p className=Styles.content>
-              {j|Welcome 👋. |j}->text
-              <strong>
-                "Natives in Tech is a coalition of Native and non-Native software developers whose goal is to support
+    None;
+  });
+  let topography = Styles.topography;
+  let connect = Styles.connect;
+  let billboard = Styles.billboard;
+  <div>
+    <BsReactHelmet>
+      <title> "Natives in Tech - Home"->text </title>
+      <meta
+        name="description"
+        content="Natives in Tech is a coalition of Native and non-Native developers who seek
+               to empower and support Native communities around the world through software development."
+      />
+      <meta
+        name="keywords"
+        content="natives in tech, natives, indigenous, tech, software development, open source"
+      />
+      <meta name="twitter:title" content="Natives in Tech" />
+      <meta
+        name="twitter:description"
+        content="Natives in Tech is a coalition of Native and non-Native developers who seek
+               to empower and support Native communities around the world through software development."
+      />
+      <meta property="og:title" content="Natives in Tech" />
+      <meta
+        property="og:description"
+        content="Natives in Tech is a coalition of Native and non-Native developers who seek
+               to empower and support Native communities around the world through software development."
+      />
+      <meta property="og:url" content="https://nativesintech.org" />
+    </BsReactHelmet>
+    <Frame>
+      <section className={j|$billboard |j}>
+        <div className=Styles.billboardHeadline>
+          {j|Supporting software developers serving Native communities|j}->text
+        </div>
+        <div className=Styles.frameBox>
+          <img className=Styles.comp src=computer />
+        </div>
+      </section>
+      <section id="about" className=Styles.about>
+        <div className=Styles.containerBox>
+          <h2> <span id="typing" /> </h2>
+          <p className=Styles.content>
+            {j|Welcome 👋. |j}->text
+            <strong>
+              "Natives in Tech is a coalition of Native and non-Native software developers whose goal is to support
                 software application development that reinforces Native beliefs, knowledge, and identity. "
-                ->text
-              </strong>
-              "This is achieved through four initiatives: networking with aspiring and
+              ->text
+            </strong>
+            "This is achieved through four initiatives: networking with aspiring and
                 experienced developers alike, creating a strong social media presence on platforms familiar to developers,
                 hosting a yearly Natives in Tech conference, and building open source software that Native peoples can use to cultivate
                 healthy online communities."
-              ->text
-            </p>
-          </div>
-          <div className={j|topography $topography|j} />
-        </section>
-        <section id="connect" className={j|$connect |j}>
-          <h2 className=Styles.connectHeadline>
-            {j|Connect with us!|j}->text
-          </h2>
-          <div className=Styles.iconsBox>
-            <a
-              href="https://nativesintech.herokuapp.com/"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img src=slack className=Styles.icon />
-            </a>
-            <a
-              href="https://medium.com/natives-in-tech"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img src=medium className=Styles.icon />
-            </a>
-            <a
-              href="https://github.com/nativesintech"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img src=github className=Styles.icon />
-            </a>
-            <a
-              href="https://twitter.com/nativesintech"
-              target="_blank"
-              rel="noopener noreferrer">
-              <img src=twitter className=Styles.icon />
-            </a>
-          </div>
-        </section>
-        <section id="contact" className=Styles.contact>
-          <h2> {j|Ask a question or leave a comment 💬|j}->text </h2>
-          <p>
-            "We would love to hear from you! Feel free to send a message to "
             ->text
-            <a href="mailto:hello@nativesintech.org">
-              "hello@nativesintech.org"->text
-            </a>
-            {j| or drop us a line below.|j}->text
           </p>
-          <form
-            action="https://formspree.io/hello@nativesintech.org"
-            method="POST">
-            <div className=Styles.inputs>
-              <span className=Styles.inputBox>
-                <input
-                  required=true
-                  className=Styles.input
-                  type_="text"
-                  placeholder="Name"
-                  name="name"
-                />
-              </span>
-              <span className=Styles.inputBox>
-                <input
-                  required=true
-                  className=Styles.input
-                  type_="email"
-                  placeholder="Email"
-                  name="_replyto"
-                />
-              </span>
-            </div>
+        </div>
+        <div className={j|topography $topography|j} />
+      </section>
+      <section id="connect" className={j|$connect |j}>
+        <h2 className=Styles.connectHeadline>
+          {j|Connect with us!|j}->text
+        </h2>
+        <div className=Styles.iconsBox>
+          <a
+            href="https://nativesintech.herokuapp.com/"
+            target="_blank"
+            rel="noopener noreferrer">
+            <img src=slack className=Styles.icon />
+          </a>
+          <a
+            href="https://medium.com/natives-in-tech"
+            target="_blank"
+            rel="noopener noreferrer">
+            <img src=medium className=Styles.icon />
+          </a>
+          <a
+            href="https://github.com/nativesintech"
+            target="_blank"
+            rel="noopener noreferrer">
+            <img src=github className=Styles.icon />
+          </a>
+          <a
+            href="https://twitter.com/nativesintech"
+            target="_blank"
+            rel="noopener noreferrer">
+            <img src=twitter className=Styles.icon />
+          </a>
+        </div>
+      </section>
+      <section id="contact" className=Styles.contact>
+        <h2> {j|Ask a question or leave a comment 💬|j}->text </h2>
+        <p>
+          "We would love to hear from you! Feel free to send a message to "
+          ->text
+          <a href="mailto:hello@nativesintech.org">
+            "hello@nativesintech.org"->text
+          </a>
+          {j| or drop us a line below.|j}->text
+        </p>
+        <form
+          action="https://formspree.io/hello@nativesintech.org" method="POST">
+          <div className=Styles.inputs>
             <span className=Styles.inputBox>
-              <textarea
+              <input
                 required=true
-                className=Styles.textarea
-                placeholder="Message"
-                name="message"
+                className=Styles.input
+                type_="text"
+                placeholder="Name"
+                name="name"
               />
             </span>
-            <button className=Styles.button type_="submit" value="Send">
-              "Submit"->text
-            </button>
-          </form>
-        </section>
-      </Frame>
-    </div>;
-  },
+            <span className=Styles.inputBox>
+              <input
+                required=true
+                className=Styles.input
+                type_="email"
+                placeholder="Email"
+                name="_replyto"
+              />
+            </span>
+          </div>
+          <span className=Styles.inputBox>
+            <textarea
+              required=true
+              className=Styles.textarea
+              placeholder="Message"
+              name="message"
+            />
+          </span>
+          <button className=Styles.button type_="submit" value="Send">
+            "Submit"->text
+          </button>
+        </form>
+      </section>
+    </Frame>
+  </div>;
 };
-
-let jsComponent = ReasonReact.wrapReasonForJs(~component, _jsProps => make());
