@@ -19,6 +19,15 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "AlanaKaimi",
+      "name": "AJ Bryce",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/46729511?v=4",
+      "profile": "https://github.com/AlanaKaimi",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7
