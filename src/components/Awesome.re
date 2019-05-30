@@ -126,7 +126,8 @@ let make = () => {
         },
       {data: RemoteData.NotAsked},
     );
-  React.useEffect(() => {
+
+  React.useEffect0(() => {
     let payload = Js.Dict.empty();
     Js.Dict.set(
       payload,
@@ -233,7 +234,7 @@ let make = () => {
                  m.node.name->orStr,
                  m.node.websiteUrl->orStr,
                );
-               <div className=Styles.userBox>
+               <div key=email className=Styles.userBox>
                  <div className={Styles.image(img)} />
                  <div className=Styles.content>
                    <div className=Styles.name> name->text </div>

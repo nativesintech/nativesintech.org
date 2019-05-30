@@ -16,16 +16,16 @@
     }
   ],
   "bs-dependencies": [
-    "reason-react",
-    "@moox/bs-react-helmet",
-    "@phenomic/preset-react-app",
-    "@phenomic/plugin-renderer-react",
-    "@phenomic/api-client",
-    "bs-css",
-    "bs-typing",
-    "bs-fetch",
     "@glennsl/bs-json",
+    "@moox/bs-react-helmet",
+    "@phenomic/api-client",
+    "@phenomic/plugin-renderer-react",
+    "@phenomic/preset-react-app",
+    "bs-css",
+    "bs-fetch",
+    "bs-remotedata",
+    "bs-typing",
     "bs-webapi",
-    "bs-remotedata"
+    "reason-react"
   ]
 }

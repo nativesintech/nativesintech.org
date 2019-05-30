@@ -234,7 +234,7 @@ module Styles = {
 
 [@react.component]
 let make = () => {
-  React.useEffect(() => {
+  React.useEffect0(() => {
     let _ =
       Typing.make(
         "#typing",

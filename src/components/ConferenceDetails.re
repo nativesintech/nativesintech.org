@@ -1,6 +1,5 @@
 open Helpers;
 open Shared;
-open Types;
 
 module Styles = {
   open Css;
@@ -90,7 +89,8 @@ type action =
 
 [@react.component]
 let make = (~params) => {
-  let {splat: year} = params;
+  let year = params##splat;
+  let id = getIdFromYear(year);
 
   let (state, dispatch) =
     React.useReducer(
@@ -101,10 +101,7 @@ let make = (~params) => {
       {data: RemoteData.NotAsked},
     );
 
-  React.useEffect(() => {
-    let {splat: year} = params;
-    let id = getIdFromYear(year);
-
+  React.useEffect0(() => {
     dispatch(UpdateDetails(RemoteData.Loading));
 
     if (LocalStorage.hasCachedConferenceDetails(year)) {
