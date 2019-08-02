@@ -314,6 +314,9 @@ let make = () => {
                 healthy online communities."
             ->text
           </p>
+          <p>
+          "Natives in Tech is a US 501(c)(3) charitable organization, funded by individual donations." ->text
+          </p>
         </div>
         <div className={j|topography $topography|j} />
       </section>
