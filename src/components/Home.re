@@ -14,6 +14,9 @@ external medium: string = "../../../../public/images/medium-logo.svg";
 external twitter: string = "../../../../public/images/twitter-logo.svg";
 
 [@bs.module]
+external linkedin: string = "../../../../public/images/linkedin-logo.svg";
+
+[@bs.module]
 external computer: string =
   "../../../../public/images/computer-with-feather.svg";
 
@@ -339,6 +342,12 @@ let make = () => {
             target="_blank"
             rel="noopener noreferrer">
             <img src=github className=Styles.icon />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/natives-in-tech"
+            target="_blank"
+            rel="noopener noreferrer">
+            <img src=linkedin className=Styles.icon />
           </a>
           <a
             href="https://twitter.com/nativesintech"
