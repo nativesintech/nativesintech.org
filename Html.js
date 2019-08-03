@@ -14,6 +14,10 @@ export default ({ App, render }) => {
         <meta charSet="utf-8" />
         <meta
           name="google-site-verification"
+          content="Mu-V2otwuGHTToasZ7Tb-LOD0Xd1e7jCz_vYyVb6bdI"
+        />
+        <meta
+          name="google-site-verification"
           content="SyuiaRpl6xD19jqWl4zCCc7bkeawvTUU43Nr2h7rXoY"
         />
         <meta
