@@ -1,6 +1,6 @@
 ![Natives in Tech](./public/images/natives-in-tech-logo-github.png)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a2eead8b-3d03-4de5-b744-299149b6de59/deploy-status)](https://app.netlify.com/sites/natives-in-tech/deploys)
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
 
 # Natives in Tech
 
@@ -63,7 +63,13 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/all-contri
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://arecvlohe.github.io/simple-portfolio/"><img src="https://avatars3.githubusercontent.com/u/9747933?v=4" width="100px;" alt="Adam Recvlohe"/><br /><sub><b>Adam Recvlohe</b></sub></a><br /><a href="#design-arecvlohe" title="Design">🎨</a> <a href="https://github.com/nativesintech/natives-in-tech/commits?author=arecvlohe" title="Code">💻</a> <a href="https://github.com/nativesintech/natives-in-tech/commits?author=arecvlohe" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/AlanaKaimi"><img src="https://avatars2.githubusercontent.com/u/46729511?v=4" width="100px;" alt="AJ Bryce"/><br /><sub><b>AJ Bryce</b></sub></a><br /><a href="https://github.com/nativesintech/natives-in-tech/issues?q=author%3AAlanaKaimi" title="Bug reports">🐛</a></td></tr></table>
+<table>
+  <tr>
+    <td align="center"><a href="https://arecvlohe.github.io/simple-portfolio/"><img src="https://avatars3.githubusercontent.com/u/9747933?v=4" width="100px;" alt="Adam Recvlohe"/><br /><sub><b>Adam Recvlohe</b></sub></a><br /><a href="#design-arecvlohe" title="Design">🎨</a> <a href="https://github.com/nativesintech/natives-in-tech/commits?author=arecvlohe" title="Code">💻</a> <a href="https://github.com/nativesintech/natives-in-tech/commits?author=arecvlohe" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/AlanaKaimi"><img src="https://avatars2.githubusercontent.com/u/46729511?v=4" width="100px;" alt="AJ Bryce"/><br /><sub><b>AJ Bryce</b></sub></a><br /><a href="https://github.com/nativesintech/natives-in-tech/issues?q=author%3AAlanaKaimi" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/csutherl"><img src="https://avatars2.githubusercontent.com/u/2897567?v=4" width="100px;" alt="Coty Sutherland"/><br /><sub><b>Coty Sutherland</b></sub></a><br /><a href="https://github.com/nativesintech/natives-in-tech/commits?author=csutherl" title="Code">💻</a> <a href="https://github.com/nativesintech/natives-in-tech/commits?author=csutherl" title="Documentation">📖</a></td>
+  </tr>
+</table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
