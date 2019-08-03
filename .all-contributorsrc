@@ -28,17 +28,7 @@
       "contributions": [
         "bug"
       ]
-    },
-    {
-      "login": "csutherl",
-      "name": "Coty Sutherland",
-      "avatar_url": "https://avatars3.githubusercontent.com/u/2897567?s=460&v=4",
-      "profile": "https://github.com/csutherl",
-      "contributions": [
-        "code",
-        "doc"
-      ]
-    },
+    }
   ],
   "contributorsPerLine": 7
 }
