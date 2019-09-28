@@ -23,11 +23,13 @@ module Styles = {
       borderBottom(px(1), `solid, Colors.gray100),
       marginBottom(Spacer.px096),
       boxShadow(
-        ~y=px(1),
-        ~blur=px(1),
-        ~spread=px(1),
-        ~inset=true,
-        Colors.gray100,
+        Shadow.box(
+          ~y=px(1),
+          ~blur=px(1),
+          ~spread=px(1),
+          ~inset=true,
+          Colors.gray100,
+        ),
       ),
       Styles.mobile([
         padding2(~v=Spacer.px128, ~h=Spacer.px024),
@@ -64,12 +66,14 @@ module Styles = {
       borderRadius(Spacer.px004),
       overflow(`hidden),
       boxShadow(
-        ~x=px(0),
-        ~y=px(0),
-        ~blur=px(2),
-        ~spread=px(2),
-        ~inset=false,
-        Colors.gray050,
+        Shadow.box(
+          ~x=px(0),
+          ~y=px(0),
+          ~blur=px(2),
+          ~spread=px(2),
+          ~inset=false,
+          Colors.gray050,
+        ),
       ),
       Styles.mobile([marginBottom(Spacer.px128), maxWidth(Spacer.px256)]),
     ]);

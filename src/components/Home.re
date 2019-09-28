@@ -51,11 +51,13 @@ module Styles = {
       alignItems(`center),
       backgroundColor(Colors.gray050),
       boxShadow(
-        ~y=px(1),
-        ~blur=px(1),
-        ~spread=px(1),
-        ~inset=true,
-        Colors.gray100,
+        Shadow.box(
+          ~y=px(1),
+          ~blur=px(1),
+          ~spread=px(1),
+          ~inset=true,
+          Colors.gray100,
+        ),
       ),
       borderBottom(px(1), `solid, Colors.gray100),
       padding2(~v=Spacer.px096, ~h=Spacer.px064),
@@ -68,7 +70,7 @@ module Styles = {
 
   let billboardHeadline =
     style([
-      flex(2),
+      flex(`num(2.0)),
       color(Colors.gray900),
       media(
         "(max-width: 900px)",
@@ -178,7 +180,7 @@ module Styles = {
       display(`flex),
       flexDirection(`column),
       marginBottom(Spacer.px012),
-      flex(1),
+      flex(`num(1.0)),
     ]);
 
   let input = style([FontSize.px18, padding(Spacer.px008)]);
@@ -318,7 +320,8 @@ let make = () => {
             ->text
           </p>
           <p>
-          "Natives in Tech is a US 501(c)(3) charitable organization, funded by individual donations." ->text
+            "Natives in Tech is a US 501(c)(3) charitable organization, funded by individual donations."
+            ->text
           </p>
         </div>
         <div className={j|topography $topography|j} />

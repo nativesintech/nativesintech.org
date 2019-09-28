@@ -23,11 +23,13 @@ module Styles = {
       padding2(~h=Spacer.px064, ~v=px(0)),
       minHeight(Spacer.px096),
       boxShadow(
-        ~x=px(1),
-        ~y=px(0),
-        ~blur=px(2),
-        ~spread=px(2),
-        Colors.gray050,
+        Shadow.box(
+          ~x=px(1),
+          ~y=px(0),
+          ~blur=px(2),
+          ~spread=px(2),
+          Colors.gray050,
+        ),
       ),
       overflow(`hidden),
       Styles.mobile([padding2(~h=Spacer.px024, ~v=px(0))]),
