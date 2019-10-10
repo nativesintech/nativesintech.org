@@ -17,6 +17,9 @@ external twitter: string = "../../../../public/images/twitter-logo.svg";
 external linkedin: string = "../../../../public/images/linkedin-logo.svg";
 
 [@bs.module]
+external discourse: string = "../../../../public/images/discourse-logo.svg";
+
+[@bs.module]
 external computer: string =
   "../../../../public/images/computer-with-feather.svg";
 
@@ -338,10 +341,10 @@ let make = () => {
             <img src=slack className=Styles.icon />
           </a>
           <a
-            href="https://medium.com/natives-in-tech"
+            href="https://forum.nativesintech.org"
             target="_blank"
             rel="noopener noreferrer">
-            <img src=medium className=Styles.icon />
+            <img src=discourse className=Styles.icon />
           </a>
           <a
             href="https://github.com/nativesintech"
@@ -350,16 +353,16 @@ let make = () => {
             <img src=github className=Styles.icon />
           </a>
           <a
-            href="https://www.linkedin.com/company/natives-in-tech"
-            target="_blank"
-            rel="noopener noreferrer">
-            <img src=linkedin className=Styles.icon />
-          </a>
-          <a
             href="https://twitter.com/nativesintech"
             target="_blank"
             rel="noopener noreferrer">
             <img src=twitter className=Styles.icon />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/natives-in-tech"
+            target="_blank"
+            rel="noopener noreferrer">
+            <img src=linkedin className=Styles.icon />
           </a>
         </div>
       </section>
