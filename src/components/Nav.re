@@ -28,6 +28,7 @@ module Styles = {
           ~y=px(0),
           ~blur=px(2),
           ~spread=px(2),
+          ~inset=true,
           Colors.gray050,
         ),
       ),
