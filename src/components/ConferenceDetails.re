@@ -11,6 +11,15 @@ module Styles = {
       borderBottom(px(1), `solid, Colors.gray100),
       padding2(~v=Spacer.px192, ~h=Spacer.px064),
       marginBottom(Spacer.px064),
+      boxShadow(
+        Shadow.box(
+          ~y=px(1),
+          ~blur=px(1),
+          ~spread=px(1),
+          ~inset=true,
+          Colors.gray100,
+        ),
+      ),
       Styles.mobile([
         padding2(~v=Spacer.px128, ~h=Spacer.px024),
         marginBottom(Spacer.px048),
