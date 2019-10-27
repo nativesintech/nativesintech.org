@@ -22,13 +22,13 @@ module Styles = {
       alignItems(`center),
       padding2(~h=Spacer.px064, ~v=px(0)),
       minHeight(Spacer.px096),
+      marginTop(pxFloat(62.4)),
       boxShadow(
         Shadow.box(
           ~x=px(1),
           ~y=px(0),
           ~blur=px(2),
           ~spread=px(2),
-          ~inset=true,
           Colors.gray050,
         ),
       ),

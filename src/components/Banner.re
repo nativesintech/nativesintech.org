@@ -1,4 +1,5 @@
 open Helpers;
+open Shared;
 
 module Styles = {
   open Css;
@@ -8,6 +9,10 @@ module Styles = {
       backgroundColor(Shared.Colors.pink500),
       textAlign(`center),
       padding(px(12)),
+      top(px(0)),
+      position(`fixed),
+      minWidth(pct(100.0)),
+      zIndex(100),
     ]);
 
   let header = style([color(hex("fff")), display(`inlineBlock)]);
@@ -21,6 +26,22 @@ module Styles = {
       marginBottom(px(0)),
       lineHeight(`abs(1.25)),
     ]);
+
+  let buttonColor = Colors.cyan400;
+
+  let button =
+    style([
+      FontSize.px16,
+      border(px(2), `solid, buttonColor),
+      textTransform(`uppercase),
+      padding2(~h=Spacer.px012, ~v=Spacer.px008),
+      marginLeft(Spacer.px008),
+      borderRadius(px(3)),
+      backgroundColor(buttonColor),
+      fontWeight(`bold),
+      cursor(`pointer),
+      color(hex("fff")),
+    ]);
 };
 
 [@react.component]
@@ -30,7 +51,7 @@ let make = () => {
       "Natives in Tech Conf is November 9th!"->text
     </h3>
     <PhenomicPresetReactApp.Link href="/conference/2019/">
-      <h3 className=Styles.link> "Click here for details"->text </h3>
+      <button className=Styles.button> "Details"->text </button>
     </PhenomicPresetReactApp.Link>
   </div>;
 };
