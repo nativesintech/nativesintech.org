@@ -61,6 +61,19 @@ module SessionizeAPI = {
     try (Belt.Result.Ok(decodeResponseExn(json))) {
     | Json.Decode.DecodeError(err) => Belt.Result.Error(err)
     };
+
+  let sessionDetails = json => {
+    id: json |> field("id", string),
+    title: json |> field("title", string),
+    description: json |> field("description", string),
+    startsAt: json |> field("startsAt", string),
+    endsAt: json |> field("endsAt", string),
+    speakers: json |> field("speakers", list(session)),
+  };
+
+  let sessionsResponse = json => {
+    sessions: json |> field("sessions", list(sessionDetails)),
+  };
 };
 
 module ConferenceDetails = {
@@ -73,6 +86,13 @@ module ConferenceDetails = {
 
   let decodeConferenceDetailsFromStorage = json =>
     try (Belt.Result.Ok(decodeConferenceDetailsFromStorageExn(json))) {
+    | Json.Decode.DecodeError(err) => Belt.Result.Error(err)
+    };
+};
+
+module ConferenceSessions = {
+  let decodeSessionsResponse = json =>
+    try (Belt.Result.Ok(SessionizeAPI.sessionsResponse(json))) {
     | Json.Decode.DecodeError(err) => Belt.Result.Error(err)
     };
 };
