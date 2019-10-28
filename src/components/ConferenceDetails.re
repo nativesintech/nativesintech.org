@@ -11,6 +11,15 @@ module Styles = {
       borderBottom(px(1), `solid, Colors.gray100),
       padding2(~v=Spacer.px192, ~h=Spacer.px064),
       marginBottom(Spacer.px064),
+      boxShadow(
+        Shadow.box(
+          ~y=px(1),
+          ~blur=px(1),
+          ~spread=px(1),
+          ~inset=true,
+          Colors.gray100,
+        ),
+      ),
       Styles.mobile([
         padding2(~v=Spacer.px128, ~h=Spacer.px024),
         marginBottom(Spacer.px048),
@@ -90,78 +99,8 @@ type action =
 [@react.component]
 let make = (~params) => {
   let year = params##splat;
-  let id = getIdFromYear(year);
 
-  let (state, dispatch) =
-    React.useReducer(
-      (_state, action) =>
-        switch (action) {
-        | UpdateDetails(result) => {data: result}
-        },
-      {data: RemoteData.NotAsked},
-    );
-
-  React.useEffect0(() => {
-    dispatch(UpdateDetails(RemoteData.Loading));
-
-    if (LocalStorage.hasCachedConferenceDetails(year)) {
-      let details =
-        LocalStorage.getConferenceDetails(year) |> RemoteData.fromResult;
-      dispatch(UpdateDetails(details));
-    } else {
-      Js.Promise.(
-        Fetch.fetch({j|https://sessionize.com/api/v2/$id/view/speakers|j})
-        |> then_(res =>
-             if (Fetch.Response.ok(res)) {
-               Fetch.Response.text(res);
-             } else {
-               dispatch(UpdateDetails(RemoteData.Failure("Bad status")));
-               reject(Js.Exn.raiseError("Bad status"));
-             }
-           )
-        |> then_(text => {
-             let encodedConferenceData =
-               Belt.Option.(
-                 text
-                 ->Json.parse
-                 ->map(v =>
-                     v
-                     ->Decoders.SessionizeAPI.decodeResponse
-                     ->Belt.Result.map(
-                         Encoders.LocalStorage.encodeConferenceData,
-                       )
-                     ->Belt.Result.getWithDefault(Js.Json.string(""))
-                   )
-                 ->getWithDefault(Js.Json.string(""))
-               );
-
-             let result =
-               Js.Dict.fromList([
-                 ("timestamp", Js.Json.number(getNextDay())),
-                 ("data", encodedConferenceData),
-               ]);
-
-             LocalStorage.setConferenceDetails(
-               year,
-               Js.Json.object_(result),
-             );
-
-             let details =
-               LocalStorage.getConferenceDetails(year)
-               |> RemoteData.fromResult;
-
-             dispatch(UpdateDetails(details));
-             resolve();
-           })
-        |> catch(_ => {
-             dispatch(UpdateDetails(RemoteData.Failure("Network error")));
-             resolve();
-           })
-      )
-      |> ignore;
-    };
-    None;
-  });
+  let (state, _dispatch) = Hooks.useConferenceData(year);
 
   <div>
     <BsReactHelmet>

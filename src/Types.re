@@ -77,12 +77,30 @@ module SessionizeAPI = {
   };
 
   type response = list(speaker);
+
+  type sessionDetails = {
+    id: string,
+    title: string,
+    description: string,
+    startsAt: string,
+    endsAt: string,
+    speakers: list(session),
+  };
+
+  type sessionsResponse = {sessions: list(sessionDetails)};
 };
 
 module ConferenceDetails = {
   type details = {
     timestamp: float,
     data: SessionizeAPI.response,
+  };
+};
+
+module ConferenceSchedule = {
+  type details = {
+    timestamp: float,
+    data: SessionizeAPI.sessionsResponse,
   };
 };
 
