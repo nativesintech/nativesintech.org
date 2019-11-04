@@ -15,7 +15,12 @@ module Styles = {
       zIndex(100),
     ]);
 
-  let header = style([color(hex("fff")), display(`inlineBlock)]);
+  let header =
+    style([
+      color(hex("fff")),
+      display(`inlineBlock),
+      Styles.mobile([FontSize.px14]),
+    ]);
 
   let link =
     style([
@@ -25,6 +30,7 @@ module Styles = {
       borderBottom(px(2), `solid, hex("fff")),
       marginBottom(px(0)),
       lineHeight(`abs(1.25)),
+      Styles.mobile([FontSize.px14]),
     ]);
 
   let buttonColor = Colors.cyan400;
@@ -41,15 +47,17 @@ module Styles = {
       fontWeight(`bold),
       cursor(`pointer),
       color(hex("fff")),
+      Styles.mobile([
+        FontSize.px14,
+        padding2(~h=Spacer.px008, ~v=Spacer.px008),
+      ]),
     ]);
 };
 
 [@react.component]
 let make = () => {
   <div className=Styles.banner>
-    <h3 className=Styles.header>
-      "Natives in Tech Conf is November 9th!"->text
-    </h3>
+    <h3 className=Styles.header> "Natives in Tech Conf is Nov 9th!"->text </h3>
     <PhenomicPresetReactApp.Link href="/conference/2019/">
       <button className=Styles.button> "Details"->text </button>
     </PhenomicPresetReactApp.Link>
