@@ -133,9 +133,37 @@ let make = (~params) => {
         <h1 className=Styles.headline>
           "Indigenous Peoples in Digital Spaces"->text
         </h1>
-        <div className=Styles.tagline> "2019 Conference Details"->text </div>
+        <div className=Styles.tagline>
+          "November 2019 Conference Details"->text
+        </div>
       </div>
       <div className=Styles.container>
+        <h2> "Date and Time"->text </h2>
+        <p> "Date: November 9th, 2019"->text </p>
+        <p> "Time: 9am CDT to 6pm CDT"->text </p>
+        <h2> "Watch Live"->text </h2>
+        <p>
+          "The conference is being live streamed on Twitch.tv. You can watch using this link: "
+          ->text
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://www.twitch.tv/events/d-_b2HzaRAu4aGpoeZvF-g">
+            "Natives in Tech Conf Livestream"->text
+          </a>
+          <span> "."->text </span>
+        </p>
+        <h2> "Schedule"->text </h2>
+        <p>
+          "You can find the schedule for the event using this link: "->text
+          <a
+            href="https://docs.google.com/spreadsheets/d/14nJGMDhA23tDn3l3QGVKe_yWMmUHrYyxz-5AL_gGahQ/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer">
+            "Natives in Tech Conf Schedule"->text
+          </a>
+          <span> "."->text </span>
+        </p>
         <h2 className=Styles.header> "Meet the Speakers"->text </h2>
         {switch (state.data) {
          | NotAsked => nothing

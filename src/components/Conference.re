@@ -69,9 +69,6 @@ let make = () => {
       <div className=Styles.container>
         <div className=Styles.content>
           <h1 className=Styles.header1> {j|Natives in Tech Conf|j}->text </h1>
-          <h2 className=Styles.header2>
-            {j|November 9th , 2019 - Location TBD|j}->text
-          </h2>
           <p className=Styles.text>
             "The Natives in Tech Conference brings together Native and non-Native developers to share projects that empower and support Native communties around the world."
             ->text
@@ -117,7 +114,6 @@ let make = () => {
             {j|Stay up to date on all the latest details by joining our mailing list.|j}
             ->text
           </p>
-          <SubscribeForm />
           <h2
             style={ReactDOMRe.Style.make(~margin="24px 0 24px 0", ())}
             className=Styles.header2>
@@ -130,6 +126,7 @@ let make = () => {
               "2019"->text
             </PhenomicPresetReactApp.Link>
           </div>
+          <SubscribeForm />
         </div>
       </div>
     </Frame>
