@@ -22,7 +22,6 @@ module Styles = {
       alignItems(`center),
       padding2(~h=Spacer.px064, ~v=px(0)),
       minHeight(Spacer.px096),
-      marginTop(pxFloat(62.4)),
       boxShadow(
         Shadow.box(
           ~x=px(1),
@@ -44,7 +43,8 @@ module Styles = {
     style([
       color(Colors.cyan400),
       FontSize.px24,
-      Styles.mobile([display(`none)]),
+      media("(max-width: 692px) ", [display(`none)]),
+      // Styles.mobile([display(`none)]),
     ]);
 
   let linksBox =
@@ -154,6 +154,20 @@ type action =
   | OpenSidebar
   | CloseSidebar;
 
+let links = [|"about", "awesome", "conference", "blog"|];
+
+let capitalize = (str: string) => {
+  str
+  |> (
+    str => {
+      let firstLetter = str |> Js.String.charAt(0) |> Js.String.toUpperCase;
+      let restOfWord =
+        str |> Js.String.sliceToEnd(~from=1) |> Js.String.toLowerCase;
+      firstLetter ++ restOfWord;
+    }
+  );
+};
+
 [@react.component]
 let make = () => {
   let (state, dispatch) =
@@ -174,18 +188,18 @@ let make = () => {
       </header>
     </PhenomicPresetReactApp.Link>
     <div className=Styles.linksBox>
-      <PhenomicPresetReactApp.Link activeStyle href="/about">
-        "About"->text
-      </PhenomicPresetReactApp.Link>
-      <PhenomicPresetReactApp.Link activeStyle href="/awesome">
-        "Awesome"->text
-      </PhenomicPresetReactApp.Link>
-      <PhenomicPresetReactApp.Link activeStyle href="/conference">
-        "Conference"->text
-      </PhenomicPresetReactApp.Link>
-      <PhenomicPresetReactApp.Link activeStyle href="/blog">
-        "Blog"->text
-      </PhenomicPresetReactApp.Link>
+      {Belt.Array.map(links, link =>
+         <PhenomicPresetReactApp.Link activeStyle href={j|/$link|j}>
+           {link->capitalize->text}
+         </PhenomicPresetReactApp.Link>
+       )
+       |> React.array}
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://forum.nativesintech.org">
+        "Forum"->text
+      </a>
     </div>
     <span className=Styles.hamburger onClick={_e => dispatch(OpenSidebar)}>
       <img src=menu />
@@ -197,22 +211,25 @@ let make = () => {
           onClick={_e => dispatch(CloseSidebar)}>
           <img src=close />
         </span>
-        <PhenomicPresetReactApp.Link
-          className="sidelink" activeStyle href="/about">
-          "About"->text
-        </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link
-          className="sidelink" activeStyle href="/awesome">
-          "Awesome"->text
-        </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link
-          className="sidelink" activeStyle href="/conference">
-          "Conference"->text
-        </PhenomicPresetReactApp.Link>
-        <PhenomicPresetReactApp.Link
-          className="sidelink" activeStyle href="/blog">
-          "Blog"->text
-        </PhenomicPresetReactApp.Link>
+        {Belt.Array.map(links, link =>
+           <PhenomicPresetReactApp.Link
+             className="sidelink" activeStyle href={j|/$link|j}>
+             {link->capitalize->text}
+           </PhenomicPresetReactApp.Link>
+         )
+         |> React.array}
+        <a
+          style={ReactDOMRe.Style.make(
+            ~color="#fff",
+            ~fontSize="20px",
+            ~padding="10px 20px",
+            (),
+          )}
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://forum.nativesintech.org">
+          "Forum"->text
+        </a>
       </div>
     </div>
   </nav>;

@@ -10,7 +10,6 @@ module Styles = {
 [@react.component]
 let make = (~children) => {
   <div className=Styles.container>
-    <Banner />
     <Nav />
     <main className=Styles.main> children </main>
     <Footer />
