@@ -62,11 +62,21 @@ a {
 }
 
 a:visited {
-  color: #102a43;
+  color: #38bec9;
 }
 
 a:hover {
   color: #38bec9;
+}
+
+article p > a {
+  text-decoration: underline;
+  color: #14919b;
+}
+
+article p > a:visited {
+  text-decoration: underline;
+  color: #14919b;
 }
 
 strong {
