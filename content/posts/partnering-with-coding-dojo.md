@@ -20,7 +20,7 @@ If you are a Native person already in tech, join us on our Slack channel. Our go
 
 ## How Can you Help? (Business)
 
-If you are a business, NiT is looking for remote-first companies who are open to providing paid internships or jobs to the students after graduation. If you are interested in supporting this way then reach out to our email account hello@nativesintech.org and let us know how you would like to support this effort.
+If you are a business, NiT is looking for remote-first companies who are open to providing paid internships or jobs to the students after graduation. If you are interested in supporting this way then reach out to our email account <a href="mailto:hello@nativesintech.org">hello@nativesintech.org</a> and let us know how you would like to support this effort.
 
 ## What Now?
 
