@@ -128,3 +128,15 @@ code {
 em {
   color: #38bec9;
 }
+
+ul li {
+  font-size: 24px;
+}
+
+table {
+  font-size: 24px;
+}
+
+th {
+  text-transform: capitalize;
+}
