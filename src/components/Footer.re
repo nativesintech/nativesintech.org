@@ -18,11 +18,18 @@ module Styles = {
       justifyContent(`center),
       alignItems(`center),
     ]);
+
+  let netlify = style([marginLeft(px(4))]);
 };
 
 [@react.component]
 let make = () => {
   <footer className=Styles.footer>
-    {j|Made with ❤️ by Natives in Tech |j}->text
+    {j|Made with ❤️ by Natives in Tech & |j}->text
+    <a className=Styles.netlify href="https://www.netlify.com">
+      <img
+        src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg"
+      />
+    </a>
   </footer>;
 };
