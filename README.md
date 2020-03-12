@@ -63,15 +63,19 @@ If you would like to make a change to this repo then fork the repository and the
 Thanks goes to these wonderful people ([emoji key](https://github.com/all-contributors/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://arecvlohe.github.io/simple-portfolio/"><img src="https://avatars3.githubusercontent.com/u/9747933?v=4" width="100px;" alt="Adam Recvlohe"/><br /><sub><b>Adam Recvlohe</b></sub></a><br /><a href="#design-arecvlohe" title="Design">🎨</a> <a href="https://github.com/nativesintech/natives-in-tech/commits?author=arecvlohe" title="Code">💻</a> <a href="https://github.com/nativesintech/natives-in-tech/commits?author=arecvlohe" title="Documentation">📖</a></td>
-    <td align="center"><a href="https://github.com/AlanaKaimi"><img src="https://avatars2.githubusercontent.com/u/46729511?v=4" width="100px;" alt="AJ Bryce"/><br /><sub><b>AJ Bryce</b></sub></a><br /><a href="https://github.com/nativesintech/natives-in-tech/issues?q=author%3AAlanaKaimi" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="https://github.com/csutherl"><img src="https://avatars2.githubusercontent.com/u/2897567?v=4" width="100px;" alt="Coty Sutherland"/><br /><sub><b>Coty Sutherland</b></sub></a><br /><a href="https://github.com/nativesintech/natives-in-tech/commits?author=csutherl" title="Code">💻</a> <a href="https://github.com/nativesintech/natives-in-tech/commits?author=csutherl" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://arecvlohe.github.io/simple-portfolio/"><img src="https://avatars3.githubusercontent.com/u/9747933?v=4" width="100px;" alt=""/><br /><sub><b>Adam Recvlohe</b></sub></a><br /><a href="#design-arecvlohe" title="Design">🎨</a> <a href="https://github.com/nativesintech/nativesintech.org/commits?author=arecvlohe" title="Code">💻</a> <a href="https://github.com/nativesintech/nativesintech.org/commits?author=arecvlohe" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/AlanaKaimi"><img src="https://avatars2.githubusercontent.com/u/46729511?v=4" width="100px;" alt=""/><br /><sub><b>AJ Bryce</b></sub></a><br /><a href="https://github.com/nativesintech/nativesintech.org/issues?q=author%3AAlanaKaimi" title="Bug reports">🐛</a></td>
+    <td align="center"><a href="https://github.com/csutherl"><img src="https://avatars2.githubusercontent.com/u/2897567?v=4" width="100px;" alt=""/><br /><sub><b>Coty Sutherland</b></sub></a><br /><a href="https://github.com/nativesintech/nativesintech.org/commits?author=csutherl" title="Code">💻</a> <a href="https://github.com/nativesintech/nativesintech.org/commits?author=csutherl" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://yes.erin.codes"><img src="https://avatars3.githubusercontent.com/u/467627?v=4" width="100px;" alt=""/><br /><sub><b>Catherine "Erin" Ishimoticha</b></sub></a><br /><a href="https://github.com/nativesintech/nativesintech.org/commits?author=erinishimoticha" title="Code">💻</a> <a href="https://github.com/nativesintech/nativesintech.org/commits?author=erinishimoticha" title="Documentation">📖</a></td>
   </tr>
 </table>
 
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
