@@ -1,59 +1,35 @@
 {
-  "private": false,
   "name": "natives-in-tech-website",
-  "devDependencies": {
-    "@babel/core": "7.6.4",
-    "@babel/preset-env": "7.6.3",
-    "@glennsl/bs-json": "5.0.1",
-    "@moox/bs-react-helmet": "2.1.0",
-    "@phenomic/cli": "1.0.0",
-    "@phenomic/core": "1.0.0",
-    "@phenomic/plugin-public-assets": "1.0.0",
-    "@phenomic/preset-react-app": "1.0.0",
-    "babel-loader": "8.0.6",
-    "bs-css": "10.0.1",
-    "bs-fetch": "0.5.0",
-    "bs-platform": "5.2.1",
-    "bs-remotedata": "2.0.1",
-    "bs-typing": "1.0.2",
-    "bs-webapi": "0.15.5",
-    "compression-webpack-plugin": "3.0.0",
-    "css-loader": "3.2.0",
-    "cssnano": "4.1.10",
-    "dotenv-webpack": "1.7.0",
-    "emotion": "10.0.17",
-    "emotion-server": "10.0.17",
-    "file-loader": "4.2.0",
-    "mini-css-extract-plugin": "0.8.0",
-    "normalize.css": "8.0.1",
-    "npm-run-all": "4.1.5",
-    "postcss-import": "12.0.1",
-    "postcss-loader": "3.0.0",
-    "postcss-preset-env": "6.7.0",
-    "react": "16.10.1",
-    "react-dom": "16.10.1",
-    "react-helmet": "5.2.1",
-    "react-hot-loader": "4.12.15",
-    "react-router": "3.2.1",
-    "reason-react": "0.7.0",
-    "style-loader": "1.0.0",
-    "terser-webpack-plugin": "2.2.1",
-    "typed.js": "2.0.11",
-    "url-loader": "2.2.0"
-  },
+  "version": "2.0.0",
+  "description": "Website for Natives in Tech",
+  "main": "index.js",
   "scripts": {
-    "reason:cleanup": "bsb -clean-world",
-    "reason:compile": "bsb -make-world",
-    "prepare": "yarn reason:cleanup && yarn reason:compile",
-    "start": "yarn reason:cleanup && npm-run-all --parallel start:*",
-    "start:js": "phenomic start",
-    "start:reason": "yarn reason:compile -w",
-    "build": "yarn reason:compile && phenomic build"
+    "dev": "next",
+    "build": "next build",
+    "export": "npm run build && next export",
+    "deploy": "npm run build && npm run export",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
-  "phenomic": {
-    "presets": [
-      "@phenomic/preset-react-app"
-    ]
+  "license": "MIT",
+  "dependencies": {
+    "next": "9.2.1",
+    "react": "16.12.0",
+    "react-animated-burgers": "^1.2.7",
+    "react-dom": "16.12.0",
+    "styled-components": "^5.0.0"
   },
-  "version": "1.0.0"
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@fullhuman/postcss-purgecss": "2.0.5",
+    "@storybook/addon-actions": "^5.3.9",
+    "@storybook/addon-links": "^5.3.9",
+    "@storybook/addons": "^5.3.9",
+    "@storybook/react": "^5.3.9",
+    "autoprefixer": "9.7.4",
+    "babel-loader": "^8.0.6",
+    "tailwindcss": "1.1.4"
+  }
 }
