@@ -1,5 +1,5 @@
 {
-  "projectName": "natives-in-tech",
+  "projectName": "nativesintech.org",
   "projectOwner": "nativesintech",
   "repoType": "github",
   "repoHost": "https://github.com",
@@ -38,7 +38,18 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "erinishimoticha",
+      "name": "Catherine \"Erin\" Ishimoticha",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/467627?v=4",
+      "profile": "http://yes.erin.codes",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "skipCi": true
 }
