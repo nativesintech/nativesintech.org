@@ -39,7 +39,8 @@ Packages are managed using [yarn](https://yarnpkg.com/en/) for more deterministi
 Running the application locally requires a few steps.
 
 - Clone this repository to your desktop (or somewhere else on your computer): `git clone git@github.com:nativesintech/natives-in-tech.git`
-- From the terminal, install dependencies: `$ yarn install`
+- From the terminal, install local dependencies: `$ yarn install`
+- From the terminal, install global dependencies: `npm i -g yarn phenomic npm-run-all bs-platform`
 - From the terminal, run the app in development mode: `$ yarn start`
 - You now have the app running and can browse to `localhost:3333` to see it live!
 

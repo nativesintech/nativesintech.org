@@ -250,11 +250,20 @@ let make = () => {
           ~strings=
             Belt.Array.map(
               [|
-                "Hello",
-                {j|s@^gaêl'A|j},
-                "Hesci",
-                {j|Yá'át'ééh|j},
-                "Halito",
+                "Hello",              // English
+                {j|s@^gaêl'A|j},      // Yuchi
+                "Hesci",              // Muscogee Creek
+                {j|Yá'át'ééh|j},      // Navajo
+                "Halito",             // Choctaw
+                {j|ᎣᏏᏲ|j},            // Cherokee
+                "Aaniin",             // Anishinaabemowin
+                {j|Wáa sá i yatee|j}, // Tlingit
+                "Pablan",             // Inupiaq
+                "Sekoh",              // Mohawk / Kanien'keha
+                "Howa",               // Osage
+                "Ba'ax ka wa'alik",   // Mayan
+                "Niltse",             // Nahuatl
+                "Tanisi",             // Cree
               |],
               x =>
               x ++ "!"
