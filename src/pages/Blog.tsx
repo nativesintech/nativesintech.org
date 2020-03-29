@@ -1,10 +1,10 @@
-import Layout from '../components/layout';
+import Layout from "../components/Layout";
 
 function About() {
   return (
     <Layout>
-      <div className='flex flex-col md:flex-row'>
-      <div className="lg:w-1/2 md:w-3/4 w-10/12 mx-auto">
+      <div className="flex flex-col md:flex-row">
+        <div className="lg:w-1/2 md:w-3/4 w-10/12 mx-auto">
           {[
             {
               heading: `Blog post placeholder`,
@@ -12,10 +12,10 @@ function About() {
             }
           ].map(section => (
             <>
-              <h2 className='font-bold mb-3 text-4xl text-gray-800'>
+              <h2 className="font-bold mb-3 text-4xl text-gray-800">
                 {section.heading}
               </h2>
-              <p className='mb-6 text-gray-800 text-lg'>{section.body}</p>
+              <p className="mb-6 text-gray-800 text-lg">{section.body}</p>
             </>
           ))}
         </div>

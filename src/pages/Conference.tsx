@@ -1,10 +1,10 @@
-import Layout from '../components/layout';
-import Newsletter from '../components/newsletter';
+import Layout from "../components/Layout";
+import Newsletter from "../components/Newsletter";
 function About() {
   return (
     <Layout>
-      <div className='flex flex-col'>
-        <div className='lg:w-1/2 md:w-3/4 w-10/12 mx-auto'>
+      <div className="flex flex-col">
+        <div className="lg:w-1/2 md:w-3/4 w-10/12 mx-auto">
           {[
             {
               heading: `Natives in Tech Conf`,
@@ -41,10 +41,10 @@ Individuals and organzations seeking to engage, learn about, and support Native 
             }
           ].map(section => (
             <>
-              <h2 className='font-bold mb-3 text-4xl text-gray-800'>
+              <h2 className="font-bold mb-3 text-4xl text-gray-800">
                 {section.heading}
               </h2>
-              <p className='mb-6 text-gray-800 text-lg'>{section.body}</p>
+              <p className="mb-6 text-gray-800 text-lg">{section.body}</p>
             </>
           ))}
         </div>

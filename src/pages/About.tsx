@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 
 function About() {
   return (
@@ -16,13 +16,13 @@ function About() {
             }
           ].map(section => (
             <>
-              <h2 className="font-bold mb-3 text-6xl text-gray-800">{section.heading}</h2>
+              <h2 className="font-bold mb-3 text-6xl text-gray-800">
+                {section.heading}
+              </h2>
               <p className="mb-6 text-gray-800 text-lg">{section.body}</p>
             </>
           ))}
         </div>
-
-     
       </div>
     </Layout>
   );
