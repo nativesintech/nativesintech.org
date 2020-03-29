@@ -21,14 +21,14 @@
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
-    "@babel/core": "7.8.4",
+    "@babel/core": "7.9.0",
     "@fullhuman/postcss-purgecss": "2.1.0",
     "@storybook/addon-actions": "^5.3.9",
-    "@storybook/addon-links": "5.3.9",
-    "@storybook/addons": "5.3.9",
-    "@storybook/react": "5.3.9",
+    "@storybook/addon-links": "5.3.17",
+    "@storybook/addons": "5.3.17",
+    "@storybook/react": "5.3.17",
     "autoprefixer": "9.7.5",
-    "babel-loader": "8.0.6",
+    "babel-loader": "8.1.0",
     "postcss-preset-env": "6.7.0",
     "tailwindcss": "1.2.0",
     "typescript": "3.8.3"
