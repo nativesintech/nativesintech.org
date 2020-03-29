@@ -4,11 +4,10 @@
   "description": "Website for Natives in Tech",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "start": "next",
     "build": "next build",
-    "export": "npm run build && next export",
-    "deploy": "npm run build && npm run export",
-    "start": "next start",
+    "export": "yarn run build && next export",
+    "deploy": "yarn run build && yarn run export",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
