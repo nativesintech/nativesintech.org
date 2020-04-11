@@ -1,4 +1,4 @@
-import Header from "./Header";
+import { Footer } from "./Footer";
 
 function Layout(props: { children: React.ReactNode }) {
   return (
@@ -8,7 +8,7 @@ function Layout(props: { children: React.ReactNode }) {
       <main className="flex-1 w-full p-4 mx-auto md:px-8 md:py-16 bg-gray-200">
         {props.children}
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
