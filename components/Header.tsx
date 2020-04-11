@@ -3,12 +3,13 @@ import { useState } from "react";
 import { HamburgerSqueeze } from "react-animated-burgers";
 import { useRouter } from "next/router";
 
-function Header(props: { href: string }) {
+export function Header(props: { href: string }) {
   const [isActive, toggleButton] = useState(false);
   const router = useRouter();
+
   return (
     <>
-      <header className="bg-white shadow-xl m-0">
+      <header className="bg-white m-0">
         <div className="flex flex-wrap md:flex-no-wrap items-center justify-between max-w-full m-0 px-4 py-6 md:px-8 ">
           <div className="flex items-center">
             <Link href="/">
@@ -17,14 +18,14 @@ function Header(props: { href: string }) {
               </a>
             </Link>
             <Link href="/">
-              <a className="font-bold text-teal-500 text-2xl hidden md:block lg:block">
+              <a className="font-bold text-teal-400 text-2xl hidden md:block lg:block">
                 Natives In Tech
               </a>
             </Link>
           </div>
           <div className="block md:hidden flex">
             <HamburgerSqueeze
-              className="z-10"
+              className="z-40"
               isActive={isActive}
               onClick={() => toggleButton(!isActive)}
               barColor={!isActive ? "#2D3748" : "#FFFFFF"}
@@ -37,16 +38,16 @@ function Header(props: { href: string }) {
               { title: "Awesome", route: "/awesome" },
               { title: "Conference", route: "/conference" },
               { title: "Blog", route: "/blog" },
-              { title: "Forum", route: "/forum" }
-            ].map(navigationItem => (
+              { title: "Forum", route: "/forum" },
+            ].map((navigationItem) => (
               <li className="mt-3 md:mt-0 md:ml-6" key={navigationItem.title}>
                 <Link href={navigationItem.route}>
                   <a
-                    className={`${
+                    className={`block ${
                       router.pathname === navigationItem.route
-                        ? "font-bold underline "
-                        : " "
-                    }block text-teal-500`}
+                        ? "text-gray-800"
+                        : "text-teal-400"
+                    } `}
                   >
                     {navigationItem.title}
                   </a>
@@ -57,7 +58,7 @@ function Header(props: { href: string }) {
         </div>
       </header>
       <div
-        className={`${isActive} fixed bg-gray-800 h-screen w-1/2 flex flex-col right-0 md:hidden lg:hidden`}
+        className={`${isActive} fixed z-30 bg-gray-800 h-screen w-1/2 flex flex-col right-0 md:hidden lg:hidden`}
         id="SideMenu"
       >
         <ul className="flex-col mt-16">
@@ -66,19 +67,19 @@ function Header(props: { href: string }) {
             { title: "Awesome", route: "/awesome" },
             { title: "Conference", route: "/conference" },
             { title: "Blog", route: "/blog" },
-            { title: "Forum", route: "/forum" }
-          ].map(navigationItem => (
+            { title: "Forum", route: "/forum" },
+          ].map((navigationItem) => (
             <li
               className="mt-3 md:mt-0 md:ml-6"
               key={navigationItem.title + "side"}
             >
               <Link href={navigationItem.route}>
                 <a
-                  className={`${
+                  className={`block ml-4 text-2xl ${
                     router.pathname === navigationItem.route
-                      ? "text-teal-500 underline "
+                      ? "text-teal-400"
                       : "text-white"
-                  } block ml-4 text-2xl`}
+                  }`}
                 >
                   {navigationItem.title}
                 </a>
@@ -90,5 +91,3 @@ function Header(props: { href: string }) {
     </>
   );
 }
-
-export default Header;

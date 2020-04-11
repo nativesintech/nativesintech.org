@@ -1,6 +1,6 @@
-import Layout from "../components/Layout";
+import { Layout } from "../components/Layout";
 
-function IndexPage() {
+export default function IndexPage() {
   return (
     <Layout>
       <div className="flex flex-col lg:flex-row items-center justify-center mx-8">
@@ -12,5 +12,3 @@ function IndexPage() {
     </Layout>
   );
 }
-
-export default IndexPage;

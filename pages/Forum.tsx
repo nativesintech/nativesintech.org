@@ -1,6 +1,7 @@
-import Layout from "../components/Layout";
+import React from "react";
+import { Layout } from "../components/Layout";
 
-function About() {
+export default function Forum() {
   return (
     <Layout>
       <div className="flex flex-col md:flex-row">
@@ -8,20 +9,18 @@ function About() {
           {[
             {
               heading: `Lorem ipsum`,
-              body: `Lorem ipsum`
-            }
-          ].map(section => (
-            <>
+              body: `Lorem ipsum`,
+            },
+          ].map((section) => (
+            <React.Fragment key={section.heading}>
               <h2 className="font-bold mb-3 text-4xl text-gray-800">
                 {section.heading}
               </h2>
               <p className="mb-6 text-gray-800 text-lg">{section.body}</p>
-            </>
+            </React.Fragment>
           ))}
         </div>
       </div>
     </Layout>
   );
 }
-
-export default About;
