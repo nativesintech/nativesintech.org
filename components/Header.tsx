@@ -3,7 +3,7 @@ import { useState } from "react";
 import { HamburgerSqueeze } from "react-animated-burgers";
 import { useRouter } from "next/router";
 
-function Header(props: { href: string }) {
+export function Header(props: { href: string }) {
   const [isActive, toggleButton] = useState(false);
   const router = useRouter();
   return (
@@ -90,5 +90,3 @@ function Header(props: { href: string }) {
     </>
   );
 }
-
-export default Header;

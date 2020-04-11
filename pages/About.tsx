@@ -1,6 +1,6 @@
-import Layout from "../components/Layout";
+import { Layout } from "../components/Layout";
 
-function About() {
+export default function About() {
   return (
     <Layout>
       <div className="flex flex-col md:flex-row">
@@ -27,5 +27,3 @@ function About() {
     </Layout>
   );
 }
-
-export default About;

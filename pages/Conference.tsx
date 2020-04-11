@@ -1,6 +1,7 @@
-import Layout from "../components/Layout";
-import Newsletter from "../components/Newsletter";
-function About() {
+import { Layout } from "../components/Layout";
+import { Newsletter } from "../components/Newsletter";
+
+export default function Conference() {
   return (
     <Layout>
       <div className="flex flex-col">
@@ -54,5 +55,3 @@ Individuals and organzations seeking to engage, learn about, and support Native 
     </Layout>
   );
 }
-
-export default About;

@@ -1,4 +1,4 @@
-const Newsletter = () => {
+export const Newsletter = () => {
   return (
     <div className='shadow-xl p-10 bg-white max-w-xl rounded mx-auto'>
       <h1 className='text-4xl font-bold mb-4 text-gray-800'>
@@ -21,4 +21,3 @@ const Newsletter = () => {
     </div>
   );
 };
-export default Newsletter
