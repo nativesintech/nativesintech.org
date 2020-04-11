@@ -9,6 +9,9 @@ export default function Forum() {
           {[
             {
               heading: `Lorem ipsum`,
+              body: `Lorem ipsum`,
+            },
+          ].map((section) => (
             <React.Fragment key={section.heading}>
               <h2 className="font-bold mb-3 text-4xl text-gray-800">
                 {section.heading}

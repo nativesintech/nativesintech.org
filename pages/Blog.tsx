@@ -9,6 +9,9 @@ export default function Blog() {
           {[
             {
               heading: `Blog post placeholder`,
+              body: `Will leave this more empty until we start tinkering with ghostcms`,
+            },
+          ].map((section) => (
             <React.Fragment key={section.heading}>
               <h2 className="font-bold mb-3 text-4xl text-gray-800">
                 {section.heading}

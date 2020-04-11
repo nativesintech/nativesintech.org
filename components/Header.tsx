@@ -37,8 +37,8 @@ export function Header(props: { href: string }) {
               { title: "Awesome", route: "/awesome" },
               { title: "Conference", route: "/conference" },
               { title: "Blog", route: "/blog" },
-              { title: "Forum", route: "/forum" }
-            ].map(navigationItem => (
+              { title: "Forum", route: "/forum" },
+            ].map((navigationItem) => (
               <li className="mt-3 md:mt-0 md:ml-6" key={navigationItem.title}>
                 <Link href={navigationItem.route}>
                   <a
@@ -66,8 +66,8 @@ export function Header(props: { href: string }) {
             { title: "Awesome", route: "/awesome" },
             { title: "Conference", route: "/conference" },
             { title: "Blog", route: "/blog" },
-            { title: "Forum", route: "/forum" }
-          ].map(navigationItem => (
+            { title: "Forum", route: "/forum" },
+          ].map((navigationItem) => (
             <li
               className="mt-3 md:mt-0 md:ml-6"
               key={navigationItem.title + "side"}

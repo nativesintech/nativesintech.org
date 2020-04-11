@@ -9,6 +9,9 @@ export default function Awesome() {
           {[
             {
               heading: `Awesome Natives in Tech`,
+              body: `A list of Native and non-Native developers working in the software development industry that represent or serve Native communities`,
+            },
+          ].map((section) => (
             <React.Fragment key={section.heading}>
               <h2 className="font-bold mb-3 text-4xl text-gray-800">
                 {section.heading}
