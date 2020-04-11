@@ -1,3 +1,4 @@
+import React from "react";
 import { Layout } from "../components/Layout";
 
 export default function Blog() {
@@ -8,15 +9,12 @@ export default function Blog() {
           {[
             {
               heading: `Blog post placeholder`,
-              body: `Will leave this more empty until we start tinkering with ghostcms`
-            }
-          ].map(section => (
-            <>
+            <React.Fragment key={section.heading}>
               <h2 className="font-bold mb-3 text-4xl text-gray-800">
                 {section.heading}
               </h2>
               <p className="mb-6 text-gray-800 text-lg">{section.body}</p>
-            </>
+            </React.Fragment>
           ))}
         </div>
       </div>

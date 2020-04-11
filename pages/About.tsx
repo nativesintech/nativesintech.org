@@ -1,3 +1,4 @@
+import React from "react";
 import { Layout } from "../components/Layout";
 
 export default function About() {
@@ -12,15 +13,12 @@ export default function About() {
             },
             {
               heading: ` `,
-              body: `Natives in Tech is a coalition of Native and non-Native software developers whose goal is to support software application development that reinforces Native beliefs, knowledge, and identity. This is achieved through four initiatives: networking with aspiring and experienced developers alike, creating a strong social media presence on platforms familiar to developers, hosting a yearly Natives in Tech conference, and building open source software that Native peoples can use to cultivate healthy online communities. Through these initiatives we hope to build a strong community of developers that have the power to shape the online future of the communities they serve.`
-            }
-          ].map(section => (
-            <>
+            <React.Fragment key={section.heading}>
               <h2 className="font-bold mb-3 text-6xl text-gray-800">
                 {section.heading}
               </h2>
               <p className="mb-6 text-gray-800 text-lg">{section.body}</p>
-            </>
+            </React.Fragment>
           ))}
         </div>
       </div>
