@@ -1,6 +1,8 @@
+import React from "react";
 import Typed from "typed.js";
 import { Layout } from "../components/Layout";
 
+export default function Index() {
   const typedRef = React.createRef<HTMLDivElement>();
 
   const options = {
