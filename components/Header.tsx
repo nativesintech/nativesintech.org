@@ -3,9 +3,18 @@ import { useState } from "react";
 import { HamburgerSqueeze } from "react-animated-burgers";
 import { useRouter } from "next/router";
 
-export function Header(props: { href: string }) {
+export function Header() {
   const [isActive, toggleButton] = useState(false);
   const router = useRouter();
+
+  const routes = [
+    { title: "About", route: "/about" },
+    { title: "Awesome", route: "/awesome" },
+    { title: "Conference", route: "/conference" },
+    { title: "Donations", route: "/donations" },
+    { title: "Blog", route: "/blog" },
+    { title: "Forum", route: "/forum" },
+  ];
 
   return (
     <>
@@ -33,13 +42,7 @@ export function Header(props: { href: string }) {
           </div>
 
           <ul className="hidden md:flex flex-col md:flex-row md:items-center md:justify-center text-base w-full md:w-auto mr-0">
-            {[
-              { title: "About", route: "/about" },
-              { title: "Awesome", route: "/awesome" },
-              { title: "Conference", route: "/conference" },
-              { title: "Blog", route: "/blog" },
-              { title: "Forum", route: "/forum" },
-            ].map((navigationItem) => (
+            {routes.map((navigationItem) => (
               <li className="mt-3 md:mt-0 md:ml-6" key={navigationItem.title}>
                 <Link href={navigationItem.route}>
                   <a
@@ -62,13 +65,7 @@ export function Header(props: { href: string }) {
         id="SideMenu"
       >
         <ul className="flex-col mt-16">
-          {[
-            { title: "About", route: "/about" },
-            { title: "Awesome", route: "/awesome" },
-            { title: "Conference", route: "/conference" },
-            { title: "Blog", route: "/blog" },
-            { title: "Forum", route: "/forum" },
-          ].map((navigationItem) => (
+          {routes.map((navigationItem) => (
             <li
               className="mt-3 md:mt-0 md:ml-6"
               key={navigationItem.title + "side"}
