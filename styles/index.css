@@ -15,3 +15,7 @@
 body {
   overflow-x: hidden;
 }
+
+.typed-cursor {
+  font-size: 24px;
+}
