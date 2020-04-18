@@ -1,0 +1,17 @@
+---
+name: Header
+menu: Components
+---
+
+import { Playground } from "docz";
+import { Header } from "./Header";
+
+# Header
+
+This is the header. It's part of the layout component that renders each page.
+
+The router is provided by `NextJS` with `useRouter` but we are passing it here declaratively to show you the active route styles.
+
+<Playground>
+  <Header router={{ pathname: "/awesome" }} logo={"./public/computer.svg"} />
+</Playground>
