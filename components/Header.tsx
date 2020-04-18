@@ -23,7 +23,7 @@ export function Header() {
           <div className="flex items-center">
             <Link href="/">
               <a>
-                <img src="NITlogo.png" className="w-12 mr-4" />{" "}
+                <img src="computer.svg" className="w-16 mr-4" />{" "}
               </a>
             </Link>
             <Link href="/">
