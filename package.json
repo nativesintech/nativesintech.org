@@ -9,27 +9,26 @@
     "export": "yarn run build && next export",
     "deploy": "yarn run build && yarn run export",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "docz:serve": "docz build && docz serve"
   },
   "license": "MIT",
   "dependencies": {
-    "next": "9.3.2",
+    "docz": "2.3.1",
+    "next": "9.3.5",
     "react": "16.13.1",
     "react-animated-burgers": "1.2.7",
     "react-dom": "16.13.1",
-    "styled-components": "5.0.1",
+    "styled-components": "5.1.0",
     "typed.js": "2.0.11"
   },
   "devDependencies": {
     "@babel/core": "7.9.0",
-    "@fullhuman/postcss-purgecss": "2.1.0",
-    "@storybook/addon-actions": "^5.3.9",
-    "@storybook/addon-links": "5.3.17",
-    "@storybook/addons": "5.3.17",
-    "@storybook/react": "5.3.17",
-    "autoprefixer": "9.7.5",
+    "@fullhuman/postcss-purgecss": "2.1.2",
+    "autoprefixer": "9.7.6",
     "babel-loader": "8.1.0",
+    "gatsby-plugin-postcss": "2.2.3",
     "postcss-preset-env": "6.7.0",
     "tailwindcss": "1.2.0",
     "typescript": "3.8.3"

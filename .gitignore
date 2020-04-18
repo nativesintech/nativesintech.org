@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# docz
+.docz/
+
 # production
 /build
 /dist
@@ -27,6 +30,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# ocaml
-.merlin
