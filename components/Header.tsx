@@ -2,10 +2,16 @@ import * as React from "react";
 import Link from "next/link";
 import { useState } from "react";
 import { HamburgerSqueeze } from "react-animated-burgers";
-import { useRouter, withRouter, NextRouter } from "next/router";
+import { withRouter, NextRouter } from "next/router";
 
 export const Header = withRouter(
-  ({ router, logo = "computer.svg" }: { router: NextRouter; logo: string }) => {
+  ({
+    router,
+    logo = "computer.svg",
+  }: {
+    router: NextRouter;
+    logo?: string;
+  }) => {
     const [isActive, toggleButton] = useState(false);
 
     const routes = [
