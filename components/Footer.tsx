@@ -1,3 +1,5 @@
+import * as React from "react";
+
 export function Footer() {
   return (
     <footer className="p-10 text-gray-800">

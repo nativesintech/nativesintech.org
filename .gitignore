@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# storybook
+storybook-static/
+
 # production
 /build
 /dist
@@ -28,5 +31,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# ocaml
-.merlin
