@@ -1,6 +1,8 @@
 import React from "react";
 import Typed from "typed.js";
 import { Layout } from "../components/Layout";
+import { FaSlackHash, FaDiscourse, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { AiFillTwitterCircle } from 'react-icons/ai';
 
 export default function Index() {
   const typedRef = React.createRef<HTMLDivElement>();
@@ -45,13 +47,13 @@ export default function Index() {
 
       <div className="px-8 py-4">
         <div>
-          <span className="typed text-2xl" ref={typedRef} />
+          <span className="typed text-2xl font-bold" ref={typedRef} />
         </div>
 
-        <div className="w-1/2 text-2xl">
+        <div className="lg:w-1/2 md:w-3/4 w-full text-2xl">
           <div className="py-4">
             Welcome 👋.{" "}
-            <span className="text-teal-500">
+            <span className="text-teal-500 font-bold">
               Natives in Tech is a coalition of Native and non-Native software
               developers whose goal is to support software application
               development that reinforces Native beliefs, knowledge, and
@@ -71,9 +73,63 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="px-8">Connect With Us!</div>
+      <div className='flex flex-col mx-auto bg-gray-200 px-8 md:px-16 py-16 text-gray-800'>
+        <p className='text-6xl mx-auto py-8 text-bold text-center'>
+          Connect with us!
+        </p>
+        <div className='flex flex-row py-8 justify-around w-full md:w-7/12 mx-auto text-teal-500'>
+          {[
+            { icon: FaSlackHash, url: 'https://nativesintech.herokuapp.com/' },
+            { icon: FaDiscourse, url: 'https://forum.nativesintech.org/' },
+            { icon: FaGithub, url: 'https://github.com/nativesintech' },
+            {
+              icon: AiFillTwitterCircle,
+              url: 'https://twitter.com/nativesintech'
+            },
+            {
+              icon: FaLinkedin,
+              url: 'https://www.linkedin.com/company/natives-in-tech'
+            }
+          ].map(iconLink => (
+            <a className='' href={iconLink.url} key={iconLink.icon.toString()}>
+              <iconLink.icon className='h-16 w-16 lg:h-24 lg:w-24 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-125' />
+            </a>
+          ))}
+        </div>
+      </div>
 
-      <div className="px-8">Ask a Question or Leave a Comment</div>
+       {/* No logic in place yet for contact form */}
+       <div className='flex flex-col bg-white px-8 md:px-16 py-16'>
+        <div className='bg-white max-w-xl rounded '>
+          <h1 className='text-4xl font-bold mb-4 text-gray-800'>
+            Ask a question or leave a comment 💬
+          </h1>
+          <p className='text-2xl text-gray-800'>
+            We would love to hear from you! Feel free to send a message to
+            hello@nativesintech.org or drop us a line below.
+          </p>
+          <div className='mb-4 relative'>
+            <input
+              className='input border border-gray-400 appearance-none rounded my-2 pb-2 mr-2 focus focus:border-indigo-600 focus:outline-none active:outline-none active:border-indigo-600'
+              type='email'
+              placeholder=' Name'
+            />
+            <input
+              className='input border border-gray-400 appearance-none rounded my-2 pb-2 focus focus:border-indigo-600 focus:outline-none active:outline-none active:border-indigo-600'
+              type='email'
+              placeholder=' Email'
+            />
+            <input
+              className='input border border-gray-400 appearance-none rounded w-full my-2 pb-16 focus focus:border-indigo-600 focus:outline-none active:outline-none active:border-indigo-600 '
+              type='email'
+              placeholder=' Message'
+            />
+          </div>
+          <button className='bg-teal-500 text-white font-bold py-3 px-6 rounded hover:bg-white hover:text-teal-500 border-2 border-teal-500'>
+            SUBMIT
+          </button>
+        </div>
+      </div>
     </Layout>
   );
 }
