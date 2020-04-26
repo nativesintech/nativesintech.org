@@ -79,20 +79,20 @@ export default function Index() {
         </p>
         <div className='flex flex-row py-8 justify-around w-full md:w-7/12 mx-auto text-teal-500'>
           {[
-            { icon: FaSlackHash, url: 'https://nativesintech.herokuapp.com/' },
-            { icon: FaDiscourse, url: 'https://forum.nativesintech.org/' },
-            { icon: FaGithub, url: 'https://github.com/nativesintech' },
+            { Icon: FaSlackHash, url: 'https://nativesintech.herokuapp.com/' },
+            { Icon: FaDiscourse, url: 'https://forum.nativesintech.org/' },
+            { Icon: FaGithub, url: 'https://github.com/nativesintech' },
             {
-              icon: AiFillTwitterCircle,
+              Icon: AiFillTwitterCircle,
               url: 'https://twitter.com/nativesintech'
             },
             {
-              icon: FaLinkedin,
+              Icon: FaLinkedin,
               url: 'https://www.linkedin.com/company/natives-in-tech'
             }
-          ].map(iconLink => (
-            <a className='' href={iconLink.url} key={iconLink.icon.toString()}>
-              <iconLink.icon className='h-16 w-16 lg:h-24 lg:w-24 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-125' />
+          ].map(({Icon, url}) => (
+            <a href={url} key={url}>
+              <Icon className='h-16 w-16 lg:h-24 lg:w-24 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-125'/>
             </a>
           ))}
         </div>
