@@ -2,7 +2,7 @@ import * as React from "react";
 
 export function Footer() {
   return (
-    <footer className="p-10 text-gray-800">
+    <footer className="p-10 text-gray-800 bg-gray-200">
       <div className="text-center"> Made with ❤️ by Natives in Tech</div>
       <a href="https://www.netlify.com">
         <img
