@@ -1,30 +1,118 @@
 import React from "react";
 import { Layout } from "../components/Layout";
+import { GetStaticProps } from "next";
 
-export default function Awesome() {
+type User = {
+  name: string;
+  bio: string;
+  avatarUrl: string;
+  email: string;
+  company: string;
+  websiteUrl: string;
+  location: string;
+  login: string;
+};
+
+type Node = { node: User };
+
+type Users = Array<Node>;
+
+type Response = {
+  data: {
+    organization: {
+      membersWithRole: {
+        edges: Users;
+      };
+    };
+  };
+};
+
+type Props = {
+  users: Users;
+};
+
+export default function Awesome({ users }: Props) {
   return (
     <Layout>
-      <div className="flex flex-col md:flex-row">
-        <div className="lg:w-1/2 md:w-3/4 w-10/12 mx-auto">
-          {[
-            {
-              heading: `Awesome Natives in Tech`,
-              body: `A list of Native and non-Native developers working in the software development industry that represent or serve Native communities`,
-            },
-          ].map((section) => (
-            <React.Fragment key={section.heading}>
-              <h2 className="font-bold mb-3 text-4xl text-gray-800">
-                {section.heading}
-              </h2>
-              <p className="mb-6 text-gray-800 text-lg">{section.body}</p>
-            </React.Fragment>
-          ))}
-        </div>
-
-        {/* <div className="md:ml-6 md:w-1/2">
-          <img src="critter.svg" className="w-full" />
-        </div> */}
+      <div className="text-center">
+        <h2 className="font-bold mb-3 text-4xl text-gray-800">
+          Awesome Natives in Tech
+        </h2>
+        <p className="mb-6 text-gray-800 text-lg">
+          A list of Native and non-Native developers working in the software
+          development industry that represent or serve Native communities
+        </p>
+      </div>
+      <div className="p-8 flex flex-wrap justify-around">
+        {users.map((user) => {
+          return (
+            <div key={user.node.login} className="shadow-lg rounded-lg mb-4">
+              <div
+                className="bg-cover rounded-lg rounded-b-none"
+                style={{
+                  backgroundImage: `url(${user.node.avatarUrl})`,
+                  height: 384,
+                  width: 384,
+                }}
+              />
+              <div className="p-4" style={{ maxWidth: 384 }}>
+                <div>
+                  <span className="text-xl"> {user.node.name}</span>
+                  <span className="ml-2">
+                    {user.node.company ? `(${user.node.company})` : ""}
+                  </span>
+                </div>
+                <div className="text-sm mb-2">
+                  <span className="">{user.node.location}</span>
+                </div>
+                <div className="italic">{user.node.bio}</div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps = async (_context) => {
+  const graphQLQuery: string = `{
+    organization(login:\"nativesintech\") {
+      membersWithRole(first: 100) {
+        edges {
+          node {
+            ...on User {
+              name
+              bio
+              avatarUrl
+              email
+              company
+              websiteUrl
+              location
+              login
+            }
+          }
+        }
+      }
+    }
+  }`;
+
+  const query = JSON.stringify({ query: graphQLQuery });
+
+  const res = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    body: query,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+    },
+  });
+
+  const response: Response = await res.json();
+
+  return {
+    props: {
+      users: response.data.organization.membersWithRole.edges,
+    },
+  };
+};
