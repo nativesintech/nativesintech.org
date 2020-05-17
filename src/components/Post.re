@@ -87,6 +87,7 @@ let make = (~post, ~params) => {
              property="og:url"
              content={j|https://nativesintech.org/blog/$article/|j}
            />
+           <link rel="canonical" href={post##canonical} />
          </BsReactHelmet>
          <Frame>
            <div />

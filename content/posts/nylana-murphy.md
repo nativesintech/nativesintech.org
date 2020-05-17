@@ -7,6 +7,7 @@ minRead: "5 minute"
 author: "Adam Recvlohe"
 image: "nylana-murphy.jpeg"
 tags: "natives in tech, open source, augmented reality, native in tech, NASA"
+canonical: "https://blog.nativesintech.org/nylana-murphy-aiming-high/"
 ---
 
 <em>What nation/clan/tribal town/etc. are you from?</em>

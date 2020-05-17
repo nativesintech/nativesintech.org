@@ -7,6 +7,7 @@ minRead: "5 minute"
 author: "Adam Recvlohe"
 image: "coty-sutherland.jpg"
 tags: "natives in tech, open source, red hat, native in tech"
+canonical: "https://blog.nativesintech.org/coty-sutherland-open-source-contributor/"
 ---
 
 <em>What nation/clan/tribal town/etc. are you from?</em>

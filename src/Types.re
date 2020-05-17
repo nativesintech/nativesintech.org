@@ -8,6 +8,7 @@ type partialPost = {
   "author": string,
   "tags": string,
   "image": option(string),
+  "canonical": string,
 };
 
 type posts =
@@ -26,6 +27,7 @@ type post = {
   "tagline": string,
   "filename": string,
   "image": option(string),
+  "canonical": string,
   "body": PhenomicPresetReactApp.BodyRenderer.jsBody,
 };
 

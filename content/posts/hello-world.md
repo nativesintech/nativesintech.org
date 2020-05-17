@@ -6,6 +6,7 @@ layout: "normal"
 minRead: "6 minute"
 author: "Adam Recvlohe"
 tags: "reasonml, reason, functional programming"
+canonical: "https://blog.nativesintech.org/hello-world/"
 ---
 
 You might be wondering why the heck I would choose ReasonML to build this site. Especially when there are languages like TypeScript or Flow that are more familiar to people. I'd like to share some of the reasons, pun intended 😄, for why I chose ReasonML/ReasonReact for the Natives in Tech website over any other programming language/framework.

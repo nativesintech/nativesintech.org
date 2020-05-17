@@ -6,6 +6,7 @@ layout: "normal"
 minRead: "3 minute"
 author: "Adam Recvlohe"
 tags: "conference, speakers"
+canonical: "https://blog.nativesintech.org/an-appeal-to-speakers/"
 ---
 
 The Natives in Tech conference is not a conference. It is an idea. Let me share with you what that idea is and how speaking at this conference can help further that idea.

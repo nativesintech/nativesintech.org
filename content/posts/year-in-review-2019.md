@@ -6,6 +6,7 @@ layout: "normal"
 minRead: "5 minute"
 author: "Adam Recvlohe"
 tags: "year-in-review"
+canonical: "https://blog.nativesintech.org/2019-year-in-review/"
 ---
 
 This year has been a great one for Natives in Tech. We had our first remote conference were Native developers and leaders in the Native tech sphere spoke about their work. It was amazing to see and listen to all the wonderful ideas and applications that are out there to help elevate Native culture and modernize how we assert our identity across the globe. If you missed it, check out the recordings [here](https://www.youtube.com/watch?v=T8LljEPsknc&list=PLkEm8Fr-qex0P4U-asUIzPXNUl25KV3i-). We look forward to next year's conference that further builds on this topic of cultural renaissance and how technology can help to empower Native peoples.

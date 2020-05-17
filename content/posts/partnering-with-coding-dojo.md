@@ -6,6 +6,7 @@ layout: "normal"
 minRead: "2 minute"
 author: "Adam Recvlohe"
 tags: "announcement"
+canonical: "https://blog.nativesintech.org/partnering-with-coding-dojo/"
 ---
 
 You heard that right! We are partnering with Coding Dojo to provide full-ride scholarships to Native persons interested in pursuing a full-stack boot camp program.

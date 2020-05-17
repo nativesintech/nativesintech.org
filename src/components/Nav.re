@@ -154,7 +154,7 @@ type action =
   | OpenSidebar
   | CloseSidebar;
 
-let links = [|"about", "awesome", "conference", "blog"|];
+let links = [|"about", "awesome", "conference"|];
 
 let capitalize = (str: string) => {
   str
@@ -197,6 +197,12 @@ let make = () => {
       <a
         target="_blank"
         rel="noopener noreferrer"
+        href="https://blog.nativesintech.org">
+        "Blog"->text
+      </a>
+      <a
+        target="_blank"
+        rel="noopener noreferrer"
         href="https://forum.nativesintech.org">
         "Forum"->text
       </a>
@@ -218,6 +224,18 @@ let make = () => {
            </PhenomicPresetReactApp.Link>
          )
          |> React.array}
+        <a
+          style={ReactDOMRe.Style.make(
+            ~color="#fff",
+            ~fontSize="20px",
+            ~padding="10px 20px",
+            (),
+          )}
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://blog.nativesintech.org">
+          "Blog"->text
+        </a>
         <a
           style={ReactDOMRe.Style.make(
             ~color="#fff",
