@@ -10,10 +10,8 @@ export function Header() {
   const routes = [
     { title: "About", route: "/about" },
     { title: "Awesome", route: "/awesome" },
-    { title: "Conference", route: "/conference" },
     { title: "Donations", route: "/donations" },
-    { title: "Blog", route: "/blog" },
-    { title: "Forum", route: "/forum" },
+    { title: "Conference", route: "/conference" },
   ];
 
   return (
@@ -42,21 +40,40 @@ export function Header() {
           </div>
 
           <ul className="hidden md:flex flex-col md:flex-row md:items-center md:justify-center text-base w-full md:w-auto mr-0">
-            {routes.map((navigationItem) => (
-              <li className="mt-3 md:mt-0 md:ml-6" key={navigationItem.title}>
-                <Link href={navigationItem.route}>
-                  <a
-                    className={`block ${
-                      router.pathname === navigationItem.route
-                        ? "text-gray-800"
-                        : "text-teal-400"
-                    } `}
-                  >
-                    {navigationItem.title}
-                  </a>
-                </Link>
-              </li>
-            ))}
+            {routes
+              .map((navigationItem) => (
+                <li className="mt-3 md:mt-0 md:ml-6" key={navigationItem.title}>
+                  <Link href={navigationItem.route}>
+                    <a
+                      className={`block ${
+                        router.pathname === navigationItem.route
+                          ? "text-gray-800"
+                          : "text-teal-400"
+                      } `}
+                    >
+                      {navigationItem.title}
+                    </a>
+                  </Link>
+                </li>
+              ))
+              .concat(
+                ["blog", "forum"].map((subdomain) => {
+                  return (
+                    <li
+                      className="mt-3 md:mt-0 md:ml-6 text-teal-400 capitalize"
+                      key={subdomain}
+                    >
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={`https://${subdomain}.nativesintech.org`}
+                      >
+                        {subdomain}
+                      </a>
+                    </li>
+                  );
+                })
+              )}
           </ul>
         </div>
       </header>
