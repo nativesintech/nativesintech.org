@@ -11,13 +11,13 @@ export function Header() {
     { title: "About", route: "/about" },
     { title: "Awesome", route: "/awesome" },
     { title: "Donations", route: "/donations" },
-    { title: "Conference", route: "/conference" },
+    // { title: "Conference", route: "/conference" }, // Will implement in a later time
   ];
 
   return (
     <>
       <header className="bg-white m-0">
-        <div className="flex flex-wrap md:flex-no-wrap items-center justify-between max-w-full m-0 px-4 py-6 md:px-8 ">
+        <div className="flex flex-wrap md:flex-no-wrap items-center justify-between max-w-full m-0 py-8 px-16">
           <div className="flex items-center">
             <Link href="/">
               <a>
