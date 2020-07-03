@@ -1,8 +1,0 @@
-node_modules
-dist
-.merlin
-lib
-.bsb.lock
-.env
-yarn-error.log
-.DS_Store

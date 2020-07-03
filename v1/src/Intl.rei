@@ -1,1 +1,0 @@
-let formatUSDate: string => string;
