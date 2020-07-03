@@ -125,19 +125,22 @@ export default function Index() {
             <input
               className="input border border-gray-400 appearance-none rounded my-2 md:mr-2 focus focus:shadow-outline active:outline-none active:border-indigo-600 text-xl p-1 flex-auto"
               style={{ textIndent: ".5rem" }}
-              placeholder=" Name"
+              name="name"
+              placeholder="Name"
             />
             <input
               className="input border border-gray-400 appearance-none rounded my-2 focus focus:shadow-outline  active:outline-none active:border-indigo-600 text-xl p-1 flex-auto"
               style={{ textIndent: ".5rem" }}
               type="email"
-              placeholder=" Email"
+              name="_replyto"
+              placeholder="Email"
             />
           </div>
           <input
             className="input border border-gray-400 appearance-none rounded w-full my-2 pb-16 focus focus:shadow-outline active:outline-none active:border-indigo-600 text-xl p-1"
             style={{ textIndent: ".5rem" }}
-            placeholder=" Message"
+            name="message"
+            placeholder="Message"
           />
         </div>
         <button
