@@ -68,7 +68,7 @@ export function Header() {
                   </a>
                 ) : (
                   <Link href={navigationItem.route}>
-                    <a
+                    <span
                       className={`${
                         router.pathname === navigationItem.route
                           ? "text-gray-800"
@@ -76,7 +76,7 @@ export function Header() {
                       } `}
                     >
                       {navigationItem.title}
-                    </a>
+                    </span>
                   </Link>
                 )}
               </li>
@@ -105,7 +105,7 @@ export function Header() {
                 </a>
               ) : (
                 <Link href={navigationItem.route}>
-                  <a
+                  <span
                     className={`block ml-4 text-2xl ${
                       router.pathname === navigationItem.route
                         ? "text-teal-400"
@@ -113,7 +113,7 @@ export function Header() {
                     }`}
                   >
                     {navigationItem.title}
-                  </a>
+                  </span>
                 </Link>
               )}
             </li>
