@@ -38,32 +38,35 @@ export default function Index() {
 
   return (
     <Layout>
-      <div className="flex flex-col lg:flex-row items-center justify-center p-4 mx-auto md:px-8 md:py-16 bg-gray-200">
-        <h2 className=" my-8 p-3 text-5xl lg:text-6xl text-gray-800 text-center leading-tight">
-          Supporting software developers serving Native communities{" "}
+      <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-3 md:grid-rows-1 px-8 md:p-16 bg-gray-200 py-16">
+        <h2 className="col-span-2 text-5xl lg:text-6xl text-gray-800 text-center self-center">
+          Supporting technologists serving Native communities
         </h2>
-        <img src="computer.svg" className="w-64 lg:w-1/4" />
+        <img
+          src="computer.svg"
+          className="col-span-1 self-center w-64"
+          style={{ justifySelf: "center" }}
+        />
       </div>
 
-      <div className="p-8 md:p-16">
-        <div>
+      <div className="p-8 md:p-16 max-w-screen-lg mx-auto">
+        <div style={{ height: 30 }}>
           <span className="typed text-2xl font-bold" ref={typedRef} />
         </div>
-
-        <div className="max-w-screen-md text-2xl">
+        <div className="text-2xl leading-loose">
           <div className="py-4">
             Welcome 👋.{" "}
             <span className="text-teal-500 font-bold">
-              Natives in Tech is a coalition of Native and non-Native software
-              developers whose goal is to support software application
-              development that reinforces Native beliefs, knowledge, and
-              identity
+              Natives in Tech is a coalition of Native and non-Native
+              technologists whose goal is to support technology that reinforces
+              Native beliefs, knowledge, and identity
             </span>
             . This is achieved through four initiatives: networking with
-            aspiring and experienced developers alike, creating a strong social
-            media presence on platforms familiar to developers, hosting a yearly
-            Natives in Tech conference, and building open source software that
-            Native peoples can use to cultivate healthy online communities.
+            aspiring and experienced technologists alike, creating a strong
+            social media presence on platforms familiar to technologists,
+            hosting a yearly Natives in Tech conference, and building open
+            source technology that Native peoples can use to cultivate healthy
+            online communities.
           </div>
 
           <div>
@@ -73,11 +76,12 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="flex flex-col mx-auto bg-gray-200 p-16 md:px-16 text-gray-800">
-        <p className="text-6xl mx-auto py-8 text-bold text-center">
-          Connect with us!
-        </p>
-        <div className="flex flex-row py-8 justify-around w-full md:w-7/12 mx-auto text-teal-500">
+      <div className="bg-gray-200 p-16 md:px-16 text-gray-800">
+        <p className="text-6xl py-8 text-bold text-center">Connect with us!</p>
+        <div
+          style={{ justifyItems: "center" }}
+          className="grid grid-flow-row grid-col-1 row-gap-12 lg:grid-flow-col lg:grid-row-1 py-8 text-teal-500"
+        >
           {[
             { Icon: FaSlackHash, url: "https://nativesintech.herokuapp.com/" },
             { Icon: FaDiscourse, url: "https://forum.nativesintech.org/" },
@@ -92,7 +96,10 @@ export default function Index() {
             },
           ].map(({ Icon, url }) => (
             <a href={url} key={url}>
-              <Icon className="h-16 w-16 lg:h-24 lg:w-24 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-125" />
+              <Icon
+                style={{ fontSize: 156 }}
+                className="self-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-125"
+              />
             </a>
           ))}
         </div>
@@ -106,7 +113,7 @@ export default function Index() {
         <h2 className="text-4xl font-bold mb-4 text-gray-800">
           Ask a question or leave a comment 💬
         </h2>
-        <p className="text-2xl text-gray-800">
+        <p className="text-2xl text-gray-800 leading-loose">
           We would love to hear from you! Feel free to send a message to{" "}
           <a className="text-teal-400" href="mailto:hello@nativesintech.org">
             hello@nativesintech.org

@@ -8,16 +8,29 @@ export function Header() {
   const router = useRouter();
 
   const routes = [
+    { title: "Home", route: "/" },
     { title: "About", route: "/about" },
     { title: "Awesome", route: "/awesome" },
-    { title: "Donations", route: "/donations" },
-    // { title: "Conference", route: "/conference" }, // Will implement in a later time
+    // { title: "Donations", route: "/donations" },
+    // { title: "Conference", route: "/conference" },
+    {
+      title: "Blog",
+      route: "https://blog.nativesintech.org",
+    },
+    {
+      title: "Forum",
+      route: "https://forum.nativesintech.org",
+    },
+    {
+      title: "Code",
+      route: "https://github.com/nativesintech/nativesintech.org",
+    },
   ];
 
   return (
     <>
       <header className="bg-white m-0">
-        <div className="flex flex-wrap md:flex-no-wrap items-center justify-between max-w-full m-0 py-8 px-16">
+        <div className="flex flex-wrap md:flex-no-wrap items-center justify-between max-w-full m-0 py-8 px-8 md:px-16">
           <div className="flex items-center">
             <Link href="/">
               <a>
@@ -30,7 +43,7 @@ export function Header() {
               </a>
             </Link>
           </div>
-          <div className="block md:hidden flex">
+          <div className="flex md:hidden">
             <HamburgerSqueeze
               className="z-40"
               isActive={isActive}
@@ -40,12 +53,23 @@ export function Header() {
           </div>
 
           <ul className="hidden md:flex flex-col md:flex-row md:items-center md:justify-center text-base w-full md:w-auto mr-0">
-            {routes
-              .map((navigationItem) => (
-                <li className="mt-3 md:mt-0 md:ml-6" key={navigationItem.title}>
+            {routes.map((navigationItem) => (
+              <li
+                className="mt-3 md:mt-0 md:ml-6 text-teal-400"
+                key={navigationItem.title}
+              >
+                {navigationItem.route.startsWith("https") ? (
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={navigationItem.route}
+                  >
+                    {navigationItem.title}
+                  </a>
+                ) : (
                   <Link href={navigationItem.route}>
                     <a
-                      className={`block ${
+                      className={`${
                         router.pathname === navigationItem.route
                           ? "text-gray-800"
                           : "text-teal-400"
@@ -54,26 +78,9 @@ export function Header() {
                       {navigationItem.title}
                     </a>
                   </Link>
-                </li>
-              ))
-              .concat(
-                ["blog", "forum"].map((subdomain) => {
-                  return (
-                    <li
-                      className="mt-3 md:mt-0 md:ml-6 text-teal-400 capitalize"
-                      key={subdomain}
-                    >
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={`https://${subdomain}.nativesintech.org`}
-                      >
-                        {subdomain}
-                      </a>
-                    </li>
-                  );
-                })
-              )}
+                )}
+              </li>
+            ))}
           </ul>
         </div>
       </header>
@@ -87,17 +94,28 @@ export function Header() {
               className="mt-3 md:mt-0 md:ml-6"
               key={navigationItem.title + "side"}
             >
-              <Link href={navigationItem.route}>
+              {navigationItem.route.startsWith("https") ? (
                 <a
-                  className={`block ml-4 text-2xl ${
-                    router.pathname === navigationItem.route
-                      ? "text-teal-400"
-                      : "text-white"
-                  }`}
+                  href={navigationItem.route}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block ml-4 text-2xl text-white"
                 >
                   {navigationItem.title}
                 </a>
-              </Link>
+              ) : (
+                <Link href={navigationItem.route}>
+                  <a
+                    className={`block ml-4 text-2xl ${
+                      router.pathname === navigationItem.route
+                        ? "text-teal-400"
+                        : "text-white"
+                    }`}
+                  >
+                    {navigationItem.title}
+                  </a>
+                </Link>
+              )}
             </li>
           ))}
         </ul>

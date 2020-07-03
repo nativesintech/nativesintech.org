@@ -9,15 +9,15 @@ export default function Conference() {
           {[
             {
               heading: `Natives in Tech Conf`,
-              body: `The Natives in Tech Conference brings together Native and non-Native developers to share projects that empower and support Native communties around the world.
-Natives in Tech seeks to encourage Native communties to use software development as a means to empower themselves while encoding a traditional worldview.`,
+              body: `The Natives in Tech Conference brings together Native and non-Native technologists to share projects that empower and support Native communities around the world.
+Natives in Tech seeks to encourage Native communities to use technology as a means to empower themselves while encoding a traditional worldview.`,
             },
             {
               heading: `Who is this conference for?
               `,
-              body: `Natives working in software development
+              body: `Natives working in technology
 
-Non-Natives developing software that empowers Native peoples
+Non-Natives developing technology that empowers Native peoples
 
 Individuals and organzations seeking to engage, learn about, and support Native communities`,
             },
