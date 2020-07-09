@@ -145,7 +145,7 @@ export default function Index() {
               </div>
               <div className="flex-auto">
                 <label
-                  htmlFor="name"
+                  htmlFor="email"
                   className="block uppercase tracking-wide text-gray-700 text-xs font-bold"
                 >
                   Email
@@ -163,17 +163,18 @@ export default function Index() {
             </div>
             <div>
               <label
-                htmlFor="name"
+                htmlFor="message"
                 className="block uppercase tracking-wide text-gray-700 text-xs font-bold"
               >
                 Message
               </label>
-              <input
+              <textarea
+                id="message"
                 style={{ textIndent: ".5rem" }}
                 name="message"
                 placeholder="Message"
                 className="input border border-gray-400 appearance-none rounded w-full my-2 pb-16 focus focus:shadow-outline active:outline-none active:border-indigo-600 text-xl p-1"
-              />
+              ></textarea>
             </div>
           </div>
           <button
