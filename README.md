@@ -1,4 +1,4 @@
-![Natives in Tech](./public/computer.svg)
+<img src="./public/computer.svg" width="100%"/>
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a2eead8b-3d03-4de5-b744-299149b6de59/deploy-status)](https://app.netlify.com/sites/natives-in-tech/deploys)
 [![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors)
 
