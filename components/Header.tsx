@@ -73,7 +73,7 @@ export function Header() {
                 ) : (
                   <Link href={navigationItem.route} passHref>
                     <a
-                      className={`${
+                      className={`hover:text-teal-500 ${
                         router.pathname === navigationItem.route
                           ? "text-teal-800"
                           : "text-teal-400"
