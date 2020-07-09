@@ -33,17 +33,18 @@ type Props = {
 
 export default function Awesome({ users }: Props) {
   return (
-    <Layout>
-      <div className="text-center bg-gray-200 py-24 px-8">
-        <h2 className="font-bold mb-3 text-6xl text-gray-800">
+    <Layout title="Natives in Tech - Awesome">
+      <section className="text-center bg-gray-200 py-24 px-8">
+        <h1 className="font-bold mb-3 text-6xl text-gray-800">
           Awesome Natives in Tech
-        </h2>
+        </h1>
         <p className="mb-6 text-gray-800 text-lg max-w-screen-md mx-auto">
           A list of Native and non-Native technologists that represent or serve
           Native communities
         </p>
-      </div>
-      <div className="p-8 flex flex-wrap justify-around mb-16">
+      </section>
+
+      <section className="p-8 flex flex-wrap justify-around mb-16">
         {users.map((user) => {
           return (
             <div key={user.node.login} className="shadow-lg rounded-lg mt-16">
@@ -70,7 +71,7 @@ export default function Awesome({ users }: Props) {
             </div>
           );
         })}
-      </div>
+      </section>
     </Layout>
   );
 }
