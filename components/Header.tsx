@@ -32,12 +32,16 @@ export function Header() {
       <header className="bg-white m-0">
         <div className="flex flex-wrap md:flex-no-wrap items-center justify-between max-w-full m-0 py-8 px-8 md:px-16">
           <div className="flex items-center">
-            <Link href="/">
+            <Link href="/" passHref>
               <a>
-                <img src="computer.svg" className="w-16 mr-4" />{" "}
+                <img
+                  alt="Native in Tech Logo. Mac computer with a feather in the middle."
+                  src="computer.svg"
+                  className="w-16 mr-4"
+                />
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <a className="font-bold text-teal-400 text-2xl hidden md:block lg:block">
                 Natives In Tech
               </a>
@@ -55,7 +59,7 @@ export function Header() {
           <ul className="hidden md:flex flex-col md:flex-row md:items-center md:justify-center text-base w-full md:w-auto mr-0">
             {routes.map((navigationItem) => (
               <li
-                className="mt-3 md:mt-0 md:ml-6 text-teal-400"
+                className="mt-3 md:mt-0 md:ml-6 text-teal-400 hover:text-teal-500"
                 key={navigationItem.title}
               >
                 {navigationItem.route.startsWith("https") ? (
@@ -67,11 +71,11 @@ export function Header() {
                     {navigationItem.title}
                   </a>
                 ) : (
-                  <Link href={navigationItem.route}>
+                  <Link href={navigationItem.route} passHref>
                     <a
                       className={`${
                         router.pathname === navigationItem.route
-                          ? "text-gray-800"
+                          ? "text-teal-800"
                           : "text-teal-400"
                       } `}
                     >
@@ -99,12 +103,12 @@ export function Header() {
                   href={navigationItem.route}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block ml-4 text-2xl text-white"
+                  className="block ml-4 text-2xl text-white hover:text-teal-500"
                 >
                   {navigationItem.title}
                 </a>
               ) : (
-                <Link href={navigationItem.route}>
+                <Link href={navigationItem.route} passHref>
                   <a
                     className={`block ml-4 text-2xl ${
                       router.pathname === navigationItem.route

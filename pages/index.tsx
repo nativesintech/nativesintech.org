@@ -37,19 +37,20 @@ export default function Index() {
   }, [typedRef.current]);
 
   return (
-    <Layout>
-      <div className="grid grid-cols-1 grid-rows-2 md:grid-cols-3 md:grid-rows-1 px-8 md:p-16 bg-gray-200 py-16">
-        <h2 className="col-span-2 text-5xl lg:text-6xl text-gray-800 text-center self-center">
+    <Layout title="Natives in Tech - Home">
+      <section className="grid grid-cols-1 grid-rows-2 md:grid-cols-3 md:grid-rows-1 px-8 md:p-16 bg-gray-200 py-16">
+        <h1 className="col-span-2 text-5xl lg:text-6xl text-gray-800 text-center self-center">
           Supporting technologists serving Native communities
-        </h2>
+        </h1>
         <img
+          alt="Natives in Tech Logo. Mac computer with feather in middle."
           src="computer.svg"
           className="col-span-1 self-center w-64"
           style={{ justifySelf: "center" }}
         />
-      </div>
+      </section>
 
-      <div className="p-8 md:p-16 max-w-screen-lg mx-auto">
+      <section className="p-8 md:p-16 max-w-screen-lg mx-auto">
         <div style={{ height: 30 }}>
           <span className="typed text-2xl font-bold" ref={typedRef} />
         </div>
@@ -74,10 +75,10 @@ export default function Index() {
             individual donations.
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="bg-gray-200 p-16 md:px-16 text-gray-800">
-        <p className="text-6xl py-8 text-bold text-center">Connect with us!</p>
+      <section className="bg-gray-200 p-16 md:px-16 text-gray-800">
+        <p className="text-6xl py-8 text-bold text-center">Connect with Us!</p>
         <div
           style={{ justifyItems: "center" }}
           className="grid grid-flow-row grid-col-1 row-gap-12 lg:grid-flow-col lg:grid-row-1 py-8 text-teal-500"
@@ -103,54 +104,87 @@ export default function Index() {
             </a>
           ))}
         </div>
-      </div>
+      </section>
 
-      <form
-        action="https://formspree.io/hello@nativesintech.org"
-        method="POST"
-        className="max-w-screen-md bg-white p-8 md:p-16"
-      >
-        <h2 className="text-4xl font-bold mb-4 text-gray-800">
-          Ask a question or leave a comment 💬
-        </h2>
-        <p className="text-2xl text-gray-800 leading-loose">
-          We would love to hear from you! Feel free to send a message to{" "}
-          <a className="text-teal-400" href="mailto:hello@nativesintech.org">
-            hello@nativesintech.org
-          </a>{" "}
-          or drop us a line below.
-        </p>
-        <div className="mb-4">
-          <div className="flex flex-col md:flex-row">
-            <input
-              className="input border border-gray-400 appearance-none rounded my-2 md:mr-2 focus focus:shadow-outline active:outline-none active:border-indigo-600 text-xl p-1 flex-auto"
-              style={{ textIndent: ".5rem" }}
-              name="name"
-              placeholder="Name"
-            />
-            <input
-              className="input border border-gray-400 appearance-none rounded my-2 focus focus:shadow-outline  active:outline-none active:border-indigo-600 text-xl p-1 flex-auto"
-              style={{ textIndent: ".5rem" }}
-              type="email"
-              name="_replyto"
-              placeholder="Email"
-            />
-          </div>
-          <input
-            className="input border border-gray-400 appearance-none rounded w-full my-2 pb-16 focus focus:shadow-outline active:outline-none active:border-indigo-600 text-xl p-1"
-            style={{ textIndent: ".5rem" }}
-            name="message"
-            placeholder="Message"
-          />
-        </div>
-        <button
-          type="submit"
-          value="Send"
-          className="bg-teal-500 text-white font-bold py-3 px-6 rounded hover:bg-white hover:text-teal-500 border-2 border-teal-500"
+      <section>
+        <form
+          action="https://formspree.io/hello@nativesintech.org"
+          method="POST"
+          className="max-w-screen-md bg-white p-8 md:p-16"
         >
-          SUBMIT
-        </button>
-      </form>
+          <h2 className="text-4xl font-bold mb-4 text-gray-800">
+            Ask a question or leave a comment 💬
+          </h2>
+          <p className="text-2xl text-gray-800 leading-loose">
+            We would love to hear from you! Feel free to send a message to{" "}
+            <a
+              className="text-teal-400 hover:text-teal-500"
+              href="mailto:hello@nativesintech.org"
+            >
+              hello@nativesintech.org
+            </a>{" "}
+            or drop us a line below.
+          </p>
+          <div className="mb-4 mt-6">
+            <div className="flex flex-col md:flex-row">
+              <div className="flex-auto md:mr-2">
+                <label
+                  htmlFor="name"
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold"
+                >
+                  Name
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  style={{ textIndent: ".5rem" }}
+                  name="name"
+                  placeholder="Name"
+                  className="input border border-gray-400 appearance-none rounded my-2 focus focus:shadow-outline active:outline-none active:border-indigo-600 text-xl p-1 w-full"
+                />
+              </div>
+              <div className="flex-auto">
+                <label
+                  htmlFor="name"
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold"
+                >
+                  Email
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  autoComplete="email"
+                  style={{ textIndent: ".5rem" }}
+                  name="_replyto"
+                  placeholder="Email"
+                  className="input border border-gray-400 appearance-none rounded my-2 focus focus:shadow-outline  active:outline-none active:border-indigo-600 text-xl p-1 w-full"
+                />
+              </div>
+            </div>
+            <div>
+              <label
+                htmlFor="name"
+                className="block uppercase tracking-wide text-gray-700 text-xs font-bold"
+              >
+                Message
+              </label>
+              <input
+                style={{ textIndent: ".5rem" }}
+                name="message"
+                placeholder="Message"
+                className="input border border-gray-400 appearance-none rounded w-full my-2 pb-16 focus focus:shadow-outline active:outline-none active:border-indigo-600 text-xl p-1"
+              />
+            </div>
+          </div>
+          <button
+            type="submit"
+            value="Send"
+            className="bg-teal-500 text-white font-bold py-3 px-6 rounded hover:bg-white hover:text-teal-500 border-2 border-teal-500"
+          >
+            SUBMIT
+          </button>
+        </form>
+      </section>
     </Layout>
   );
 }

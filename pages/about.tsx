@@ -3,9 +3,9 @@ import { Layout } from "../components/Layout";
 
 export default function About() {
   return (
-    <Layout>
-      <div className="max-w-screen-md mx-auto leading-loose pb-24">
-        <h2 className="font-bold mb-3 text-6xl text-gray-800">Why?</h2>
+    <Layout title="Natives in Tech - About">
+      <section className="max-w-screen-md mx-auto leading-loose pb-24">
+        <h1 className="font-bold mb-3 text-6xl text-gray-800">About</h1>
         <p className="mb-6 text-gray-800 text-xl">
           In recent years, open source development has exploded and a new
           generation of technology has captivated the minds of users from all
@@ -34,7 +34,7 @@ export default function About() {
           community of technologists that have the power to shape the online
           future of the communities they serve.
         </p>
-      </div>
+      </section>
     </Layout>
   );
 }

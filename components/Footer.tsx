@@ -13,13 +13,12 @@ export function Footer() {
       </div>
       <a
         className="row-span-1 col-span-1"
+        target="_blank"
+        rel="noopener noreferrer"
         href="https://www.netlify.com"
         style={{ justifySelf: "end" }}
       >
-        <img
-          src="https://www.netlify.com/img/global/badges/netlify-color-bg.svg"
-          alt="Deploys by Netlify"
-        />
+        <img src="/netlify.svg" alt="Deploys by Netlify" />
       </a>
     </footer>
   );
