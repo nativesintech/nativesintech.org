@@ -84,19 +84,33 @@ export default function Index() {
           className="grid grid-flow-row grid-col-1 row-gap-12 lg:grid-flow-col lg:grid-row-1 py-8 text-teal-500"
         >
           {[
-            { Icon: FaSlackHash, url: "https://nativesintech.herokuapp.com/" },
-            { Icon: FaDiscourse, url: "https://forum.nativesintech.org/" },
-            { Icon: FaGithub, url: "https://github.com/nativesintech" },
+            {
+              Icon: FaSlackHash,
+              url: "https://nativesintech.herokuapp.com/",
+              label: "Slack Logo",
+            },
+            {
+              Icon: FaDiscourse,
+              url: "https://forum.nativesintech.org/",
+              label: "Discourse Logo",
+            },
+            {
+              Icon: FaGithub,
+              url: "https://github.com/nativesintech",
+              label: "GitHub Logo",
+            },
             {
               Icon: AiFillTwitterCircle,
               url: "https://twitter.com/nativesintech",
+              label: "Twitter Logo",
             },
             {
               Icon: FaLinkedin,
               url: "https://www.linkedin.com/company/natives-in-tech",
+              label: "LinkedIn Logo",
             },
-          ].map(({ Icon, url }) => (
-            <a href={url} key={url}>
+          ].map(({ Icon, url, label }) => (
+            <a href={url} key={url} aria-label={label}>
               <Icon
                 style={{ fontSize: 156 }}
                 className="self-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-125"
