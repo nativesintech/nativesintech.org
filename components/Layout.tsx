@@ -23,6 +23,17 @@ export function Layout(props: Props) {
           content="natives in tech, natives, indigenous, tech, software development, open source"
         />
 
+        <meta name="twitter:title" content={props.title} />
+        <meta
+          name="twitter:description"
+          content="Natives in Tech is a coalition of Native and non-Native developers who seek to empower and support Native communities around the world through open source technology."
+        />
+        <meta
+          name="twitter:image"
+          content="https://nativesintech.org/computer.svg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+
         <meta property="og:title" content={props.title} />
         <meta
           property="og:description"
@@ -33,7 +44,6 @@ export function Layout(props: Props) {
           property="og:image"
           content="https://nativesintech.org/computer.svg"
         />
-        <meta name="twitter:card" content="summary_large_image" />
 
         <link
           rel="apple-touch-icon"
