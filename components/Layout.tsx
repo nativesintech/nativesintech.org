@@ -32,7 +32,6 @@ export function Layout(props: Props) {
           name="twitter:image"
           content="https://nativesintech.org/computer.svg"
         />
-        <meta name="twitter:card" content="summary_large_image" />
 
         <meta property="og:title" content={props.title} />
         <meta
