@@ -1,9 +1,11 @@
 import React from "react";
 import { Layout } from "../components/Layout";
+import { NextSeo } from "next-seo";
 
 export default function About() {
   return (
-    <Layout title="Natives in Tech - About">
+    <Layout>
+      <NextSeo title="Natives in Tech - About" />
       <section className="max-w-screen-md mx-auto leading-loose pb-24">
         <h1 className="font-bold mb-3 text-6xl text-gray-800">About</h1>
         <p className="mb-6 text-gray-800 text-xl">

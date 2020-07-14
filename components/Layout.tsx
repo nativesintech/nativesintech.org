@@ -3,7 +3,6 @@ import { Footer } from "./Footer";
 
 type Props = {
   children: React.ReactNode;
-  title: string;
 };
 
 export function Layout(props: Props) {

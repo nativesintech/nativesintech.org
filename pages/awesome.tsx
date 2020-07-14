@@ -34,12 +34,8 @@ type Props = {
 
 export default function Awesome({ users }: Props) {
   return (
-    <Layout title="Natives in Tech - Awesome">
-      <NextSeo
-        openGraph={{
-          title: "Natives in Tech - Awesome",
-        }}
-      />
+    <Layout>
+      <NextSeo title="Natives in Tech - Awesome" />
       <section className="text-center bg-gray-200 py-24 px-8">
         <h1 className="font-bold mb-3 text-6xl text-gray-800">
           Awesome Natives in Tech
