@@ -4,7 +4,10 @@ import { NextSeo } from "next-seo";
 export default function Donate() {
   return (
     <Layout>
-      <NextSeo title="Natives in Tech - Donations" />
+      <NextSeo
+        title="Natives in Tech - Donate"
+        description="Donate to Natives in Tech, Inc."
+      />
       <section className="max-w-screen-md mx-auto leading-loose pb-24 px-8">
         <h1 className="font-bold mb-3 text-6xl text-gray-800">Donate</h1>
         <p className="mb-6 text-gray-800 text-xl">
