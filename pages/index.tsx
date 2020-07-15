@@ -113,10 +113,7 @@ export default function Index() {
             },
           ].map(({ Icon, url, label }) => (
             <a href={url} key={url} aria-label={label}>
-              <Icon
-                style={{ fontSize: 156 }}
-                className="self-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-125"
-              />
+              <Icon className="self-center transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-125 icons" />
             </a>
           ))}
         </div>

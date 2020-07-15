@@ -6,7 +6,7 @@ export default function About() {
   return (
     <Layout>
       <NextSeo title="Natives in Tech - About" />
-      <section className="max-w-screen-md mx-auto leading-loose pb-24">
+      <section className="max-w-screen-md mx-auto pb-24 px-8">
         <h1 className="font-bold mb-3 text-6xl text-gray-800">About</h1>
         <p className="mb-6 text-gray-800 prose prose-lg">
           In recent years, open source development has exploded and a new
