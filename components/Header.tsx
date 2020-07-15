@@ -11,7 +11,7 @@ export function Header() {
     { title: "Home", route: "/" },
     { title: "About", route: "/about" },
     { title: "Awesome", route: "/awesome" },
-    // { title: "Donations", route: "/donations" },
+    { title: "Donate", route: "/donate" },
     // { title: "Conference", route: "/conference" },
     {
       title: "Blog",
@@ -42,7 +42,7 @@ export function Header() {
               </a>
             </Link>
             <Link href="/" passHref>
-              <a className="font-bold text-teal-400 text-2xl hidden md:block lg:block">
+              <a className="font-bold text-teal-400 text-2xl hidden md:hidden lg:block">
                 Natives In Tech
               </a>
             </Link>

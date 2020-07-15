@@ -22,3 +22,13 @@ body {
 .typed-cursor {
   font-size: 24px;
 }
+
+.icons {
+  font-size: 98px;
+}
+
+@media only screen and (min-width: 786px) {
+  .icons {
+    font-size: 132px;
+  }
+}
