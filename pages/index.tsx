@@ -56,7 +56,7 @@ export default function Index() {
         <div style={{ height: 30 }}>
           <span className="typed text-2xl font-bold" ref={typedRef} />
         </div>
-        <div className="text-2xl leading-loose">
+        <div className="prose prose-2xl">
           <div className="py-4">
             Welcome 👋.{" "}
             <span className="text-teal-500 font-bold">
@@ -131,7 +131,7 @@ export default function Index() {
           <h2 className="text-4xl font-bold mb-4 text-gray-800">
             Ask a question or leave a comment 💬
           </h2>
-          <p className="text-2xl text-gray-800 leading-loose">
+          <p className="text-gray-800 prose prose-2xl">
             We would love to hear from you! Feel free to send a message to{" "}
             <a
               className="text-teal-400 hover:text-teal-500"
