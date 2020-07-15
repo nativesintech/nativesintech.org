@@ -9,6 +9,7 @@ module.exports = {
       "/": { page: "/" },
       "/awesome": { page: "/awesome" },
       "/about": { page: "/about" },
+      "/donate": { page: "/donate" },
     };
   },
 };
