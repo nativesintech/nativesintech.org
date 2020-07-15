@@ -15,7 +15,8 @@ function MyApp({ Component, pageProps }) {
             "Natives in Tech is a coalition of Native and non-Native developers who seek to empower and support Native communities around the world through open source technology.",
           images: [
             {
-              url: "https://nativesintech.org/computer.svg",
+              url: "https://nativesintech.org/computer.png",
+              alt: "Mac computer with feather on screen",
             },
           ],
           site_name: "Natives in Tech",
