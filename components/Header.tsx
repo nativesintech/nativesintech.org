@@ -11,7 +11,7 @@ export function Header() {
     { title: "Home", route: "/" },
     { title: "About", route: "/about" },
     { title: "Awesome", route: "/awesome" },
-    // { title: "Donations", route: "/donations" },
+    { title: "Donate", route: "/donate" },
     // { title: "Conference", route: "/conference" },
     {
       title: "Blog",
