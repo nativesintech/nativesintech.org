@@ -1,11 +1,13 @@
 import { Layout } from "../components/Layout";
 import { Newsletter } from "../components/Newsletter";
-import { NextSeo } from "next-seo";
+import Head from "next/head";
 
 export default function Conference() {
   return (
     <Layout>
-      <NextSeo title="Natives in Tech - Conference" />
+      <Head>
+        <title>Natives in Tech Conf</title>
+      </Head>
       <div className="flex flex-col">
         <div className="lg:w-1/2 md:w-3/4 w-10/12 mx-auto">
           {[

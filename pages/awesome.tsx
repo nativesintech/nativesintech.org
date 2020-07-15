@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout } from "../components/Layout";
 import { GetStaticProps } from "next";
-import { NextSeo } from "next-seo";
+import Head from "next/head";
 
 type User = {
   name: string;
@@ -35,7 +35,9 @@ type Props = {
 export default function Awesome({ users }: Props) {
   return (
     <Layout>
-      <NextSeo title="Natives in Tech - Awesome" />
+      <Head>
+        <title>Natives in Tech - Awesome</title>
+      </Head>
       <section className="text-center bg-gray-200 py-24 px-8">
         <h1 className="font-bold mb-3 text-6xl text-gray-800">
           Awesome Natives in Tech

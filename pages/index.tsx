@@ -3,7 +3,7 @@ import Typed from "typed.js";
 import { Layout } from "../components/Layout";
 import { FaSlackHash, FaDiscourse, FaGithub, FaLinkedin } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
-import { NextSeo } from "next-seo";
+import Head from "next/head";
 
 export default function Index() {
   const typedRef = React.createRef<HTMLDivElement>();
@@ -39,7 +39,9 @@ export default function Index() {
 
   return (
     <Layout>
-      <NextSeo title="Natives in Tech - Home" />
+      <Head>
+        <title>Natives in Tech - Home</title>
+      </Head>
       <section className="grid grid-cols-1 grid-rows-2 md:grid-cols-3 md:grid-rows-1 px-8 md:p-16 bg-gray-200 py-16">
         <h1 className="col-span-2 text-5xl lg:text-6xl text-gray-800 text-center self-center">
           Supporting technologists serving Native communities

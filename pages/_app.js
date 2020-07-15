@@ -1,35 +1,7 @@
 import "../styles/index.css";
-import { DefaultSeo } from "next-seo";
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <DefaultSeo
-        title="Natives in Tech"
-        description="Natives in Tech is a coalition of Native and non-Native developers who seek to empower and support Native communities around the world through open source technology."
-        openGraph={{
-          title: "Natives in Tech",
-          type: "website",
-          url: "https://nativesintech.org",
-          description:
-            "Natives in Tech is a coalition of Native and non-Native developers who seek to empower and support Native communities around the world through open source technology.",
-          images: [
-            {
-              url: "https://nativesintech.org/computer.png",
-              alt: "Mac computer with feather on screen",
-            },
-          ],
-          site_name: "Natives in Tech",
-        }}
-        twitter={{
-          site: "@nativesintech",
-          handle: "@nativesintech",
-          cardType: "summary_large_image",
-        }}
-      />
-      <Component {...pageProps} />
-    </>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
