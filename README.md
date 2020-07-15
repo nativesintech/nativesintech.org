@@ -28,11 +28,7 @@ Running the application locally requires a few steps.
 
 ## Road Map 🗺
 
-- [ ] A page for the Natives in Tech conference
-- [ ] A page to make donations
-- [ ] A page for users to nominate others for Awesome Natives in Tech
-- [ ] Build out a test suite to test the site
-- [ ] Make this site awesome in anyway possible 😂
+Check out the [projects](https://github.com/nativesintech/nativesintech.org/projects) section to see what future work we have planned.
 
 ## Contributing 📝
 
