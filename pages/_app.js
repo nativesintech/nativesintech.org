@@ -1,6 +1,15 @@
 import "../styles/index.css";
 import Head from "next/head";
 
+const isSSR = () => typeof window === "undefined";
+
+if (process.env.NODE_ENV !== "production" && !isSSR()) {
+  const React = require("react");
+  const DOM = require("react-dom");
+  const axe = require("react-axe");
+  axe(React, DOM, 1000);
+}
+
 function MyApp({ Component, pageProps }) {
   return (
     <>

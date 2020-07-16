@@ -39,6 +39,7 @@
     "babel-loader": "8.1.0",
     "fork-ts-checker-webpack-plugin": "5.0.7",
     "postcss-preset-env": "6.7.0",
+    "react-axe": "3.5.3",
     "react-is": "16.13.1",
     "ts-loader": "8.0.0",
     "typescript": "3.9.6"
