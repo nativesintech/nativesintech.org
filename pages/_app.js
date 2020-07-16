@@ -1,6 +1,8 @@
 import "../styles/index.css";
 import Head from "next/head";
 
+/* Uncomment to test locally
+
 const isSSR = () => typeof window === "undefined";
 
 if (process.env.NODE_ENV !== "production" && !isSSR()) {
@@ -9,6 +11,7 @@ if (process.env.NODE_ENV !== "production" && !isSSR()) {
   const axe = require("react-axe");
   axe(React, DOM, 1000);
 }
+*/
 
 function MyApp({ Component, pageProps }) {
   return (
