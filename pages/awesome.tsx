@@ -50,27 +50,31 @@ export default function Awesome({ users }: Props) {
 
       <section className="p-8 flex flex-wrap justify-around mb-16">
         {users.map((user) => {
+          console.log({ user });
+          const jobAndLocation = [user.node.company, user.node.location]
+            .filter((v) => typeof v === "string" && v.length > 0)
+            .join(" | ");
+
           return (
-            <div key={user.node.login} className="shadow-lg rounded-lg mt-16">
+            <div
+              key={user.node.login}
+              className="shadow-lg rounded-lg mt-16"
+              style={{ minWidth: 325, maxWidth: 325 }}
+            >
               <div
                 className="bg-cover rounded-lg rounded-b-none"
                 style={{
                   backgroundImage: `url(${user.node.avatarUrl})`,
-                  height: 384,
-                  width: 384,
+                  backgroundSize: "cover",
+                  height: 325,
                 }}
               />
-              <div className="p-4" style={{ maxWidth: 384 }}>
+              <div className="p-4">
                 <div>
-                  <span className="text-xl"> {user.node.name}</span>
-                  <span className="ml-2">
-                    {user.node.company ? `(${user.node.company})` : ""}
-                  </span>
+                  <span className="text-xl uppercase"> {user.node.name}</span>
                 </div>
-                <div className="text-sm mb-2">
-                  <span className="">{user.node.location}</span>
-                </div>
-                <div className="italic">{user.node.bio}</div>
+                <div className="mb-2">{jobAndLocation}</div>
+                <div>{user.node.bio}</div>
               </div>
             </div>
           );
