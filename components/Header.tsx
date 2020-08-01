@@ -31,7 +31,7 @@ export function Header() {
     <>
       <header className="bg-white m-0">
         <div className="flex flex-wrap md:flex-no-wrap items-center justify-between max-w-full m-0 py-8 px-8 md:px-16">
-          <div className="flex items-center">
+          <div className="flex items-center" style={{ minHeight: 64 }}>
             <Link href="/" passHref>
               <a>
                 <img
