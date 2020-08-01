@@ -50,7 +50,7 @@ export default function Index() {
           alt="Natives in Tech Logo. Mac computer with feather in middle."
           src="computer.svg"
           className="col-span-1 self-center w-64"
-          style={{ justifySelf: "center" }}
+          style={{ justifySelf: "center", minHeight: 256 }}
         />
       </section>
 
