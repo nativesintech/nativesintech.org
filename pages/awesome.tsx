@@ -4,14 +4,14 @@ import { GetStaticProps } from "next";
 import Head from "next/head";
 
 type User = {
-  name: string;
-  bio: string;
-  avatarUrl: string;
-  email: string;
-  company: string;
-  websiteUrl: string;
-  location: string;
-  login: string;
+  name: string | null;
+  bio: string | null;
+  avatarUrl: string | null;
+  email: string | null;
+  company: string | null;
+  websiteUrl: string | null;
+  location: string | null;
+  login: string | null;
 };
 
 type Node = { node: User };
@@ -50,14 +50,13 @@ export default function Awesome({ users }: Props) {
 
       <section className="p-8 flex flex-wrap justify-around mb-16">
         {users.map((user) => {
-          console.log({ user });
           const jobAndLocation = [user.node.company, user.node.location]
             .filter((v) => typeof v === "string" && v.length > 0)
             .join(" | ");
 
           return (
             <div
-              key={user.node.login}
+              key={user.node?.login ?? "user-key"}
               className="shadow-lg rounded-lg mt-16"
               style={{ minWidth: 325, maxWidth: 325 }}
             >

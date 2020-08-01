@@ -15,19 +15,19 @@
   "license": "MIT",
   "dependencies": {
     "@tailwindcss/typography": "0.2.0",
-    "next": "9.4.4",
+    "next": "9.5.1",
     "react": "16.13.1",
     "react-animated-burgers": "1.2.8",
     "react-dom": "16.13.1",
     "react-icons": "3.10.0",
     "styled-components": "5.1.1",
-    "tailwindcss": "1.5.1",
+    "tailwindcss": "1.6.0",
     "typed.js": "2.0.11"
   },
   "devDependencies": {
-    "@babel/core": "7.10.5",
+    "@babel/core": "7.11.0",
     "@babel/plugin-transform-react-jsx": "7.10.4",
-    "@mdx-js/loader": "1.6.11",
+    "@mdx-js/loader": "1.6.16",
     "@storybook/addon-actions": "5.3.19",
     "@storybook/addon-docs": "5.3.19",
     "@storybook/addon-links": "5.3.19",
@@ -35,13 +35,13 @@
     "@storybook/preset-typescript": "3.0.0",
     "@storybook/react": "5.3.19",
     "@storybook/source-loader": "5.3.19",
-    "autoprefixer": "9.8.5",
+    "autoprefixer": "9.8.6",
     "babel-loader": "8.1.0",
-    "fork-ts-checker-webpack-plugin": "5.0.7",
+    "fork-ts-checker-webpack-plugin": "5.0.13",
     "postcss-preset-env": "6.7.0",
     "react-axe": "3.5.3",
     "react-is": "16.13.1",
-    "ts-loader": "8.0.1",
+    "ts-loader": "8.0.2",
     "typescript": "3.9.7"
   }
 }
