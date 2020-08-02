@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="title"
-          content="Supporting technologists serving Native communities"
+          content="Native technologists supporting Native communities"
         />
         <meta
           name="description"
@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="og:url" content="https://nativesintech.org/" />
         <meta
           property="og:title"
-          content="Supporting technologists serving Native communities"
+          content="Native technologists supporting Native communities"
         />
         <meta
           property="og:description"
@@ -48,7 +48,7 @@ function MyApp({ Component, pageProps }) {
         <meta property="twitter:url" content="https://nativesintech.org/" />
         <meta
           property="twitter:title"
-          content="Supporting technologists serving Native communities"
+          content="Native technologists supporting Native communities"
         />
         <meta
           property="twitter:description"

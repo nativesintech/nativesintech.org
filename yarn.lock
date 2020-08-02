@@ -4517,6 +4517,11 @@ data-uri-to-buffer@3.0.0:
   dependencies:
     buffer-from "^1.1.1"
 
+date-fns@^2.9.0:
+  version "2.15.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.15.0.tgz#424de6b3778e4e69d3ff27046ec136af58ae5d5f"
+  integrity sha512-ZCPzAMJZn3rNUvvQIMlXhDr4A+Ar07eLeGsGREoWU19a3Pqf5oYa+ccd+B3F6XVtQY6HANMFdOQ8A+ipFnvJdQ==
+
 de-indent@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/de-indent/-/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"
@@ -7708,6 +7713,13 @@ next@9.5.1:
     web-vitals "0.2.1"
     webpack "4.44.0"
     webpack-sources "1.4.3"
+
+nextjs-sitemap-generator@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/nextjs-sitemap-generator/-/nextjs-sitemap-generator-1.0.0.tgz#88227fea24a055f0d9031bfe4ce303bf537b24b1"
+  integrity sha512-4M5nC2FA1Mf1sDDPQ+a1OJB5iFXjRUuhfQ+V9wVEl8ydzV2jQU6j0lABy+4cHm6KPmQr7ikq3JwOxusbB9nK1w==
+  dependencies:
+    date-fns "^2.9.0"
 
 nice-try@^1.0.4:
   version "1.0.5"

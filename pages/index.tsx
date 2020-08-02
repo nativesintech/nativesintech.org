@@ -44,7 +44,7 @@ export default function Index() {
       </Head>
       <section className="grid grid-cols-1 grid-rows-2 md:grid-cols-3 md:grid-rows-1 px-8 md:p-16 bg-gray-200 py-16">
         <h1 className="col-span-2 text-5xl lg:text-6xl text-gray-800 text-center self-center">
-          Supporting technologists serving Native communities
+          Native technologists supporting Native communities
         </h1>
         <img
           alt="Natives in Tech Logo. Mac computer with feather in middle."

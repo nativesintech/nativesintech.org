@@ -43,8 +43,8 @@ export default function Awesome({ users }: Props) {
           Awesome Natives in Tech
         </h1>
         <p className="mb-6 text-gray-800 text-lg max-w-screen-md mx-auto">
-          A list of Native and non-Native technologists that represent or serve
-          Native communities
+          A list of Native technologists that represent or serve Native
+          communities
         </p>
       </section>
 

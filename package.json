@@ -38,6 +38,7 @@
     "autoprefixer": "9.8.6",
     "babel-loader": "8.1.0",
     "fork-ts-checker-webpack-plugin": "5.0.13",
+    "nextjs-sitemap-generator": "1.0.0",
     "postcss-preset-env": "6.7.0",
     "react-axe": "3.5.3",
     "react-is": "16.13.1",
