@@ -38,7 +38,7 @@ export default function Awesome({ users }: Props) {
       <Head>
         <title>Natives in Tech - Awesome</title>
       </Head>
-      <section className="text-center bg-gray-200 py-24 px-8">
+      <section className="text-center bg-gray-200 py-24 px-4 md:px-8">
         <h1 className="font-bold mb-3 text-6xl text-gray-800">
           Awesome Natives in Tech
         </h1>
@@ -48,7 +48,12 @@ export default function Awesome({ users }: Props) {
         </p>
       </section>
 
-      <section className="p-8 flex flex-wrap justify-around mb-16">
+      <section
+        className="p-4 md:p-8 grid gap-4 md:gap-16"
+        style={{
+          gridTemplateColumns: "repeat(auto-fit, minmax(275px, 1fr))",
+        }}
+      >
         {users.map((user) => {
           const jobAndLocation = [user.node.company, user.node.location]
             .filter((v) => typeof v === "string" && v.length > 0)
@@ -58,14 +63,14 @@ export default function Awesome({ users }: Props) {
             <div
               key={user.node?.login ?? "user-key"}
               className="shadow-lg rounded-lg mt-16"
-              style={{ minWidth: 325, maxWidth: 325 }}
             >
               <div
                 className="bg-cover rounded-lg rounded-b-none"
                 style={{
                   backgroundImage: `url(${user.node.avatarUrl})`,
                   backgroundSize: "cover",
-                  height: 325,
+                  backgroundPosition: "center",
+                  height: 350,
                 }}
               />
               <div className="p-4">
