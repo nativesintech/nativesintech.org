@@ -32,3 +32,7 @@ import React from "react";
   * If the collaborators permission is "MAINTAIN" then that means that they
   * are an outside collaborator
  */
+
+export default function Collaborators() {
+  return <div>Collaborators</div>;
+}
