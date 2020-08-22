@@ -10,9 +10,8 @@ export function Header() {
   const routes = [
     { title: "Home", route: "/" },
     { title: "About", route: "/about" },
+    { title: "Conf", route: "/conference" },
     { title: "Awesome", route: "/awesome" },
-    { title: "Donate", route: "/donate" },
-    // { title: "Conference", route: "/conference" },
     {
       title: "Blog",
       route: "https://blog.nativesintech.org",
@@ -21,6 +20,7 @@ export function Header() {
       title: "Forum",
       route: "https://forum.nativesintech.org",
     },
+    { title: "Donate", route: "/donate" },
     {
       title: "Code",
       route: "https://github.com/nativesintech/nativesintech.org",
