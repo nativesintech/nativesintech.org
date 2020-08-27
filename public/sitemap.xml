@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-      <url>
-            <loc>https://nativesintech.org/</loc>
-
-
-            <lastmod>2020-08-02</lastmod>
-      </url>
-      <url>
-            <loc>https://nativesintech.org/awesome</loc>
-
-
-            <lastmod>2020-08-02</lastmod>
-      </url>
-      <url>
-            <loc>https://nativesintech.org/about</loc>
-
-
-            <lastmod>2020-08-02</lastmod>
-      </url>
-      <url>
-            <loc>https://nativesintech.org/donate</loc>
-
-
-            <lastmod>2020-08-02</lastmod>
-      </url>
-</urlset>
+      <urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" 
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+      xmlns:xhtml="http://www.w3.org/1999/xhtml">
+      <url><loc>https://nativesintech.org/</loc>
+                
+                
+                
+                <lastmod>2020-08-26</lastmod>
+                </url><url><loc>https://nativesintech.org/awesome</loc>
+                
+                
+                
+                <lastmod>2020-08-26</lastmod>
+                </url><url><loc>https://nativesintech.org/about</loc>
+                
+                
+                
+                <lastmod>2020-08-26</lastmod>
+                </url><url><loc>https://nativesintech.org/donate</loc>
+                
+                
+                
+                <lastmod>2020-08-26</lastmod>
+                </url><url><loc>https://nativesintech.org/conference</loc>
+                
+                
+                
+                <lastmod>2020-08-26</lastmod>
+                </url></urlset>

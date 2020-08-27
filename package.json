@@ -10,6 +10,7 @@
     "deploy": "yarn run build && yarn run export",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
+    "sitemap": "rm ./public/sitemap.xml && node siteMapGenerator.js",
     "build-storybook": "build-storybook"
   },
   "license": "MIT",
