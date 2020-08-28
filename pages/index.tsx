@@ -4,6 +4,7 @@ import { Layout } from "../components/Layout";
 import { FaSlackHash, FaDiscourse, FaGithub, FaLinkedin } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import Head from "next/head";
+import { assets } from "../helpers/assets";
 
 export default function Index() {
   const typedRef = React.createRef<HTMLDivElement>();
@@ -40,15 +41,15 @@ export default function Index() {
   return (
     <Layout>
       <Head>
-        <title>Natives in Tech - Home</title>
+        <title>Natives technologists supporting Native communities</title>
       </Head>
       <section className="grid grid-cols-1 grid-rows-2 md:grid-cols-3 md:grid-rows-1 px-8 md:p-16 bg-gray-200 py-16">
-        <h1 className="col-span-2 text-5xl lg:text-6xl text-gray-800 text-center self-center">
+        <h1 className="col-span-2 text-5xl lg:text-6xl text-center self-center">
           Native technologists supporting Native communities
         </h1>
         <img
-          alt="Natives in Tech Logo. Mac computer with feather in middle."
-          src="computer.svg"
+          alt={assets.logo.altText}
+          src={assets.logo.src}
           className="col-span-1 self-center w-64"
           style={{ justifySelf: "center", minHeight: 256 }}
         />
@@ -61,7 +62,7 @@ export default function Index() {
         <div className="prose prose-2xl">
           <div className="py-4">
             Welcome 👋.{" "}
-            <span className="text-teal-500 font-bold">
+            <span className="text-nit-dark font-bold">
               Natives in Tech is a coalition of Native and non-Native
               technologists whose goal is to support technology that reinforces
               Native beliefs, knowledge, and identity
@@ -81,11 +82,11 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="bg-gray-200 p-16 md:px-16 text-gray-800">
+      <section className="bg-gray-200 p-16 md:px-16">
         <p className="text-6xl py-8 text-bold text-center">Connect with Us!</p>
         <div
           style={{ justifyItems: "center" }}
-          className="grid grid-flow-row grid-col-1 row-gap-12 lg:grid-flow-col lg:grid-row-1 py-8 text-teal-500"
+          className="grid grid-flow-row grid-col-1 row-gap-12 lg:grid-flow-col lg:grid-row-1 py-8"
         >
           {[
             {
@@ -127,13 +128,13 @@ export default function Index() {
           method="POST"
           className="max-w-screen-md bg-white p-8 md:p-16"
         >
-          <h2 className="text-4xl font-bold mb-4 text-gray-800">
+          <h2 className="text-4xl font-bold mb-4">
             Ask a question or leave a comment 💬
           </h2>
-          <p className="text-gray-800 prose prose-2xl">
+          <p className="prose prose-2xl">
             We would love to hear from you! Feel free to send a message to{" "}
             <a
-              className="text-teal-400 hover:text-teal-500"
+              className="hover:text-nit-earth"
               href="mailto:hello@nativesintech.org"
             >
               hello@nativesintech.org
@@ -161,7 +162,7 @@ export default function Index() {
               <div className="flex-auto">
                 <label
                   htmlFor="email"
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-bold"
+                  className="block uppercase tracking-wide text-xs font-bold"
                 >
                   Email
                 </label>
@@ -195,7 +196,7 @@ export default function Index() {
           <button
             type="submit"
             value="Send"
-            className="bg-teal-500 text-white font-bold py-3 px-6 rounded hover:bg-white hover:text-teal-500 border-2 border-teal-500"
+            className="text-nit-earth font-bold py-3 px-6 rounded hover:bg-white border-2 border-nit-earth"
           >
             SUBMIT
           </button>

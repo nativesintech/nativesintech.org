@@ -9,8 +9,8 @@ export default function About() {
         <title>Natives in Tech - About</title>
       </Head>
       <section className="max-w-screen-md mx-auto pb-24 px-8">
-        <h1 className="font-bold mb-3 text-6xl text-gray-800">About</h1>
-        <p className="mb-6 text-gray-800 prose prose-lg">
+        <h1 className="font-bold mb-3 text-6xl ">About</h1>
+        <p className="mb-6 prose prose-lg">
           In recent years, open source development has exploded and a new
           generation of technology has captivated the minds of users from all
           walks of life. New technologies and design patterns have made it
@@ -26,7 +26,7 @@ export default function About() {
           Natives in Tech community hopes to answer and we would like you to be
           a part of it!
         </p>
-        <p className="text-gray-800 prose prose-lg">
+        <p className="prose prose-lg">
           Natives in Tech is a coalition of Native and non-Native technologists
           whose goal is to support technology that reinforces Native beliefs,
           knowledge, and identity. This is achieved through four initiatives:

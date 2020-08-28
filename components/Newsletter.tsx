@@ -1,10 +1,10 @@
 export const Newsletter = () => {
   return (
     <div className="shadow-xl p-10 bg-white rounded ">
-      <h1 className="text-4xl font-bold mb-4 text-gray-800">
+      <h1 className="text-4xl font-bold mb-4 prose prose-lg">
         Join our mailing list
       </h1>
-      <p className="text-base text-gray-800 pb-2">
+      <p className="text-base pb-2 prose prose-lg">
         Get the latest news from Natives in Tech. No spam. Unsubscribe at any
         time.
       </p>

@@ -39,10 +39,8 @@ export default function Awesome({ users }: Props) {
         <title>Natives in Tech - Awesome</title>
       </Head>
       <section className="text-center bg-gray-200 py-24 px-4 md:px-8">
-        <h1 className="font-bold mb-3 text-6xl text-gray-800">
-          Awesome Natives in Tech
-        </h1>
-        <p className="mb-6 text-gray-800 text-lg max-w-screen-md mx-auto">
+        <h1 className="font-bold mb-3 text-6xl">Awesome Natives in Tech</h1>
+        <p className="mb-6 prose prose-lg text-lg max-w-screen-md mx-auto">
           A list of Native technologists that represent or serve Native
           communities
         </p>

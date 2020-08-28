@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { HamburgerSqueeze } from "react-animated-burgers";
 import { useRouter } from "next/router";
+import { assets } from "../helpers/assets";
 
 export function Header() {
   const [isActive, toggleButton] = useState(false);
@@ -12,6 +13,7 @@ export function Header() {
     { title: "About", route: "/about" },
     { title: "Conf", route: "/conference" },
     { title: "Awesome", route: "/awesome" },
+    { title: "Donate", route: "/donate" },
     {
       title: "Blog",
       route: "https://blog.nativesintech.org",
@@ -20,7 +22,6 @@ export function Header() {
       title: "Forum",
       route: "https://forum.nativesintech.org",
     },
-    { title: "Donate", route: "/donate" },
     {
       title: "Code",
       route: "https://github.com/nativesintech/nativesintech.org",
@@ -35,14 +36,14 @@ export function Header() {
             <Link href="/" passHref>
               <a>
                 <img
-                  alt="Native in Tech Logo. Mac computer with a feather in the middle."
-                  src="computer.svg"
+                  alt={assets.logo.altText}
+                  src={assets.logo.src}
                   className="w-16 mr-4"
                 />
               </a>
             </Link>
             <Link href="/" passHref>
-              <a className="font-bold text-teal-400 text-2xl hidden md:hidden lg:block">
+              <a className="font-bold text-2xl hidden md:hidden lg:block">
                 Natives In Tech
               </a>
             </Link>
@@ -59,7 +60,7 @@ export function Header() {
           <ul className="hidden md:flex flex-col md:flex-row md:items-center md:justify-center text-base w-full md:w-auto mr-0">
             {routes.map((navigationItem) => (
               <li
-                className="mt-3 md:mt-0 md:ml-6 text-teal-400 hover:text-teal-500"
+                className="mt-3 md:mt-0 md:ml-6 hover:text-nit-grey"
                 key={navigationItem.title}
               >
                 {navigationItem.route.startsWith("https") ? (
@@ -73,10 +74,10 @@ export function Header() {
                 ) : (
                   <Link href={navigationItem.route} passHref>
                     <a
-                      className={`hover:text-teal-500 ${
+                      className={`hover:text-nit-grey ${
                         router.pathname === navigationItem.route
-                          ? "text-teal-800"
-                          : "text-teal-400"
+                          ? "text-nit-dark"
+                          : ""
                       } `}
                     >
                       {navigationItem.title}
@@ -112,7 +113,7 @@ export function Header() {
                   <a
                     className={`block ml-4 text-2xl ${
                       router.pathname === navigationItem.route
-                        ? "text-teal-400"
+                        ? "text-nit-dark"
                         : "text-white"
                     }`}
                   >
