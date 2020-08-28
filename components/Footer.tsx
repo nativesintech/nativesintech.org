@@ -1,4 +1,5 @@
 import * as React from "react";
+import { assets } from "../helpers/assets";
 
 export function Footer() {
   return (
@@ -18,7 +19,7 @@ export function Footer() {
         href="https://www.netlify.com"
         style={{ justifySelf: "end" }}
       >
-        <img src="/netlify.svg" alt="Deploys by Netlify" />
+        <img src={assets.netlify.src} alt={assets.netlify.altText} />
       </a>
     </footer>
   );
