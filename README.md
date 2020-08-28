@@ -48,12 +48,12 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/all-contri
     <td align="center"><a href="https://github.com/csutherl"><img src="https://avatars2.githubusercontent.com/u/2897567?v=4" width="100px;" alt=""/><br /><sub><b>Coty Sutherland</b></sub></a><br /><a href="https://github.com/nativesintech/nativesintech.org/commits?author=csutherl" title="Code">💻</a> <a href="https://github.com/nativesintech/nativesintech.org/commits?author=csutherl" title="Documentation">📖</a></td>
     <td align="center"><a href="http://yes.erin.codes"><img src="https://avatars3.githubusercontent.com/u/467627?v=4" width="100px;" alt=""/><br /><sub><b>Catherine "Erin" Ishimoticha</b></sub></a><br /><a href="https://github.com/nativesintech/nativesintech.org/commits?author=erinishimoticha" title="Code">💻</a> <a href="https://github.com/nativesintech/nativesintech.org/commits?author=erinishimoticha" title="Documentation">📖</a></td>
     <td align="center"><a href="https://paulierodriguez.dev/"><img src="https://avatars1.githubusercontent.com/u/43390616?v=4" width="100px;" alt=""/><br /><sub><b>Paulie Rodriguez</b></sub></a><br /><a href="https://github.com/nativesintech/nativesintech.org/commits?author=jorgebustamante" title="Code">💻</a></td>
+    <td align="center"><a href="http://www.elibrumbaugh.com"><img src="https://avatars1.githubusercontent.com/u/2042462?v=4" width="100px;" alt=""/><br /><sub><b>Eli Sebastian Brumbaugh</b></sub></a><br /><a href="#design-elibrumbaugh" title="Design">🎨</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
