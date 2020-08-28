@@ -57,6 +57,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "elibrumbaugh",
+      "name": "Eli Sebastian Brumbaugh",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/2042462?v=4",
+      "profile": "http://www.elibrumbaugh.com",
+      "contributions": [
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
