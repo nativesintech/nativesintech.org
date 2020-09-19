@@ -3,24 +3,55 @@ import { assets } from "../helpers/assets";
 
 export function Footer() {
   return (
-    <footer className="p-10 bg-gray-200 grid grid-flow-col grid-row-1 md:grid-cols-3 md:grid-rows-1 items-center">
-      <div className="row-span-1 col-span-1" />
-      <div
-        className="row-span-1 col-span-1 text-center"
-        style={{ justifySelf: "center" }}
-      >
-        {" "}
-        Made with ❤️ by Natives in Tech
+    <footer className="grid items-center grid-flow-col p-10 grid-row-1 md:grid-cols-2 md:grid-rows-1">
+      <div className="col-span-1 space-x-8">
+        <a
+          className="inline-block"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.netlify.com"
+        >
+          <img src={assets.netlify.src} alt={assets.netlify.altText} />
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://nativesintech.herokuapp.com/"
+          className="underline text-nit-primary"
+        >
+          Slack
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/nativesintech"
+          className="underline text-nit-primary"
+        >
+          GitHub
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://twitter.com/nativesintech"
+          className="underline text-nit-primary"
+        >
+          Twitter
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/company/natives-in-tech"
+          className="underline text-nit-primary"
+        >
+          LinkedIn
+        </a>
       </div>
-      <a
-        className="row-span-1 col-span-1"
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.netlify.com"
-        style={{ justifySelf: "end" }}
-      >
-        <img src={assets.netlify.src} alt={assets.netlify.altText} />
-      </a>
+      <div>
+        <div className="text-nit-grey dark:text-nit-light-grey">
+          Natives in Tech is a US 501(c)(3) charitable organization, funded by
+          individual donations.
+        </div>
+      </div>
     </footer>
   );
 }

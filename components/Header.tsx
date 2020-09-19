@@ -9,10 +9,9 @@ export function Header() {
   const router = useRouter();
 
   const routes = [
-    { title: "Home", route: "/" },
     { title: "About", route: "/about" },
     { title: "Conf", route: "/conference" },
-    { title: "Awesome", route: "/awesome" },
+    // { title: "Awesome", route: "/awesome" },
     { title: "Donate", route: "/donate" },
     {
       title: "Blog",
@@ -23,17 +22,17 @@ export function Header() {
       route: "https://forum.nativesintech.org",
     },
     {
-      title: "Code",
-      route: "https://github.com/nativesintech/nativesintech.org",
+      title: "Contact",
+      route: "/contact",
     },
   ];
 
   return (
     <>
-      <header className="bg-white m-0">
-        <div className="flex flex-wrap md:flex-no-wrap items-center justify-between max-w-full m-0 py-8 px-8 md:px-16">
+      <header>
+        <div className="flex flex-wrap items-center justify-between max-w-full px-8 py-8 m-0 md:flex-no-wrap md:px-10">
           <div className="flex items-center" style={{ minHeight: 64 }}>
-            <Link href="/" passHref>
+            {/* <Link href="/" passHref>
               <a>
                 <img
                   alt={assets.logo.altText}
@@ -41,9 +40,9 @@ export function Header() {
                   className="w-16 mr-4"
                 />
               </a>
-            </Link>
+            </Link> */}
             <Link href="/" passHref>
-              <a className="font-bold text-2xl hidden md:hidden lg:block">
+              <a className="hidden text-2xl font-bold md:hidden lg:block text-nit-primary">
                 Natives In Tech
               </a>
             </Link>
@@ -57,27 +56,36 @@ export function Header() {
             />
           </div>
 
-          <ul className="hidden md:flex flex-col md:flex-row md:items-center md:justify-center text-base w-full md:w-auto mr-0">
+          <ul className="flex-col hidden w-full mr-0 text-base md:flex md:flex-row md:items-center md:justify-center md:w-auto">
             {routes.map((navigationItem) => (
-              <li
-                className="mt-3 md:mt-0 md:ml-6 hover:text-nit-grey"
-                key={navigationItem.title}
-              >
+              <li className="mt-3 md:mt-0 md:ml-6" key={navigationItem.title}>
                 {navigationItem.route.startsWith("https") ? (
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={navigationItem.route}
-                  >
-                    {navigationItem.title}
-                  </a>
+                  <span className="flex items-center cursor-pointer">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="pr-2 underline text-nit-primary"
+                      href={navigationItem.route}
+                    >
+                      {navigationItem.title}
+                    </a>
+                    <img
+                      style={{
+                        width: 20,
+                        height: 20,
+                      }}
+                      className="text-nit-primary"
+                      src={assets.externalLink.src}
+                      alt={assets.externalLink.altText}
+                    />
+                  </span>
                 ) : (
                   <Link href={navigationItem.route} passHref>
                     <a
-                      className={`hover:text-nit-grey ${
-                        router.pathname === navigationItem.route
-                          ? "text-nit-dark"
-                          : ""
+                      className={`underline ${
+                        navigationItem.title === "Contact"
+                          ? "bg-nit-primary text-nit-white px-5 py-2 font-bold rounded-md no-underline"
+                          : "text-nit-primary"
                       } `}
                     >
                       {navigationItem.title}

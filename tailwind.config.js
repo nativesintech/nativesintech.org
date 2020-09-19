@@ -22,4 +22,11 @@ module.exports = {
   },
   variants: false,
   plugins: [require("@tailwindcss/typography")],
+  experimental: {
+    darkModeVariant: true,
+  },
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
 };

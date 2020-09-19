@@ -1,5 +1,13 @@
 :root {
   --nit-black: #111111;
+  --nit-grey: #717171;
+  --nit-light-grey: #c2c2c2;
+  --nit-white: #ffffff;
+  --nit-dark: #8f6233;
+  --nit-primary: #c69662;
+  --nit-light: #e1c8ad;
+  --nit-earth: #41e783;
+  --nit-water: #2986ff;
 }
 
 @tailwind base;
@@ -78,7 +86,8 @@ body {
 }
 
 .typed-cursor {
-  font-size: 24px;
+  font-size: 96px;
+  color: var(--nit-primary);
 }
 
 .icons {
