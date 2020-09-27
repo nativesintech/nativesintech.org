@@ -36,7 +36,7 @@
     "@storybook/preset-typescript": "3.0.0",
     "@storybook/react": "6.0.21",
     "@storybook/source-loader": "6.0.21",
-    "autoprefixer": "9.8.6",
+    "autoprefixer": "10.0.1",
     "babel-loader": "8.1.0",
     "fork-ts-checker-webpack-plugin": "5.2.0",
     "nextjs-sitemap-generator": "1.1.1",
