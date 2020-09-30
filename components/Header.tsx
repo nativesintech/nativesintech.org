@@ -42,7 +42,7 @@ export function Header() {
               </a>
             </Link> */}
             <Link href="/" passHref>
-              <a className="hidden text-2xl font-bold md:hidden lg:block text-nit-primary">
+              <a className="hidden text-lg font-bold md:hidden lg:block text-nit-primary">
                 Natives In Tech
               </a>
             </Link>
@@ -60,7 +60,7 @@ export function Header() {
             {routes.map((navigationItem) => (
               <li className="mt-3 md:mt-0 md:ml-6" key={navigationItem.title}>
                 {navigationItem.route.startsWith("https") ? (
-                  <span className="flex items-center cursor-pointer">
+                  <span className="flex items-center text-xs cursor-pointer">
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
@@ -84,8 +84,8 @@ export function Header() {
                     <a
                       className={`underline ${
                         navigationItem.title === "Contact"
-                          ? "bg-nit-primary text-nit-white px-5 py-2 font-bold rounded-md no-underline"
-                          : "text-nit-primary"
+                          ? "bg-nit-primary text-nit-white px-4 py-2 text-sm font-bold rounded-md no-underline"
+                          : "text-nit-primary text-xs leading-tight"
                       } `}
                     >
                       {navigationItem.title}

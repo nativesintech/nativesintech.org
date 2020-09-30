@@ -43,7 +43,7 @@ export default function Index() {
         <title>Natives technologists supporting Native communities</title>
       </Head>
 
-      <section className="grid grid-flow-col grid-cols-2 p-10">
+      <section className="grid grid-flow-col grid-cols-2 p-6">
         <div>
           <div className="dark:text-nit-white">
             <span style={{ fontSize: 78 }} className="typed" ref={typedRef} />

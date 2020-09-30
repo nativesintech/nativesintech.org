@@ -4,7 +4,10 @@ export const assets = {
     altText: "Natives in Tech logo",
     src: "/assets/logo_brown_transparent_1x.png",
   },
-  netlify: { altText: "Netlify Logo", src: "/assets/netlify.svg" },
+  netlify: {
+    altText: "Netlify Logo",
+    src: "/assets/netlify-callout-vertical-dark.svg",
+  },
   externalLink: {
     altText: "External link icon",
     src: "/assets/external-link.svg",
