@@ -17,9 +17,9 @@
   "dependencies": {
     "@tailwindcss/typography": "0.2.0",
     "next": "9.5.3",
-    "react": "16.13.1",
+    "react": "16.14.0",
     "react-animated-burgers": "1.2.8",
-    "react-dom": "16.13.1",
+    "react-dom": "16.14.0",
     "react-icons": "3.11.0",
     "styled-components": "5.2.0",
     "tailwindcss": "1.8.8",
