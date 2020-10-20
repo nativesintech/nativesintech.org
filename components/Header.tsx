@@ -60,7 +60,7 @@ export function Header() {
             {routes.map((navigationItem) => (
               <li className="mt-3 md:mt-0 md:ml-6" key={navigationItem.title}>
                 {navigationItem.route.startsWith("https") ? (
-                  <span className="flex items-center text-xs cursor-pointer">
+                  <span className="flex items-center text-sm cursor-pointer">
                     <a
                       target="_blank"
                       rel="noopener noreferrer"
@@ -85,7 +85,7 @@ export function Header() {
                       className={`underline ${
                         navigationItem.title === "Contact"
                           ? "bg-nit-primary text-nit-white px-4 py-2 text-sm font-bold rounded-md no-underline"
-                          : "text-nit-primary text-xs leading-tight"
+                          : "text-nit-primary text-sm leading-tight"
                       } `}
                     >
                       {navigationItem.title}

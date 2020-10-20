@@ -4,7 +4,7 @@ import { assets } from "../helpers/assets";
 export function Footer() {
   return (
     <footer className="flex items-center p-10">
-      <div className="flex items-center flex-grow space-x-6 text-xs">
+      <div className="flex items-center flex-grow space-x-6 text-sm">
         <a
           className="inline-block"
           target="_blank"
