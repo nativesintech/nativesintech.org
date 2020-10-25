@@ -14,6 +14,10 @@ export function Header() {
     // { title: "Awesome", route: "/awesome" },
     { title: "Donate", route: "/donate" },
     {
+      title: "Talent",
+      route: "https://talent.nativesintech.org",
+    },
+    {
       title: "Blog",
       route: "https://blog.nativesintech.org",
     },
