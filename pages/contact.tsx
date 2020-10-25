@@ -24,7 +24,7 @@ export default function Contact() {
             or drop us a line below.
           </p>
           <div className="mt-6 mb-4">
-            <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col mb-4 space-y-4 md:space-y-0 md:mb-0 md:flex-row">
               <div className="flex-auto md:mr-2">
                 <label
                   htmlFor="name"
@@ -59,7 +59,7 @@ export default function Contact() {
                 />
               </div>
             </div>
-            <div>
+            <div className="mt-4">
               <label
                 htmlFor="message"
                 className="block text-xs font-bold tracking-wide uppercase dark:text-nit-light-grey"

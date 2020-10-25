@@ -10,7 +10,7 @@ export default function Index() {
 
   const options = {
     strings: [
-      "s@^gaêl", // Euchee/Yuchi
+      "s@^gaê'lA", // Euchee/Yuchi
       "Hesci", // Muscogee (Creek) / Seminole
       "Yá'át'ééh", // Navajo
       "Halito", // Choctaw
@@ -65,17 +65,15 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 grid-rows-1 ">
-          <img
-            className="z-10 col-span-2 col-start-2 row-start-1 md:col-start-1 place-self-center logo-index"
-            src={assets.logo.src}
-            alt={assets.logo.altText}
-          />
-          <img
-            src={assets.primaryImage.src}
-            alt={assets.primaryImage.altText}
-            className="col-span-2 col-start-1 row-start-1 rounded-lg md:col-start-2 justify-self-center md:justify-self-end image-index"
-          />
+        <div className="flex flex-col items-center justify-items-center">
+          <figure>
+            <img
+              src={assets.primaryImage.src}
+              alt={assets.primaryImage.altText}
+              className="image-index"
+            />
+            <figcaption className='text-xs text-center text-nit-grey'> <span>Photo by <a href="https://unsplash.com/@taylorruecker?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" className="underline text-nit-primary">Taylor Ruecker</a> on <a href="https://unsplash.com/s/photos/native-american?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" className="underline text-nit-primary">Unsplash</a></span></figcaption>
+          </figure>
         </div>
       </section>
     </Layout>

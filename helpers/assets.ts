@@ -13,7 +13,7 @@ export const assets = {
     src: "/assets/external-link.svg",
   },
   primaryImage: {
-    src: "/assets/taylor-ruecker-unsplash.jpg",
+    src: "/assets/taylor-ruecker-unsplash-2x.png",
     altText: "Native woman",
   },
 };
