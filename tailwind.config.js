@@ -2,6 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   purge: ["./components/**/*.tsx", "./pages/**/*.tsx"],
+  plugins: [require("@tailwindcss/typography")],
   theme: {
     extend: {
       fontFamily: {
@@ -21,7 +22,6 @@ module.exports = {
     },
   },
   variants: false,
-  plugins: [require("@tailwindcss/typography")],
   experimental: {
     darkModeVariant: true,
   },
