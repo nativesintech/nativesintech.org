@@ -85,9 +85,26 @@ body {
   overflow-x: hidden;
 }
 
+.typed {
+  font-size: 32px;
+}
+
+@media only screen and (min-width: 786px) {
+  .typed {
+    font-size: 78px;
+  }
+}
+
 .typed-cursor {
-  font-size: 96px;
+  font-size: 32px;
   color: var(--nit-primary);
+}
+
+@media only screen and (min-width: 786px) {
+  .typed-cursor {
+    font-size: 96px;
+    color: var(--nit-primary);
+  }
 }
 
 .icons {
@@ -98,4 +115,28 @@ body {
   .icons {
     font-size: 132px;
   }
+}
+
+.logo-index {
+  height: 120px;
+}
+
+@media only screen and (min-width: 786px) {
+  .logo-index {
+    height: 260px;
+  }
+}
+
+.image-index {
+  width: 430px;
+}
+
+@media only screen and (max-width: 786px) {
+  div > a.ml-none {
+    margin-left: 0px;
+  }
+}
+
+.stroke-white {
+  stroke: var(--nit-white);
 }

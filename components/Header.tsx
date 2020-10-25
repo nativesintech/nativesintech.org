@@ -30,29 +30,21 @@ export function Header() {
   return (
     <>
       <header>
-        <div className="flex flex-wrap items-center justify-between max-w-full px-8 py-8 m-0 md:flex-no-wrap md:px-10">
-          <div className="flex items-center" style={{ minHeight: 64 }}>
-            {/* <Link href="/" passHref>
-              <a>
-                <img
-                  alt={assets.logo.altText}
-                  src={assets.logo.src}
-                  className="w-16 mr-4"
-                />
-              </a>
-            </Link> */}
+        <div className="flex flex-wrap items-center justify-between max-w-full px-6 py-8 m-0 md:px-10 md:flex-no-wrap">
+          <div className="flex items-center">
             <Link href="/" passHref>
-              <a className="hidden text-lg font-bold md:hidden lg:block text-nit-primary">
+              <a className="text-lg font-bold lg:block text-nit-primary">
                 Natives In Tech
               </a>
             </Link>
           </div>
           <div className="flex md:hidden">
             <HamburgerSqueeze
+              buttonWidth={30}
               className="z-40"
               isActive={isActive}
               onClick={() => toggleButton(!isActive)}
-              barColor={!isActive ? "#2D3748" : "#FFFFFF"}
+              barColor={!isActive ? "#c69662" : "#FFFFFF"}
             />
           </div>
 
@@ -74,7 +66,6 @@ export function Header() {
                         width: 20,
                         height: 20,
                       }}
-                      className="text-nit-primary"
                       src={assets.externalLink.src}
                       alt={assets.externalLink.altText}
                     />
@@ -98,7 +89,7 @@ export function Header() {
         </div>
       </header>
       <div
-        className={`${isActive} fixed z-30 bg-gray-800 h-screen w-1/2 flex flex-col right-0 md:hidden lg:hidden`}
+        className={`${isActive} fixed z-30 bg-nit-black h-screen w-1/2 flex flex-col right-0 md:hidden lg:hidden`}
         id="SideMenu"
       >
         <ul className="flex-col mt-16">
@@ -108,20 +99,30 @@ export function Header() {
               key={navigationItem.title + "side"}
             >
               {navigationItem.route.startsWith("https") ? (
-                <a
-                  href={navigationItem.route}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block ml-4 text-2xl text-white hover:text-teal-500"
-                >
-                  {navigationItem.title}
-                </a>
+                <span className="flex flex-row items-center">
+                  <a
+                    href={navigationItem.route}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block ml-4 mr-2 text-xl text-white"
+                  >
+                    {navigationItem.title}
+                  </a>
+                  <img
+                      style={{
+                        width: 20,
+                        height: 20,
+                      }}
+                      src={assets.externalLink.src}
+                      alt={assets.externalLink.altText}
+                    />
+                </span>
               ) : (
                 <Link href={navigationItem.route} passHref>
                   <a
-                    className={`block ml-4 text-2xl ${
+                    className={`block ml-4 text-xl ${
                       router.pathname === navigationItem.route
-                        ? "text-nit-dark"
+                        ? "text-nit-primary"
                         : "text-white"
                     }`}
                   >

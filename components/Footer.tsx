@@ -3,21 +3,21 @@ import { assets } from "../helpers/assets";
 
 export function Footer() {
   return (
-    <footer className="flex items-center p-10">
-      <div className="flex items-center flex-grow space-x-6 text-sm">
+    <footer className="flex flex-col p-6 space-y-8 md:p-10 md:items-center md:flex-row md:space-y-0">
+      <div className="flex items-center flex-grow mr-4 space-x-4 text-sm md:space-x-6">
         <a
-          className="inline-block"
+          className="hidden md:inline-block"
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.netlify.com"
         >
-          <img src={assets.netlify.src} alt={assets.netlify.altText} />
+          <img src={assets.netlify.src} alt={assets.netlify.altText} style={{ minWidth: 75 }} />
         </a>
         <a
           target="_blank"
           rel="noopener noreferrer"
           href="https://nativesintech.herokuapp.com/"
-          className="inline-block underline text-nit-primary"
+          className="inline-block underline text-nit-primary ml-none"
         >
           Slack
         </a>
@@ -46,11 +46,21 @@ export function Footer() {
           LinkedIn
         </a>
       </div>
-      <div className="flex justify-end text-xs">
+      <div className="flex text-xs md:justify-end">
         <div className="text-nit-grey dark:text-nit-grey">
           Natives in Tech is a US 501(c)(3) charitable organization, funded by
           individual donations.
         </div>
+      </div>
+      <div className="md:hidden">
+      <a
+          className="inline-block"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.netlify.com"
+        >
+          <img src={assets.netlify.src} alt={assets.netlify.altText} style={{ minWidth: 75 }} />
+        </a>
       </div>
     </footer>
   );
