@@ -11,7 +11,6 @@ export function Header() {
   const routes = [
     { title: "About", route: "/about" },
     { title: "Conf", route: "/conference" },
-    // { title: "Awesome", route: "/awesome" },
     { title: "Donate", route: "/donate" },
     {
       title: "Talent",
