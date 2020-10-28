@@ -12,25 +12,24 @@ export default function Conference() {
         <h1 className="text-4xl font-bold md:text-6xl dark:text-nit-white">
           Natives in Tech Conf
         </h1>
-        <div>
-          <p className="mb-6 prose prose-lg md:text-lg dark:text-nit-light-grey">
+        <div className="space-y-1">
+          <p className="prose dark:text-nit-light-grey">
             The Natives in Tech Conference brings together Native and non-Native
             technologists to share projects that empower and support Native
             communities around the world. Natives in Tech seeks to encourage
             Native communities to use technology as a means to empower themselves
             while encoding a traditional worldview.
           </p>
-
-          <p className="mb-6 prose prose-lg md:text-lg dark:text-nit-light-grey">
+          <p className="prose dark:text-nit-light-grey">
             Natives in Tech Conf is completely online and free and open to the
             public.
           </p>
         </div>
-        <div>
-          <h2 className="mb-3 text-2xl font-bold md:text-4xl dark:text-nit-white">
+        <div className="space-y-1">
+          <h2 className="text-2xl font-bold md:text-4xl dark:text-nit-white">
             Who is this conference for?
           </h2>
-          <ul className="mb-6 list-disc md:text-lg dark:text-nit-light-grey">
+          <ul className="list-disc dark:text-nit-light-grey">
             <li>Natives working in technology </li>
             <li>
               Non-Natives developing technology that empowers Native peoples
@@ -42,22 +41,21 @@ export default function Conference() {
           </ul>
         </div>
 
-        <div>
-          <h2 className="mb-3 text-2xl font-bold md:text-4xl dark:text-nit-white">
+        <div className="space-y-1">
+          <h2 className="text-2xl font-bold md:text-4xl dark:text-nit-white">
             Would you like to present?
           </h2>
-
-          <p className="mb-6 prose prose-lg md:text-lg dark:text-nit-light-grey">
+          <p className="prose dark:text-nit-light-grey">
             If you would like to present at this conference, create a session
             using sessionize.
           </p>
         </div>
 
-        <div>
+        <div className="space-y-1">
           <h2 className="text-2xl font-bold md:text-4xl dark:text-nit-white">
             List of Conferences by Year
           </h2>
-          <p className="text-lg prose prose-lg dark:text-nit-light-grey">
+          <p className="prose dark:text-nit-light-grey">
             Coming soon...
           </p>
         </div>
