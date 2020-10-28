@@ -1,9 +1,5 @@
 export const assets = {
   logo: { altText: "Natives in Tech logo", src: "/assets/natives_in_tech.svg" },
-  logoTransparent: {
-    altText: "Natives in Tech logo",
-    src: "/assets/logo_brown_transparent_1x.png",
-  },
   netlify: {
     altText: "Netlify Logo",
     src: "/assets/netlify-callout-vertical-dark.svg",
@@ -13,7 +9,7 @@ export const assets = {
     src: "/assets/external-link.svg",
   },
   primaryImage: {
-    src: "/assets/taylor-ruecker-unsplash-2x.png",
+    src: "/assets/taylor-ruecker-unsplash-2x.jpg",
     altText: "Native woman",
   },
 };

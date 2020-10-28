@@ -60,17 +60,17 @@ export default function Index() {
 
           <div className="pt-4">
             <Link href="/about">
-              <a className="underline md:text-lg text-nit-primary">Learn More</a>
+              <a className="underline md:text-lg text-nit-primary">Learn More About</a>
             </Link>
           </div>
         </div>
 
-        <div className="flex flex-col items-center -ml-2 -mr-2 sm:-ml-4 sm:-mr-4 md:ml-0 md:-mr-4 md:items-end">
+        <div className="flex flex-col items-center md:items-end">
           <figure>
             <img
               src={assets.primaryImage.src}
               alt={assets.primaryImage.altText}
-              className="image-index"
+              className="mb-4 rounded-3xl image-index"
             />
             <figcaption className='text-xs text-center text-nit-grey'> <span>Photo by <a href="https://unsplash.com/@taylorruecker?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" className="underline text-nit-primary">Taylor Ruecker</a></span></figcaption>
           </figure>
