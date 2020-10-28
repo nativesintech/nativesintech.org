@@ -8,7 +8,7 @@ export default function Conference() {
       <Head>
         <title>Natives in Tech Conf</title>
       </Head>
-      <div className="max-w-screen-md px-8 pb-24 mx-auto space-y-8">
+      <div className="max-w-screen-md px-6 pb-24 mx-auto space-y-8">
         <h1 className="text-4xl font-bold md:text-6xl dark:text-nit-white">
           Natives in Tech Conf
         </h1>

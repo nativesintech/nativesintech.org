@@ -8,7 +8,7 @@ export default function About() {
       <Head>
         <title>Natives in Tech - About</title>
       </Head>
-      <section className="max-w-screen-md px-6 mx-auto space-y-8 md:px-8">
+      <section className="max-w-screen-md px-6 mx-auto space-y-8">
         <h1 className="text-4xl font-bold md:text-6xl dark:text-nit-white">About</h1>
 
         <h2 className="text-xl font-bold md:text-4xl dark:text-nit-white">Initiatives</h2>

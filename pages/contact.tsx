@@ -8,7 +8,7 @@ export default function Contact() {
         <form
           action="https://formspree.io/hello@nativesintech.org"
           method="POST"
-          className="max-w-screen-md px-8 m-auto"
+          className="max-w-screen-md px-6 m-auto"
         >
           <h2 className="mb-4 text-4xl font-bold md:text-6xl dark:text-nit-white">
             Contact

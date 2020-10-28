@@ -7,7 +7,7 @@ export default function Donate() {
       <Head>
         <title>Natives in Tech - Donate</title>
       </Head>
-      <section className="max-w-screen-md px-8 pb-24 mx-auto">
+      <section className="max-w-screen-md px-6 pb-24 mx-auto">
         <h1 className="mb-3 text-4xl font-bold md:text-6xl dark:text-nit-white">Donate</h1>
         <p className="mb-6 prose dark:text-nit-light-grey">
           You can make a tax deductible donation through either a one time
