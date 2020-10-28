@@ -65,14 +65,14 @@ export default function Index() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-items-center">
+        <div className="flex flex-col items-center -ml-2 -mr-2 sm:-ml-4 sm:-mr-4 md:ml-0 md:-mr-4 md:items-end">
           <figure>
             <img
               src={assets.primaryImage.src}
               alt={assets.primaryImage.altText}
               className="image-index"
             />
-            <figcaption className='text-xs text-center text-nit-grey'> <span>Photo by <a href="https://unsplash.com/@taylorruecker?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" className="underline text-nit-primary">Taylor Ruecker</a> on <a href="https://unsplash.com/s/photos/native-american?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" className="underline text-nit-primary">Unsplash</a></span></figcaption>
+            <figcaption className='text-xs text-center text-nit-grey'> <span>Photo by <a href="https://unsplash.com/@taylorruecker?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" className="underline text-nit-primary">Taylor Ruecker</a></span></figcaption>
           </figure>
         </div>
       </section>

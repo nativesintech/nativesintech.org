@@ -128,7 +128,13 @@ body {
 }
 
 .image-index {
-  width: 430px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 786px) {
+  .image-index {
+    width: 408px;
+  }
 }
 
 @media only screen and (max-width: 786px) {
