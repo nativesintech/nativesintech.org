@@ -78,7 +78,7 @@ export function Header() {
                     <a
                       className={`underline ${
                         navigationItem.title === "Contact"
-                          ? "bg-nit-black text-nit-white px-4 py-2 text-sm font-bold rounded-md no-underline"
+                          ? "bg-nit-dark text-nit-white px-4 py-2 text-sm font-bold rounded-md no-underline"
                           : "text-nit-primary text-sm leading-tight"
                       } `}
                     >

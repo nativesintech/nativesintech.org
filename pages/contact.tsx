@@ -8,12 +8,12 @@ export default function Contact() {
         <form
           action="https://formspree.io/hello@nativesintech.org"
           method="POST"
-          className="max-w-screen-md p-6 m-auto md:p-8"
+          className="max-w-screen-md px-8 m-auto"
         >
-          <h2 className="mb-4 text-2xl font-bold md:text-4xl dark:text-nit-white">
-            Ask a question or leave a comment
+          <h2 className="mb-4 text-4xl font-bold md:text-6xl dark:text-nit-white">
+            Contact
           </h2>
-          <p className="md:text-xl dark:text-nit-light-grey">
+          <p className="dark:text-nit-light-grey">
             We would love to hear from you! Feel free to send a message to{" "}
             <a
               className="underline text-nit-primary"
@@ -78,7 +78,7 @@ export default function Contact() {
           <button
             type="submit"
             value="Send"
-            className="px-6 py-3 font-bold rounded bg-nit-primary text-nit-white focus:shadow-outline"
+            className="px-6 py-3 font-bold rounded bg-nit-dark text-nit-white focus:shadow-outline"
           >
             SUBMIT
           </button>
