@@ -2,16 +2,20 @@ import Link from "next/link";
 import { useState } from "react";
 import { HamburgerSqueeze } from "react-animated-burgers";
 import { useRouter } from "next/router";
+import { assets } from "../helpers/assets";
 
 export function Header() {
   const [isActive, toggleButton] = useState(false);
   const router = useRouter();
 
   const routes = [
-    { title: "Home", route: "/" },
     { title: "About", route: "/about" },
     { title: "Conf", route: "/conference" },
-    { title: "Awesome", route: "/awesome" },
+    { title: "Donate", route: "/donate" },
+    {
+      title: "Talent",
+      route: "https://talent.nativesintech.org",
+    },
     {
       title: "Blog",
       route: "https://blog.nativesintech.org",
@@ -20,63 +24,62 @@ export function Header() {
       title: "Forum",
       route: "https://forum.nativesintech.org",
     },
-    { title: "Donate", route: "/donate" },
     {
-      title: "Code",
-      route: "https://github.com/nativesintech/nativesintech.org",
+      title: "Contact",
+      route: "/contact",
     },
   ];
 
   return (
     <>
-      <header className="bg-white m-0">
-        <div className="flex flex-wrap md:flex-no-wrap items-center justify-between max-w-full m-0 py-8 px-8 md:px-16">
-          <div className="flex items-center" style={{ minHeight: 64 }}>
+      <header>
+        <div className="flex flex-wrap items-center justify-between max-w-full px-6 py-8 m-0 md:px-10 md:flex-no-wrap">
+          <div className="flex items-center">
             <Link href="/" passHref>
-              <a>
-                <img
-                  alt="Native in Tech Logo. Mac computer with a feather in the middle."
-                  src="computer.svg"
-                  className="w-16 mr-4"
-                />
-              </a>
-            </Link>
-            <Link href="/" passHref>
-              <a className="font-bold text-teal-400 text-2xl hidden md:hidden lg:block">
+              <a className="text-lg font-bold lg:block text-nit-primary">
                 Natives In Tech
               </a>
             </Link>
           </div>
           <div className="flex md:hidden">
             <HamburgerSqueeze
+              buttonWidth={30}
               className="z-40"
               isActive={isActive}
               onClick={() => toggleButton(!isActive)}
-              barColor={!isActive ? "#2D3748" : "#FFFFFF"}
+              barColor={!isActive ? "#c69662" : "#FFFFFF"}
             />
           </div>
 
-          <ul className="hidden md:flex flex-col md:flex-row md:items-center md:justify-center text-base w-full md:w-auto mr-0">
+          <ul className="flex-col hidden w-full mr-0 text-base md:flex md:flex-row md:items-center md:justify-center md:w-auto">
             {routes.map((navigationItem) => (
-              <li
-                className="mt-3 md:mt-0 md:ml-6 text-teal-400 hover:text-teal-500"
-                key={navigationItem.title}
-              >
+              <li className="mt-3 md:mt-0 md:ml-6" key={navigationItem.title}>
                 {navigationItem.route.startsWith("https") ? (
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={navigationItem.route}
-                  >
-                    {navigationItem.title}
-                  </a>
+                  <span className="flex items-center text-sm cursor-pointer">
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="pr-2 underline text-nit-primary"
+                      href={navigationItem.route}
+                    >
+                      {navigationItem.title}
+                    </a>
+                    <img
+                      style={{
+                        width: 20,
+                        height: 20,
+                      }}
+                      src={assets.externalLink.src}
+                      alt={assets.externalLink.altText}
+                    />
+                  </span>
                 ) : (
                   <Link href={navigationItem.route} passHref>
                     <a
-                      className={`hover:text-teal-500 ${
-                        router.pathname === navigationItem.route
-                          ? "text-teal-800"
-                          : "text-teal-400"
+                      className={`underline ${
+                        navigationItem.title === "Contact"
+                          ? "bg-nit-dark text-nit-white px-4 py-2 text-sm font-bold rounded-md no-underline"
+                          : "text-nit-primary text-sm leading-tight"
                       } `}
                     >
                       {navigationItem.title}
@@ -89,7 +92,7 @@ export function Header() {
         </div>
       </header>
       <div
-        className={`${isActive} fixed z-30 bg-gray-800 h-screen w-1/2 flex flex-col right-0 md:hidden lg:hidden`}
+        className={`${isActive} fixed z-30 bg-nit-black h-screen w-1/2 flex flex-col right-0 md:hidden lg:hidden`}
         id="SideMenu"
       >
         <ul className="flex-col mt-16">
@@ -99,20 +102,30 @@ export function Header() {
               key={navigationItem.title + "side"}
             >
               {navigationItem.route.startsWith("https") ? (
-                <a
-                  href={navigationItem.route}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block ml-4 text-2xl text-white hover:text-teal-500"
-                >
-                  {navigationItem.title}
-                </a>
+                <span className="flex flex-row items-center">
+                  <a
+                    href={navigationItem.route}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block ml-4 mr-2 text-xl text-white"
+                  >
+                    {navigationItem.title}
+                  </a>
+                  <img
+                      style={{
+                        width: 20,
+                        height: 20,
+                      }}
+                      src={assets.externalLink.src}
+                      alt={assets.externalLink.altText}
+                    />
+                </span>
               ) : (
                 <Link href={navigationItem.route} passHref>
                   <a
-                    className={`block ml-4 text-2xl ${
+                    className={`block ml-4 text-xl ${
                       router.pathname === navigationItem.route
-                        ? "text-teal-400"
+                        ? "text-nit-primary"
                         : "text-white"
                     }`}
                   >

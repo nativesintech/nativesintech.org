@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property="og:image"
-          content="https://nativesintech.org/computer.png"
+          content="https://nativesintech.org/assets/natives_in_tech.png"
         />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -56,7 +56,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property="twitter:image"
-          content="https://nativesintech.org/computer.png"
+          content="https://nativesintech.org/natives_in_tech.png"
         />
 
         <link

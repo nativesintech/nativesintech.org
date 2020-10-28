@@ -7,36 +7,22 @@ export default function Donate() {
       <Head>
         <title>Natives in Tech - Donate</title>
       </Head>
-      <section className="max-w-screen-md mx-auto leading-loose pb-24 px-8">
-        <h1 className="font-bold mb-3 text-6xl text-gray-800">Donate</h1>
-        <p className="mb-6 text-gray-800 text-xl">
+      <section className="max-w-screen-md px-6 pb-24 mx-auto">
+        <h1 className="mb-3 text-4xl font-bold md:text-6xl dark:text-nit-white">Donate</h1>
+        <p className="mb-6 prose dark:text-nit-light-grey">
           You can make a tax deductible donation through either a one time
-          payment or subscription.
+          payment or subscription to our Open Collective.
         </p>
-        <ol className="mb-6 text-gray-800 text-xl ">
-          <li>
-            One time payment -{" "}
+
             <a
-              className="text-teal-400 hover:text-teal-500"
+              className="underline text-nit-primary"
               rel="noopener noreferrer"
               target="_blank"
-              href="https://paypal.me/nativesintech"
+              href="https://opencollective.com/natives-in-tech"
             >
-              https://paypal.me/nativesintech
+              Open Collective
             </a>
-          </li>
-          <li>
-            Subscription -{" "}
-            <a
-              className="text-teal-400 hover:text-teal-500"
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://patreon.com/nativesintech"
-            >
-              https://patreon.com/nativesintech
-            </a>
-          </li>
-        </ol>
+
       </section>
     </Layout>
   );

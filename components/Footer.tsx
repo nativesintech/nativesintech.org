@@ -1,25 +1,67 @@
 import * as React from "react";
+import { assets } from "../helpers/assets";
 
 export function Footer() {
   return (
-    <footer className="p-10 text-gray-800 bg-gray-200 grid grid-flow-col grid-row-1 md:grid-cols-3 md:grid-rows-1 items-center">
-      <div className="row-span-1 col-span-1" />
-      <div
-        className="row-span-1 col-span-1 text-center"
-        style={{ justifySelf: "center" }}
-      >
-        {" "}
-        Made with ❤️ by Natives in Tech
+    <footer className="flex flex-col p-6 space-y-8 md:p-10 md:items-center md:flex-row md:space-y-0">
+      <div className="flex items-center flex-grow mr-4 space-x-4 text-sm md:space-x-6">
+        <a
+          className="hidden md:inline-block"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.netlify.com"
+        >
+          <img src={assets.netlify.src} alt={assets.netlify.altText} style={{ minWidth: 75 }} />
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://nativesintech.herokuapp.com/"
+          className="inline-block underline text-nit-primary ml-none"
+        >
+          Slack
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/nativesintech"
+          className="inline-block underline text-nit-primary"
+        >
+          GitHub
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://twitter.com/nativesintech"
+          className="inline-block underline text-nit-primary"
+        >
+          Twitter
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/company/natives-in-tech"
+          className="inline-block underline text-nit-primary"
+        >
+          LinkedIn
+        </a>
       </div>
+      <div className="flex text-xs md:justify-end">
+        <div className="text-nit-grey dark:text-nit-grey">
+          Natives in Tech is a US 501(c)(3) charitable organization, funded by
+          individual donations.
+        </div>
+      </div>
+      <div className="md:hidden">
       <a
-        className="row-span-1 col-span-1"
-        target="_blank"
-        rel="noopener noreferrer"
-        href="https://www.netlify.com"
-        style={{ justifySelf: "end" }}
-      >
-        <img src="/netlify.svg" alt="Deploys by Netlify" />
-      </a>
+          className="inline-block"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.netlify.com"
+        >
+          <img src={assets.netlify.src} alt={assets.netlify.altText} style={{ minWidth: 75 }} />
+        </a>
+      </div>
     </footer>
   );
 }
