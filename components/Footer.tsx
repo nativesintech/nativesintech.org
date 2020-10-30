@@ -1,3 +1,4 @@
+import Image from "next/image";
 import * as React from "react";
 import { assets } from "../helpers/assets";
 
@@ -11,7 +12,7 @@ export function Footer() {
           rel="noopener noreferrer"
           href="https://www.netlify.com"
         >
-          <img src={assets.netlify.src} alt={assets.netlify.altText} style={{ minWidth: 75 }} />
+          <Image src={assets.netlify.src} alt={assets.netlify.altText} width={114} height={51} />
         </a>
         <a
           target="_blank"
@@ -59,7 +60,7 @@ export function Footer() {
           rel="noopener noreferrer"
           href="https://www.netlify.com"
         >
-          <img src={assets.netlify.src} alt={assets.netlify.altText} style={{ minWidth: 75 }} />
+          <Image src={assets.netlify.src} alt={assets.netlify.altText} width={114} height={51} />
         </a>
       </div>
     </footer>

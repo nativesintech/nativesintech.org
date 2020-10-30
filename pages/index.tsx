@@ -4,6 +4,7 @@ import { Layout } from "../components/Layout";
 import Head from "next/head";
 import { assets } from "../helpers/assets";
 import Link from "next/link";
+import Image from 'next/image'
 
 export default function Index() {
   const typedRef = React.createRef<HTMLDivElement>();
@@ -67,10 +68,13 @@ export default function Index() {
 
         <div className="flex flex-col items-center md:items-end">
           <figure>
-            <img
+            <Image
               src={assets.primaryImage.src}
               alt={assets.primaryImage.altText}
-              className="mb-4 rounded-3xl image-index"
+              width={408}
+              height={665}
+              quality={85}
+              className="pb-4 rounded-3xl image-index"
             />
             <figcaption className='text-xs text-center text-nit-grey'> <span>Photo by <a href="https://unsplash.com/@taylorruecker?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" className="underline text-nit-primary">Taylor Ruecker</a></span></figcaption>
           </figure>

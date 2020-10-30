@@ -3,6 +3,7 @@ import { useState } from "react";
 import { HamburgerSqueeze } from "react-animated-burgers";
 import { useRouter } from "next/router";
 import { assets } from "../helpers/assets";
+import Image from 'next/image'
 
 export function Header() {
   const [isActive, toggleButton] = useState(false);
@@ -64,11 +65,9 @@ export function Header() {
                     >
                       {navigationItem.title}
                     </a>
-                    <img
-                      style={{
-                        width: 20,
-                        height: 20,
-                      }}
+                    <Image
+                      width={20}
+                      height={20}
                       src={assets.externalLink.src}
                       alt={assets.externalLink.altText}
                     />
@@ -111,14 +110,12 @@ export function Header() {
                   >
                     {navigationItem.title}
                   </a>
-                  <img
-                      style={{
-                        width: 20,
-                        height: 20,
-                      }}
-                      src={assets.externalLink.src}
-                      alt={assets.externalLink.altText}
-                    />
+                  <Image
+                    width={20}
+                    height={20}
+                    src={assets.externalLink.src}
+                    alt={assets.externalLink.altText}
+                  />
                 </span>
               ) : (
                 <Link href={navigationItem.route} passHref>
