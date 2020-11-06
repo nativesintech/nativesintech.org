@@ -6,7 +6,7 @@ export default function Contact() {
     <Layout>
       <section>
         <form
-          action="https://formspree.io/hello@nativesintech.org"
+          action="https://formspree.io/f/xdopzbqz"
           method="POST"
           className="max-w-screen-md px-6 m-auto"
         >
