@@ -16,14 +16,6 @@ export function Footer() {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://nativesintech.herokuapp.com/"
-          className="inline-block underline text-nit-primary ml-none"
-        >
-          Slack
-        </a>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
           href="https://github.com/nativesintech"
           className="inline-block underline text-nit-primary"
         >
@@ -44,6 +36,14 @@ export function Footer() {
           className="inline-block underline text-nit-primary"
         >
           LinkedIn
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.youtube.com/channel/UCRyR1Jm77K9uVN1QXvoLY6A?view_as=subscriber"
+          className="inline-block underline text-nit-primary ml-none"
+        >
+          YouTube
         </a>
       </div>
       <div className="flex text-xs md:justify-end">
