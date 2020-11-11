@@ -11,7 +11,12 @@ export function Footer() {
           rel="noopener noreferrer"
           href="https://www.netlify.com"
         >
-          <img src={assets.netlify.src} alt={assets.netlify.altText} width={114} height={51} />
+          <img
+            src={assets.netlify.src}
+            alt={assets.netlify.altText}
+            width={114}
+            height={51}
+          />
         </a>
         <a
           target="_blank"
@@ -53,13 +58,18 @@ export function Footer() {
         </div>
       </div>
       <div className="md:hidden">
-      <a
+        <a
           className="inline-block"
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.netlify.com"
         >
-          <img src={assets.netlify.src} alt={assets.netlify.altText} width={114} height={51} />
+          <img
+            src={assets.netlify.src}
+            alt={assets.netlify.altText}
+            width={114}
+            height={51}
+          />
         </a>
       </div>
     </footer>

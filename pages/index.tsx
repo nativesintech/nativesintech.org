@@ -50,7 +50,9 @@ export default function Index() {
           </div>
 
           <div className="pt-8 md:pt-12">
-            <h1 className="text-lg md:text-3xl dark:text-nit-white">Our Mission</h1>
+            <h1 className="text-lg md:text-3xl dark:text-nit-white">
+              Our Mission
+            </h1>
             <p className="pt-2 md:pt-4 md:text-lg dark:text-nit-light-grey text-nit-grey">
               Natives in Tech is a coalition of Native and non-Native
               technologists whose goal is to support technology that reinforces
@@ -60,7 +62,9 @@ export default function Index() {
 
           <div className="pt-4">
             <Link href="/about">
-              <a className="underline md:text-lg text-nit-primary">Learn More</a>
+              <a className="underline md:text-lg text-nit-primary">
+                Learn More
+              </a>
             </Link>
           </div>
         </div>
@@ -74,7 +78,18 @@ export default function Index() {
               height={665}
               className="mb-4 rounded-3xl"
             />
-            <figcaption className='text-xs text-center text-nit-grey'> <span>Photo by <a href="https://unsplash.com/@taylorruecker?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" className="underline text-nit-primary">Taylor Ruecker</a></span></figcaption>
+            <figcaption className="text-xs text-center text-nit-grey">
+              {" "}
+              <span>
+                Photo by{" "}
+                <a
+                  href="https://unsplash.com/@taylorruecker?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
+                  className="underline text-nit-primary"
+                >
+                  Taylor Ruecker
+                </a>
+              </span>
+            </figcaption>
           </figure>
         </div>
       </section>

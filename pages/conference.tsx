@@ -21,8 +21,7 @@ export default function Conference() {
             themselves while encoding a traditional worldview.
           </p>
           <p className="prose dark:text-nit-light-grey text-nit-grey">
-            Natives in Tech Conf is completely online and free and open to the
-            public.
+            Natives in Tech Conf is completely online and free to the public.
           </p>
         </div>
         <div className="space-y-1">
