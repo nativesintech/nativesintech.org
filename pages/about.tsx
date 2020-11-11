@@ -13,10 +13,10 @@ export default function About() {
 
         <h2 className="text-xl font-bold md:text-4xl dark:text-nit-white">Initiatives</h2>
 
-        <ul className="space-y-8">
+        <ul className="space-y-8 ">
           <li className="space-y-1">
             <h3 className="text-lg md:text-2xl dark:text-nit-white">Networking</h3>
-            <p className="dark:text-nit-light-grey">
+            <p className="dark:text-nit-light-grey text-nit-grey">
               Networking with aspiring and experienced technologists alike
             </p>
           </li>
@@ -25,7 +25,7 @@ export default function About() {
             <h3 className="text-lg md:text-2xl dark:text-nit-white">
               Social Media Presence
             </h3>
-            <p className="dark:text-nit-light-grey">
+            <p className="dark:text-nit-light-grey text-nit-grey">
               Creating a strong social media presence on platforms familiar to
               technologists
             </p>
@@ -33,7 +33,7 @@ export default function About() {
 
           <li className="space-y-1">
             <h3 className="text-lg md:text-2xl dark:text-nit-white">Yearly Conference</h3>
-            <p className="dark:text-nit-light-grey">
+            <p className="dark:text-nit-light-grey text-nit-grey">
               Hosting a yearly Natives in Tech conference
             </p>
           </li>
@@ -42,7 +42,7 @@ export default function About() {
             <h3 className="text-lg md:text-2xl dark:text-nit-white">
               Developing Indigenous-centric technology
             </h3>
-            <p className="dark:text-nit-light-grey">
+            <p className="dark:text-nit-light-grey text-nit-grey">
               Building open source technology that Native peoples can use to
               cultivate healthy online communities
             </p>

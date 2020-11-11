@@ -13,14 +13,14 @@ export default function Conference() {
           Natives in Tech Conf
         </h1>
         <div className="space-y-1">
-          <p className="prose dark:text-nit-light-grey">
+          <p className="prose dark:text-nit-light-grey text-nit-grey">
             The Natives in Tech Conference brings together Native and non-Native
             technologists to share projects that empower and support Native
             communities around the world. Natives in Tech seeks to encourage
-            Native communities to use technology as a means to empower themselves
-            while encoding a traditional worldview.
+            Native communities to use technology as a means to empower
+            themselves while encoding a traditional worldview.
           </p>
-          <p className="prose dark:text-nit-light-grey">
+          <p className="prose dark:text-nit-light-grey text-nit-grey">
             Natives in Tech Conf is completely online and free and open to the
             public.
           </p>
@@ -29,7 +29,7 @@ export default function Conference() {
           <h2 className="text-2xl font-bold md:text-4xl dark:text-nit-white">
             Who is this conference for?
           </h2>
-          <ul className="list-disc dark:text-nit-light-grey">
+          <ul className="prose list-disc dark:text-nit-light-grey text-nit-grey">
             <li>Natives working in technology </li>
             <li>
               Non-Natives developing technology that empowers Native peoples
@@ -45,7 +45,7 @@ export default function Conference() {
           <h2 className="text-2xl font-bold md:text-4xl dark:text-nit-white">
             Would you like to present?
           </h2>
-          <p className="prose dark:text-nit-light-grey">
+          <p className="prose dark:text-nit-light-grey text-nit-grey">
             If you would like to present at this conference, create a session
             using sessionize.
           </p>
@@ -55,9 +55,17 @@ export default function Conference() {
           <h2 className="text-2xl font-bold md:text-4xl dark:text-nit-white">
             List of Conferences by Year
           </h2>
-          <p className="prose dark:text-nit-light-grey">
-            Coming soon...
-          </p>
+          <ul className="prose dark:text-nit-light-grey text-nit-grey">
+            <li>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.youtube.com/playlist?list=PLkEm8Fr-qex0P4U-asUIzPXNUl25KV3i-"
+              >
+                2019
+              </a>
+            </li>
+          </ul>
         </div>
         {/* <div className="mt-20">
           <Newsletter />

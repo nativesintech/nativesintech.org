@@ -13,7 +13,7 @@ export default function Contact() {
           <h2 className="mb-4 text-4xl font-bold md:text-6xl dark:text-nit-white">
             Contact
           </h2>
-          <p className="dark:text-nit-light-grey">
+          <p className="dark:text-nit-light-grey text-nit-grey">
             We would love to hear from you! Feel free to send a message to{" "}
             <a
               className="underline text-nit-primary"

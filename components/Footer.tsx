@@ -17,7 +17,7 @@ export function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           href="https://github.com/nativesintech"
-          className="inline-block underline text-nit-primary"
+          className="inline-block underline text-nit-primary ml-none"
         >
           GitHub
         </a>
@@ -41,7 +41,7 @@ export function Footer() {
           target="_blank"
           rel="noopener noreferrer"
           href="https://www.youtube.com/channel/UCRyR1Jm77K9uVN1QXvoLY6A?view_as=subscriber"
-          className="inline-block underline text-nit-primary ml-none"
+          className="inline-block underline text-nit-primary"
         >
           YouTube
         </a>
