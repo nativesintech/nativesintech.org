@@ -145,3 +145,15 @@ body {
 .stroke-white {
   stroke: var(--nit-white);
 }
+
+@media (prefers-color-scheme: dark) {
+  ul > li > a.text-light-grey {
+    color: var(--nit-light-grey);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  ul > li > a.text-grey {
+    color: var(--nit-grey);
+  }
+}

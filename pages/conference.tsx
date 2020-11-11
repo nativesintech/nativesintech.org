@@ -60,6 +60,7 @@ export default function Conference() {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
+                className="text-grey text-light-grey"
                 href="https://www.youtube.com/playlist?list=PLkEm8Fr-qex0P4U-asUIzPXNUl25KV3i-"
               >
                 2019
