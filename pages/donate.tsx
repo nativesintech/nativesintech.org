@@ -15,15 +15,60 @@ export default function Donate() {
           You can make a tax deductible donation through either a one time
           payment or subscription to our Open Collective.
         </p>
-
-        <a
-          className="underline text-nit-primary"
-          rel="noopener noreferrer"
-          target="_blank"
-          href="https://opencollective.com/natives-in-tech"
-        >
-          Open Collective
-        </a>
+        <div className="space-y-2">
+          <h2 className="text-2xl font-bold md:text-4xl dark:text-nit-white">
+            Individuals
+          </h2>
+          <p className="dark:text-nit-light-grey text-nit-grey">
+            Become a financial contributor and help us sustain our community.
+          </p>
+          <p>
+            <a href="https://opencollective.com/natives-in-tech">
+              <img src="https://opencollective.com/natives-in-tech/individuals.svg?width=890" />
+            </a>
+          </p>
+        </div>
+        <div className="mt-6 space-y-2">
+          <h2 className="text-2xl font-bold md:text-4xl dark:text-nit-white">
+            Organizations
+          </h2>
+          <p className="dark:text-nit-light-grey text-nit-grey">
+            Support this project with your organization. Your logo will show up
+            here with a link to your website.
+          </p>
+          <p>
+            <a href="https://opencollective.com/natives-in-tech/organization/0/website">
+              <img src="https://opencollective.com/natives-in-tech/organization/0/avatar.svg" />
+            </a>
+            <a href="https://opencollective.com/natives-in-tech/organization/1/website">
+              <img src="https://opencollective.com/natives-in-tech/organization/1/avatar.svg" />
+            </a>
+            <a href="https://opencollective.com/natives-in-tech/organization/2/website">
+              <img src="https://opencollective.com/natives-in-tech/organization/2/avatar.svg" />
+            </a>
+            <a href="https://opencollective.com/natives-in-tech/organization/3/website">
+              <img src="https://opencollective.com/natives-in-tech/organization/3/avatar.svg" />
+            </a>
+            <a href="https://opencollective.com/natives-in-tech/organization/4/website">
+              <img src="https://opencollective.com/natives-in-tech/organization/4/avatar.svg" />
+            </a>
+            <a href="https://opencollective.com/natives-in-tech/organization/5/website">
+              <img src="https://opencollective.com/natives-in-tech/organization/5/avatar.svg" />
+            </a>
+            <a href="https://opencollective.com/natives-in-tech/organization/6/website">
+              <img src="https://opencollective.com/natives-in-tech/organization/6/avatar.svg" />
+            </a>
+            <a href="https://opencollective.com/natives-in-tech/organization/7/website">
+              <img src="https://opencollective.com/natives-in-tech/organization/7/avatar.svg" />
+            </a>
+            <a href="https://opencollective.com/natives-in-tech/organization/8/website">
+              <img src="https://opencollective.com/natives-in-tech/organization/8/avatar.svg" />
+            </a>
+            <a href="https://opencollective.com/natives-in-tech/organization/9/website">
+              <img src="https://opencollective.com/natives-in-tech/organization/9/avatar.svg" />
+            </a>
+          </p>
+        </div>
       </section>
     </Layout>
   );
