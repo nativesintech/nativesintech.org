@@ -8,14 +8,14 @@ export default function Donate() {
         <title>Natives in Tech - Donate</title>
       </Head>
       <section className="max-w-screen-md px-6 pb-24 mx-auto">
-        <h1 className="mb-3 text-4xl font-bold md:text-6xl dark:text-nit-white">
+        <h1 className="mb-4 text-4xl font-bold md:text-6xl dark:text-nit-white">
           Donate
         </h1>
         <p className="mb-6 prose dark:text-nit-light-grey text-nit-grey">
           You can make a tax deductible donation through either a one time
           payment or subscription to our Open Collective.
         </p>
-        <div className="space-y-2">
+        <div className="space-y-4">
           <h2 className="text-2xl font-bold md:text-4xl dark:text-nit-white">
             Individuals
           </h2>
@@ -28,7 +28,7 @@ export default function Donate() {
             </a>
           </p>
         </div>
-        <div className="mt-6 space-y-2">
+        <div className="mt-6 space-y-4">
           <h2 className="text-2xl font-bold md:text-4xl dark:text-nit-white">
             Organizations
           </h2>

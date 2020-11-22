@@ -24,7 +24,7 @@ export default function Conference() {
             Natives in Tech Conf is completely online and free to the public.
           </p>
         </div>
-        <div className="space-y-1">
+        <div className="space-y-4">
           <h2 className="text-2xl font-bold md:text-4xl dark:text-nit-white">
             Who is this conference for?
           </h2>
@@ -40,7 +40,7 @@ export default function Conference() {
           </ul>
         </div>
 
-        <div className="space-y-1">
+        {/* <div className="space-y-1">
           <h2 className="text-2xl font-bold md:text-4xl dark:text-nit-white">
             Would you like to present?
           </h2>
@@ -48,11 +48,11 @@ export default function Conference() {
             If you would like to present at this conference, create a session
             using sessionize.
           </p>
-        </div>
+        </div> */}
 
-        <div className="space-y-1">
+        <div className="space-y-4">
           <h2 className="text-2xl font-bold md:text-4xl dark:text-nit-white">
-            List of Conferences by Year
+            Watch Past Conferences
           </h2>
           <ul className="prose dark:text-nit-light-grey text-nit-grey">
             <li>
@@ -63,6 +63,16 @@ export default function Conference() {
                 href="https://www.youtube.com/playlist?list=PLkEm8Fr-qex0P4U-asUIzPXNUl25KV3i-"
               >
                 2019
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-grey text-light-grey"
+                href="https://www.youtube.com/watch?v=kV8IpFhZmHs&list=PLkEm8Fr-qex3kvWETUYJ_6iIYrxOQXtwB"
+              >
+                2020
               </a>
             </li>
           </ul>

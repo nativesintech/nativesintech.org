@@ -1,6 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
+  darkMode: "media",
   purge: ["./components/**/*.tsx", "./pages/**/*.tsx"],
   plugins: [require("@tailwindcss/typography")],
   theme: {
@@ -22,11 +23,4 @@ module.exports = {
     },
   },
   variants: false,
-  experimental: {
-    darkModeVariant: true,
-  },
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
 };

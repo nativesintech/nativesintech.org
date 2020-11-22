@@ -54,9 +54,7 @@ export default function Index() {
               Our Mission
             </h1>
             <p className="pt-2 md:pt-4 md:text-lg dark:text-nit-light-grey text-nit-grey">
-              Natives in Tech is a coalition of Native and non-Native
-              technologists whose goal is to support technology that reinforces
-              Native beliefs, knowledge, and identity.
+              Native technologists building tools for Native communities.
             </p>
           </div>
 
