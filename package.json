@@ -1,6 +1,6 @@
 {
   "name": "natives-in-tech",
-  "version": "4.0.0",
+  "version": "3.0.1",
   "description": "Website for Natives in Tech",
   "main": "index.js",
   "scripts": {
