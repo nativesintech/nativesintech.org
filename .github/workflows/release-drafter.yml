@@ -15,3 +15,8 @@ jobs:
         # (Optional) specify config name to use, relative to .github/. Default: release-drafter.yml
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+template: |
+  ## What’s Changed
+
+  $CHANGES
