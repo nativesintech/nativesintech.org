@@ -12,7 +12,7 @@ export default function Donate() {
           Donate
         </h1>
         <p className="mb-6 prose dark:text-nit-light-grey text-nit-grey">
-          You can make a tax deductible donation through either a one time
+          You can make a tax deductible donation through either a one-time
           payment or subscription to our Open Collective.
         </p>
         <div className="space-y-4">

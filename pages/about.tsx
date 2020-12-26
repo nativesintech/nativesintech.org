@@ -23,7 +23,7 @@ export default function About() {
               Networking
             </h3>
             <p className="dark:text-nit-light-grey text-nit-grey">
-              Networking with aspiring and experienced technologists alike
+              Network with aspiring and experienced technologists alike
             </p>
           </li>
 
@@ -32,7 +32,7 @@ export default function About() {
               Social Media Presence
             </h3>
             <p className="dark:text-nit-light-grey text-nit-grey">
-              Creating a strong social media presence on platforms familiar to
+              Create a strong social media presence on platforms familiar to
               technologists
             </p>
           </li>
@@ -42,7 +42,7 @@ export default function About() {
               Yearly Conference
             </h3>
             <p className="dark:text-nit-light-grey text-nit-grey">
-              Hosting a yearly Natives in Tech conference
+              Host a yearly Natives in Tech conference
             </p>
           </li>
 
@@ -51,8 +51,8 @@ export default function About() {
               Developing Indigenous-centric technology
             </h3>
             <p className="dark:text-nit-light-grey text-nit-grey">
-              Building open source technology that Native peoples can use to
-              cultivate healthy online communities
+              Build free and open source technology that Native peoples can use
+              to cultivate a strong online presence
             </p>
           </li>
         </ul>

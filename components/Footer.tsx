@@ -14,6 +14,7 @@ export function Footer() {
           <img
             src={assets.netlify.src}
             alt={assets.netlify.altText}
+            style={{ minWidth: 114, minHeight: 51 }}
             width={114}
             height={51}
           />
@@ -67,6 +68,7 @@ export function Footer() {
           <img
             src={assets.netlify.src}
             alt={assets.netlify.altText}
+            style={{ minWidth: 114, minHeight: 51 }}
             width={114}
             height={51}
           />

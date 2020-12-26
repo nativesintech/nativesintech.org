@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           name="description"
-          content="Natives in Tech is a coalition of Native and non-Native developers who seek to empower and support Native communities around the world through open source technology."
+          content="Natives in Tech is a collective of Native technologists who seek to empower and support Native communities around the world through free and open source technology."
         />
 
         <meta property="og:type" content="website" />
@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property="og:description"
-          content="Natives in Tech is a coalition of Native and non-Native developers who seek to empower and support Native communities around the world through open source technology."
+          content="Natives in Tech is a collective of Native technologists who seek to empower and support Native communities around the world through free and open source technology."
         />
         <meta
           property="og:image"
@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta
           property="twitter:description"
-          content="Natives in Tech is a coalition of Native and non-Native developers who seek to empower and support Native communities around the world through open source technology."
+          content="Natives in Tech is a collective of Native technologists who seek to empower and support Native communities around the world through free and open source technology."
         />
         <meta
           property="twitter:image"

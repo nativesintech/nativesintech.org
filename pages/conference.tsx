@@ -14,11 +14,9 @@ export default function Conference() {
         </h1>
         <div className="space-y-1">
           <p className="prose dark:text-nit-light-grey text-nit-grey">
-            The Natives in Tech Conference brings together Native and non-Native
-            technologists to share projects that empower and support Native
-            communities around the world. Natives in Tech seeks to encourage
-            Native communities to use technology as a means to empower
-            themselves while encoding a traditional worldview.
+            The Natives in Tech Conference brings together Native technologists
+            to share projects that empower and support Native communities around
+            the world.
           </p>
           <p className="prose dark:text-nit-light-grey text-nit-grey">
             Natives in Tech Conf is completely online and free to the public.

@@ -54,7 +54,8 @@ export default function Index() {
               Our Mission
             </h1>
             <p className="pt-2 md:pt-4 md:text-lg dark:text-nit-light-grey text-nit-grey">
-              Native technologists building tools for Native communities.
+              Build a collective of Native technologists crafting free and open
+              source technology for Native communities.
             </p>
           </div>
 

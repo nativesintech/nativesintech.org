@@ -1,9 +1,14 @@
 import React from "react";
+import Head from "next/head";
+
 import { Layout } from "../components/Layout";
 
 export default function Contact() {
   return (
     <Layout>
+      <Head>
+        <title>Natives in Tech - Contact</title>
+      </Head>
       <section>
         <form
           action="https://formspree.io/f/xdopzbqz"

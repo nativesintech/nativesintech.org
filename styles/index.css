@@ -137,8 +137,8 @@ body {
 }
 
 @media only screen and (max-width: 786px) {
-  div > a.ml-none {
-    margin-left: 0px;
+  div.space-x-4 > a.ml-none {
+    margin-left: 0px !important;
   }
 }
 
