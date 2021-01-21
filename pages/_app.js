@@ -5,27 +5,27 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Supporting technologists serving Native communities</title>
+        <title>Natives crafting Native-centric technology</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="title"
-          content="Native technologists supporting Native communities"
+          content="Natives crafting Native-centric technology"
         />
         <meta
           name="description"
-          content="Natives in Tech is a collective of Native technologists who seek to empower and support Native communities around the world through free and open source technology."
+          content="Natives in Tech is a collective of Native technologists crafting free and open source software that empowers Native peoples."
         />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://nativesintech.org/" />
         <meta
           property="og:title"
-          content="Native technologists supporting Native communities"
+          content="Natives crafting Native-centric technology"
         />
         <meta
           property="og:description"
-          content="Natives in Tech is a collective of Native technologists who seek to empower and support Native communities around the world through free and open source technology."
+          content="Natives in Tech is a collective of Native technologists crafting free and open source software that empowers Native peoples."
         />
         <meta
           property="og:image"
@@ -36,11 +36,11 @@ function MyApp({ Component, pageProps }) {
         <meta property="twitter:url" content="https://nativesintech.org/" />
         <meta
           property="twitter:title"
-          content="Native technologists supporting Native communities"
+          content="Natives crafting Native-centric technology"
         />
         <meta
           property="twitter:description"
-          content="Natives in Tech is a collective of Native technologists who seek to empower and support Native communities around the world through free and open source technology."
+          content="Natives in Tech is a collective of Native technologists crafting free and open source software that empowers Native peoples."
         />
         <meta
           property="twitter:image"

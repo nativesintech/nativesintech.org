@@ -48,11 +48,10 @@ export default function About() {
 
           <li className="space-y-1">
             <h3 className="text-lg md:text-2xl dark:text-nit-white">
-              Developing Indigenous-centric technology
+              Build Native-centric technology
             </h3>
             <p className="dark:text-nit-light-grey text-nit-grey">
-              Build free and open source technology that Native peoples can use
-              to cultivate a strong online presence
+              Craft free and open source technology that empowers Native peoples
             </p>
           </li>
         </ul>
