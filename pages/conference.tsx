@@ -15,8 +15,8 @@ export default function Conference() {
         <div className="space-y-1">
           <p className="prose dark:text-nit-light-grey text-nit-grey">
             The Natives in Tech Conference brings together Native technologists
-            to share projects that empower and support Native communities around
-            the world.
+            to share projects that empower and support Native peoples around the
+            world.
           </p>
           <p className="prose dark:text-nit-light-grey text-nit-grey">
             Natives in Tech Conf is completely online and free to the public.
@@ -33,7 +33,7 @@ export default function Conference() {
             </li>
             <li>
               Individuals and organizations seeking to engage, learn about, and
-              support Native communities
+              support Native peoples
             </li>
           </ul>
         </div>

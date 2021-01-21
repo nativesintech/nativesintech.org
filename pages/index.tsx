@@ -55,7 +55,7 @@ export default function Index() {
             </h1>
             <p className="pt-2 md:pt-4 md:text-lg dark:text-nit-light-grey text-nit-grey">
               Build a collective of Native technologists crafting free and open
-              source technology for Native communities.
+              source technology for Native peoples.
             </p>
           </div>
 
