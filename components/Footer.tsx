@@ -51,6 +51,14 @@ export function Footer() {
         >
           YouTube
         </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.reddit.com/r/nativesintech/"
+          className="inline-block underline text-nit-primary"
+        >
+          Reddit
+        </a>
       </div>
       <div className="flex text-xs md:justify-end">
         <div className="text-nit-grey dark:text-nit-grey">
