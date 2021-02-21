@@ -17,6 +17,17 @@ const nextConfig = {
   workboxOpts: {
     runtimeCaching: [
       {
+        urlPattern: `/assets\/.+\.(?:png|jpg|jpeg|svg)$/`,
+        handler: "CacheFirst",
+        options: {
+          cacheName: "assets",
+          expiration: {
+            maxAgeSeconds: 30 * 24 * 60 * 60,
+            maxEntries: 20,
+          },
+        },
+      },
+      {
         urlPattern: `/\.(?:png|jpg|jpeg|svg)$/`,
         handler: "CacheFirst",
         options: {
@@ -28,7 +39,7 @@ const nextConfig = {
         },
       },
       {
-        urlPattern: `/\.(?:ttf)$/`,
+        urlPattern: `/fonts\/.+\.ttf$/`,
         handler: "CacheFirst",
         options: {
           cacheName: "fonts",
