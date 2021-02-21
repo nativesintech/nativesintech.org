@@ -60,8 +60,8 @@ export default function Index() {
           </div>
 
           <div className="pt-4">
-            <Link href="/about">
-              <a className="underline md:text-lg text-nit-primary">
+            <Link href="/about" passHref>
+              <a href="" className="underline md:text-lg text-nit-primary">
                 Learn More
               </a>
             </Link>

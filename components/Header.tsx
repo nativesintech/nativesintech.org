@@ -36,7 +36,10 @@ export function Header() {
         <div className="flex flex-wrap items-center justify-between max-w-full px-6 py-8 m-0 md:px-10 md:flex-no-wrap">
           <div className="flex items-center">
             <Link href="/" passHref>
-              <a className="text-lg font-bold lg:block text-nit-primary">
+              <a
+                href=""
+                className="text-lg font-bold lg:block text-nit-primary"
+              >
                 Natives In Tech
               </a>
             </Link>
@@ -74,6 +77,7 @@ export function Header() {
                 ) : (
                   <Link href={navigationItem.route} passHref>
                     <a
+                      href=""
                       className={`underline ${
                         navigationItem.title === "Contact"
                           ? "bg-nit-dark text-nit-white px-4 py-2 text-sm font-bold rounded-md no-underline"
@@ -119,6 +123,7 @@ export function Header() {
               ) : (
                 <Link href={navigationItem.route} passHref>
                   <a
+                    href=""
                     className={`block ml-4 text-xl ${
                       router.pathname === navigationItem.route
                         ? "text-nit-primary"
