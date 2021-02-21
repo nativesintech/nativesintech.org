@@ -20,10 +20,11 @@ export function Footer() {
       href:
         "https://www.youtube.com/channel/UCRyR1Jm77K9uVN1QXvoLY6A?view_as=subscriber",
     },
-    {
-      name: "Reddit",
-      href: "https://www.reddit.com/r/nativesintech/",
-    },
+    // Removing for now until it grows a bit more
+    // {
+    //   name: "Reddit",
+    //   href: "https://www.reddit.com/r/nativesintech/",
+    // },
   ];
 
   return (
