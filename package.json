@@ -4,7 +4,7 @@
   "description": "Website for Natives in Tech",
   "main": "index.js",
   "scripts": {
-    "start": "next",
+    "start": "next dev",
     "build": "next build",
     "export": "yarn sitemap && yarn run build && next export",
     "deploy": "yarn run build && yarn run export",

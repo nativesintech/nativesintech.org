@@ -12,6 +12,8 @@ const nextConfig = {
       "/donate": { page: "/donate" },
       "/conference": { page: "/conference" },
       "/contact": { page: "/contact" },
+      "/community": { page: "/community" },
+      "/projects": { page: "/projects" },
     };
   },
   workboxOpts: {

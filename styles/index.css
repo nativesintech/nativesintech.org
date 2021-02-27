@@ -146,22 +146,4 @@ body {
   stroke: var(--nit-white);
 }
 
-@media (prefers-color-scheme: dark) {
-  ul > li > a.text-light-grey {
-    color: var(--nit-light-grey);
-  }
-
-  a:focus-visible {
-    outline: 1px dotted var(--nit-white);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  ul > li > a.text-grey {
-    color: var(--nit-grey);
-  }
-
-  a:focus-visible {
-    outline: 1px dotted var(--nit-black);
-  }
-}
+@import "./apply.css";

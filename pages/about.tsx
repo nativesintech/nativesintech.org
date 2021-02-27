@@ -8,49 +8,35 @@ export default function About() {
       <Head>
         <title>Natives in Tech - About</title>
       </Head>
-      <section className="max-w-screen-md px-6 mx-auto space-y-8">
-        <h1 className="text-4xl font-bold md:text-6xl dark:text-nit-white">
-          About
-        </h1>
+      <section className="section">
+        <h1 className="h1">About</h1>
 
-        <h2 className="text-xl font-bold md:text-4xl dark:text-nit-white">
-          Initiatives
-        </h2>
+        <h2 className="h2">Initiatives</h2>
 
-        <ul className="space-y-8 ">
+        <ul className="space-y-6">
           <li className="space-y-1">
-            <h3 className="text-lg md:text-2xl dark:text-nit-white">
-              Networking
-            </h3>
-            <p className="dark:text-nit-light-grey text-nit-grey">
+            <h3 className="h3">Networking</h3>
+            <p className="p">
               Network with aspiring and experienced technologists alike
             </p>
           </li>
 
           <li className="space-y-1">
-            <h3 className="text-lg md:text-2xl dark:text-nit-white">
-              Social Media Presence
-            </h3>
-            <p className="dark:text-nit-light-grey text-nit-grey">
+            <h3 className="h3">Social Media Presence</h3>
+            <p className="p">
               Create a strong social media presence on platforms familiar to
               technologists
             </p>
           </li>
 
           <li className="space-y-1">
-            <h3 className="text-lg md:text-2xl dark:text-nit-white">
-              Yearly Conference
-            </h3>
-            <p className="dark:text-nit-light-grey text-nit-grey">
-              Host a yearly Natives in Tech conference
-            </p>
+            <h3 className="h3">Yearly Conference</h3>
+            <p className="p">Host a yearly Natives in Tech conference</p>
           </li>
 
           <li className="space-y-1">
-            <h3 className="text-lg md:text-2xl dark:text-nit-white">
-              Build Native-centric technology
-            </h3>
-            <p className="dark:text-nit-light-grey text-nit-grey">
+            <h3 className="h3">Build Native-centric technology</h3>
+            <p className="p">
               Craft free and open source technology that empowers Native peoples
             </p>
           </li>

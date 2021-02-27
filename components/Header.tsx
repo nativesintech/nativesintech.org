@@ -12,22 +12,9 @@ export function Header() {
     { title: "About", route: "/about" },
     { title: "Conf", route: "/conference" },
     { title: "Donate", route: "/donate" },
-    {
-      title: "Talent",
-      route: "https://talent.nativesintech.org",
-    },
-    {
-      title: "Blog",
-      route: "https://blog.nativesintech.org",
-    },
-    {
-      title: "Forum",
-      route: "https://forum.nativesintech.org",
-    },
-    {
-      title: "Contact",
-      route: "/contact",
-    },
+    { title: "Community", route: "/community" },
+    { title: "Projects", route: "/projects" },
+    { title: "Contact", route: "/contact" },
   ];
 
   return (

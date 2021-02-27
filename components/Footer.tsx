@@ -1,32 +1,8 @@
 import * as React from "react";
 import { assets } from "../helpers/assets";
+import { socialLinksArr } from "../helpers/resources";
 
 export function Footer() {
-  const links = [
-    {
-      name: "GitHub",
-      href: "https://github.com/nativesintech",
-    },
-    {
-      name: "Twitter",
-      href: "https://twitter.com/nativesintech",
-    },
-    {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/company/natives-in-tech",
-    },
-    {
-      name: "YouTube",
-      href:
-        "https://www.youtube.com/channel/UCRyR1Jm77K9uVN1QXvoLY6A?view_as=subscriber",
-    },
-    // Removing for now until it grows a bit more
-    // {
-    //   name: "Reddit",
-    //   href: "https://www.reddit.com/r/nativesintech/",
-    // },
-  ];
-
   return (
     <footer className="flex flex-col p-6 space-y-8 md:p-10 md:items-center md:flex-row md:space-y-0">
       <div className="flex items-center flex-grow mr-4 space-x-4 text-sm md:space-x-6">
@@ -44,9 +20,10 @@ export function Footer() {
             height={51}
           />
         </a>
-        {links.map((l, i) => {
+        {socialLinksArr.map((l, i) => {
           return (
             <a
+              key={`link-${i}`}
               target="_blank"
               rel="noopener noreferrer"
               href={l.href}

@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 
 import { Layout } from "../components/Layout";
+import { Anchor } from "../components/Anchor";
 
 export default function Contact() {
   return (
@@ -13,17 +14,12 @@ export default function Contact() {
         <form
           action="https://formspree.io/f/xdopzbqz"
           method="POST"
-          className="max-w-screen-md px-6 m-auto"
+          className="section"
         >
-          <h2 className="mb-4 text-4xl font-bold md:text-6xl dark:text-nit-white">
-            Contact
-          </h2>
-          <p className="dark:text-nit-light-grey text-nit-grey">
+          <h1 className="h1">Contact</h1>
+          <p className="p">
             We would love to hear from you! Feel free to send a message to{" "}
-            <a
-              className="underline text-nit-primary"
-              href="mailto:hello@nativesintech.org"
-            >
+            <a className="a" href="mailto:hello@nativesintech.org">
               hello@nativesintech.org
             </a>{" "}
             or drop us a line below.
