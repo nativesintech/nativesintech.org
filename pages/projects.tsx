@@ -20,7 +20,7 @@ export default function Projects() {
         </p>
         <ul className="ul">
           {projectsArr.map((p) => (
-            <li>
+            <li key={p.name}>
               <Anchor href={p.href}>{p.name}</Anchor>
             </li>
           ))}

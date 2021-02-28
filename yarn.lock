@@ -4151,6 +4151,11 @@ react-animated-burgers@1.2.8:
   resolved "https://registry.yarnpkg.com/react-animated-burgers/-/react-animated-burgers-1.2.8.tgz#f99e127f1969f53dfb36c63e459ec441d7864f36"
   integrity sha512-6Zt47++69CQlVfaPo/NeJWIZ2uz9ZarXwD3rjBSpQ9LrwjT1H2xIHzzkA6YkJH2TPhAS4390ErBNKhREzuGE6g==
 
+react-detect-offline@2.4.2:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/react-detect-offline/-/react-detect-offline-2.4.2.tgz#2129d11044ecffbe949f21bdaae81010df426f64"
+  integrity sha512-7bZ1dIftMZbmrGOw/MURwWAN1WjT7OgVgm35PJoa/SueaYU9PV12wTrq9xqET2CPbv6G0q5SupT9rpRvRfextg==
+
 react-dom@17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.1.tgz#1de2560474ec9f0e334285662ede52dbc5426fc6"

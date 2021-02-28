@@ -20,6 +20,7 @@
     "next-offline": "5.0.3",
     "react": "17.0.1",
     "react-animated-burgers": "1.2.8",
+    "react-detect-offline": "2.4.2",
     "react-dom": "17.0.1",
     "styled-components": "5.2.1",
     "tailwindcss": "2.0.3",

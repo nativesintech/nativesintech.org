@@ -21,12 +21,12 @@ export default function Community() {
         </p>
         <ul className="ul">
           {socialLinksArr.map((l) => (
-            <li>
+            <li key={l.name}>
               <Anchor href={l.href}>{l.name}</Anchor>
             </li>
           ))}
           {resourceLinksArr.map((l) => (
-            <li>
+            <li key={l.name}>
               <Anchor href={l.href}>{l.name}</Anchor>
             </li>
           ))}
@@ -45,7 +45,7 @@ export default function Community() {
 
         <ul className="ul">
           {nitSocialArr.map((l) => (
-            <li>{l.name}</li>
+            <li key={l.name}>{l.name}</li>
           ))}
         </ul>
       </section>

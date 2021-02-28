@@ -43,7 +43,7 @@ export function Header() {
 
           <ul className="flex-col hidden w-full mr-0 text-base md:flex md:flex-row md:items-center md:justify-center md:w-auto">
             {routes.map((navigationItem) => (
-              <li className="mt-3 md:mt-0 md:ml-6" key={navigationItem.title}>
+              <li key={navigationItem.title} className="mt-3 md:mt-0 md:ml-6">
                 {navigationItem.route.startsWith("https") ? (
                   <span className="flex items-center text-sm cursor-pointer">
                     <a
@@ -87,8 +87,8 @@ export function Header() {
         <ul className="flex-col mt-16">
           {routes.map((navigationItem) => (
             <li
-              className="mt-3 md:mt-0 md:ml-6"
               key={navigationItem.title + "side"}
+              className="mt-3 md:mt-0 md:ml-6"
             >
               {navigationItem.route.startsWith("https") ? (
                 <span className="flex flex-row items-center">
