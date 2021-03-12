@@ -16,6 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "@tailwindcss/typography": "0.4.0",
+    "lodash.shuffle": "4.2.0",
     "next": "10.0.7",
     "next-offline": "5.0.3",
     "react": "17.0.1",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@babel/core": "7.12.17",
     "@babel/plugin-transform-react-jsx": "7.12.17",
+    "@types/lodash.shuffle": "4.2.6",
     "@types/node": "14.14.31",
     "@types/react": "17.0.2",
     "autoprefixer": "10.2.4",

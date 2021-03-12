@@ -4,27 +4,31 @@ import { Layout } from "../components/Layout";
 import Head from "next/head";
 import { assets } from "../helpers/assets";
 import Link from "next/link";
+import shuffle from "lodash.shuffle";
 
 export default function Index() {
   const typedRef = React.createRef<HTMLDivElement>();
 
   const options = {
-    strings: [
-      "s@^gaê'lA", // Euchee/Yuchi
-      "Hesci", // Muscogee (Creek) / Seminole
-      "Yá'át'ééh", // Navajo
-      "Halito", // Choctaw
-      "ᎣᏏᏲ", // Cherokee
-      "Aaniin", // Anishinaabemowin
-      "Wáa sá i yatee", // Tlingit
-      "Pablan", // Inupiaq
-      "Sekoh", // Mohawk / Kanien'keha
-      "Howa", // Osage
-      "Ba'ax ka wa'alik", // Mayan
-      "Niltse", // Nahuatl
-      "Tanisi", // Cree
-      "Hello", // English
-    ].map((s) => s + "!"),
+    strings: shuffle(
+      [
+        "s@^gaê'lA", // Euchee/Yuchi
+        "Hesci", // Muscogee (Creek) / Seminole
+        "Yá'át'ééh", // Navajo
+        "Halito", // Choctaw
+        "ᎣᏏᏲ", // Cherokee
+        "Aaniin", // Anishinaabemowin
+        "Wáa sá i yatee", // Tlingit
+        "Pablan", // Inupiaq
+        "Sekoh", // Mohawk / Kanien'keha
+        "Howa", // Osage
+        "Ba'ax ka wa'alik", // Mayan
+        "Niltse", // Nahuatl
+        "Tanisi", // Cree
+        "Hau", // Lakota
+        "Hello", // English
+      ].map((s) => s + "!")
+    ),
     typeSpeed: 70,
     backSpeed: 50,
     loop: true,
