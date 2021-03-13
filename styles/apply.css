@@ -32,12 +32,12 @@
 
 @media (prefers-color-scheme: dark) {
   * > a.a {
-    @apply text-nit-light-grey;
+    @apply font-normal text-nit-light-grey;
   }
 }
 
 @media (prefers-color-scheme: light) {
   * > a.a {
-    @apply text-nit-black;
+    @apply font-normal text-nit-black;
   }
 }
