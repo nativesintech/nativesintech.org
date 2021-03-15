@@ -13,11 +13,9 @@ export function Footer() {
           href="https://www.netlify.com"
         >
           <img
+            className="min-w-[114px] min-h-[51px]"
             src={assets.netlify.src}
             alt={assets.netlify.altText}
-            style={{ minWidth: 114, minHeight: 51 }}
-            width={114}
-            height={51}
           />
         </a>
         {socialLinksArr.map((l, i) => {
@@ -52,9 +50,7 @@ export function Footer() {
           <img
             src={assets.netlify.src}
             alt={assets.netlify.altText}
-            style={{ minWidth: 114, minHeight: 51 }}
-            width={114}
-            height={51}
+            className="min-w-[114px] min-h-[51px]"
           />
         </a>
       </div>
