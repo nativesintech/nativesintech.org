@@ -2,6 +2,7 @@ const withOffline = require("next-offline");
 require("dotenv").config();
 
 const nextConfig = {
+  target: "serverless",
   env: {
     GITHUB_TOKEN: process.env.GITHUB_TOKEN,
   },
