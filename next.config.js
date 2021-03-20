@@ -17,6 +17,10 @@ const nextConfig = {
       "/projects": { page: "/projects" },
     };
   },
+  i18n: {
+    locales: ["en", "es"],
+    defaultLocale: "en",
+  },
 };
 
 module.exports = withOffline(nextConfig);

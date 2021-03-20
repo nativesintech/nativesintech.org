@@ -1,7 +1,17 @@
 import "../styles/index.css";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import * as locales from "../content/locale";
+import { IntlProvider } from "react-intl";
 
 function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+  const { locale, defaultLocale, pathname } = router;
+  const localeCopy = locales[locale];
+  const messages = localeCopy[pathname];
+  const header = localeCopy.header;
+  const footer = localeCopy.footer;
+
   return (
     <>
       <Head>
@@ -69,7 +79,17 @@ function MyApp({ Component, pageProps }) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <Component {...pageProps} />
+      <IntlProvider
+        locale={locale}
+        defaultLocale={defaultLocale}
+        messages={{
+          ...messages,
+          ...header,
+          ...footer,
+        }}
+      >
+        <Component {...pageProps} />
+      </IntlProvider>
     </>
   );
 }

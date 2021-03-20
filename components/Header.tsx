@@ -3,18 +3,23 @@ import { useState } from "react";
 import { HamburgerSqueeze } from "react-animated-burgers";
 import { useRouter } from "next/router";
 import { assets } from "../helpers/assets";
+import { useIntl } from "react-intl";
+import { MergedData } from "../content/types";
 
 export function Header() {
   const [isActive, toggleButton] = useState(false);
   const router = useRouter();
 
+  const { formatMessage } = useIntl();
+  const f = (id: keyof MergedData) => formatMessage({ id });
+
   const routes = [
-    { title: "About", route: "/about" },
-    { title: "Conf", route: "/conference" },
-    { title: "Donate", route: "/donate" },
-    { title: "Community", route: "/community" },
-    { title: "Projects", route: "/projects" },
-    { title: "Contact", route: "/contact" },
+    { title: f("about"), route: "/about" },
+    { title: f("conf"), route: "/conference" },
+    { title: f("donate"), route: "/donate" },
+    { title: f("community"), route: "/community" },
+    { title: f("projects"), route: "/projects" },
+    { title: f("contact"), route: "/contact" },
   ];
 
   return (
@@ -27,7 +32,7 @@ export function Header() {
                 href=""
                 className="text-lg font-bold lg:block text-nit-primary"
               >
-                Natives In Tech
+                {f("nit")}
               </a>
             </Link>
           </div>
@@ -66,7 +71,7 @@ export function Header() {
                     <a
                       href=""
                       className={`underline ${
-                        navigationItem.title === "Contact"
+                        navigationItem.title === f("contact")
                           ? "bg-nit-dark text-nit-white px-4 py-2 text-sm font-bold rounded-md no-underline"
                           : "text-nit-primary text-sm leading-tight"
                       } `}

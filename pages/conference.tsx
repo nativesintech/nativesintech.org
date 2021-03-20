@@ -2,36 +2,29 @@ import { Layout } from "../components/Layout";
 import { Newsletter } from "../components/Newsletter";
 import Head from "next/head";
 import { Anchor } from "../components/Anchor";
+import { useIntl } from "react-intl";
+import { MergedData } from "../content/types";
 
 export default function Conference() {
+  const { formatMessage } = useIntl();
+  const f = (id: keyof MergedData["/conference"]) => formatMessage({ id });
+
   return (
     <Layout>
       <Head>
         <title>Natives in Tech Conf</title>
       </Head>
       <section className="section">
-        <h1 className="h1">Natives in Tech Conf</h1>
+        <h1 className="h1">{f("h1")}</h1>
         <div className="space-y-1 ">
-          <p className="p">
-            The Natives in Tech Conference brings together Native technologists
-            to share projects that empower and support Native peoples around the
-            world.
-          </p>
-          <p className="p">
-            Natives in Tech Conf is completely online and free to the public.
-          </p>
+          <p className="p">{f("blurb")}</p>
         </div>
         <div className="space-y-4">
-          <h2 className="h2">Who is this conference for?</h2>
+          <h2 className="h2">{f("conferenceForTitle")}</h2>
           <ul className="ul">
-            <li>Natives working in technology </li>
-            <li>
-              Non-Natives developing technology that empowers Native peoples
-            </li>
-            <li>
-              Individuals and organizations seeking to engage, learn about, and
-              support Native peoples
-            </li>
+            <li>{f("conferenceForItem1")}</li>
+            <li>{f("conferenceForItem2")}</li>
+            <li>{f("conferenceForItem3")}</li>
           </ul>
         </div>
 
@@ -46,7 +39,7 @@ export default function Conference() {
         </div> */}
 
         <div className="space-y-4">
-          <h2 className="h2">Watch Past Conferences</h2>
+          <h2 className="h2">{f("watchTitle")}</h2>
           <ul className="ul">
             <li>
               <Anchor href="https://www.youtube.com/playlist?list=PLkEm8Fr-qex0P4U-asUIzPXNUl25KV3i-">

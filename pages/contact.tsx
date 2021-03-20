@@ -2,9 +2,12 @@ import React from "react";
 import Head from "next/head";
 
 import { Layout } from "../components/Layout";
-import { Anchor } from "../components/Anchor";
+import { useIntl } from "react-intl";
+import { MergedData } from "../content/types";
 
 export default function Contact() {
+  const { formatMessage } = useIntl();
+  const f = (id: keyof MergedData["/contact"]) => formatMessage({ id });
   return (
     <Layout>
       <Head>
@@ -16,13 +19,13 @@ export default function Contact() {
           method="POST"
           className="section"
         >
-          <h1 className="h1">Contact</h1>
+          <h1 className="h1">{f("h1")}</h1>
           <p className="p">
-            We would love to hear from you! Feel free to send a message to{" "}
+            {f("blurb")}
             <a className="a" href="mailto:hello@nativesintech.org">
               hello@nativesintech.org
-            </a>{" "}
-            or drop us a line below.
+            </a>
+            .
           </p>
           <div className="mt-6 mb-4">
             <div className="flex flex-col mb-4 space-y-4 md:space-y-0 md:mb-0 md:flex-row">
@@ -31,14 +34,14 @@ export default function Contact() {
                   htmlFor="name"
                   className="block text-xs font-bold tracking-wide uppercase dark:text-nit-light-grey"
                 >
-                  Name
+                  {f("name")}
                 </label>
                 <input
                   id="name"
                   type="text"
                   style={{ textIndent: ".5rem" }}
                   name="name"
-                  placeholder="Name"
+                  placeholder={f("name")}
                   className="w-full p-1 my-2 text-xl border rounded appearance-none border-nit-grey dark:bg-nit-black dark:text-nit-light-grey input focus focus:shadow-outline active:outline-none active:border-nit-light-grey"
                 />
               </div>
@@ -47,7 +50,7 @@ export default function Contact() {
                   htmlFor="email"
                   className="block text-xs font-bold tracking-wide uppercase dark:text-nit-light-grey"
                 >
-                  Email
+                  {f("email")}
                 </label>
                 <input
                   id="email"
@@ -55,7 +58,7 @@ export default function Contact() {
                   autoComplete="email"
                   style={{ textIndent: ".5rem" }}
                   name="_replyto"
-                  placeholder="Email"
+                  placeholder={f("email")}
                   className="w-full p-1 my-2 text-xl border rounded appearance-none dark:bg-nit-black dark:text-nit-light-grey border-nit-grey input focus focus:shadow-outline active:outline-none active:border-nit-light-grey"
                 />
               </div>
@@ -65,13 +68,13 @@ export default function Contact() {
                 htmlFor="message"
                 className="block text-xs font-bold tracking-wide uppercase dark:text-nit-light-grey"
               >
-                Message
+                {f("message")}
               </label>
               <textarea
                 id="message"
                 style={{ textIndent: ".5rem" }}
                 name="message"
-                placeholder="Message"
+                placeholder={f("message")}
                 className="w-full p-1 pb-16 my-2 text-xl border rounded appearance-none dark:text-nit-light-grey dark:bg-nit-black border-nit-grey input focus focus:shadow-outline active:outline-none active:border-nit-light-grey"
               ></textarea>
             </div>
@@ -81,7 +84,7 @@ export default function Contact() {
             value="Send"
             className="px-6 py-3 font-bold rounded bg-nit-dark text-nit-white focus:shadow-outline"
           >
-            SUBMIT
+            {f("submit")}
           </button>
         </form>
       </section>

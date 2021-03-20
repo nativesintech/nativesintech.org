@@ -1,44 +1,41 @@
 import React from "react";
 import { Layout } from "../components/Layout";
 import Head from "next/head";
+import { useIntl } from "react-intl";
+import { MergedData } from "../content/types";
 
 export default function About() {
+  const { formatMessage } = useIntl();
+  const f = (id: keyof MergedData["/about"]) => formatMessage({ id });
   return (
     <Layout>
       <Head>
         <title>Natives in Tech - About</title>
       </Head>
       <section className="section">
-        <h1 className="h1">About</h1>
+        <h1 className="h1">{f("h1")}</h1>
 
-        <h2 className="h2">Initiatives</h2>
+        <h2 className="h2">{f("h2")}</h2>
 
         <ul className="space-y-6">
           <li className="space-y-1">
-            <h3 className="h3">Networking</h3>
-            <p className="p">
-              Network with aspiring and experienced technologists alike
-            </p>
+            <h3 className="h3">{f("networkTitle")}</h3>
+            <p className="p">{f("networkBlurb")}</p>
           </li>
 
           <li className="space-y-1">
-            <h3 className="h3">Social Media Presence</h3>
-            <p className="p">
-              Create a strong social media presence on platforms familiar to
-              technologists
-            </p>
+            <h3 className="h3">{f("socialMediaTitle")}</h3>
+            <p className="p">{f("socialMediaBlurb")}</p>
           </li>
 
           <li className="space-y-1">
-            <h3 className="h3">Yearly Conference</h3>
-            <p className="p">Host a yearly Natives in Tech conference</p>
+            <h3 className="h3">{f("conferenceTitle")}</h3>
+            <p className="p">{f("conferenceBlurb")}</p>
           </li>
 
           <li className="space-y-1">
-            <h3 className="h3">Build Native-centric technology</h3>
-            <p className="p">
-              Craft free and open source technology that empowers Native peoples
-            </p>
+            <h3 className="h3">{f("buildTitle")}</h3>
+            <p className="p">{f("buildBlurb")}</p>
           </li>
         </ul>
       </section>
