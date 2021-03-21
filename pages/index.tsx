@@ -32,6 +32,7 @@ export default function Index() {
         "Tanisi", // Cree
         "Hau", // Lakota
         "Hello", // English
+        "Hola", // Spanish
       ].map((s) => s + "!")
     ),
     typeSpeed: 70,
