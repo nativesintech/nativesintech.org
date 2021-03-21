@@ -4,7 +4,7 @@ export const es: Locale = {
   "/": {
     missionTitle: "Nuestra Visión",
     missionBlurb:
-      "Construir un colectivo de tecnólogos indígenas elaborando tecnología gratuita y de código abierto para los pueblos Indígenas.",
+      "Construir un colectivo de tecnólogos indígenas elaborando tecnología gratuita y de código abierto para los Indígenas.",
     missionCTAText: "Aprender Más",
     captionText: "Foto por",
   },
@@ -27,23 +27,23 @@ export const es: Locale = {
   "/conference": {
     h1: "Indígenas en Tecnología Conf",
     blurb:
-      "The Indígenas en Tecnología Conferencia reúne a tecnólogos indígenas para compartir proyectos que empoderan y apoyan a los pueblos indígenas de todo el mundo. Natives en Tech Conf está completamente en línea y libre al público.",
+      "Los Indígenas en Tecnología Conferencia reúne a tecnólogos Indígenas para compartir proyectos que empoderan y apoyan a los pueblos Indígenas de todo el mundo. La conferencia está completamente en línea y libre al público.",
     conferenceForTitle: "¿Para quién es esta conferencia?",
-    conferenceForItem1: "Indígenas trabajando en tecnología",
+    conferenceForItem1: "Los Indígenas trabajando en tecnología",
     conferenceForItem2:
-      "Los no indígenas desarrollan tecnología que empodera a los pueblos indígenas",
+      "Los no indígenas desarrollan tecnología que empodera a los pueblos Indígenas",
     conferenceForItem3:
-      "Individuos y organizaciones que buscan involucrar, aprender y apoyar a los pueblos indígenas",
+      "Individuos y organizaciones que buscan involucrar, aprender y apoyar a los pueblos Indígenas",
     watchTitle: "Ver Conferencias Pasadas",
   },
   "/donate": {
     h1: "Donar",
     blurb:
       "Puede hacer una donación deducible de impuestos a través de un pago único o una suscripción a nuestro Open Collective.",
-    individualsTitle: "Los Individuales",
+    individualsTitle: "Los individuos",
     individualsBlurb:
       "Conviértase en un contribuyente financiero y nos ayude a mantener nuestra comunidad.",
-    organizationsTitle: "Las Organizaciones",
+    organizationsTitle: "Las Organizaciónes",
     organizationsBlurb:
       "Apoye este proyecto con su organización. Su logotipo aparecerá aquí con un enlace a su sitio web.",
   },
@@ -53,7 +53,7 @@ export const es: Locale = {
       "Manténgase al día con Indígenas en Technologia desde nuestros diversos canales de redes sociales.",
     nitCommunityTitle: "NiT Communidad",
     nitCommunityBlurb:
-      "Si usted es una persona nativa en tecnología y le gustaría unirse a nuestros canales sociales indígenas, por favor envíe un correo electrónico con su nombre, la comunidad a la que le gustaría unirse, y su nación para",
+      "Si usted es una persona Indígena en tecnología y le gustaría unirse a nuestros canales sociales indígenas, por favor envíe un correo electrónico con su nombre, la comunidad a la que le gustaría unirse, y su nación para ",
   },
   "/projects": {
     h1: "Proyectos",
