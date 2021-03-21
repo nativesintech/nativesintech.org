@@ -2,9 +2,9 @@ import { Locale } from "../types";
 
 export const es: Locale = {
   "/": {
-    missionTitle: "Nuestra Misión",
+    missionTitle: "Nuestra Visión",
     missionBlurb:
-      "Construir un colectivo de tecnólogos nativos elaborando tecnología gratuita y de código abierto para los pueblos Nativos.",
+      "Construir un colectivo de tecnólogos indígenas elaborando tecnología gratuita y de código abierto para los pueblos Indígenas.",
     missionCTAText: "Aprender Más",
     captionText: "Foto por",
   },
@@ -18,21 +18,22 @@ export const es: Locale = {
     socialMediaBlurb:
       "Crear una fuerte presencia en las redes sociales en plataformas familiares para los tecnólogos",
     conferenceTitle: "Conferencia Anual",
-    conferenceBlurb: "Organizar una conferencia anual de nativos en tecnología",
-    buildTitle: "Construir tecnología centrada en los Nativos",
+    conferenceBlurb:
+      "Organizar una conferencia anual de indígenas en tecnología",
+    buildTitle: "Construir tecnología centrada en los Indígenas",
     buildBlurb:
-      "Crear tecnología gratuita y de código abierto que empodera a los pueblos Nativos",
+      "Crear tecnología gratuita y de código abierto que empodera a los pueblos Indígenas",
   },
   "/conference": {
-    h1: "Nativos en Tecnología Conf",
+    h1: "Indígenas en Tecnología Conf",
     blurb:
-      "The Nativos en Tecnología Conferencia reúne a tecnólogos nativos para compartir proyectos que empoderan y apoyan a los pueblos nativos de todo el mundo. Natives en Tech Conf está completamente en línea y libre al público.",
+      "The Indígenas en Tecnología Conferencia reúne a tecnólogos indígenas para compartir proyectos que empoderan y apoyan a los pueblos indígenas de todo el mundo. Natives en Tech Conf está completamente en línea y libre al público.",
     conferenceForTitle: "¿Para quién es esta conferencia?",
-    conferenceForItem1: "Nativos trabajando en tecnología",
+    conferenceForItem1: "Indígenas trabajando en tecnología",
     conferenceForItem2:
-      "Los no nativos desarrollan tecnología que empodera a los pueblos nativos",
+      "Los no indígenas desarrollan tecnología que empodera a los pueblos indígenas",
     conferenceForItem3:
-      "Individuos y organizaciones que buscan involucrar, aprender y apoyar a los pueblos nativos",
+      "Individuos y organizaciones que buscan involucrar, aprender y apoyar a los pueblos indígenas",
     watchTitle: "Ver Conferencias Pasadas",
   },
   "/donate": {
@@ -49,10 +50,10 @@ export const es: Locale = {
   "/community": {
     h1: "Communidad",
     blurb:
-      "Manténgase al día con Nativos en Technologia desde nuestros diversos canales de redes sociales.",
+      "Manténgase al día con Indígenas en Technologia desde nuestros diversos canales de redes sociales.",
     nitCommunityTitle: "NiT Communidad",
     nitCommunityBlurb:
-      "Si usted es una persona nativa en tecnología y le gustaría unirse a nuestros canales sociales nativos, por favor envíe un correo electrónico con su nombre, la comunidad a la que le gustaría unirse, y su nación para",
+      "Si usted es una persona nativa en tecnología y le gustaría unirse a nuestros canales sociales indígenas, por favor envíe un correo electrónico con su nombre, la comunidad a la que le gustaría unirse, y su nación para",
   },
   "/projects": {
     h1: "Proyectos",
@@ -69,7 +70,7 @@ export const es: Locale = {
     submit: "Enviar",
   },
   header: {
-    nit: "Nativos en Tecnología",
+    nit: "Indígenas en Tecnología",
     about: "Sobre",
     conf: "Conf",
     donate: "Donar",
