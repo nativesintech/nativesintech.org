@@ -7,6 +7,7 @@ export const en: Locale = {
       "Build a collective of Native technologists crafting free and open source technology for Native peoples.",
     missionCTAText: "Learn More",
     captionText: "Photo by",
+    title: "Natives crafting Native-centric technology",
   },
   "/about": {
     h1: "About",
@@ -21,6 +22,7 @@ export const en: Locale = {
     buildTitle: "Build Native-centric technology",
     buildBlurb:
       "Craft free and open source technology that empowers Native peoples",
+    title: "Natives in Tech - About",
   },
   "/conference": {
     h1: "Natives in Tech Conf",
@@ -33,6 +35,7 @@ export const en: Locale = {
     conferenceForItem3:
       "Individuals and organizations seeking to engage, learn about, and support Native peoples",
     watchTitle: "Watch Past Conferences",
+    title: "Natives in Tech Conf",
   },
   "/donate": {
     h1: "Donate",
@@ -44,6 +47,7 @@ export const en: Locale = {
     organizationsTitle: "Organizations",
     organizationsBlurb:
       "Support this project with your organization. Your logo will show up here with a link to your website.",
+    title: "Natives in Tech - Donate",
   },
   "/community": {
     h1: "Community",
@@ -52,11 +56,13 @@ export const en: Locale = {
     nitCommunityTitle: "NiT Community",
     nitCommunityBlurb:
       "If you are a Native person in tech and would like to join our Native social channels then please send an email with your name, the community you would like to join, and your nation to ",
+    title: "Natives in Tech - Community",
   },
   "/projects": {
     h1: "Projects",
     blurb:
       "A non-exhaustive list of projects we are working on. You can find more on our ",
+    title: "Natives in Tech - Projects",
   },
   "/contact": {
     h1: "Contact",
@@ -66,6 +72,7 @@ export const en: Locale = {
     email: "Email",
     message: "Message",
     submit: "Submit",
+    title: "Natives in Tech - Contact",
   },
   header: {
     nit: "Natives in Tech",
@@ -79,5 +86,10 @@ export const en: Locale = {
   footer: {
     nonprofitBlurb:
       "Natives in Tech is a US 501(c)(3) charitable organization, funded by individual donations.",
+  },
+  seo: {
+    title: "Natives crafting Native-centric technology",
+    description:
+      "Natives in Tech is a collective of Native technologists crafting free and open source technology that empowers Native peoples.",
   },
 };

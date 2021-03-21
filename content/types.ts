@@ -4,6 +4,7 @@ export type Locale = {
     missionBlurb: string;
     missionCTAText: string;
     captionText: string;
+    title: string;
   };
   "/about": {
     h1: string;
@@ -16,6 +17,7 @@ export type Locale = {
     conferenceBlurb: string;
     buildTitle: string;
     buildBlurb: string;
+    title: string;
   };
   "/conference": {
     h1: string;
@@ -25,6 +27,7 @@ export type Locale = {
     conferenceForItem2: string;
     conferenceForItem3: string;
     watchTitle: string;
+    title: string;
   };
   "/donate": {
     h1: string;
@@ -33,16 +36,19 @@ export type Locale = {
     individualsBlurb: string;
     organizationsTitle: string;
     organizationsBlurb: string;
+    title: string;
   };
   "/community": {
     h1: string;
     blurb: string;
     nitCommunityTitle: string;
     nitCommunityBlurb: string;
+    title: string;
   };
   "/projects": {
     h1: string;
     blurb: string;
+    title: string;
   };
   "/contact": {
     h1: string;
@@ -51,6 +57,7 @@ export type Locale = {
     email: string;
     message: string;
     submit: string;
+    title: string;
   };
   header: {
     nit: string;
@@ -63,6 +70,10 @@ export type Locale = {
   };
   footer: {
     nonprofitBlurb: string;
+  };
+  seo: {
+    title: string;
+    description: string;
   };
 };
 

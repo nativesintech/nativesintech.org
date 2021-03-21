@@ -11,7 +11,7 @@ export default function Contact() {
   return (
     <Layout>
       <Head>
-        <title>Natives in Tech - Contact</title>
+        <title>{f("title")}</title>
       </Head>
       <section>
         <form

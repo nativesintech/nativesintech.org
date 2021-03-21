@@ -12,7 +12,7 @@ export default function Projects() {
   return (
     <Layout>
       <Head>
-        <title>Natives in Tech - Projects</title>
+        <title>{f("title")}</title>
       </Head>
 
       <section className="section">

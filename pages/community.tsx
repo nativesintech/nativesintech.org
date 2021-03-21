@@ -15,7 +15,7 @@ export default function Community() {
   return (
     <Layout>
       <Head>
-        <title>Natives in Tech - Community</title>
+        <title>{f("title")}</title>
       </Head>
       <section className="section">
         <h1 className="h1">{f("h1")}</h1>

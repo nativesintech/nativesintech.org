@@ -12,7 +12,7 @@ export default function Conference() {
   return (
     <Layout>
       <Head>
-        <title>Natives in Tech Conf</title>
+        <title>{f("title")}</title>
       </Head>
       <section className="section">
         <h1 className="h1">{f("h1")}</h1>

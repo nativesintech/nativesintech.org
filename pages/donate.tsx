@@ -10,7 +10,7 @@ export default function Donate() {
   return (
     <Layout>
       <Head>
-        <title>Natives in Tech - Donate</title>
+        <title>{f("title")}</title>
       </Head>
       <section className="section">
         <h1 className="h1">{f("h1")}</h1>

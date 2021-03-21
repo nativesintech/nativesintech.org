@@ -49,7 +49,7 @@ export default function Index() {
   return (
     <Layout>
       <Head>
-        <title>Natives crafting Native-centric technology</title>
+        <title>{f("title")}</title>
       </Head>
 
       <section className="grid grid-cols-1 p-6 md:p-10 md:grid-flow-col md:grid-cols-2">

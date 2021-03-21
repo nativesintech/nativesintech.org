@@ -10,7 +10,7 @@ export default function About() {
   return (
     <Layout>
       <Head>
-        <title>Natives in Tech - About</title>
+        <title>{f("title")}</title>
       </Head>
       <section className="section">
         <h1 className="h1">{f("h1")}</h1>

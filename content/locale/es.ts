@@ -7,6 +7,7 @@ export const es: Locale = {
       "Construir un colectivo de tecnólogos indígenas elaborando tecnología gratuita y de código abierto para los Indígenas.",
     missionCTAText: "Aprender Más",
     captionText: "Foto por",
+    title: "Indígenas elaborando tecnología centrada en los Indígenas",
   },
   "/about": {
     h1: "Sobre",
@@ -23,6 +24,7 @@ export const es: Locale = {
     buildTitle: "Construir tecnología centrada en los Indígenas",
     buildBlurb:
       "Crear tecnología gratuita y de código abierto que empodera a los pueblos Indígenas",
+    title: "Indígenas en Tecnología - Sobre",
   },
   "/conference": {
     h1: "Indígenas en Tecnología Conf",
@@ -35,6 +37,7 @@ export const es: Locale = {
     conferenceForItem3:
       "Individuos y organizaciones que buscan involucrar, aprender y apoyar a los pueblos Indígenas",
     watchTitle: "Ver Conferencias Pasadas",
+    title: "Indígenas en Tecnología Conf",
   },
   "/donate": {
     h1: "Donar",
@@ -46,6 +49,7 @@ export const es: Locale = {
     organizationsTitle: "Las Organizaciónes",
     organizationsBlurb:
       "Apoye este proyecto con su organización. Su logotipo aparecerá aquí con un enlace a su sitio web.",
+    title: "Indígenas en Tecnología - Donar",
   },
   "/community": {
     h1: "Communidad",
@@ -54,11 +58,13 @@ export const es: Locale = {
     nitCommunityTitle: "NiT Communidad",
     nitCommunityBlurb:
       "Si usted es una persona Indígena en tecnología y le gustaría unirse a nuestros canales sociales indígenas, por favor envíe un correo electrónico con su nombre, la comunidad a la que le gustaría unirse, y su nación para ",
+    title: "Indígenas en Tecnología - Communidad",
   },
   "/projects": {
     h1: "Proyectos",
     blurb:
       "Una lista no exhaustiva de proyectos en los que estamos trabajando. Puedes encontrar más información sobre nuestro ",
+    title: "Indígenas en Tecnología - Proyectos",
   },
   "/contact": {
     h1: "Contacto",
@@ -68,6 +74,7 @@ export const es: Locale = {
     email: "Su Correo Electrónico",
     message: "Su Mensage",
     submit: "Enviar",
+    title: "Indígenas en Tecnología - Contacto",
   },
   header: {
     nit: "Indígenas en Tecnología",
@@ -81,5 +88,10 @@ export const es: Locale = {
   footer: {
     nonprofitBlurb:
       "Natives in Tech es un US 501(c)(3) organización caritativa, financiada por donaciones individuales.",
+  },
+  seo: {
+    title: "Indígenas elaborando tecnología centrada en los Indígenas",
+    description:
+      "Indígenas en Tecnología es un colectivo de tecnólogos Indígenas que elaboran tecnología gratuito y de código abierto que empodera a los pueblos Indígenas.",
   },
 };
