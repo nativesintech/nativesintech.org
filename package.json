@@ -23,6 +23,7 @@
     "react-animated-burgers": "1.2.8",
     "react-detect-offline": "2.4.3",
     "react-dom": "17.0.1",
+    "react-intl": "5.13.5",
     "styled-components": "5.2.1",
     "tailwindcss": "2.0.3",
     "typed.js": "2.0.11"

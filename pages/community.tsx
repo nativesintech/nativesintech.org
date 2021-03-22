@@ -1,6 +1,8 @@
 import Head from "next/head";
+import { useIntl } from "react-intl";
 import { Anchor } from "../components/Anchor";
 import { Layout } from "../components/Layout";
+import { MergedData } from "../content/types";
 import {
   nitSocialArr,
   resourceLinksArr,
@@ -8,17 +10,16 @@ import {
 } from "../helpers/resources";
 
 export default function Community() {
+  const { formatMessage } = useIntl();
+  const f = (id: keyof MergedData["/community"]) => formatMessage({ id });
   return (
     <Layout>
       <Head>
-        <title>Natives in Tech - Community</title>
+        <title>{f("title")}</title>
       </Head>
       <section className="section">
-        <h1 className="h1">Community</h1>
-        <p className="p">
-          Stay up-to-date with Natives in Tech from our various social media
-          channels.
-        </p>
+        <h1 className="h1">{f("h1")}</h1>
+        <p className="p">{f("blurb")}</p>
         <ul className="ul">
           {socialLinksArr.map((l) => (
             <li key={l.name}>
@@ -32,11 +33,9 @@ export default function Community() {
           ))}
         </ul>
 
-        <h2 className="h2">NiT Community</h2>
+        <h2 className="h2">{f("nitCommunityTitle")}</h2>
         <p className="p">
-          If you are a Native person in tech and would like to join our Native
-          social channels then please send an email with your name, the
-          community you would like to join, and your nation to{" "}
+          {f("nitCommunityBlurb")}{" "}
           <a className="a" href="mailto:hello@nativesintech.org">
             hello@nativesintech.org
           </a>

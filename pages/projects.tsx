@@ -1,21 +1,24 @@
 import Head from "next/head";
 import React from "react";
+import { useIntl } from "react-intl";
 import { Anchor } from "../components/Anchor";
 import { Layout } from "../components/Layout";
+import { MergedData } from "../content/types";
 import { projectsArr, socialLinksMap } from "../helpers/resources";
 
 export default function Projects() {
+  const { formatMessage } = useIntl();
+  const f = (id: keyof MergedData["/projects"]) => formatMessage({ id });
   return (
     <Layout>
       <Head>
-        <title>Natives in Tech - Projects</title>
+        <title>{f("title")}</title>
       </Head>
 
       <section className="section">
-        <h1 className="h1">Projects</h1>
+        <h1 className="h1">{f("h1")}</h1>
         <p className="p">
-          A non-exhaustive list of projects we are working on. You can find more
-          on our{" "}
+          {f("blurb")}
           <Anchor href={socialLinksMap.get("GitHub")!.href}>GitHub</Anchor>.
         </p>
         <ul className="ul">

@@ -5,8 +5,13 @@ import Head from "next/head";
 import { assets } from "../helpers/assets";
 import Link from "next/link";
 import shuffle from "lodash.shuffle";
+import { useIntl } from "react-intl";
+import { MergedData } from "../content/types";
 
 export default function Index() {
+  const { formatMessage } = useIntl();
+  const f = (id: keyof MergedData["/"]) => formatMessage({ id });
+
   const typedRef = React.createRef<HTMLDivElement>();
 
   const options = {
@@ -27,6 +32,7 @@ export default function Index() {
         "Tanisi", // Cree
         "Hau", // Lakota
         "Hello", // English
+        "Hola", // Spanish
       ].map((s) => s + "!")
     ),
     typeSpeed: 70,
@@ -44,7 +50,7 @@ export default function Index() {
   return (
     <Layout>
       <Head>
-        <title>Natives crafting Native-centric technology</title>
+        <title>{f("title")}</title>
       </Head>
 
       <section className="grid grid-cols-1 p-6 md:p-10 md:grid-flow-col md:grid-cols-2">
@@ -55,18 +61,17 @@ export default function Index() {
 
           <div className="pt-8 md:pt-12">
             <h1 className="text-lg md:text-3xl dark:text-nit-white">
-              Our Mission
+              {f("missionTitle")}
             </h1>
             <p className="pt-2 md:pt-4 md:text-lg dark:text-nit-light-grey text-nit-grey">
-              Build a collective of Native technologists crafting free and open
-              source technology for Native peoples.
+              {f("missionBlurb")}
             </p>
           </div>
 
           <div className="pt-4">
             <Link href="/about" passHref>
               <a href="" className="underline md:text-lg text-nit-primary">
-                Learn More
+                {f("missionCTAText")}
               </a>
             </Link>
           </div>
@@ -84,7 +89,7 @@ export default function Index() {
             <figcaption className="text-xs text-center text-nit-grey">
               {" "}
               <span>
-                Photo by{" "}
+                {f("captionText")}{" "}
                 <a
                   href="https://unsplash.com/@taylorruecker?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText"
                   className="underline text-nit-primary"

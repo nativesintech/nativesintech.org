@@ -1,8 +1,13 @@
 import * as React from "react";
+import { useIntl } from "react-intl";
+import { MergedData } from "../content/types";
 import { assets } from "../helpers/assets";
 import { socialLinksArr } from "../helpers/resources";
 
 export function Footer() {
+  const { formatMessage } = useIntl();
+  const f = (id: keyof MergedData) => formatMessage({ id });
+
   return (
     <footer className="flex flex-col p-6 space-y-8 md:p-10 md:items-center md:flex-row md:space-y-0">
       <div className="flex items-center flex-grow mr-4 space-x-4 text-sm md:space-x-6">
@@ -36,8 +41,7 @@ export function Footer() {
       </div>
       <div className="flex text-xs md:justify-end">
         <div className="text-nit-grey dark:text-nit-grey">
-          Natives in Tech is a US 501(c)(3) charitable organization, funded by
-          individual donations.
+          {f("nonprofitBlurb")}
         </div>
       </div>
       <div className="md:hidden">
