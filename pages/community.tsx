@@ -36,8 +36,8 @@ export default function Community() {
         <h2 className="h2">{f("nitCommunityTitle")}</h2>
         <p className="p">
           {f("nitCommunityBlurb")}{" "}
-          <a className="a" href="mailto:hello@nativesintech.org">
-            hello@nativesintech.org
+          <a className="a" href="mailto:social@nativesintech.org">
+            social@nativesintech.org
           </a>
           .
         </p>
