@@ -21,9 +21,6 @@ const nextConfig = {
     locales: ["en", "es"],
     defaultLocale: "en",
   },
-  workboxOpts: {
-    swDest: "./public/service-worker.js",
-  },
 };
 
 module.exports = withOffline(nextConfig);
