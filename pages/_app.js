@@ -66,7 +66,7 @@ function MyApp({ Component, pageProps }) {
           async
           defer
           data-website-id="1cefab40-c814-4a62-9d71-41dac537071f"
-          src="http://157.230.200.94:3000/umami.js"
+          src="https://analytics.nativesintech.org/umami.js"
         ></script>
       </Head>
       <IntlProvider
