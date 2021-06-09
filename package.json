@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "next dev",
-    "build": "next build",
+    "build": "next build && yarn copy && yarn sitemap",
     "export": "yarn sitemap && yarn run build && next export",
+    "copy": "cp -v ./.next/service-worker.js ./public/",
     "deploy": "yarn run build && yarn run export",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",

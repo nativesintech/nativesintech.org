@@ -5,9 +5,3 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-[[redirects]]
-from = "/service-worker.js"
-to = "/_next/static/service-worker.js"
-status = 200
-force = true
-headers = { Cache-Control = "public, max-age=43200, immutable", Service-Worker-Allowed = "/" }
