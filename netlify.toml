@@ -5,3 +5,7 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Permission-Policy = "interest-cohort=()"
