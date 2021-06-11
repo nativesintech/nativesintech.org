@@ -1,6 +1,7 @@
 {
   "name": "Natives in Tech",
   "short_name": "Natives in Tech",
+  "start_url": "https://nativesintech.org",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -15,5 +16,6 @@
   ],
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
-  "display": "standalone"
+  "display": "standalone",
+  "prefer_related_applications": false
 }
