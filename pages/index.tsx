@@ -82,7 +82,7 @@ export default function Index() {
               height={665}
               className="mb-4 rounded-3xl"
             />
-            <figcaption className="text-xs text-center text-nit-grey">
+            <figcaption className="text-xs text-center dark:text-nit-light-grey text-nit-grey">
               {" "}
               <span>
                 {f("captionText")}{" "}
