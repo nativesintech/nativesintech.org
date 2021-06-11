@@ -35,7 +35,7 @@ export function Footer() {
         })}
       </div>
       <div className="flex text-xs md:justify-end">
-        <div className="text-nit-grey dark:text-nit-grey">{f("nonprofitBlurb")}</div>
+        <div className="dark:text-nit-light-grey text-nit-grey">{f("nonprofitBlurb")}</div>
       </div>
       <div className="md:hidden">
         <a className="inline-block" target="_blank" rel="noopener noreferrer" href="https://www.netlify.com">
