@@ -60,12 +60,8 @@ export default function Index() {
           </div>
 
           <div className="pt-8 md:pt-12">
-            <h1 className="text-lg md:text-3xl dark:text-nit-white">
-              {f("missionTitle")}
-            </h1>
-            <p className="pt-2 md:pt-4 md:text-lg dark:text-nit-light-grey text-nit-grey">
-              {f("missionBlurb")}
-            </p>
+            <h1 className="text-lg md:text-3xl dark:text-nit-white">{f("missionTitle")}</h1>
+            <p className="pt-2 md:pt-4 md:text-lg dark:text-nit-light-grey text-nit-grey">{f("missionBlurb")}</p>
           </div>
 
           <div className="pt-4">
