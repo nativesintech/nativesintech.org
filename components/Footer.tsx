@@ -39,7 +39,13 @@ export function Footer() {
       </div>
       <div className="md:hidden">
         <a className="inline-block" target="_blank" rel="noopener noreferrer" href="https://www.netlify.com">
-          <img src={assets.netlify.src} alt={assets.netlify.altText} className="min-w-[114px] min-h-[51px]" />
+          <img
+            src={assets.netlify.src}
+            alt={assets.netlify.altText}
+            width={114}
+            height={51}
+            style={{ minWidth: 114, minHeight: 51 }}
+          />
         </a>
       </div>
     </footer>
