@@ -1,9 +1,9 @@
-import { Layout } from "../components/Layout";
-import { Newsletter } from "../components/Newsletter";
+import { Layout } from "../../components/Layout";
+import { Newsletter } from "../../components/Newsletter";
 import Head from "next/head";
-import { Anchor } from "../components/Anchor";
+import { Anchor } from "../../components/Anchor";
 import { useIntl } from "react-intl";
-import { MergedData } from "../content/types";
+import { MergedData } from "../../content/types";
 
 export default function Conference() {
   const { formatMessage } = useIntl();
@@ -42,9 +42,7 @@ export default function Conference() {
           <h2 className="h2">{f("watchTitle")}</h2>
           <ul className="ul">
             <li>
-              <Anchor href="https://www.youtube.com/playlist?list=PLkEm8Fr-qex0P4U-asUIzPXNUl25KV3i-">
-                2019
-              </Anchor>
+              <Anchor href="https://www.youtube.com/playlist?list=PLkEm8Fr-qex0P4U-asUIzPXNUl25KV3i-">2019</Anchor>
             </li>
             <li>
               <Anchor href="https://www.youtube.com/watch?v=kV8IpFhZmHs&list=PLkEm8Fr-qex3kvWETUYJ_6iIYrxOQXtwB">
