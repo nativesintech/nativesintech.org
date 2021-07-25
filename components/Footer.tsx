@@ -20,19 +20,21 @@ export function Footer() {
             style={{ minWidth: 114, minHeight: 51 }}
           />
         </a>
-        {socialLinksArr.map((l, i) => {
-          return (
-            <a
-              key={`link-${i}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              href={l.href}
-              className={`inline-block underline text-nit-primary ${i === 0 ? "ml-none" : ""}`}
-            >
-              {l.name}
-            </a>
-          );
-        })}
+        {socialLinksArr
+          .sort((a, b) => a.name.localeCompare(b.name))
+          .map((l, i) => {
+            return (
+              <a
+                key={`link-${i}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                href={l.href}
+                className={`inline-block underline text-nit-primary ${i === 0 ? "ml-none" : ""}`}
+              >
+                {l.name}
+              </a>
+            );
+          })}
       </div>
       <div className="flex text-xs md:justify-end">
         <div className="dark:text-nit-light-grey text-nit-grey">{f("nonprofitBlurb")}</div>

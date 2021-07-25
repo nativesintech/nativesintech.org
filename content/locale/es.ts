@@ -13,17 +13,13 @@ export const es: Locale = {
     h1: "Sobre",
     h2: "Las Iniciativas",
     networkTitle: "El Establecimiento de Contactos",
-    networkBlurb:
-      "Network con tecnólogos aspirantes y experimentados por igual",
+    networkBlurb: "Network con tecnólogos aspirantes y experimentados por igual",
     socialMediaTitle: "Presencia en las Redes Sociales",
-    socialMediaBlurb:
-      "Crear una fuerte presencia en las redes sociales en plataformas familiares para los tecnólogos",
+    socialMediaBlurb: "Crear una fuerte presencia en las redes sociales en plataformas familiares para los tecnólogos",
     conferenceTitle: "Conferencia Anual",
-    conferenceBlurb:
-      "Organizar una conferencia anual de indígenas en tecnología",
+    conferenceBlurb: "Organizar una conferencia anual de indígenas en tecnología",
     buildTitle: "Construir tecnología centrada en los Indígenas",
-    buildBlurb:
-      "Crear tecnología gratuita y de código abierto que empodera a los pueblos Indígenas",
+    buildBlurb: "Crear tecnología gratuita y de código abierto que empodera a los pueblos Indígenas",
     title: "Indígenas en Tecnología - Sobre",
   },
   "/conference": {
@@ -32,10 +28,8 @@ export const es: Locale = {
       "Los Indígenas en Tecnología Conferencia reúne a tecnólogos Indígenas para compartir proyectos que empoderan y apoyan a los pueblos Indígenas de todo el mundo. La conferencia está completamente en línea y libre al público.",
     conferenceForTitle: "¿Para quién es esta conferencia?",
     conferenceForItem1: "Los Indígenas trabajando en tecnología",
-    conferenceForItem2:
-      "Los no indígenas desarrollan tecnología que empodera a los pueblos Indígenas",
-    conferenceForItem3:
-      "Individuos y organizaciones que buscan involucrar, aprender y apoyar a los pueblos Indígenas",
+    conferenceForItem2: "Los no indígenas desarrollan tecnología que empodera a los pueblos Indígenas",
+    conferenceForItem3: "Individuos y organizaciones que buscan involucrar, aprender y apoyar a los pueblos Indígenas",
     watchTitle: "Ver Conferencias Pasadas",
     title: "Indígenas en Tecnología Conf",
   },
@@ -44,8 +38,7 @@ export const es: Locale = {
     blurb:
       "Puede hacer una donación deducible de impuestos a través de un pago único o una suscripción a nuestro Open Collective.",
     individualsTitle: "Los individuos",
-    individualsBlurb:
-      "Conviértase en un contribuyente financiero y nos ayude a mantener nuestra comunidad.",
+    individualsBlurb: "Conviértase en un contribuyente financiero y nos ayude a mantener nuestra comunidad.",
     organizationsTitle: "Las Organizaciónes",
     organizationsBlurb:
       "Apoye este proyecto con su organización. Su logotipo aparecerá aquí con un enlace a su sitio web.",
@@ -53,8 +46,7 @@ export const es: Locale = {
   },
   "/community": {
     h1: "Communidad",
-    blurb:
-      "Manténgase al día con Indígenas en Technologia desde nuestros diversos canales de redes sociales.",
+    blurb: "Manténgase al día con Indígenas en Technologia desde nuestros diversos canales de redes sociales.",
     nitCommunityTitle: "NiT Communidad",
     nitCommunityBlurb:
       "Si usted es una persona Indígena en tecnología y le gustaría unirse a nuestros canales sociales indígenas, por favor envíe un correo electrónico con su nombre, la comunidad a la que le gustaría unirse, y su nación para ",
@@ -84,6 +76,7 @@ export const es: Locale = {
     community: "Communidad",
     projects: "Proyectos",
     contact: "Contacto",
+    blog: "Blog",
   },
   footer: {
     nonprofitBlurb:

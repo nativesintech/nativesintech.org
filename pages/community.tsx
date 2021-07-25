@@ -3,11 +3,7 @@ import { useIntl } from "react-intl";
 import { Anchor } from "../components/Anchor";
 import { Layout } from "../components/Layout";
 import { MergedData } from "../content/types";
-import {
-  nitSocialArr,
-  resourceLinksArr,
-  socialLinksArr,
-} from "../helpers/resources";
+import { nitSocialArr, resourceLinksArr, socialLinksArr } from "../helpers/resources";
 
 export default function Community() {
   const { formatMessage } = useIntl();
@@ -21,16 +17,13 @@ export default function Community() {
         <h1 className="h1">{f("h1")}</h1>
         <p className="p">{f("blurb")}</p>
         <ul className="ul">
-          {socialLinksArr.map((l) => (
-            <li key={l.name}>
-              <Anchor href={l.href}>{l.name}</Anchor>
-            </li>
-          ))}
-          {resourceLinksArr.map((l) => (
-            <li key={l.name}>
-              <Anchor href={l.href}>{l.name}</Anchor>
-            </li>
-          ))}
+          {[...socialLinksArr, ...resourceLinksArr]
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map((l) => (
+              <li key={l.name}>
+                <Anchor href={l.href}>{l.name}</Anchor>
+              </li>
+            ))}
         </ul>
 
         <h2 className="h2">{f("nitCommunityTitle")}</h2>
@@ -43,9 +36,11 @@ export default function Community() {
         </p>
 
         <ul className="ul">
-          {nitSocialArr.map((l) => (
-            <li key={l.name}>{l.name}</li>
-          ))}
+          {nitSocialArr
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map((l) => (
+              <li key={l.name}>{l.name}</li>
+            ))}
         </ul>
       </section>
     </Layout>

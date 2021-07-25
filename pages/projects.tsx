@@ -22,11 +22,13 @@ export default function Projects() {
           <Anchor href={socialLinksMap.get("GitHub")!.href}>GitHub</Anchor>.
         </p>
         <ul className="ul">
-          {projectsArr.map((p) => (
-            <li key={p.name}>
-              <Anchor href={p.href}>{p.name}</Anchor>
-            </li>
-          ))}
+          {projectsArr
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map((p) => (
+              <li key={p.name}>
+                <Anchor href={p.href}>{p.name}</Anchor>
+              </li>
+            ))}
         </ul>
       </section>
     </Layout>

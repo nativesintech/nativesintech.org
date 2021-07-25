@@ -74,6 +74,7 @@ export const en: Locale = {
     community: "Community",
     projects: "Projects",
     contact: "Contact",
+    blog: "Blog",
   },
   footer: {
     nonprofitBlurb: "Natives in Tech is a US 501(c)(3) charitable organization, funded by individual donations.",

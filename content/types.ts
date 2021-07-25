@@ -67,6 +67,7 @@ export type Locale = {
     community: string;
     projects: string;
     contact: string;
+    blog: string;
   };
   footer: {
     nonprofitBlurb: string;
@@ -77,6 +78,4 @@ export type Locale = {
   };
 };
 
-export type MergedData = Omit<Locale, "header" | "footer"> &
-  Locale["header"] &
-  Locale["footer"];
+export type MergedData = Omit<Locale, "header" | "footer"> & Locale["header"] & Locale["footer"];
