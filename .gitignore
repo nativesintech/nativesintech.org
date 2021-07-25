@@ -25,6 +25,7 @@ storybook-static/
 # misc
 .DS_Store
 .env*
+sitemap.xml
 
 # debug
 npm-debug.log*
