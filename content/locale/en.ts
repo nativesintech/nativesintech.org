@@ -4,7 +4,7 @@ export const en: Locale = {
   "/": {
     missionTitle: "Our Mission",
     missionBlurb:
-      "Build a tech ecosystem of Native technologists crafting free and open source technology for Native communities.",
+      "Cultivate a tech ecosystem of Native technologists crafting free and open source technology for Native communities.",
     missionCTAText: "Learn More About",
     captionText: "Photo by",
     title: "Native technologists crafting free and open source technology for Native communities",
