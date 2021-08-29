@@ -4,10 +4,10 @@ export const es: Locale = {
   "/": {
     missionTitle: "Nuestra Visión",
     missionBlurb:
-      "Construir un colectivo de tecnólogos indígenas elaborando tecnología gratuita y de código abierto para los pueblos Indígenas.",
+      "Construir un ecosistema tecnológico de tecnólogos Indígenas que elaboren tecnología gratuita y de código abierto para las comunidades Indígenas",
     missionCTAText: "Aprender Más",
     captionText: "Foto por",
-    title: "Indígenas elaborando tecnología centrada en los Indígenas",
+    title: "Tecnólogos Indígenas elaboran tecnología gratuita y de código abierto para las comunidades Indígenas",
   },
   "/about": {
     h1: "Sobre",
