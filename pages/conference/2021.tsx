@@ -136,7 +136,7 @@ export default function TwentyTwentyOne() {
                 {v.name}
               </h5>
               <label className="label-header">Bio</label>
-              <p className="pb-5 text-white p" style={{ marginTop: 0 }}>
+              <p className="pb-5 dark:text-white p" style={{ marginTop: 0 }}>
                 {v.bio}
               </p>
             </li>
@@ -171,13 +171,13 @@ export default function TwentyTwentyOne() {
                 {v.photo ? (
                   <img src={v.photo} />
                 ) : (
-                  <p className="text-white p" style={{ marginTop: 0, marginBottom: 0 }}>
+                  <p className="dark:text-white p" style={{ marginTop: 0, marginBottom: 0 }}>
                     TBD
                   </p>
                 )}
                 <br />
                 <label className="label-header">Bio</label>
-                <p className="text-white p" style={{ marginTop: 0 }}>
+                <p className="dark:text-white p " style={{ marginTop: 0 }}>
                   {v.bio}
                 </p>
               </li>
