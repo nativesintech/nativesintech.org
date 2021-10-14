@@ -10,6 +10,14 @@
   @apply text-lg md:text-2xl dark:text-nit-white;
 }
 
+.h4 {
+  @apply text-sm md:text-xl dark:text-nit-white;
+}
+
+.h5 {
+  @apply text-xs md:text-lg dark:text-nit-white;
+}
+
 .p {
   @apply prose dark:text-nit-light-grey text-nit-grey;
 }
@@ -40,4 +48,8 @@
   * > a.a {
     @apply font-normal text-nit-black;
   }
+}
+
+.label-header {
+  @apply text-xs uppercase dark:text-nit-light-grey text-nit-grey;
 }
