@@ -194,7 +194,7 @@ export default function TwentyTwentyOne() {
                   {v.track}
                 </h5> */}
                 {/* <label className="label-header">Name</label> */}
-                <h5 className="pb-1 h3" style={{ marginTop: 0, fontStyle: "bold", color: "black" }}>
+                <h5 className="pb-1 h3" style={{ marginTop: 0, fontStyle: "bold", color: "" }}>
                   {v.name} {v.session ? ( `—  ${v.session}` ) : (null) }
                 </h5>
                 {/* <label className="label-header">Session</label> */}
