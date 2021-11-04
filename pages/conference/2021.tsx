@@ -153,8 +153,8 @@ export default function TwentyTwentyOne() {
         {/* <img src="https://pbs.twimg.com/media/FDNF7pmWQAM5q2_?format=jpg&name=medium" style={{height: "400px", margin: "auto", marginTop: "30px"}} /> */}
         {/* <h4 className="h4">Details</h4> */}
         <ul className="ul" style={{listStyle: "none", marginTop: "15px"}}>
-          <li className="li">Workshop 1: <strong>1:00pm - 3:00pm CDT</strong></li>
-          <li className="li">Workshop 2: <strong>6:00pm - 8:00pm CDT</strong></li>
+          <li className="li">Workshop 1: <span style={{fontWeight: 600}}>1:00pm - 3:00pm CDT</span></li>
+          <li className="li">Workshop 2: <span style={{fontWeight: 600}}>6:00pm - 8:00pm CDT</span></li>
           <li className="li">Location - Zoom</li>
         </ul>
         <img src="https://pbs.twimg.com/media/FDNF7pmWQAM5q2_?format=jpg&name=medium" />
