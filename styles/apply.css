@@ -1,43 +1,47 @@
 .h1 {
   @apply text-4xl font-bold md:text-6xl dark:text-nit-white;
 }
-
 .h2 {
   @apply text-2xl font-bold md:text-4xl dark:text-nit-white;
 }
-
 .h3 {
   @apply text-lg md:text-2xl dark:text-nit-white;
+}
+
+.h4 {
+  @apply text-sm md:text-xl dark:text-nit-white;
+}
+
+.h5 {
+  @apply text-xs md:text-lg dark:text-nit-white;
 }
 
 .p {
   @apply prose dark:text-nit-light-grey text-nit-grey;
 }
-
 .ul {
   @apply prose list-disc dark:text-nit-light-grey text-nit-grey;
 }
-
 .section {
   @apply max-w-screen-md px-6 py-4 mx-auto space-y-8 md:py-10;
 }
-
 .label {
   @apply font-sans;
 }
-
 * > a.a {
   @apply underline;
 }
-
 @media (prefers-color-scheme: dark) {
   * > a.a {
     @apply font-normal text-nit-light-grey;
   }
 }
-
 @media (prefers-color-scheme: light) {
   * > a.a {
     @apply font-normal text-nit-black;
   }
+}
+
+.label-header {
+  @apply text-xs uppercase dark:text-nit-light-grey text-nit-grey;
 }
