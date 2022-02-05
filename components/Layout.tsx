@@ -17,7 +17,7 @@ export function Layout(props: Props) {
       </Offline>
       <div className="p-2 text-center bg-nit-primary dark:text-nit-black text-nit-white">
         Natives in Tech Conf 2022 happening on November 5th!{" "}
-        <Link href="/conference/2021" passHref>
+        <Link href="/conference/2022" passHref>
           <a href="" className="underline">
             Click here for details
           </a>
