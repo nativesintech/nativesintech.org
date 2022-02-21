@@ -2,6 +2,7 @@ import Head from "next/head";
 import React from "react";
 import { Anchor } from "../../components/Anchor";
 import { Layout } from "../../components/Layout";
+import Link from "next/link";
 
 export default function TwentyTwentyOne() {
   const workshopSpeakers = [
@@ -35,12 +36,23 @@ export default function TwentyTwentyOne() {
           Come learn from Native technologists developing the path forward!
         </p>
         <p className="p">
-          Please follow us on <Anchor href="https://twitter.com/nativesintech/">Twitter</Anchor>, Instagram, and Facebook @nativesintech! If you are interested and would like to learn more about becoming a NiTConf2022 sponsor, please send an email to <Anchor href="mailto:conf@nativesintech.org">conf@nativesintech.org</Anchor>.
+          Please follow us on <Anchor href="https://twitter.com/nativesintech/">Twitter</Anchor>, <Anchor href="https://www.instagram.com/nativesintech/">Instagram</Anchor>, and <Anchor href="https://www.facebook.com/nativesintech/">Facebook</Anchor>! If you are interested and would like to learn more about becoming a NiTConf2022 sponsor, please send an email to <Anchor href="mailto:conf@nativesintech.org">conf@nativesintech.org</Anchor>.
         </p>
         <p className="p">
           Please follow us on twitter <Anchor href="https://twitter.com/nativesintech">@nativesintech</Anchor>! If you'd
           like to sponsor this event please send an email to <Anchor href="mailto:conf@nativesintech.org">conf@nativesintech.org</Anchor>.
         </p>
+      </section>
+      <section className="section">
+        <h2 className="h2">
+          Interested in speaking?
+        </h2>
+        <br/>
+        <Link href="https://sessionize.com/nitconf2022/" passHref>
+          <a className="bg-nit-dark text-nit-white px-4 py-2 text-sm font-bold rounded-md no-underline">
+            Call for Speakers - Opens 20 March, 2022
+          </a>
+        </Link>
       </section>
       <section className="section">
       <h2 className="h2">Agenda</h2>
