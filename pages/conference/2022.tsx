@@ -6,7 +6,7 @@ import { Layout } from "../../components/Layout";
 export default function TwentyTwentyOne() {
   const workshopSpeakers = [
   ];
-  const confSpeakers = [
+  const confSpeakers: Object[] = [
   ];
   return (
     <Layout>
@@ -14,87 +14,52 @@ export default function TwentyTwentyOne() {
         <title>Natives in Tech Conf 2022</title>
       </Head>
       <section className="section">
-        <h1 className="h1">Natives in Tech Conf 2022: ???</h1>
+        <h1 className="h1">Natives in Tech Conf 2022</h1>
+        <h2 className="h2">Developing Sovereignty in Tech</h2>
         <p className="p">
-          ???
+          We’re excited to announce the 4th annual Natives in Tech Conference on <b>Nov 4-5, 2022</b>!
+        </p>
+        <p className="p">
+          This year is exceptionally exciting because we will be hosting the NiTConf2022 in Gather Town! The team has spent many hours developing a unique space with cultural significance by integrating Native objects and significant places we use to "gather" to celebrate as a community. Our work is always guided by our traditional knowledge and ways, and the goal was to create a virtual space with a tech conference experience that reflects us, the Natives technologists. We hope you enjoy it as much as we do and we can’t wait to share this sacred space with you!
+        </p>
+        <p className="p">
+          We are planning two full days of demos and presentations focusing on this year's theme, "<b>Developing Sovereignty in Tech</b>".
+        </p>
+        <p className="p">
+          There will be opportunities to engage with speakers, attendees, and a few select sponsors on both days. Friday's Meet & Greets are Native led and by Invitation Only and Saturday's Meet & Greets are open to all attendees.
+        </p>
+        <p className="p">
+          During these two days we hope you will join us in listening, learning and celebrating the accomplishments and work being done to address data sovereignty issues Native people and communities face within technology. We look forward to the speakers inspiring innovation and sparking conversations so together we can continue to craft technology that truly serves Native communities.
+        </p>
+        <p className="p">
+          Come learn from Native technologists developing the path forward!
+        </p>
+        <p className="p">
+          Please follow us on <Anchor href="https://twitter.com/nativesintech/">Twitter</Anchor>, Instagram, and Facebook @nativesintech! If you are interested and would like to learn more about becoming a NiTConf2022 sponsor, please send an email to <Anchor href="mailto:conf@nativesintech.org">conf@nativesintech.org</Anchor>.
         </p>
         <p className="p">
           Please follow us on twitter <Anchor href="https://twitter.com/nativesintech">@nativesintech</Anchor>! If you'd
-          like to sponsor this event please send an email to{" "}
-          <Anchor href="mailto:desiree@nativesintech.org">desiree@nativesintech.org</Anchor>.
+          like to sponsor this event please send an email to <Anchor href="mailto:conf@nativesintech.org">conf@nativesintech.org</Anchor>.
         </p>
       </section>
       <section className="section">
       <h2 className="h2">Agenda</h2>
-        <h3 className="h3">Friday, November 5th — Workshops</h3>
-        {/* <img src="https://pbs.twimg.com/media/FDNF7pmWQAM5q2_?format=jpg&name=medium" style={{height: "400px", margin: "auto", marginTop: "30px"}} /> */}
-        {/* <h4 className="h4">Details</h4> */}
-        <ul className="ul" style={{listStyle: "none", marginTop: "15px"}}>
-          {/* <li className="li">Workshop 1: <span style={{fontWeight: 600}}>1:00pm - 3:00pm CDT</span></li>
-          <li className="li">Workshop 2: <span style={{fontWeight: 600}}>6:00pm - 8:00pm CDT</span></li>
-          <li className="li">Location - Zoom</li> */}
-        </ul>
-        {/* <img src="https://pbs.twimg.com/media/FDNF7pmWQAM5q2_?format=jpg&name=medium" /> */}
-        {/* <h4 className="pb-5 h4">Speakers</h4> */}
-        {/* <ul className="list-none ul">
-          {workshopSpeakers.map((v) => (
-            <li className="li" key={v.name}>
-              <label className="label-header">Name</label>
-              <h5 className="pb-5 h5" style={{ marginTop: 0 }}>
-                {v.name}
-              </h5>
-              <label className="label-header">Bio</label>
-              <p className="pb-5 text-white p" style={{ marginTop: 0 }}>
-                {v.bio}
-              </p>
-            </li>
-          ))}
-        </ul> */}
+        <h3 className="h3">Friday, November 5th — Demo Day</h3>
+        <p className="p">
+          Presenters will have up to 20 minutes to demo their project, app, or other type of technology they developed, or currently developing, related to Developing Sovereignty in Tech. 
+        </p>
         <h3 className="h3">Saturday, November 6th — Conference</h3>
+        <p className="p">
+          We start the day off with lightning talks, workshops, and sessions. This year we are excited to offer 4 Tracks: Native Entrepreneurship, Ethics in Tech, Data Sovereignty, and Native Led Solutions. 
+        </p>
         <ul className="ul" style={{listStyle: "none", marginTop: "10px", marginBottom: "20px"}}>
           {/* <li className="li" >From 12:00pm - 7:30pm CDT</li>
           <li className="li">Location - YouTube Live</li> */}
         </ul>
         <h4 className="h4">Schedule</h4>
-        {/* <h4 className="h4">Speakers</h4> */}
-        <ul className="list-none ul">
-          {confSpeakers.map((v, idx) => (
-            <React.Fragment key={v.name}>
-              {idx === 0 ? <></> : <hr className="hr" />}
-              <li className="li">
-              {/* <label className="label-header">Time</label> */}
-                <h5 className="pb-2 h5" style={{ marginTop: 0, color: "" }}>
-                  {v.time}
-                </h5>
-                {/* <label className="label-header">Track</label>
-                <h5 className="pb-5 h5" style={{ marginTop: 0 }}>
-                  {v.track}
-                </h5> */}
-                {/* <label className="label-header">Name</label> */}
-                <h5 className="pb-1 h3" style={{ marginTop: 0, fontStyle: "bold", color: "" }}>
-                  {v.name} {v.session ? ( `—  ${v.session}` ) : (null) }
-                </h5>
-                {/* <label className="label-header">Session</label> */}
-                {/* <h5 className="pb-5 h5" style={{ marginTop: 0, fontStyle: "italic" }}>
-                  {v.session}
-                </h5> */}
-                {/* <label className="label-header">Image</label> */}
-                {v.photo ? (
-                  <img src={v.photo} style={{height: "", margin: "", marginTop: ""}} />
-                ) : (null
-                  // <p className="text-white p" style={{ marginTop: 0, marginBottom: 0 }}>
-                  //   TBD
-                  // </p>
-                )}
-                {/* <br />
-                <label className="label-header">Bio</label>
-                <p className="text-white p" style={{ marginTop: 0 }}>
-                  {v.bio}
-                </p> */}
-              </li>
-            </React.Fragment>
-          ))}
-        </ul>
+        <p className="p">
+          TBA!
+        </p>
       </section>
     </Layout>
   );
