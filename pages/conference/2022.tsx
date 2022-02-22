@@ -5,7 +5,7 @@ import { Layout } from "../../components/Layout";
 import Link from "next/link";
 
 export default function TwentyTwentyOne() {
-  const workshopSpeakers = [
+  const workshopSpeakers: Object[] = [
   ];
   const confSpeakers: Object[] = [
   ];
