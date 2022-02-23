@@ -38,15 +38,14 @@ export default function TwentyTwentyOne() {
         <p className="p">
           Please follow us on <Anchor href="https://twitter.com/nativesintech/">Twitter</Anchor>, <Anchor href="https://www.instagram.com/nativesintech/">Instagram</Anchor>, and <Anchor href="https://www.facebook.com/nativesintech/">Facebook</Anchor>! If you are interested and would like to learn more about becoming a NiTConf2022 sponsor, please send an email to <Anchor href="mailto:conf@nativesintech.org">conf@nativesintech.org</Anchor>.
         </p>
-        <p className="p">
-          Please follow us on twitter <Anchor href="https://twitter.com/nativesintech">@nativesintech</Anchor>! If you'd
-          like to sponsor this event please send an email to <Anchor href="mailto:conf@nativesintech.org">conf@nativesintech.org</Anchor>.
-        </p>
       </section>
       <section className="section">
         <h2 className="h2">
           Interested in speaking?
         </h2>
+        <p className="p">
+        To learn more about the different types of speaking opportunities visit the our Sessionize:
+        </p>
         <br/>
         <Link href="https://sessionize.com/nitconf2022/" passHref>
           <a className="bg-nit-dark text-nit-white px-4 py-2 text-sm font-bold rounded-md no-underline">
@@ -56,11 +55,11 @@ export default function TwentyTwentyOne() {
       </section>
       <section className="section">
       <h2 className="h2">Agenda</h2>
-        <h3 className="h3">Friday, November 5th — Demo Day</h3>
+        <h3 className="h3">Friday, November 4th — Demo Day</h3>
         <p className="p">
           Presenters will have up to 20 minutes to demo their project, app, or other type of technology they developed, or currently developing, related to Developing Sovereignty in Tech. 
         </p>
-        <h3 className="h3">Saturday, November 6th — Conference</h3>
+        <h3 className="h3">Saturday, November 5th — Conference</h3>
         <p className="p">
           We start the day off with lightning talks, workshops, and sessions. This year we are excited to offer 4 Tracks: Native Entrepreneurship, Ethics in Tech, Data Sovereignty, and Native Led Solutions. 
         </p>
