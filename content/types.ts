@@ -29,6 +29,34 @@ export type Locale = {
     watchTitle: string;
     title: string;
   };
+  "/conference/2022": {
+    title: string;
+    shortTitle: string;
+    theme: string;
+    sponsors: string;
+    partneringSponsor: string;
+    h1: string;
+    h2: string;
+    p1: string;
+    p2: string;
+    p3: string;
+    p4: string;
+    p5: string;
+    p6: string;
+    pleaseFollow: string;
+    and: string;
+    learnMore: string;
+    interestedInSpeaking: string;
+    learnAboutSpeaking: string;
+    callForSpeakers: string;
+    agenda: string;
+    demoDay: string;
+    demoDayDetails: string;
+    conferenceDay: string;
+    conferenceDayDetails: string;
+    schedule: string;
+    tba: string;
+  };
   "/donate": {
     h1: string;
     blurb: string;
@@ -78,4 +106,6 @@ export type Locale = {
   };
 };
 
-export type MergedData = Omit<Locale, "header" | "footer"> & Locale["header"] & Locale["footer"];
+export type MergedData = Omit<Locale, "header" | "footer"> &
+  Locale["header"] &
+  Locale["footer"];

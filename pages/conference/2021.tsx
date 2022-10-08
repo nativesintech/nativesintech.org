@@ -53,16 +53,6 @@ export default function TwentyTwentyOne() {
       bio: ` Nicole Archambault is a Boston-based educational technology specialist, online course creator, speaker, blogger, and podcaster.\n She is creator of La Vie en Code, and La Vie en Code LaunchPad, a learning community designed to advocate for, support, and educate self-taught for individuals seeking non-traditional routes into the web development industry.\n A lifelong learner, her passion and area of expertise is in educational technology, gamification, and psychology. If we can make learning fun and productive—let’s do it! :)
       `,
     },
-    
-    // {
-    //   name: "Dakota J Lightning",
-    //   social: [{ email: "", instagram: "", twitter: "", linkedin: "" }],
-    //   track: "Getting into Tech",
-    //   session: "TBD",
-    //   time: "1:45pm - 2:30pm, Q&A from 2:30pm - 2:45pm",
-    //   photo: null,
-    //   bio: "TBD",
-    // },
     {
       name: "Lauren Denson",
       social: [{ email: "", instagram: "", twitter: "", linkedin: "" }],
@@ -78,7 +68,7 @@ export default function TwentyTwentyOne() {
       track: "Getting into Tech",
       session: "Indigenous XR Production",
       time: "4:45pm - 5:15pm, Q&A 5:15pm - 5:30pm",
-      photo: "https://pbs.twimg.com/media/FDMUuTbWEAE4_Wz?format=jpg&name=900x900"      ,
+      photo: "https://pbs.twimg.com/media/FDMUuTbWEAE4_Wz?format=jpg&name=900x900",
       bio: "",
     },
     {
@@ -148,13 +138,17 @@ export default function TwentyTwentyOne() {
         </p>
       </section>
       <section className="section">
-      <h2 className="h2">Agenda</h2>
+        <h2 className="h2">Agenda</h2>
         <h3 className="h3">Friday, November 5th — Language Revitalization Workshops</h3>
         {/* <img src="https://pbs.twimg.com/media/FDNF7pmWQAM5q2_?format=jpg&name=medium" style={{height: "400px", margin: "auto", marginTop: "30px"}} /> */}
         {/* <h4 className="h4">Details</h4> */}
-        <ul className="ul" style={{listStyle: "none", marginTop: "15px"}}>
-          <li className="li">Workshop 1: <span style={{fontWeight: 600}}>1:00pm - 3:00pm CDT</span></li>
-          <li className="li">Workshop 2: <span style={{fontWeight: 600}}>6:00pm - 8:00pm CDT</span></li>
+        <ul className="ul" style={{ listStyle: "none", marginTop: "15px" }}>
+          <li className="li">
+            Workshop 1: <span style={{ fontWeight: 600 }}>1:00pm - 3:00pm CDT</span>
+          </li>
+          <li className="li">
+            Workshop 2: <span style={{ fontWeight: 600 }}>6:00pm - 8:00pm CDT</span>
+          </li>
           <li className="li">Location - Zoom</li>
         </ul>
         <img src="https://pbs.twimg.com/media/FDNF7pmWQAM5q2_?format=jpg&name=medium" />
@@ -174,8 +168,8 @@ export default function TwentyTwentyOne() {
           ))}
         </ul> */}
         <h3 className="h3">Saturday, November 6th — Conference</h3>
-        <ul className="ul" style={{listStyle: "none", marginTop: "10px", marginBottom: "20px"}}>
-          <li className="li" >From 12:00pm - 7:30pm CDT</li>
+        <ul className="ul" style={{ listStyle: "none", marginTop: "10px", marginBottom: "20px" }}>
+          <li className="li">From 12:00pm - 7:30pm CDT</li>
           <li className="li">Location - YouTube Live</li>
         </ul>
         <h4 className="h4">Schedule</h4>
@@ -185,7 +179,7 @@ export default function TwentyTwentyOne() {
             <React.Fragment key={v.name}>
               {idx === 0 ? <></> : <hr className="hr" />}
               <li className="li">
-              {/* <label className="label-header">Time</label> */}
+                {/* <label className="label-header">Time</label> */}
                 <h5 className="pb-2 h5" style={{ marginTop: 0, color: "" }}>
                   {v.time}
                 </h5>
@@ -195,7 +189,7 @@ export default function TwentyTwentyOne() {
                 </h5> */}
                 {/* <label className="label-header">Name</label> */}
                 <h5 className="pb-1 h3" style={{ marginTop: 0, fontStyle: "bold", color: "" }}>
-                  {v.name} {v.session ? ( `—  ${v.session}` ) : (null) }
+                  {v.name} {v.session ? `—  ${v.session}` : null}
                 </h5>
                 {/* <label className="label-header">Session</label> */}
                 {/* <h5 className="pb-5 h5" style={{ marginTop: 0, fontStyle: "italic" }}>
@@ -203,12 +197,12 @@ export default function TwentyTwentyOne() {
                 </h5> */}
                 {/* <label className="label-header">Image</label> */}
                 {v.photo ? (
-                  <img src={v.photo} style={{height: "", margin: "", marginTop: ""}} />
-                ) : (null
-                  // <p className="text-white p" style={{ marginTop: 0, marginBottom: 0 }}>
-                  //   TBD
-                  // </p>
-                )}
+                  <img src={v.photo} style={{ height: "", margin: "", marginTop: "" }} />
+                ) : null
+                // <p className="text-white p" style={{ marginTop: 0, marginBottom: 0 }}>
+                //   TBD
+                // </p>
+                }
                 {/* <br />
                 <label className="label-header">Bio</label>
                 <p className="text-white p" style={{ marginTop: 0 }}>

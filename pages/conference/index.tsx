@@ -1,5 +1,4 @@
 import { Layout } from "../../components/Layout";
-import { Newsletter } from "../../components/Newsletter";
 import Head from "next/head";
 import { Anchor } from "../../components/Anchor";
 import { useIntl } from "react-intl";
@@ -30,15 +29,13 @@ export default function Conference() {
         </div>
 
         <div className="space-y-1">
-          <h2 className="text-2xl font-bold md:text-4xl dark:text-nit-white">
-            Natives in Tech Conf 2022
-          </h2>
+          <h2 className="text-2xl font-bold md:text-4xl dark:text-nit-white">Natives in Tech Conf 2022</h2>
           <p className="prose dark:text-nit-light-grey text-nit-grey">
             Interested in participating in our 2022 conference?
           </p>
-          <br/>
+          <br />
           <Link href="/conference/2022" passHref>
-            <a className="bg-nit-dark text-nit-white px-4 py-2 text-sm font-bold rounded-md no-underline">
+            <a className="px-4 py-2 text-sm font-bold no-underline rounded-md bg-nit-dark text-nit-white">
               Natives in Tech 2022
             </a>
           </Link>
@@ -48,9 +45,7 @@ export default function Conference() {
           <h2 className="h2">{f("watchTitle")}</h2>
           <ul className="ul">
             <li>
-              <Anchor href="https://www.youtube.com/playlist?list=PLkEm8Fr-qex0P4U-asUIzPXNUl25KV3i-">
-                2019
-              </Anchor>
+              <Anchor href="https://www.youtube.com/playlist?list=PLkEm8Fr-qex0P4U-asUIzPXNUl25KV3i-">2019</Anchor>
             </li>
             <li>
               <Anchor href="https://www.youtube.com/watch?v=kV8IpFhZmHs&list=PLkEm8Fr-qex3kvWETUYJ_6iIYrxOQXtwB">
@@ -58,9 +53,7 @@ export default function Conference() {
               </Anchor>
             </li>
             <li>
-              <Anchor href="https://www.youtube.com/playlist?list=PLkEm8Fr-qex18al1p2l-Z3ioWRn75tvnp">
-                2021
-              </Anchor>
+              <Anchor href="https://www.youtube.com/playlist?list=PLkEm8Fr-qex18al1p2l-Z3ioWRn75tvnp">2021</Anchor>
             </li>
           </ul>
         </div>
