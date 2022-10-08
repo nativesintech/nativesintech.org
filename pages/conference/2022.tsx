@@ -23,7 +23,11 @@ export default function TwentyTwentyTwo() {
         <h1 className="h1">{f("shortTitle")}</h1>
         <h2 className="h2">{f("sponsors")}</h2>
         <h3 className="h3">{f("partneringSponsor")}</h3>
-        <a href="https://www.shipt.com/" target="_blank" rel="noreferrer noopener">
+        <a
+          href="https://www.shipt.com/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <img src={assets.shiptLogo.src} alt={assets.shiptLogo.altText} />
         </a>
         <h2 className="h2">{f("theme")}</h2>
@@ -46,20 +50,17 @@ export default function TwentyTwentyTwo() {
           {f("p6")}
         </p>
         <p className="p">
-          {f("pleaseFollow")} <Anchor href="https://twitter.com/nativesintech/">Twitter</Anchor>,{" "}
-          <Anchor href="https://www.instagram.com/nativesintech/">Instagram</Anchor>, {f("and")}{" "}
-          <Anchor href="https://www.facebook.com/nativesintech/">Facebook</Anchor>! {f("learnMore")}.
+          {f("pleaseFollow")}{" "}
+          <Anchor href="https://twitter.com/nativesintech/">Twitter</Anchor>,{" "}
+          <Anchor href="https://www.instagram.com/nativesintech/">
+            Instagram
+          </Anchor>
+          , {f("and")}{" "}
+          <Anchor href="https://www.facebook.com/nativesintech/">
+            Facebook
+          </Anchor>
+          ! {f("learnMore")}.
         </p>
-      </section>
-      <section className="section">
-        <h2 className="h2">{f("interestedInSpeaking")}</h2>
-        <p className="p">{f("learnAboutSpeaking")}</p>
-        <br />
-        <Link href="https://sessionize.com/nitconf2022/" passHref>
-          <a className="px-4 py-2 text-sm font-bold no-underline rounded-md bg-nit-dark text-nit-white">
-            {f("callForSpeakers")}
-          </a>
-        </Link>
       </section>
       <section className="section">
         <h2 className="h2">{f("agenda")}</h2>
@@ -67,7 +68,10 @@ export default function TwentyTwentyTwo() {
         <p className="p">{f("demoDayDetails")}</p>
         <h3 className="h3">{f("conferenceDay")}</h3>
         <p className="p">{f("conferenceDayDetails")}</p>
-        <ul className="ul" style={{ listStyle: "none", marginTop: "10px", marginBottom: "20px" }}>
+        <ul
+          className="ul"
+          style={{ listStyle: "none", marginTop: "10px", marginBottom: "20px" }}
+        >
           {/* <li className="li" >From 12:00pm - 7:30pm CDT</li>
           <li className="li">Location - YouTube Live</li> */}
         </ul>
