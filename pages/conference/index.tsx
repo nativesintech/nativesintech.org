@@ -3,7 +3,6 @@ import Head from "next/head";
 import { Anchor } from "../../components/Anchor";
 import { useIntl } from "react-intl";
 import { MergedData } from "../../content/types";
-import Link from "next/link";
 
 export default function Conference() {
   const { formatMessage } = useIntl();
