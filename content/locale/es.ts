@@ -1,6 +1,4 @@
-import { Locale } from "../types";
-
-export const es: Locale = {
+export const es = {
   "/": {
     missionTitle: "Nuestra Visión",
     missionBlurb:
@@ -71,6 +69,9 @@ export const es: Locale = {
       "Comenzamos el día con charlas relámpago, talleres y sesiones. Este año nos complace ofrecer 4 pistas: emprendimiento indígenas, ética en tecnología, soberanía de datos y soluciones lideradas indígenas.",
     schedule: "Horario",
     tba: "¡Por Anunciar!",
+    registration: "Registro",
+    registrationDetails:
+      "Para registrarse utilice este enlace: https://airtable.com/shrccp31320iSl31r",
   },
   "/donate": {
     h1: "Donar",
@@ -128,4 +129,4 @@ export const es: Locale = {
     description:
       "Indígenas en Tecnología es un colectivo de tecnólogos Indígenas que elaboran tecnología gratuito y de código abierto que empodera a los pueblos Indígenas.",
   },
-};
+} as const;

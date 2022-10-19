@@ -1,19 +1,18 @@
-import Head from "next/head";
 import React from "react";
-import Link from "next/link";
+import Head from "next/head";
+import { useIntl } from "react-intl";
 
 import { Anchor } from "../../components/Anchor";
 import { Layout } from "../../components/Layout";
 import { assets } from "../../helpers/assets";
-import { useIntl } from "react-intl";
-import { MergedData } from "../../content/types";
+import { Locale } from "../../content/types";
 
 export default function TwentyTwentyTwo() {
-  const workshopSpeakers: Object[] = [];
-  const confSpeakers: Object[] = [];
+  const _workshopSpeakers: Object[] = [];
+  const _confSpeakers: Object[] = [];
 
   const { formatMessage } = useIntl();
-  const f = (id: keyof MergedData["/conference/2022"]) => formatMessage({ id });
+  const f = (id: keyof Locale["/conference/2022"]) => formatMessage({ id });
   return (
     <Layout>
       <Head>
@@ -28,7 +27,10 @@ export default function TwentyTwentyTwo() {
           target="_blank"
           rel="noreferrer noopener"
         >
-          <img src={assets.shiptLogo.src} alt={assets.shiptLogo.altText} />
+          <img
+            src={assets.conference["2022"].shiptLogo.src}
+            alt={assets.conference["2022"].shiptLogo.altText}
+          />
         </a>
         <h2 className="h2">{f("theme")}</h2>
         <p className="p" id="p1">
@@ -76,7 +78,14 @@ export default function TwentyTwentyTwo() {
           <li className="li">Location - YouTube Live</li> */}
         </ul>
         <h3 className="h3">{f("schedule")}</h3>
-        <p className="p">{f("tba")}</p>
+        <video controls>
+          <source
+            src={assets.conference["2022"].speakerLineup}
+            type="video/mp4"
+          ></source>
+        </video>
+        <h3 className="h3">{f("registration")}</h3>
+        <p className="p">{f("registrationDetails")}</p>
       </section>
     </Layout>
   );

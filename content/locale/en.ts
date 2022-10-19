@@ -1,6 +1,4 @@
-import { Locale } from "../types";
-
-export const en: Locale = {
+export const en = {
   "/": {
     missionTitle: "Our Mission",
     missionBlurb:
@@ -69,6 +67,8 @@ export const en: Locale = {
       "We start the day off with lightning talks, workshops, and sessions. This year we are excited to offer 4 Tracks: Native Entrepreneurship, Ethics in Tech, Data Sovereignty, and Native Led Solutions.",
     schedule: "Schedule",
     tba: "To Be Announced!",
+    registration: "Registration",
+    registrationDetails: `To register use this link: https://airtable.com/shrccp31320iSl31r`,
   },
   "/donate": {
     h1: "Donate",
@@ -126,4 +126,4 @@ export const en: Locale = {
     description:
       "Natives in Tech is a collective of Native technologists crafting free and open source technology that empowers Native peoples.",
   },
-};
+} as const;
