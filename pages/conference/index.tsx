@@ -2,11 +2,11 @@ import { Layout } from "../../components/Layout";
 import Head from "next/head";
 import { Anchor } from "../../components/Anchor";
 import { useIntl } from "react-intl";
-import { MergedData } from "../../content/types";
+import { ComponentKeys } from "../../content/types";
 
 export default function Conference() {
   const { formatMessage } = useIntl();
-  const f = (id: keyof MergedData["/conference"]) => formatMessage({ id });
+  const f = (id: ComponentKeys<"/conference">) => formatMessage({ id });
 
   return (
     <Layout>

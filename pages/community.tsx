@@ -2,12 +2,16 @@ import Head from "next/head";
 import { useIntl } from "react-intl";
 import { Anchor } from "../components/Anchor";
 import { Layout } from "../components/Layout";
-import { MergedData } from "../content/types";
-import { nitSocialArr, resourceLinksArr, socialLinksArr } from "../helpers/resources";
+import { ComponentKeys } from "../content/types";
+import {
+  nitSocialArr,
+  resourceLinksArr,
+  socialLinksArr,
+} from "../helpers/resources";
 
 export default function Community() {
   const { formatMessage } = useIntl();
-  const f = (id: keyof MergedData["/community"]) => formatMessage({ id });
+  const f = (id: ComponentKeys<"/community">) => formatMessage({ id });
   return (
     <Layout>
       <Head>

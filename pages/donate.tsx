@@ -2,11 +2,11 @@ import { Layout } from "../components/Layout";
 import Head from "next/head";
 import { Anchor } from "../components/Anchor";
 import { useIntl } from "react-intl";
-import { MergedData } from "../content/types";
+import { ComponentKeys } from "../content/types";
 
 export default function Donate() {
   const { formatMessage } = useIntl();
-  const f = (id: keyof MergedData["/donate"]) => formatMessage({ id });
+  const f = (id: ComponentKeys<"/donate">) => formatMessage({ id });
   return (
     <Layout>
       <Head>

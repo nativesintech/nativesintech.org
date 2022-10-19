@@ -4,14 +4,14 @@ import { HamburgerSqueeze } from "react-animated-burgers";
 import { useRouter } from "next/router";
 import { assets } from "../helpers/assets";
 import { useIntl } from "react-intl";
-import { MergedData } from "../content/types";
+import { ComponentKeys } from "../content/types";
 
 export function Header() {
   const [isActive, toggleButton] = useState(false);
   const router = useRouter();
 
   const { formatMessage } = useIntl();
-  const f = (id: keyof MergedData) => formatMessage({ id });
+  const f = (id: ComponentKeys<"header">) => formatMessage({ id });
 
   const routes = [
     { title: f("about"), route: "/about" },
@@ -29,7 +29,10 @@ export function Header() {
         <div className="flex flex-wrap items-center justify-between max-w-full px-6 py-8 m-0 md:px-10 md:flex-no-wrap">
           <div className="flex items-center">
             <Link href="/" passHref>
-              <a href="" className="text-lg font-bold lg:block text-nit-primary">
+              <a
+                href=""
+                className="text-lg font-bold lg:block text-nit-primary"
+              >
                 {f("nit")}
               </a>
             </Link>
@@ -57,7 +60,12 @@ export function Header() {
                     >
                       {navigationItem.title}
                     </a>
-                    <img width={20} height={20} src={assets.externalLink.src} alt={assets.externalLink.altText} />
+                    <img
+                      width={20}
+                      height={20}
+                      src={assets.externalLink.src}
+                      alt={assets.externalLink.altText}
+                    />
                   </span>
                 ) : (
                   <Link href={navigationItem.route} passHref>
@@ -84,7 +92,10 @@ export function Header() {
       >
         <ul className="flex-col mt-16">
           {routes.map((navigationItem) => (
-            <li key={navigationItem.title + "side"} className="mt-3 md:mt-0 md:ml-6">
+            <li
+              key={navigationItem.title + "side"}
+              className="mt-3 md:mt-0 md:ml-6"
+            >
               {navigationItem.route.startsWith("https") ? (
                 <span className="flex flex-row items-center">
                   <a
@@ -95,14 +106,21 @@ export function Header() {
                   >
                     {navigationItem.title}
                   </a>
-                  <img width={20} height={20} src={assets.externalLink.src} alt={assets.externalLink.altText} />
+                  <img
+                    width={20}
+                    height={20}
+                    src={assets.externalLink.src}
+                    alt={assets.externalLink.altText}
+                  />
                 </span>
               ) : (
                 <Link href={navigationItem.route} passHref>
                   <a
                     href=""
                     className={`block ml-4 text-xl ${
-                      router.pathname === navigationItem.route ? "text-nit-primary" : "text-white"
+                      router.pathname === navigationItem.route
+                        ? "text-nit-primary"
+                        : "text-white"
                     }`}
                   >
                     {navigationItem.title}

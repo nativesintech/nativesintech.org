@@ -3,11 +3,11 @@ import Head from "next/head";
 
 import { Layout } from "../components/Layout";
 import { useIntl } from "react-intl";
-import { MergedData } from "../content/types";
+import { ComponentKeys } from "../content/types";
 
 export default function Contact() {
   const { formatMessage } = useIntl();
-  const f = (id: keyof MergedData["/contact"]) => formatMessage({ id });
+  const f = (id: ComponentKeys<"/contact">) => formatMessage({ id });
   return (
     <Layout>
       <Head>

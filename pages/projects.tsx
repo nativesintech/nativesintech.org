@@ -3,12 +3,12 @@ import React from "react";
 import { useIntl } from "react-intl";
 import { Anchor } from "../components/Anchor";
 import { Layout } from "../components/Layout";
-import { MergedData } from "../content/types";
+import { ComponentKeys } from "../content/types";
 import { projectsArr, socialLinksMap } from "../helpers/resources";
 
 export default function Projects() {
   const { formatMessage } = useIntl();
-  const f = (id: keyof MergedData["/projects"]) => formatMessage({ id });
+  const f = (id: ComponentKeys<"/projects">) => formatMessage({ id });
   return (
     <Layout>
       <Head>

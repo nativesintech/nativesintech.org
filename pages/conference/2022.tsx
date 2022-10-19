@@ -5,14 +5,14 @@ import { useIntl } from "react-intl";
 import { Anchor } from "../../components/Anchor";
 import { Layout } from "../../components/Layout";
 import { assets } from "../../helpers/assets";
-import { PageKeys } from "../../content/types";
+import { ComponentKeys } from "../../content/types";
 
 export default function TwentyTwentyTwo() {
   const _workshopSpeakers: Object[] = [];
   const _confSpeakers: Object[] = [];
 
   const { formatMessage } = useIntl();
-  const f = (id: PageKeys<"/conference/2022">) => formatMessage({ id });
+  const f = (id: ComponentKeys<"/conference/2022">) => formatMessage({ id });
   return (
     <Layout>
       <Head>

@@ -3,6 +3,6 @@ import { es } from "./locale/es";
 
 export type Locale = typeof en | typeof es;
 
-export type Page = keyof Locale;
+export type Component = keyof Locale;
 
-export type PageKeys<Key extends Page> = keyof Locale[Key];
+export type ComponentKeys<Key extends Component> = keyof Locale[Key];

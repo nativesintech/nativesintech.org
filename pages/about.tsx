@@ -2,11 +2,11 @@ import React from "react";
 import { Layout } from "../components/Layout";
 import Head from "next/head";
 import { useIntl } from "react-intl";
-import { MergedData } from "../content/types";
+import { ComponentKeys } from "../content/types";
 
 export default function About() {
   const { formatMessage } = useIntl();
-  const f = (id: keyof MergedData["/about"]) => formatMessage({ id });
+  const f = (id: ComponentKeys<"/about">) => formatMessage({ id });
   return (
     <Layout>
       <Head>
