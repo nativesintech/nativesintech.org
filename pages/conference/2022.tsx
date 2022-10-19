@@ -28,10 +28,13 @@ export default function TwentyTwentyTwo() {
           rel="noreferrer noopener"
         >
           <img
+            className="flex justify-center mt-6 bg-white"
             src={assets.conference["2022"].shiptLogo.src}
             alt={assets.conference["2022"].shiptLogo.altText}
           />
         </a>
+      </section>
+      <section className="section">
         <h2 className="h2">{f("theme")}</h2>
         <p className="p" id="p1">
           {f("p1")}
@@ -64,6 +67,14 @@ export default function TwentyTwentyTwo() {
           ! {f("learnMore")}.
         </p>
       </section>
+      <section className="flex justify-center section">
+        <video width="350" controls preload="auto">
+          <source
+            src={assets.conference["2022"].gatherTown}
+            type="video/mp4"
+          ></source>
+        </video>
+      </section>
       <section className="section">
         <h2 className="h2">{f("agenda")}</h2>
         <h3 className="h3">{f("demoDay")}</h3>
@@ -78,14 +89,9 @@ export default function TwentyTwentyTwo() {
           <li className="li">Location - YouTube Live</li> */}
         </ul>
         <h3 className="h3">{f("schedule")}</h3>
-        <video controls>
-          <source
-            src={assets.conference["2022"].speakerLineup}
-            type="video/mp4"
-          ></source>
-        </video>
-        <h3 className="h3">{f("registration")}</h3>
-        <p className="p">{f("registrationDetails")}</p>
+        <p className="p">{f("tba")}</p>
+        {/* <h3 className="h3">{f("registration")}</h3>
+        <p className="p">{f("registrationDetails")}</p> */}
       </section>
     </Layout>
   );
