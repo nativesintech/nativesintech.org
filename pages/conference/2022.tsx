@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
 import { useIntl } from "react-intl";
-import urlRegexSafe from "url-regex-safe";
 
 import { Anchor } from "../../components/Anchor";
 import { Layout } from "../../components/Layout";
@@ -25,16 +24,16 @@ const parseHandle = (str: string): string => {
 
 const parseUrl = (str: string): string => {
   return str.replace(
-    urlRegexSafe(),
+    /(https:\/\/\w+\.com\/\w+)/,
     (u) =>
       `<a class="a" target="_blank" rel="noopener noreferrer" href="${u}">${u}</>`
   );
 };
 
 const parseSchedule = (str: string): Array<JSX.Element> => {
-  return str.split("|").map((v) => {
+  return str.split("|").map((v, i) => {
     const h = v.replace(/(@\w+)/gi, parseHandle);
-    return <li dangerouslySetInnerHTML={{ __html: h }} />;
+    return <li key={i} dangerouslySetInnerHTML={{ __html: h }} />;
   });
 };
 
