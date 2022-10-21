@@ -1,11 +1,46 @@
 import React from "react";
 import Head from "next/head";
 import { useIntl } from "react-intl";
+import urlRegexSafe from "url-regex-safe";
 
 import { Anchor } from "../../components/Anchor";
 import { Layout } from "../../components/Layout";
 import { assets } from "../../helpers/assets";
 import { ComponentKeys } from "../../content/types";
+
+const parseHandle = (str: string): string => {
+  return str.replace(
+    /(@\w+)/gi,
+    (h) =>
+      `<a
+        class="a"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://twitter.com/${h}"
+        >
+        ${h}
+      </a>&nbsp;`
+  );
+};
+
+const parseUrl = (str: string): string => {
+  return str.replace(
+    urlRegexSafe(),
+    (u) =>
+      `<a class="a" target="_blank" rel="noopener noreferrer" href="${u}">${u}</>`
+  );
+};
+
+const parseSchedule = (str: string): Array<JSX.Element> => {
+  return str.split("|").map((v) => {
+    const h = v.replace(/(@\w+)/gi, parseHandle);
+    return <li dangerouslySetInnerHTML={{ __html: h }} />;
+  });
+};
+
+const parseRegistration = (str: string): JSX.Element => {
+  return <p dangerouslySetInnerHTML={{ __html: parseUrl(str) }} />;
+};
 
 export default function TwentyTwentyTwo() {
   const _workshopSpeakers: Object[] = [];
@@ -78,20 +113,11 @@ export default function TwentyTwentyTwo() {
       <section className="section">
         <h2 className="h2">{f("agenda")}</h2>
         <h3 className="h3">{f("demoDay")}</h3>
-        <p className="p">{f("demoDayDetails")}</p>
+        <ul className="ul">{parseSchedule(f("demoDaySchedule"))}</ul>
         <h3 className="h3">{f("conferenceDay")}</h3>
-        <p className="p">{f("conferenceDayDetails")}</p>
-        <ul
-          className="ul"
-          style={{ listStyle: "none", marginTop: "10px", marginBottom: "20px" }}
-        >
-          {/* <li className="li" >From 12:00pm - 7:30pm CDT</li>
-          <li className="li">Location - YouTube Live</li> */}
-        </ul>
-        <h3 className="h3">{f("schedule")}</h3>
-        <p className="p">{f("tba")}</p>
-        {/* <h3 className="h3">{f("registration")}</h3>
-        <p className="p">{f("registrationDetails")}</p> */}
+        <ul className="ul">{parseSchedule(f("conferenceSchedule"))}</ul>
+        <h3 className="h3">{f("registration")}</h3>
+        <p className="p">{parseRegistration(f("registrationDetails"))}</p>
       </section>
     </Layout>
   );

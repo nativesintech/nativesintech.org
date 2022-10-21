@@ -69,6 +69,22 @@ export const en = {
     tba: "To Be Announced!",
     registration: "Registration",
     registrationDetails: `To register use this link: https://airtable.com/shrccp31320iSl31r`,
+    demoDaySchedule: `
+    Natives in Tech: Past, Present, and Future with Adam Recvlohe @adamrecvlohe
+    | Pathfinding: Avoiding techno-solutionism in Indigenous nation-(re)building Jeff Doctor @jeffadoctor & Samantha Tweet @tweetys24
+    | Purpose: Put Your Gifts Into Action with Jace Meyer @JaceActually
+    | If These Lands Could Talk with Natasha Rabsatt @NatashaRabsatt and Marsha Maxwell
+    | Integrating Google Assistant for Continuous Integration (CI) with Karan Balkar @threadsoflifebg
+    | Community Convening for Jobseekers and DEI talent development builders  - A Sponsor Feature with Shipt`,
+    conferenceSchedule: `
+    "Skill Share/Show and Tell/Grab the Mic” Rapid-fire 5 minute community member jump-in presentations - sign ups day-of
+    | Spectrum Sovereignty with Darrah Blackwater @blackwatersoul
+    | Ethics, Education, and Ethereum - What Indian Country needs to know about Crypto with Holly Grimm @hollygrimm
+    | Building a VC-Backed Tech Startup in Indian Country with @amberebuker
+    | Local Contexts: Supporting Indigenous data sovereignty in digital infrastructures with Dr Janette Hamilton-PearceCorrie @LocalContexts and Corrie Roe @CorrieRoe
+    | Towards ecologically-aware language technology that promotes sustained language use with Joshua Nemecek @mr_nemecek
+    | Rematriating Tech and CS Education with Frieda McAlear @Friedamca
+    `,
   },
   "/donate": {
     h1: "Donate",
