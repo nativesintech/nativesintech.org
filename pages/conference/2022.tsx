@@ -111,6 +111,12 @@ export default function TwentyTwentyTwo() {
       </section>
       <section className="section">
         <h2 className="h2">{f("agenda")}</h2>
+        <video width="auto" controls preload="auto">
+          <source
+            src={assets.conference["2022"].speakerLineup}
+            type="video/mp4"
+          ></source>
+        </video>
         <h3 className="h3">{f("demoDay")}</h3>
         <ul className="ul">{parseSchedule(f("demoDaySchedule"))}</ul>
         <h3 className="h3">{f("conferenceDay")}</h3>
