@@ -44,53 +44,20 @@ export const es = {
     theme: "Desarrollo de la Soberanía en la Tecnología",
     sponsors: "Patrocinadores",
     partneringSponsor: "Patrocinador Asociado",
-    h1: "Indígenas en Tecnología Conf 2022",
     intro:
-      "Join Natives in Tech for two days of keynotes, lightning talks, workshops, networking and panels about technology and its impact on the lives and experiences as Indigenous Peoples. During this time we hope you will join us in listening, learning and celebrating the accomplishments and work being done to address data sovereignty issues Native people and communities face within technology. We look forward to the speakers inspiring innovation and sparking conversations so together we can continue to craft technology that truly serves Native communities and respects Native identities.",
+      "Únase a Indígenas en Tecnología durante dos días de conferencias magistrales, charlas relámpago, talleres, redes y paneles sobre tecnología y su impacto en las vidas y experiencias como pueblos indígenas. Durante este tiempo, esperamos que se una a nosotros para escuchar, aprender y celebrar los logros y el trabajo que se está realizando para abordar los problemas de soberanía de datos que enfrentan los pueblos y comunidades nativas dentro de la tecnología. Esperamos que los oradores inspiren innovación y generen conversaciones para que juntos podamos continuar creando tecnología que realmente sirva a las comunidades nativas y respete las identidades nativas.",
     space:
-      "Attendees are encouraged to use the Gather.Town meetup space during the full 48 hours of access to this amazing space built full to the brim with content to interact with, learn from, watch, listen to, and otherwise enjoy that highlights the beautiful tapestry that makes up the Native community.  Meetup, use it as coworking space, whatever! Enjoy! Access will be available using the link received as part of registration prior to the event.",
-    h2: "Desarrollo de la Soberanía en la Tecnología",
-    p1: "¡Nos complace anunciar la 4ª Conferencia Anual de Indígenas en Tecnología del 4 al 5 de Noviembre de 2022!",
-    p2: "¡Este año es excepcionalmente emocionante porque organizaremos el NiTConf2022 en Gather Town (https://gather.town)! El equipo ha pasado muchas horas desarrollando un espacio único con significado cultural mediante la integración de objetos indígenas y lugares significativos que utilizamos para 'reunirnos' para celebrar como comunidad. Nuestro trabajo siempre se guía por nuestros conocimientos y formas tradicionales, y el objetivo era crear un espacio virtual con una experiencia de conferencia tecnológica que nos refleje a nosotros, los tecnólogos indígenas. ¡Esperamos que lo disfrutes tanto como nosotros y no podemos esperar para compartir este espacio sagrado contigo!",
-    p3: "Estamos planeando dos días completos de demostraciones y presentaciones centradas en el tema de este año, 'Desarrollo de la Soberanía en la Tecnología'.",
-    p4: "Habrá oportunidades para interactuar con oradores, asistentes y algunos patrocinadores selectos en ambos días. Los 'Meet & Greets' del viernes son dirigidos por indígenas y solo por invitación y los 'Meet & Greets' del sábado están abiertos a todos los asistentes.",
-    p5: "Durante estos dos días, esperamos que se una a nosotros para escuchar, aprender y celebrar los logros y el trabajo que se está realizando para abordar los problemas de soberanía de datos que enfrentan las personas y comunidades indígenas dentro de la tecnología. Esperamos que los oradores inspiren la innovación y provoquen conversaciones para que juntos podamos continuar creando tecnología que realmente sirva a las comunidades indígenas.",
-    p6: "¡Venga a aprender de los tecnólogos indígenas que desarrollan el camino a seguir!",
-    pleaseFollow: "Por favor, síguenos en ",
-    and: "y",
-    learnMore:
-      "Si está interesado y desea obtener más información sobre cómo convertirse en patrocinador de NiTConf2022, envíe un correo electrónico a conf@nativesintech.org",
-    interestedInSpeaking: "¿Interesado en Hablar?",
-    learnAboutSpeaking:
-      "To learn more about the different types of speaking opportunities visit the our Sessionize:",
-    callForSpeakers: "Call for Speakers - Opens 20 March, 2022",
+      "Se alienta a los asistentes a usar el espacio de reunión de Gather.Town durante las 48 horas completas de acceso a este increíble espacio construido hasta el borde con contenido para interactuar, aprender, ver, escuchar y disfrutar de otra manera que resalta el hermoso tapiz que conforma la comunidad nativa. Meetup, úsalo como espacio de coworking, ¡lo que sea! ¡Disfrutar! El acceso estará disponible utilizando el enlace recibido como parte del registro previo al evento.",
     agenda: "Agenda",
-    demoDay: "Viernes, 4 de Noviembre - Día de la Demostración",
-    demoDayDetails:
-      "Los presentadores tendrán hasta 20 minutos para demostrar su proyecto, aplicación u otro tipo de tecnología que desarrollaron, o que actualmente están desarrollando, relacionada con el desarrollo de la soberanía en la tecnología.",
-    conferenceDay: "Sábado, 5 de Noviembre - Conferencia",
-    conferenceDayDetails:
-      "Comenzamos el día con charlas relámpago, talleres y sesiones. Este año nos complace ofrecer 4 pistas: emprendimiento indígenas, ética en tecnología, soberanía de datos y soluciones lideradas indígenas.",
+    demoDay: "Viernes, 4 de noviembre - Demo Day",
+    conferenceDay: "Sábado, 5 de noviembre - Conferencia",
     schedule: "Horario",
-    tba: "¡Por Anunciar!",
     registration: "Registro",
-    registrationDetails:
-      "Para registrarse utilice este enlace: https://airtable.com/shrccp31320iSl31r",
+    registrationDetails: `Para registrarse utilice este enlace: https://airtable.com/shrccp31320iSl31r`,
     demoDaySchedule: `
-    Natives in Tech: Past, Present, and Future with Adam Recvlohe @adamrecvlohe
-    | Pathfinding: Avoiding techno-solutionism in Indigenous nation-(re)building Jeff Doctor @jeffadoctor & Samantha Tweet @tweetys24
-    | Purpose: Put Your Gifts Into Action with Jace Meyer @JaceActually
-    | If These Lands Could Talk with Natasha Rabsatt @NatashaRabsatt and Marsha Maxwell
-    | Integrating Google Assistant for Continuous Integration (CI) with Karan Balkar @threadsoflifebg
-    | Community Convening for Jobseekers and DEI talent development builders  - A Sponsor Feature with Shipt`,
+    Indígenas en Tecnología: pasado, presente y futuro con Adam Recvlohe @adamrecvlohe | Pathfinding: Evitar el tecno-solucionismo en la nación indígena: (re)construyendo Jeff Doctor @jeffadoctor y Samantha Tweet @tweetys24 | Propósito: Pon tus dones en acción con Jace Meyer @JaceActually | Si estas tierras pudieran hablar con Natasha Rabsatt @NatashaRabsatt y Marsha Maxwell | Integración del Asistente de Google para la integración continua (CI) con Karan Balkar @threadsoflifebg | Convocatoria comunitaria para solicitantes de empleo y constructores de desarrollo de talentos de DEI - Una característica de patrocinador con Shipt`,
     conferenceSchedule: `
-    "Skill Share/Show and Tell/Grab the Mic” Rapid-fire 5 minute community member jump-in presentations - sign ups day-of
-    | Spectrum Sovereignty with Darrah Blackwater @blackwatersoul
-    | Ethics, Education, and Ethereum - What Indian Country needs to know about Crypto with Holly Grimm @hollygrimm
-    | Building a VC-Backed Tech Startup in Indian Country with @amberebuker
-    | Local Contexts: Supporting Indigenous data sovereignty in digital infrastructures with Dr Janette Hamilton-PearceCorrie @LocalContexts Roe @CorrieRoe
-    | Towards ecologically-aware language technology that promotes sustained language use with Joshua  Nemecek @mr_nemecek
-    | Rematriating Tech and CS Education with Frieda McAlear @Friedamca
+    "Compartir habilidades / Mostrar y decir / agarrar el micrófono" Presentaciones rápidas de 5 minutos para miembros de la comunidad - inscripciones el día de | Soberanía del espectro con Darrah Blackwater @blackwatersoul | Ética, educación y Ethereum - Lo que el país indio necesita saber sobre Crypto con Holly Grimm @hollygrimm | Construyendo una startup tecnológica respaldada por capital de riesgo en un país indio con @amberebuker | Contextos locales: Apoyo a la soberanía de datos indígenas en infraestructuras digitales con la Dra. Janette Hamilton-PearceCorrie @LocalContexts y Corrie Roe @CorrieRoe | Hacia una tecnología lingüística ecológicamente consciente que promueva el uso sostenido de la lengua con Joshua Nemecek @mr_nemecek | Rematriating Tech and CS Education con Frieda McAlear @Friedamca
     `,
   },
   "/donate": {

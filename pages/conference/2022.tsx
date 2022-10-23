@@ -2,7 +2,6 @@ import React from "react";
 import Head from "next/head";
 import { useIntl } from "react-intl";
 
-import { Anchor } from "../../components/Anchor";
 import { Layout } from "../../components/Layout";
 import { assets } from "../../helpers/assets";
 import { ComponentKeys } from "../../content/types";
@@ -26,19 +25,20 @@ const parseUrl = (str: string): string => {
   return str.replace(
     /(https:\/\/\w+\.com\/\w+)/,
     (u) =>
-      `<a class="a" target="_blank" rel="noopener noreferrer" href="${u}">${u}</>`
+      `<a class="a" target="_blank" rel="noopener noreferrer" href="${u}">${u}</a>`
   );
 };
 
 const parseSchedule = (str: string): Array<JSX.Element> => {
   return str.split("|").map((v, i) => {
-    const h = v.replace(/(@\w+)/gi, parseHandle);
+    const h = parseHandle(v);
     return <li key={i} dangerouslySetInnerHTML={{ __html: h }} />;
   });
 };
 
 const parseRegistration = (str: string): JSX.Element => {
-  return <p dangerouslySetInnerHTML={{ __html: parseUrl(str) }} />;
+  const s = parseUrl(str);
+  return <p className="p" dangerouslySetInnerHTML={{ __html: s }} />;
 };
 
 export default function TwentyTwentyTwo() {
@@ -73,7 +73,7 @@ export default function TwentyTwentyTwo() {
         <p className="p">{f("intro")}</p>
         <p className="p">{f("space")}</p>
         <h3 className="h3">{f("registration")}</h3>
-        <p className="p">{parseRegistration(f("registrationDetails"))}</p>
+        <>{parseRegistration(f("registrationDetails"))}</>
       </section>
       <section className="section">
         <h2 className="h2">{f("agenda")}</h2>
@@ -88,7 +88,7 @@ export default function TwentyTwentyTwo() {
         <h3 className="h3">{f("conferenceDay")}</h3>
         <ul className="ul">{parseSchedule(f("conferenceSchedule"))}</ul>
         <h3 className="h3">{f("registration")}</h3>
-        <p className="p">{parseRegistration(f("registrationDetails"))}</p>
+        <>{parseRegistration(f("registrationDetails"))}</>
       </section>
     </Layout>
   );
