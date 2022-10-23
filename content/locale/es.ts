@@ -45,6 +45,10 @@ export const es = {
     sponsors: "Patrocinadores",
     partneringSponsor: "Patrocinador Asociado",
     h1: "Indígenas en Tecnología Conf 2022",
+    intro:
+      "Join Natives in Tech for two days of keynotes, lightning talks, workshops, networking and panels about technology and its impact on the lives and experiences as Indigenous Peoples. During this time we hope you will join us in listening, learning and celebrating the accomplishments and work being done to address data sovereignty issues Native people and communities face within technology. We look forward to the speakers inspiring innovation and sparking conversations so together we can continue to craft technology that truly serves Native communities and respects Native identities.",
+    space:
+      "Attendees are encouraged to use the Gather.Town meetup space during the full 48 hours of access to this amazing space built full to the brim with content to interact with, learn from, watch, listen to, and otherwise enjoy that highlights the beautiful tapestry that makes up the Native community.  Meetup, use it as coworking space, whatever! Enjoy! Access will be available using the link received as part of registration prior to the event.",
     h2: "Desarrollo de la Soberanía en la Tecnología",
     p1: "¡Nos complace anunciar la 4ª Conferencia Anual de Indígenas en Tecnología del 4 al 5 de Noviembre de 2022!",
     p2: "¡Este año es excepcionalmente emocionante porque organizaremos el NiTConf2022 en Gather Town (https://gather.town)! El equipo ha pasado muchas horas desarrollando un espacio único con significado cultural mediante la integración de objetos indígenas y lugares significativos que utilizamos para 'reunirnos' para celebrar como comunidad. Nuestro trabajo siempre se guía por nuestros conocimientos y formas tradicionales, y el objetivo era crear un espacio virtual con una experiencia de conferencia tecnológica que nos refleje a nosotros, los tecnólogos indígenas. ¡Esperamos que lo disfrutes tanto como nosotros y no podemos esperar para compartir este espacio sagrado contigo!",

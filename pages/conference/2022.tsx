@@ -70,44 +70,10 @@ export default function TwentyTwentyTwo() {
       </section>
       <section className="section">
         <h2 className="h2">{f("theme")}</h2>
-        <p className="p" id="p1">
-          {f("p1")}
-        </p>
-        <p className="p" id="p2">
-          {f("p2")}
-        </p>
-        <p className="p" id="p3">
-          {f("p3")}
-        </p>
-        <p className="p" id="p4">
-          {f("p4")}
-        </p>
-        <p className="p" id="p5">
-          {f("p5")}
-        </p>
-        <p className="p" id="p6">
-          {f("p6")}
-        </p>
-        <p className="p">
-          {f("pleaseFollow")}{" "}
-          <Anchor href="https://twitter.com/nativesintech/">Twitter</Anchor>,{" "}
-          <Anchor href="https://www.instagram.com/nativesintech/">
-            Instagram
-          </Anchor>
-          , {f("and")}{" "}
-          <Anchor href="https://www.facebook.com/nativesintech/">
-            Facebook
-          </Anchor>
-          ! {f("learnMore")}.
-        </p>
-      </section>
-      <section className="flex justify-center section">
-        <video width="350" controls preload="auto">
-          <source
-            src={assets.conference["2022"].gatherTown}
-            type="video/mp4"
-          ></source>
-        </video>
+        <p className="p">{f("intro")}</p>
+        <p className="p">{f("space")}</p>
+        <h3 className="h3">{f("registration")}</h3>
+        <p className="p">{parseRegistration(f("registrationDetails"))}</p>
       </section>
       <section className="section">
         <h2 className="h2">{f("agenda")}</h2>
