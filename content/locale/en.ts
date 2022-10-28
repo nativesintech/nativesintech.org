@@ -93,7 +93,7 @@ export const en = {
   "/projects": {
     h1: "Projects",
     blurb:
-      "A non-exhaustive list of projects we are working on. You can find more on our ",
+      "A non-exhaustive list of projects we are working on. You can find more at our GitHub: https://github.com/nativesintech.",
     title: "Natives in Tech - Projects",
   },
   "/contact": {
