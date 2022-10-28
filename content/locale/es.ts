@@ -84,7 +84,7 @@ export const es = {
   "/projects": {
     h1: "Proyectos",
     blurb:
-      "Una lista no exhaustiva de proyectos en los que estamos trabajando. Puedes encontrar más información sobre nuestro ",
+      "Una lista no exhaustiva de proyectos en los que estamos trabajando. Puedes encontrar más información sobre nuestro Github: https://github.com/nativesintech.",
     title: "Indígenas en Tecnología - Proyectos",
   },
   "/contact": {
