@@ -2,7 +2,7 @@ import * as React from "react";
 import { useIntl } from "react-intl";
 import { ComponentKeys } from "../content/types";
 import { assets } from "../helpers/assets";
-import { socialLinksArr } from "../helpers/resources";
+import { socials } from "../helpers/resources";
 
 export function Footer() {
   const { formatMessage } = useIntl();
@@ -25,7 +25,7 @@ export function Footer() {
             style={{ minWidth: 114, minHeight: 51 }}
           />
         </a>
-        {socialLinksArr
+        {[...socials]
           .sort((a, b) => a.name.localeCompare(b.name))
           .map((l, i) => {
             return (
