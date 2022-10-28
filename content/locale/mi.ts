@@ -8,22 +8,24 @@ export const mi = {
     title:
       "E waihanga ana ngā kaihangarau Taketake i ngā hangarau utukore, pūmanawa herekore hoki, mō ngā hapori Taketake",
   },
-  "/mōNiT": {
+  "/about": {
     h1: "He kōrero mō Natives in Tech",
     h2: "Ngā kaupapa",
     networkTitle: "Tauwhitiwhiti",
-    networkBlurb: "Kia whakawhiti kōrero ki ētahi atu kaihangarau pīrere mai, matatau mai",
+    networkBlurb:
+      "Kia whakawhiti kōrero ki ētahi atu kaihangarau pīrere mai, matatau mai",
     socialMediaTitle: "Awenga Pāhopori",
     socialMediaBlurb:
       "Kia tū hei kaupapa kitea ki ngā pāhopori e waia nei ki ngā kaihangarau.",
     conferenceTitle: "Hui Taumata ā-Tau",
-    conferenceBlurb: "Kia whakaritea tētahi hui taumata ā-tau mō Natives in Tech",
+    conferenceBlurb:
+      "Kia whakaritea tētahi hui taumata ā-tau mō Natives in Tech",
     buildTitle: "Waihanga hangarau Taketake pū",
     buildBlurb:
       "Kia waihanga ana i ngā hangarau utukore, pūmanawa herekore hoki, kia whakamana ai i ngā iwi Taketake",
     title: "Mō Natives in Tech",
   },
-  "/huitaumata": {
+  "/conference": {
     h1: "Natives in Tech Hui Taumata ā-Tau",
     blurb:
       "Mā te Natives in Tech Hui Taumata ā-Tau ngā kaihangarau Taketake e huihui kia kōrero tahi mō ngā kaupapa e whakamana nei, e tautoko nei i ngā iwi Taketake huri noa i te ao. He tuihono katoa, he utukore ki te marea te Natives in Tech Hui Taumata ā-Tau..",
@@ -36,7 +38,7 @@ export const mi = {
     watchTitle: "Mātakina ngā hui taumata o mua",
     title: "Natives in Tech Hui Taumata ā-Tau",
   },
-  "/huiātau/2022": {
+  "/conference/2022": {
     title: "Natives in Tech Hui Taumata ā-Tau 2022",
     shortTitle: "NiT Hui Taumata 2022",
     theme: "Kia whakamana motuhake te ao hangarau",
@@ -69,37 +71,36 @@ export const mi = {
     | Rematriating Tech and CS Education with Frieda McAlear @Friedamca
     `,
   },
-  "/takoha": {
+  "/donate": {
     h1: "Takoha",
     blurb:
       "E rua ngā momo takoha pūtea, mā tētahi utunga tūtahi, mā tētahi ohaurunga ki Open Collective rānei.",
     individualsTitle: "He takoha takitahi",
-    individualsBlurb:
-      "Kia takoha pūtea hei toitū te kaupapa nei.",
+    individualsBlurb: "Kia takoha pūtea hei toitū te kaupapa nei.",
     organizationsTitle: "Umanga",
     organizationsBlurb:
       "Kia tautoko tō umanga i te kaupapa nei. Ka whakaaturia te waitohu me te pae tukutuku o tō umanga ki tēnei whārangi. ",
     title: "Natives in Tech - Takoha",
   },
-  "/pāhopori": {
+  "/community": {
     h1: "Pāhopori",
     blurb:
       "Kia whakamōhiotia koe ki ngā mahi a Natives in Tech mā ngā tini pāhopori.",
     nitCommunityTitle: "NiT Pāhopori",
     nitCommunityBlurb:
-      "Mēnā he tangata i te ao hangarau koe, ā, e hiahia ana ki te hono mai ki ngā pāhopori Taketake, hena tukua īmēra mai e kīia ana ko wai koe, ko tēhea pāhopori, nō hea koe hoki ki social@nativesintech.org",
+      "Mēnā he tangata i te ao hangarau koe, ā, e hiahia ana ki te hono mai ki ngā pāhopori Taketake, hena tukua īmēra mai e kīia ana ko wai koe, ko tēhea pāhopori, nō hea koe hoki ki social@nativesintech.org.",
     title: "Natives in Tech - Pāhopori",
   },
-  "/kaupapamahi": {
+  "/projects": {
     h1: "Kaupapa Mahi",
     blurb:
-      "He rārangi tīpako o ngā kaupapa mahi e mahia ana e mātou. He mea anō ki GitHub ",
+      "He rārangi tīpako o ngā kaupapa mahi e mahia ana e mātou. He mea anō ki GitHub: https://github.com/nativesintech.",
     title: "Natives in Tech - Kaupapa Mahi",
   },
-  "/Whakapā mai": {
+  "/contact": {
     h1: "Whakapā mai",
     blurb:
-      "E hiahia ana mātou kia kōrero tahi! Tukua karere mai ki raro iho rā, tukua īmēra rānei ki hello@nativesintech.org ",
+      "E hiahia ana mātou kia kōrero tahi! Tukua karere mai ki raro iho rā, tukua īmēra rānei ki hello@nativesintech.org.",
     name: "Ingoa",
     email: "Īmēra",
     message: "Te Karere",
@@ -118,7 +119,7 @@ export const mi = {
   },
   footer: {
     nonprofitBlurb:
-      "He hinonga ohaoha US 501 (c)(3) a Natives in Tech, nā ngā takoha pūtea takitahi i utu ai .",
+      "He hinonga ohaoha US 501 (c)(3) a Natives in Tech, nā ngā takoha pūtea takitahi i utu ai.",
   },
   seo: {
     title: "E waihanga ana ngā iwi Taketake i ngā hangarau taketake pū",
