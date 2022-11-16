@@ -15,14 +15,6 @@ export function Layout(props: Props) {
           You are viewing this site offline. Some images may not render.
         </div>
       </Offline>
-      <div className="p-2 text-center bg-nit-primary dark:text-nit-black text-nit-white">
-        Natives in Tech Conf 2022 happening on November 4th-5th!{" "}
-        <Link href="/conference/2022" passHref>
-          <a href="" className="underline">
-            Click here for details
-          </a>
-        </Link>
-      </div>
       <Header />
       <main className="flex-1 w-full">{props.children}</main>
       <Footer />
