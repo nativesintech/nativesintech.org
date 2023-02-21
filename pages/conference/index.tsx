@@ -45,6 +45,11 @@ export default function Conference() {
                 2021
               </Anchor>
             </li>
+            <li>
+              <Anchor href="https://www.youtube.com/playlist?list=PLkEm8Fr-qex3UiiK-jedOwWREcJuqf9Op">
+                2022
+              </Anchor>
+            </li>
           </ul>
         </div>
       </section>
