@@ -1285,6 +1285,11 @@
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.2.tgz#1a62f89525723dde24ba1b01b092bf5df8ad4d39"
   integrity sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==
 
+"@types/url-regex-safe@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/url-regex-safe/-/url-regex-safe-1.0.0.tgz#78d0742fbc0438ab5805ae12ddb7ed0cf5daf493"
+  integrity sha512-4ktZEdl4U+ETSm8asxGDLsveKH2vl+9+d8NWYuvmI2YfCtpkNG+XffjoD9vtduPdHWJEr+VFet6r3F57Y9oTww==
+
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.11.1.tgz#2bfd767eae1a6996f432ff7e8d7fc75679c0b6a7"

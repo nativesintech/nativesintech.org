@@ -3,12 +3,16 @@ import React from "react";
 import { useIntl } from "react-intl";
 import { Anchor } from "../components/Anchor";
 import { Layout } from "../components/Layout";
-import { MergedData } from "../content/types";
-import { projectsArr, socialLinksMap } from "../helpers/resources";
+import { ComponentKeys } from "../content/types";
+import { convertStrToJsx, convertUrlToLink } from "../helpers/convertStr";
+import { projects } from "../helpers/resources";
 
 export default function Projects() {
   const { formatMessage } = useIntl();
-  const f = (id: keyof MergedData["/projects"]) => formatMessage({ id });
+  const f = (id: ComponentKeys<"/projects">) => formatMessage({ id });
+
+  const convertBlurb = convertStrToJsx(convertUrlToLink);
+
   return (
     <Layout>
       <Head>
@@ -17,12 +21,9 @@ export default function Projects() {
 
       <section className="section">
         <h1 className="h1">{f("h1")}</h1>
-        <p className="p">
-          {f("blurb")}
-          <Anchor href={socialLinksMap.get("GitHub")!.href}>GitHub</Anchor>.
-        </p>
+        {convertBlurb(f("blurb"))}
         <ul className="ul">
-          {projectsArr
+          {[...projects]
             .sort((a, b) => a.name.localeCompare(b.name))
             .map((p) => (
               <li key={p.name}>

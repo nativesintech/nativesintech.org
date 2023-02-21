@@ -12,4 +12,15 @@ export const assets = {
     src: "/assets/taylor-ruecker-unsplash-2x.jpg",
     altText: "Native woman",
   },
-};
+
+  conference: {
+    "2022": {
+      speakerLineup: "/assets/conference/2022/speaker-lineup.mp4",
+      gatherTown: "/assets/conference/2022/gather-town.mp4",
+      shiptLogo: {
+        altText: "Shipt logo",
+        src: "/assets/conference/2022/shipt-logo.svg",
+      },
+    },
+  },
+} as const;

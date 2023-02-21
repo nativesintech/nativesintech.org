@@ -2,12 +2,16 @@ import Head from "next/head";
 import { useIntl } from "react-intl";
 import { Anchor } from "../components/Anchor";
 import { Layout } from "../components/Layout";
-import { MergedData } from "../content/types";
-import { nitSocialArr, resourceLinksArr, socialLinksArr } from "../helpers/resources";
+import { ComponentKeys } from "../content/types";
+import { convertEmailToLink, convertStrToJsx } from "../helpers/convertStr";
+import { nitSocials, resources, socials } from "../helpers/resources";
 
 export default function Community() {
   const { formatMessage } = useIntl();
-  const f = (id: keyof MergedData["/community"]) => formatMessage({ id });
+  const f = (id: ComponentKeys<"/community">) => formatMessage({ id });
+
+  const convertBlurb = convertStrToJsx(convertEmailToLink);
+
   return (
     <Layout>
       <Head>
@@ -17,7 +21,7 @@ export default function Community() {
         <h1 className="h1">{f("h1")}</h1>
         <p className="p">{f("blurb")}</p>
         <ul className="ul">
-          {[...socialLinksArr, ...resourceLinksArr]
+          {[...socials, ...resources]
             .sort((a, b) => a.name.localeCompare(b.name))
             .map((l) => (
               <li key={l.name}>
@@ -27,16 +31,9 @@ export default function Community() {
         </ul>
 
         <h2 className="h2">{f("nitCommunityTitle")}</h2>
-        <p className="p">
-          {f("nitCommunityBlurb")}{" "}
-          <a className="a" href="mailto:social@nativesintech.org">
-            social@nativesintech.org
-          </a>
-          .
-        </p>
-
+        {convertBlurb(f("nitCommunityBlurb"))}
         <ul className="ul">
-          {nitSocialArr
+          {[...nitSocials]
             .sort((a, b) => a.name.localeCompare(b.name))
             .map((l) => (
               <li key={l.name}>{l.name}</li>

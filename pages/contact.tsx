@@ -3,11 +3,15 @@ import Head from "next/head";
 
 import { Layout } from "../components/Layout";
 import { useIntl } from "react-intl";
-import { MergedData } from "../content/types";
+import { ComponentKeys } from "../content/types";
+import { convertEmailToLink, convertStrToJsx } from "../helpers/convertStr";
 
 export default function Contact() {
   const { formatMessage } = useIntl();
-  const f = (id: keyof MergedData["/contact"]) => formatMessage({ id });
+  const f = (id: ComponentKeys<"/contact">) => formatMessage({ id });
+
+  const convertBlurb = convertStrToJsx(convertEmailToLink);
+
   return (
     <Layout>
       <Head>
@@ -20,13 +24,7 @@ export default function Contact() {
           className="section"
         >
           <h1 className="h1">{f("h1")}</h1>
-          <p className="p">
-            {f("blurb")}
-            <a className="a" href="mailto:hello@nativesintech.org">
-              hello@nativesintech.org
-            </a>
-            .
-          </p>
+          {convertBlurb(f("blurb"))}
           <div className="mt-6 mb-4">
             <div className="flex flex-col mb-4 space-y-4 md:space-y-0 md:mb-0 md:flex-row">
               <div className="flex-auto md:mr-2">
