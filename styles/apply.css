@@ -22,6 +22,11 @@
 .ul {
   @apply prose list-disc dark:text-nit-light-grey text-nit-grey;
 }
+
+.li {
+  @apply prose dark:text-nit-light-grey text-nit-grey;
+}
+
 .section {
   @apply max-w-screen-md px-6 py-4 mx-auto space-y-8 md:py-10;
 }

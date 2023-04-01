@@ -3,6 +3,7 @@ import { Layout } from "../components/Layout";
 import Head from "next/head";
 import { useIntl } from "react-intl";
 import { ComponentKeys } from "../content/types";
+import { Anchor } from "../components/Anchor";
 
 export default function About() {
   const { formatMessage } = useIntl();
@@ -36,6 +37,38 @@ export default function About() {
           <li className="space-y-1">
             <h3 className="h3">{f("buildTitle")}</h3>
             <p className="p">{f("buildBlurb")}</p>
+          </li>
+        </ul>
+      </section>
+      <section className="section">
+        <h2 className="h2">Sponsors</h2>
+        <p className="p">
+          Thank you to our sponsors and community supporters for supporting us
+          and our work!
+        </p>
+
+        <h3 className="h3">Organizational Sponsors</h3>
+        <ul className="space-y-6">
+          <li>
+            <Anchor href="https://shipt.com">Shipt</Anchor>
+          </li>
+        </ul>
+        <h3 className="h3">Past Sponsors</h3>
+        <ul className="space-y-6">
+          <li>
+            <Anchor href="https://bestbuy.com">Best Buy</Anchor>
+          </li>
+        </ul>
+        <h3 className="h3">Community Supporters</h3>
+        <ul className="space-y-6">
+          <li>
+            <Anchor href="https://animikii.com/">Animikii</Anchor>
+          </li>
+          <li>
+            <Anchor href="https://nucamp.co">Nucamp</Anchor>
+          </li>
+          <li>
+            <Anchor href="https://www.pdxwit.org/">PDXWIT</Anchor>
           </li>
         </ul>
       </section>
