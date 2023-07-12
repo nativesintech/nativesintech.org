@@ -2,6 +2,7 @@ export const resources = [
   { name: "Forum", href: "https://forum.nativesintech.org/" },
   { name: "Blog", href: "https://blog.nativesintech.org/" },
   { name: "Talent", href: "https://talent.nativesintech.org/" },
+  { name: "Jobs", href: "https://nativesintech.seeker.company/"},
 ] as const;
 
 export const nitSocials = [
