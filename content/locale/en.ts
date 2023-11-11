@@ -69,6 +69,21 @@ export const en = {
     | Rematriating Tech and CS Education with Frieda McAlear @Friedamca
     `,
   },
+  "/conference/2023": {
+    title: "Natives in Tech Conf 2023",
+    shortTitle: "NiT Conf 2023",
+    theme: "Developing Sovereignty In Tech",
+    sponsors: "Sponsors",
+    partneringSponsor: "Partnering Sponsor",
+    intro:
+      "Join Natives in Tech for two days of keynotes, lightning talks, workshops, networking and panels about technology and its impact on the lives and experiences as Indigenous Peoples. During this time we hope you will join us in listening, learning and celebrating the accomplishments and work being done to address data sovereignty issues Native people and communities face within technology. We look forward to the speakers inspiring innovation and sparking conversations so together we can continue to craft technology that truly serves Native communities and respects Native identities.",
+     space:
+      "Attendees are encouraged to use the Gather.Town meetup space during the full 48 hours of access to this amazing space built full to the brim with content to interact with, learn from, watch, listen to, and otherwise enjoy that highlights the beautiful tapestry that makes up the Native community.  Meetup, use it as coworking space, whatever! Enjoy! Access will be available using the link received as part of registration prior to the event.",
+    agenda: "Agenda",
+    tbd: "TBD",
+    registration: "Registration",
+    registrationDetails: "TBD",
+  },
   "/donate": {
     h1: "Donate",
     blurb:
