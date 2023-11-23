@@ -22,5 +22,11 @@ export const assets = {
         src: "/assets/conference/2022/shipt-logo.svg",
       },
     },
+    "2023": {
+      shiptLogo: {
+        altText: "Shipt logo",
+        src: "/assets/conference/2023/shipt-logo.svg",
+      }
+    }
   },
 } as const;

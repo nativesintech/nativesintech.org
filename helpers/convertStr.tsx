@@ -15,7 +15,7 @@ export const convertHandleToLink = (str: string): string => {
 
 export const convertUrlToLink = (str: string): string => {
   return str.replace(
-    /(https:\/\/\w+\.com\/\w+)/,
+    /(https:\/\/\w+\.(com|ly)\/\w+)/g,
     (u) =>
       `<a class="a" target="_blank" rel="noopener noreferrer" href="${u}">${u}</a>`
   );

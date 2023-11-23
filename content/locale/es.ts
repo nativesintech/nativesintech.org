@@ -60,6 +60,19 @@ export const es = {
     "Compartir habilidades / Mostrar y decir / agarrar el micrófono" Presentaciones rápidas de 5 minutos para miembros de la comunidad - inscripciones el día de | Soberanía del espectro con Darrah Blackwater @blackwatersoul | Ética, educación y Ethereum - Lo que el país indio necesita saber sobre Crypto con Holly Grimm @hollygrimm | Construyendo una startup tecnológica respaldada por capital de riesgo en un país indio con @amberebuker | Contextos locales: Apoyo a la soberanía de datos indígenas en infraestructuras digitales con la Dra. Janette Hamilton-PearceCorrie @LocalContexts y Corrie Roe @CorrieRoe | Hacia una tecnología lingüística ecológicamente consciente que promueva el uso sostenido de la lengua con Joshua Nemecek @mr_nemecek | Rematriating Tech and CS Education con Frieda McAlear @Friedamca
     `,
   },
+  "/conference/2023": {  
+    title: "Natives in Tech Conf 2023",
+    shortTitle: "NiT Conf 2023",
+    theme: "Bridging Tech | Inspiring Nations",
+    sponsors: "Sponsors",
+    partneringSponsor: "Partnering Sponsor",
+    intro: "Welcome to NiT Conf 2023:  Bridging Tech / Inspiring Nations, taking place Friday, December 8, 2023. The Natives in Tech Conference brings together Native technologists to share projects that empower and support Native peoples around the world. Natives in Tech Conference is completely online and free to the public.",
+    space: "Attendees are encouraged to use the Gather.Town meetup space during the full 48 hours of access to this amazing space built full to the brim with content to interact with, learn from, watch, listen to, and otherwise enjoy that highlights the beautiful tapestry that makes up the Native community.  Meetup, use it as coworking space, whatever! Enjoy! Access will be available using the link received as part of registration prior to the event.",
+    agenda: "Agenda",
+    agendaDetails: "This year we are excited to offer 2 Tracks: Federated Tech and Decolonizing Data. Kicking off NiT Conf 2023: Presenters will have up to 20 minutes to demo their project, show off their app, give a talk, or showcase any other type of technology they developed, or are currently developing. All ideas and presenters welcome, we only ask that you present only tech that can benefit Indigenous Peoples. This is an interactive conference wherein participation makes it exceptional in its class. We encourage you to pitch all ideas, even if they're out of format with the above. We are willing to experiment and build alongside you.",
+    registration: "Registration",
+    registrationDetails: "We hope you will join us in listening, learning and celebrating the accomplishments and work being done by and for Native people in tech. We look forward to the presenters inspiring innovation and sparking conversations so together we can continue to craft technology that truly serves Native communities. Come learn from Native technologists developing the path forward! REGISTER: https://bit.ly/NITConf2023. If you know someone who would be a great fit for this, please send them this link: https://sessionize.com/nitconf2023. Please follow us on X (the app formerly known as Twitter,) Instagram, and Facebook @nativesintech!",
+    },
   "/donate": {
     h1: "Donar",
     blurb:
