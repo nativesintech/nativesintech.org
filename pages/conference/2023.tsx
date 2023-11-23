@@ -37,6 +37,8 @@ export default function TwentyTwentyThree () {
         <h2 className="h2">{f("theme")}</h2>
         <p className="p">{f("intro")}</p>
         <p className="p">{f("space")}</p>
+				<h3 className="h3">{f("agenda")}</h3>
+				<p className="p">{f("agendaDetails")}</p>
         <h3 className="h3">{f("registration")}</h3>
         {convertUrlToJsx(f("registrationDetails"))}
 			</section>
