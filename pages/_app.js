@@ -2,7 +2,7 @@ import "../styles/index.css";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import * as locales from "../content/locale";
-import { IntlProvider, useIntl } from "react-intl";
+import { IntlProvider } from "react-intl";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();

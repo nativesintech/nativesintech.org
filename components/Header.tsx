@@ -16,11 +16,11 @@ export function Header() {
   const routes = [
     { title: f("about"), route: "/about" },
     { title: f("conf"), route: "/conference" },
-    { title: f("donate"), route: "/donate" },
     { title: f("community"), route: "/community" },
     { title: f("projects"), route: "/projects" },
     { title: f("blog"), route: "https://blog.nativesintech.org" },
     { title: f("contact"), route: "/contact" },
+    { title: f("donate"), route: "/donate" },
   ];
 
   return (
@@ -72,7 +72,7 @@ export function Header() {
                     <a
                       href=""
                       className={`underline ${
-                        navigationItem.title === f("contact")
+                        navigationItem.title === f("donate")
                           ? "bg-nit-dark text-nit-white px-4 py-2 text-sm font-bold rounded-md no-underline"
                           : "text-nit-primary text-sm leading-tight"
                       } `}
